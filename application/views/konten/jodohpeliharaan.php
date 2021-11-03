@@ -76,7 +76,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-6 product">
                             <div class="product-inner">
                                 <div class="thumb">
-                                    <a href="<?php echo base_url();?>liathewanjodoh.php" class="image">
+                                    <a href="<?php echo base_url();?>liathewanjodoh" class="image">
                                         <img class="fit-image" src="<?php echo base_url();?>assets/images/products/medium-product/kucing.png" alt="Product" />
                                     </a>
                                     <span class="badges">
@@ -90,7 +90,7 @@
                                 </div>
 
                                 <div class="content">
-                                    <h5 class="title"><a href="<?php echo base_url();?>liathewanjodoh.php">Kucing Anggora Asli</a></h5>
+                                    <h5 class="title"><a href="<?php echo base_url();?>liathewanjodoh">Kucing Anggora Asli</a></h5>
 
                                     <span class="rating">
                                             <i class="fa fa-star"></i>
@@ -123,7 +123,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-6 product">
                             <div class="product-inner">
                                 <div class="thumb">
-                                    <a href="<?php echo base_url();?>liathewanjodoh.php" class="image">
+                                    <a href="<?php echo base_url();?>liathewanjodoh" class="image">
                                         <img class="fit-image" src="<?php echo base_url();?>assets/images/products/medium-product/AnggoraMp.png" alt="Product" />
                                     </a>
                                     <span class="badges">
@@ -136,7 +136,7 @@
                                     </div>
                                 </div>
                                 <div class="content">
-                                    <h5 class="title"><a href="<?php echo base_url();?>liathewanjodoh.php">Kucing Anggora mix Persia</a></h5>
+                                    <h5 class="title"><a href="<?php echo base_url();?>liathewanjodoh">Kucing Anggora mix Persia</a></h5>
                                     <span class="rating">
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
@@ -168,7 +168,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-6 product">
                             <div class="product-inner">
                                 <div class="thumb">
-                                    <a href="<?php echo base_url();?>liathewanjodoh.php" class="image">
+                                    <a href="<?php echo base_url();?>liathewanjodoh" class="image">
                                         <img class="fit-image" src="<?php echo base_url();?>assets/images/products/medium-product/Persia.png" alt="Product" />
                                     </a>
                                     <div class="action-wrapper">
@@ -178,7 +178,7 @@
                                     </div>
                                 </div>
                                <div class="content">
-                                    <h5 class="title"><a href="<?php echo base_url();?>liathewanjodoh.php">Kucing Persia Asli</a></h5>
+                                    <h5 class="title"><a href="<?php echo base_url();?>liathewanjodoh">Kucing Persia Asli</a></h5>
                                     <span class="rating">
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
@@ -210,7 +210,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-6 product">
                             <div class="product-inner">
                                 <div class="thumb">
-                                    <a href="<?php echo base_url();?>liathewanjodoh.php" class="image">
+                                    <a href="<?php echo base_url();?>liathewanjodoh" class="image">
                                         <img class="fit-image" src="<?php echo base_url();?>assets/images/products/medium-product/koren.png" alt="Product" />
                                     </a>
                                     <span class="badges">
@@ -227,7 +227,7 @@
                                     </div>
                                 </div>
                                 <div class="content">
-                                    <h5 class="title"><a href="<?php echo base_url();?>liathewanjodoh.php">Kucing Mainecoon</a></h5>
+                                    <h5 class="title"><a href="<?php echo base_url();?>liathewanjodoh">Kucing Mainecoon</a></h5>
                                     <span class="rating">
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
@@ -259,7 +259,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-6 product">
                             <div class="product-inner">
                                 <div class="thumb">
-                                    <a href="<?php echo base_url();?>liathewanjodoh.php" class="image">
+                                    <a href="<?php echo base_url();?>liathewanjodoh" class="image">
                                         <img class="fit-image" src="<?php echo base_url();?>assets/images/products/medium-product/Chihuahua.png" alt="Product" />
                                     </a>
                                     <span class="badges">
@@ -272,7 +272,7 @@
                                     </div>
                                 </div>
                                 <div class="content">
-                                    <h5 class="title"><a href="<?php echo base_url();?>liathewanjodoh.php">Anjing Chihuahua</a></h5>
+                                    <h5 class="title"><a href="<?php echo base_url();?>liathewanjodoh">Anjing Chihuahua</a></h5>
                                     <span class="rating">
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
@@ -349,7 +349,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-6 product">
                             <div class="product-inner">
                                 <div class="thumb">
-                                    <a href="<?php echo base_url();?>liathewanjodoh.php" class="image">
+                                    <a href="<?php echo base_url();?>liathewanjodoh" class="image">
                                         <img class="fit-image" src="<?php echo base_url();?>assets/images/products/medium-product/alaskan malamute.png" alt="Product" />
                                     </a>
                                     <div class="action-wrapper">
@@ -359,7 +359,7 @@
                                     </div>
                                 </div>
                                 <div class="content">
-                                    <h5 class="title"><a href="<?php echo base_url();?>liathewanjodoh.php">Anjing Alaskan Malamute</a></h5>
+                                    <h5 class="title"><a href="<?php echo base_url();?>liathewanjodoh">Anjing Alaskan Malamute</a></h5>
                                     <span class="rating">
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
@@ -391,7 +391,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-6 product">
                             <div class="product-inner">
                                 <div class="thumb">
-                                    <a href="<?php echo base_url();?>liathewanjodoh.php" class="image">
+                                    <a href="<?php echo base_url();?>liathewanjodoh" class="image">
                                         <img class="fit-image" src="<?php echo base_url();?>assets/images/products/medium-product/siberia husky.png" alt="Product" />
                                     </a>
                                     <span class="badges">
@@ -404,7 +404,7 @@
                                     </div>
                                 </div>
                                 <div class="content">
-                                    <h5 class="title"><a href="<?php echo base_url();?>liathewanjodoh.php">Anjing Siberian Husky</a></h5>
+                                    <h5 class="title"><a href="<?php echo base_url();?>liathewanjodoh">Anjing Siberian Husky</a></h5>
                                     <span class="rating">
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
@@ -436,7 +436,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-6 product">
                             <div class="product-inner">
                                 <div class="thumb">
-                                    <a href="<?php echo base_url();?>liathewanjodoh.php" class="image">
+                                    <a href="<?php echo base_url();?>liathewanjodoh" class="image">
                                         <img class="fit-image" src="<?php echo base_url();?>assets/images/products/medium-product/himalaya.png" alt="Product" />
                                     </a>
                                     <div class="action-wrapper">
@@ -446,7 +446,7 @@
                                     </div>
                                 </div>
                                 <div class="content">
-                                    <h5 class="title"><a href="<?php echo base_url();?>liathewanjodoh.php">Kucing Himalaya</a></h5>
+                                    <h5 class="title"><a href="<?php echo base_url();?>liathewanjodoh">Kucing Himalaya</a></h5>
                                     <span class="rating">
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
@@ -478,7 +478,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-6 product">
                             <div class="product-inner">
                                 <div class="thumb">
-                                    <a href="<?php echo base_url();?>liathewanjodoh.php" class="image">
+                                    <a href="<?php echo base_url();?>liathewanjodoh" class="image">
                                         <img class="fit-image" src="<?php echo base_url();?>assets/images/products/medium-product/rusian blue.png" alt="Product" />
                                     </a>
                                     <span class="badges">
@@ -491,7 +491,7 @@
                                     </div>
                                 </div>
                                 <div class="content">
-                                    <h5 class="title"><a href="<?php echo base_url();?>liathewanjodoh.php">Kucing Russian Blue</a></h5>
+                                    <h5 class="title"><a href="<?php echo base_url();?>liathewanjodoh">Kucing Russian Blue</a></h5>
                                     <span class="rating">
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
@@ -523,7 +523,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-6 product">
                             <div class="product-inner">
                                 <div class="thumb">
-                                    <a href="<?php echo base_url();?>liathewanjodoh.php" class="image">
+                                    <a href="<?php echo base_url();?>liathewanjodoh" class="image">
                                         <img class="fit-image" src="<?php echo base_url();?>assets/images/products/medium-product/poddle.png" alt="Product" />
                                     </a>
                                     <span class="badges">
@@ -536,7 +536,7 @@
                                     </div>
                                 </div>
                                 <div class="content">
-                                    <h5 class="title"><a href="<?php echo base_url();?>liathewanjodoh.php">Anjing Poddle</a></h5>
+                                    <h5 class="title"><a href="<?php echo base_url();?>liathewanjodoh">Anjing Poddle</a></h5>
                                     <span class="rating">
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
@@ -568,7 +568,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-6 product">
                             <div class="product-inner">
                                 <div class="thumb">
-                                    <a href="<?php echo base_url();?>liathewanjodoh.php" class="image">
+                                    <a href="<?php echo base_url();?>liathewanjodoh" class="image">
                                         <img class="fit-image" src="<?php echo base_url();?>assets/images/products/medium-product/beagle.png" alt="Product" />
                                     </a>
                                     <div class="action-wrapper">
@@ -578,7 +578,7 @@
                                     </div>
                                 </div>
                                 <div class="content">
-                                    <h5 class="title"><a href="<?php echo base_url();?>liathewanjodoh.php">Anjing Beagle</a></h5>
+                                    <h5 class="title"><a href="<?php echo base_url();?>liathewanjodoh">Anjing Beagle</a></h5>
                                     <span class="rating">
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
@@ -718,7 +718,7 @@
                                         <!-- Product List Thumb Start -->
                                         <div class="product">
                                             <div class="thumb">
-                                                <a href="<?php echo base_url();?>liathewanjodoh.php" class="image">
+                                                <a href="<?php echo base_url();?>liathewanjodoh" class="image">
                                                     <img class="fit-image first-image" src="<?php echo base_url();?>assets/images/products/medium-product/kucing.png" alt="Product Image">
                                                 </a>
                                             </div>
@@ -728,7 +728,7 @@
                                         <!-- Product List Content Start -->
                                         <div class="product-list-content">
                                             <h6 class="product-name">
-                                                <a href="<?php echo base_url();?>liathewanjodoh.php">Kucing Anggora Asli</a>
+                                                <a href="<?php echo base_url();?>liathewanjodoh">Kucing Anggora Asli</a>
                                             </h6>
                                             <span class="price">
                                                     <span class="new">Rp.35.000/Hari</span>
@@ -745,7 +745,7 @@
                                         <!-- Product List Thumb Start -->
                                         <div class="product">
                                             <div class="thumb">
-                                                <a href="<?php echo base_url();?>liathewanjodoh.php" class="image">
+                                                <a href="<?php echo base_url();?>liathewanjodoh" class="image">
                                                     <img class="fit-image first-image" src="<?php echo base_url();?>assets/images/products/medium-product/shiba inu.png" alt="Product Image">
                                                 </a>
                                             </div>
@@ -755,7 +755,7 @@
                                         <!-- Product List Content Start -->
                                         <div class="product-list-content">
                                             <h6 class="product-name">
-                                                <a href="<?php echo base_url();?>liathewanjodoh.php">Anjing Shiba Inu</a>
+                                                <a href="<?php echo base_url();?>liathewanjodoh">Anjing Shiba Inu</a>
                                             </h6>
                                             <span class="price">
                                                     <span class="new">Rp.105.000/Hari</span>
@@ -772,7 +772,7 @@
                                         <!-- Product List Thumb Start -->
                                         <div class="product">
                                             <div class="thumb">
-                                                <a href="<?php echo base_url();?>liathewanjodoh.php" class="image">
+                                                <a href="<?php echo base_url();?>liathewanjodoh" class="image">
                                                     <img class="fit-image first-image" src="<?php echo base_url();?>assets/images/products/medium-product/koren.png" alt="Product Image">
                                                 </a>
                                             </div>
@@ -782,7 +782,7 @@
                                         <!-- Product List Content Start -->
                                         <div class="product-list-content">
                                             <h6 class="product-name">
-                                                <a href="<?php echo base_url();?>liathewanjodoh.php">Kucing Mainecoon</a>
+                                                <a href="<?php echo base_url();?>liathewanjodoh">Kucing Mainecoon</a>
                                             </h6>
                                             <span class="price">
                                                     <span class="new">Rp.55.000/Hari</span>
@@ -1021,7 +1021,7 @@
                             <li class="has-children">
                                 <a href="<?php echo base_url();?>#">Product <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                 <ul class="dropdown">
-                                    <li><a href="<?php echo base_url();?>liathewanjodoh.php">Single Product</a></li>
+                                    <li><a href="<?php echo base_url();?>liathewanjodoh">Single Product</a></li>
                                     <li><a href="<?php echo base_url();?>single-product-sale.html">Single Product Sale</a></li>
                                     <li><a href="<?php echo base_url();?>single-product-group.html">Single Product Group</a></li>
                                     <li><a href="<?php echo base_url();?>single-product-normal.html">Single Product Normal</a></li>
