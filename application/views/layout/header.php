@@ -128,7 +128,7 @@
                                                 <h4 class="mega-menu-title">Lainnya</h4>
                                                 <ul class="mb-n2">
                                                     <li><a href="<?php echo base_url(); ?>Profile">Akun saya</a></li>
-                                                    <li><a href="login.php">Masuk | Daftar</a></li>
+                                                    <li><a href="<?php echo base_url();?>login">Masuk | Daftar</a></li>
                                                     <li><a href="wishlist.php">Daftar Keinginan</a></li>
                                                     <li><a href="cart.php">Keranjang</a></li>
                                                     <li><a href="checkout.php">Pesan</a></li>
@@ -147,10 +147,10 @@
                                     <li class="has-children">
                                         <a href="#">Halaman</a>
                                         <ul class="sub-menu">
-                                             <li><a href="blog-left-sidebar.php">Artikel</a></li>
-                                            <li><a href="faq.php">FAQ</a></li>
-                                            <li><a href="login.php">Masuk</a></li>
-                                            <li><a href="register.php">Daftar</a></li>
+                                             <li><a href="<?php echo base_url(); ?>blogleftsidebar">Artikel</a></li>
+                                            <li><a href="<?php echo base_url(); ?>faq">FAQ</a></li>
+                                            <li><a href="<?php echo base_url();?>login">Masuk</a></li>
+                                            <li><a href="<?php echo base_url();?>register">Daftar</a></li>
                                         </ul>
                                     </li>
                           <li class="has-children">
