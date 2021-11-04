@@ -160,10 +160,10 @@
                                             <li class="mega-menu-col">
                                                 <h4 class="mega-menu-title">Kategori</h4>
                                                 <ul class="mb-n2">
-                                                    <li><a href="jodoh-peliharaan.php">Hewan Peliharaan</a></li>
-                                                    <li><a href="jodoh-reptil.php">Reptil</a></li>
-                                                    <li><a href="jodoh-ikan.php">Ikan</a></li>
-                                                    <li><a href="jodoh-burung.php">Burung</a></li>
+                                                    <li><a href="jodohpeliharaan">Hewan Peliharaan</a></li>
+                                                    <li><a href="jodohreptil">Reptil</a></li>
+                                                    <li><a href="jodohikan">Ikan</a></li>
+                                                    <li><a href="jodohburung">Burung</a></li>
                                                 </ul>
                                               
                                             <li class="mega-menu-col">
@@ -178,7 +178,7 @@
                                     </li>
                                     </li>
                                     <li><a href="<?php echo base_url(); ?>About">Tentang</a></li>
-                                    <li><a href="contact.php">Kontak</a></li>
+                                    <li><a href="contact">Kontak</a></li>
                                 </ul>
                             </div>
                         </div>
