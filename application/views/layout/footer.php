@@ -24,10 +24,10 @@
                         <div class="single-footer-widget">
                             <h2 class="widget-title">Link</h2>
                             <ul class="widget-list">
-                                <li><a href="contact.php">Bantuan & Kontak Kami</a></li>
-                                <li><a href="contact.php">Pengembalian Barang dan Dana</a></li>
-                                <li><a href="index.php">Toko Online</a></li>
-                                <li><a href="syarat_dan_ketentuan.php">Syarat & Ketentuan</a></li>
+                                <li><a href="contact">Bantuan & Kontak Kami</a></li>
+                                <li><a href="contact">Pengembalian Barang dan Dana</a></li>
+                                <li><a href="beranda">Toko Online</a></li>
+                                <li><a href="syaratdanketentuan">Syarat & Ketentuan</a></li>
                             </ul>
                         </div> 
                     </div>
@@ -35,9 +35,9 @@
                         <div class="single-footer-widget aos-init aos-animate">
                             <h2 class="widget-title">Bantuan</h2>
                             <ul class="widget-list">
-                                <li><a href="wishlist.php">Keranjang</a></li>
-                                <li><a href="contact.php">Pelacakan Pesanan</a></li>
-                                <li><a href="contact.php">Pengembalian</a></li>
+                                <li><a href="wishlist">Keranjang</a></li>
+                                <li><a href="contact">Pelacakan Pesanan</a></li>
+                                <li><a href="contact">Pengembalian</a></li>
                             </ul>
                         </div>
                     </div>
