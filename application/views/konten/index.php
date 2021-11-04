@@ -6,7 +6,7 @@
 
                 <div class="hero-slide-item swiper-slide">
                     <div class="hero-slide-bg">
-                        <img src="assets/images/slider/slider1-1.png" alt="Slider Image" />
+                        <img src="<?php echo base_url();?>assets/images/slider/slider1-1.png" alt="Slider Image" />
                     </div>
                     <div class="container">
                         <div class="hero-slide-content text-start">
@@ -20,7 +20,7 @@
 
                 <div class="hero-slide-item swiper-slide">
                     <div class="hero-slide-bg">
-                        <img src="assets/images/slider/slider1-2.png" alt="Slider Image" />
+                        <img src="<?php echo base_url();?>assets/images/slider/slider1-2.png" alt="Slider Image" />
                     </div>
                     <div class="container">
                         <div class="hero-slide-content text-center text-md-end">
@@ -148,7 +148,7 @@
                                         <!-- Thumb Start  -->
                                         <div class="thumb">
                                             <a href="single-product.php" class="image">
-                                                <img class="fit-image" src="assets/images/products/medium-product/kucing.png" alt="Product" />
+                                                <img class="fit-image" src="<?php echo base_url();?>assets/images/products/medium-product/kucing.png" alt="Product" />
                                             </a>
                                             <span class="badges">
                                             <span class="sale">-18%</span>
@@ -187,7 +187,7 @@
                                         <!-- Thumb Start  -->
                                         <div class="thumb">
                                             <a href="single-product.php" class="image">
-                                                <img class="fit-image" src="assets/images/products/medium-product/AnggoraMp.png" alt="Product" />
+                                                <img class="fit-image" src="<?php echo base_url();?>assets/images/products/medium-product/AnggoraMp.png" alt="Product" />
                                             </a>
                                             <span class="badges">
                                             <span class="new">Baru</span>
@@ -225,7 +225,7 @@
                                         <!-- Thumb Start  -->
                                         <div class="thumb">
                                             <a href="single-product.php" class="image">
-                                                <img class="fit-image" src="assets/images/products/medium-product/persia.png" alt="Product" />
+                                                <img class="fit-image" src="<?php echo base_url();?>assets/images/products/medium-product/persia.png" alt="Product" />
                                             </a>
                                             <div class="action-wrapper">
                                                 <a href="#/" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view"><i class="ti-plus"></i></a>
@@ -260,7 +260,7 @@
                                         <!-- Thumb Start  -->
                                         <div class="thumb">
                                             <a href="single-product.php" class="image">
-                                                <img class="fit-image" src="assets/images/products/medium-product/koren.png" alt="Product" />
+                                                <img class="fit-image" src="<?php echo base_url();?>assets/images/products/medium-product/koren.png" alt="Product" />
                                             </a>
                                             <span class="badges">
                                             <span class="sale">-18%</span>
@@ -303,7 +303,7 @@
                                         <!-- Thumb Start  -->
                                         <div class="thumb">
                                             <a href="single-product.php" class="image">
-                                                <img class="fit-image" src="assets/images/products/medium-product/Chihuahua.png" alt="Product" />
+                                                <img class="fit-image" src="<?php echo base_url();?>assets/images/products/medium-product/Chihuahua.png" alt="Product" />
                                             </a>
                                             <span class="badges">
                                             <span class="sale">-20%</span>
@@ -342,7 +342,7 @@
                                         <!-- Thumb Start  -->
                                         <div class="thumb">
                                             <a href="single-product.php" class="image">
-                                                <img class="fit-image" src="assets/images/products/medium-product/shiba inu.png" alt="Product" />
+                                                <img class="fit-image" src="<?php echo base_url();?>assets/images/products/medium-product/shiba inu.png" alt="Product" />
                                             </a>
                                             <span class="badges">
                                             <span class="new">Baru</span>
@@ -380,7 +380,7 @@
                                         <!-- Thumb Start  -->
                                         <div class="thumb">
                                             <a href="single-product.php" class="image">
-                                                <img class="fit-image" src="assets/images/products/medium-product/alaskan malamute.png" alt="Product" />
+                                                <img class="fit-image" src="<?php echo base_url();?>assets/images/products/medium-product/alaskan malamute.png" alt="Product" />
                                             </a>
                                             <div class="action-wrapper">
                                                 <a href="#/" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view"><i class="ti-plus"></i></a>
@@ -415,7 +415,7 @@
                                         <!-- Thumb Start  -->
                                         <div class="thumb">
                                             <a href="single-product.php" class="image">
-                                                <img class="fit-image" src="assets/images/products/medium-product/siberia husky.png" alt="Product" />
+                                                <img class="fit-image" src="<?php echo base_url();?>assets/images/products/medium-product/siberia husky.png" alt="Product" />
                                             </a>
                                             <span class="badges">
                                             <span class="sale">-20%</span>
@@ -460,7 +460,7 @@
                                         <!-- Thumb Start  -->
                                         <div class="thumb">
                                             <a href="single-product.php" class="image">
-                                                <img class="fit-image" src="assets/images/products/medium-product/kucing.png" alt="Product" />
+                                                <img class="fit-image" src="<?php echo base_url();?>assets/images/products/medium-product/kucing.png" alt="Product" />
                                             </a>
                                             <span class="badges">
                                             <span class="sale">-18%</span>
@@ -499,7 +499,7 @@
                                         <!-- Thumb Start  -->
                                         <div class="thumb">
                                             <a href="single-product.php" class="image">
-                                                <img class="fit-image" src="assets/images/products/medium-product/shiba inu.png" alt="Product" />
+                                                <img class="fit-image" src="<?php echo base_url();?>assets/images/products/medium-product/shiba inu.png" alt="Product" />
                                             </a>
                                             <span class="badges">
                                             <span class="sale">-20%</span>
@@ -538,7 +538,7 @@
                                         <!-- Thumb Start  -->
                                         <div class="thumb">
                                             <a href="single-product.php" class="image">
-                                                <img class="fit-image" src="assets/images/products/medium-product/Chameleon.png" alt="Product" />
+                                                <img class="fit-image" src="<?php echo base_url();?>assets/images/products/medium-product/Chameleon.png" alt="Product" />
                                             </a>
                                             <span class="badges">
                                             <span class="new">Baru</span>
@@ -576,7 +576,7 @@
                                         <!-- Thumb Start  -->
                                         <div class="thumb">
                                             <a href="single-product.php" class="image">
-                                                <img class="fit-image" src="assets/images/products/medium-product/Ular Albino.png" alt="Product" />
+                                                <img class="fit-image" src="<?php echo base_url();?>assets/images/products/medium-product/Ular Albino.png" alt="Product" />
                                             </a>
                                             <span class="badges">
                                             <span class="new">New</span>
@@ -614,7 +614,7 @@
                                         <!-- Thumb Start  -->
                                         <div class="thumb">
                                             <a href="single-product.php" class="image">
-                                                <img class="fit-image" src="assets/images/products/medium-product/arwana1.png" alt="Product" />
+                                                <img class="fit-image" src="<?php echo base_url();?>assets/images/products/medium-product/arwana1.png" alt="Product" />
                                             </a>
                                             <div class="action-wrapper">
                                                 <a href="#/" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view"><i class="ti-plus"></i></a>
@@ -649,7 +649,7 @@
                                         <!-- Thumb Start  -->
                                         <div class="thumb">
                                             <a href="single-product.php" class="image">
-                                                <img class="fit-image" src="assets/images/products/medium-product/koi1.png" alt="Product" />
+                                                <img class="fit-image" src="<?php echo base_url();?>assets/images/products/medium-product/koi1.png" alt="Product" />
                                             </a>
                                             <span class="badges">
                                             <span class="sale">-18%</span>
@@ -688,7 +688,7 @@
                                         <!-- Thumb Start  -->
                                         <div class="thumb">
                                             <a href="single-product.php" class="image">
-                                                <img class="fit-image" src="assets/images/products/medium-product/kakatua.png" alt="Product" />
+                                                <img class="fit-image" src="<?php echo base_url();?>assets/images/products/medium-product/kakatua.png" alt="Product" />
                                             </a>
                                             <span class="badges">
                                             <span class="sale">-20%</span>
@@ -726,7 +726,7 @@
                                         <!-- Thumb Start  -->
                                         <div class="thumb">
                                             <a href="single-product.php" class="image">
-                                                <img class="fit-image" src="assets/images/products/medium-product/love bird.png" alt="Product" />
+                                                <img class="fit-image" src="<?php echo base_url();?>assets/images/products/medium-product/love bird.png" alt="Product" />
                                             </a>
                                             <div class="action-wrapper">
                                                 <a href="#/" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view"><i class="ti-plus"></i></a>
@@ -776,7 +776,7 @@
                 <!-- Banner Start -->
                 <div class="col-md-6 col-12 mb-6" data-aos="fade-up" data-aos-duration="1000">
                     <a href="shop.php" class="banner">
-                        <img class="fit-image" src="assets/images/banner/Promo1.png" alt="Banner Image" />
+                        <img class="fit-image" src="<?php echo base_url();?>assets/images/banner/Promo1.png" alt="Banner Image" />
                     </a>
                 </div>
                 <!-- Banner End -->
@@ -784,7 +784,7 @@
                 <!-- Banner Start -->
                 <div class="col-md-6 col-12 mb-6" data-aos="fade-up" data-aos-duration="1400">
                     <a href="shop.php" class="banner">
-                        <img class="fit-image" src="assets/images/banner/promo2.png" alt="Banner Image" />
+                        <img class="fit-image" src="<?php echo base_url();?>assets/images/banner/promo2.png" alt="Banner Image" />
                     </a>
                 </div>
                 <!-- Banner End -->
@@ -820,7 +820,7 @@
                                         <!-- Deal Thumb Start -->
                                         <div class="deal-thumb col-md-6 mb-6" data-aos="fade-up" data-aos-duration="1200">
                                             <a href="single-product.php">
-                                                <img class="fit-image" src="assets/images/products/large-product/kucing anggora1.png" alt="Product Image">
+                                                <img class="fit-image" src="<?php echo base_url();?>assets/images/products/large-product/kucing anggora1.png" alt="Product Image">
                                             </a>
                                         </div>
                                         <!-- Deal Thumb End -->
@@ -855,7 +855,7 @@
                                         <!-- Deal Thumb Start -->
                                         <div class="deal-thumb col-md-6 mb-6">
                                             <a href="single-product.php">
-                                                <img class="fit-image" src="assets/images/products/large-product/shiba inu.png" alt="Product Image">
+                                                <img class="fit-image" src="<?php echo base_url();?>assets/images/products/large-product/shiba inu.png" alt="Product Image">
                                             </a>
                                         </div>
                                         <!-- Deal Thumb End -->
@@ -976,7 +976,7 @@
                                 <div class="swiper-slide">
                                     <!-- Testimonial Thumb Start -->
                                     <div class="testimonial-thumb text-center">
-                                        <img src="assets/images/testimonial/kayes.jpg" alt="Testimonial Image">
+                                        <img src="<?php echo base_url();?>assets/images/testimonial/kayes.jpg" alt="Testimonial Image">
                                         <h3 class="thumb-title">Kayess</h3>
                                         <h6 class="thumb-subtitle">Pelanggan</h6>
                                     </div>
@@ -988,7 +988,7 @@
                                 <div class="swiper-slide">
                                     <!-- Testimonial Thumb Start -->
                                     <div class="testimonial-thumb text-center">
-                                        <img src="assets/images/testimonial/kucing.png" alt="Testimonial Image">
+                                        <img src="<?php echo base_url();?>assets/images/testimonial/kucing.png" alt="Testimonial Image">
                                         <h3 class="thumb-title">Fira</h3>
                                         <h6 class="thumb-subtitle">Pelanggan</h6>
                                     </div>
@@ -1000,7 +1000,7 @@
                                 <div class="swiper-slide">
                                     <!-- Testimonial Thumb Start -->
                                     <div class="testimonial-thumb text-center">
-                                        <img src="assets/images/testimonial/agustina.jpg" alt="Testimonial Image">
+                                        <img src="<?php echo base_url();?>assets/images/testimonial/agustina.jpg" alt="Testimonial Image">
                                         <h3 class="thumb-title">Agustina</h3>
                                         <h6 class="thumb-subtitle">Pelanggan</h6>
                                     </div>
@@ -1044,7 +1044,7 @@
                         <!-- Blog Thumb Start -->
                         <div class="blog-thumb thumb-effect">
                             <a class="image" href="blog-details.php">
-                                <img class="fit-image" src="assets/images/blog/kucing.jpg" alt="Blog Image">
+                                <img class="fit-image" src="<?php echo base_url();?>assets/images/blog/kucing.jpg" alt="Blog Image">
                             </a>
                         </div>
                         <!-- Blog Thumb End -->
@@ -1074,7 +1074,7 @@
                         <!-- Blog Thumb Start -->
                         <div class="blog-thumb thumb-effect">
                             <a class="image" href="blog-details.php">
-                                <img class="fit-image" src="assets/images/blog/ikancupang.jpeg" alt="Blog Image">
+                                <img class="fit-image" src="<?php echo base_url();?>assets/images/blog/ikancupang.jpeg" alt="Blog Image">
                             </a>
                         </div>
                         <!-- Blog Thumb End -->
@@ -1104,7 +1104,7 @@
                         <!-- Blog Thumb Start -->
                         <div class="blog-thumb thumb-effect">
                             <a class="image" href="blog-details.php">
-                                <img class="fit-image" src="assets/images/blog/anjing.jpg" alt="Blog Image">
+                                <img class="fit-image" src="<?php echo base_url();?>assets/images/blog/anjing.jpg" alt="Blog Image">
                             </a>
                         </div>
                         <!-- Blog Thumb End -->
@@ -1148,19 +1148,19 @@
                             <div class="swiper-container">
                                 <div class="swiper-wrapper">
                                     <a class="swiper-slide" href="#">
-                                        <img class="w-100" src="assets/images/products/large-product/1.png" alt="Product">
+                                        <img class="w-100" src="<?php echo base_url();?>assets/images/products/large-product/1.png" alt="Product">
                                     </a>
                                     <a class="swiper-slide" href="#">
-                                        <img class="w-100" src="assets/images/products/large-product/2.png" alt="Product">
+                                        <img class="w-100" src="<?php echo base_url();?>assets/images/products/large-product/2.png" alt="Product">
                                     </a>
                                     <a class="swiper-slide" href="#">
-                                        <img class="w-100" src="assets/images/products/large-product/3.png" alt="Product">
+                                        <img class="w-100" src="<?php echo base_url();?>assets/images/products/large-product/3.png" alt="Product">
                                     </a>
                                     <a class="swiper-slide" href="#">
-                                        <img class="w-100" src="assets/images/products/large-product/4.png" alt="Product">
+                                        <img class="w-100" src="<?php echo base_url();?>assets/images/products/large-product/4.png" alt="Product">
                                     </a>
                                     <a class="swiper-slide" href="#">
-                                        <img class="w-100" src="assets/images/products/large-product/5.png" alt="Product">
+                                        <img class="w-100" src="<?php echo base_url();?>assets/images/products/large-product/5.png" alt="Product">
                                     </a>
                                 </div>
 
@@ -1262,7 +1262,7 @@
                             <div class="payment-option mt-4 d-flex justify-content-start">
                                 <span><strong>Payment: </strong></span>
                                 <a href="#">
-                                    <img class="fit-image ms-1" src="assets/images/payment/payment_large.png" alt="Payment Option Image">
+                                    <img class="fit-image ms-1" src="<?php echo base_url();?>assets/images/payment/payment_large.png" alt="Payment Option Image">
                                 </a>
                             </div>
                             <!-- Payment Option End -->

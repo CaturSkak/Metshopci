@@ -130,7 +130,7 @@
                                     <div class="col-lg-6">
                                         <a href="javascript:void(0);" data-toggle="modal" data-target="#view_info">
                                
-                                               <img width="50px" style="border-radius: 100px; -moz-border-radius: 100px;" src="assets/images/logo.png" alt="avatar" />
+                                               <img width="50px" style="border-radius: 100px; -moz-border-radius: 100px;" src="<?php echo base_url();?>assets/images/logo.png" alt="avatar" />
                                                <h6 class="m-b-0 chat-about">Admin </h6> <br>                                   
                                                <small  > &nbsp; Terlihat : 2 Menit  lalu</small>
                                             </a>
@@ -156,7 +156,7 @@
                                     </li>                               
                                     <li class="clearfix ">
                                         <div class="message-data">
-                                            <img width="50px" style="border-radius: 100px; -moz-border-radius: 100px;" src="assets/images/logo.png" alt="avatar">
+                                            <img width="50px" style="border-radius: 100px; -moz-border-radius: 100px;" src="<?php echo base_url();?>assets/images/logo.png" alt="avatar">
                                             <span class="message-data-time ">10:15 WIB, Hari Ini</span>
                                         </div>
                                         <div class="message my-message">Iya, Batul Kucing ini sangat sehat !</div>
@@ -169,7 +169,7 @@
                                     </li> 
                                     <li class="clearfix">
                                         <div class="message-data">
-                                            <img width="50px" style="border-radius: 100px; -moz-border-radius: 100px;" src="assets/images/logo.png" alt="avatar">
+                                            <img width="50px" style="border-radius: 100px; -moz-border-radius: 100px;" src="<?php echo base_url();?>assets/images/logo.png" alt="avatar">
                                             <span class="message-data-time" >10:10 WIB, Hari Ini</span>
                                         </div>
                                         <div class="message my-message"> Oh, ya kak ready silahkan kakak ke menu beli untuk memesan nya.</div>
@@ -203,7 +203,7 @@
                                         <div class="product">
                                             <div class="thumb">
                                                 <a href="liathewanjodoh.php" class="image">
-                                                    <img class="fit-image first-image" src="assets/images/products/medium-product/kucing.png" alt="Product Image">
+                                                    <img class="fit-image first-image" src="<?php echo base_url();?>assets/images/products/medium-product/kucing.png" alt="Product Image">
                                                 </a>
                                             </div>
                                         </div>
@@ -229,7 +229,7 @@
                                         <div class="product">
                                             <div class="thumb">
                                                 <a href="liathewanjodoh.php" class="image">
-                                                    <img class="fit-image first-image" src="assets/images/products/medium-product/shiba inu.png" alt="Product Image">
+                                                    <img class="fit-image first-image" src="<?php echo base_url();?>assets/images/products/medium-product/shiba inu.png" alt="Product Image">
                                                 </a>
                                             </div>
                                         </div>
@@ -256,7 +256,7 @@
                                         <div class="product">
                                             <div class="thumb">
                                                 <a href="liathewanjodoh.php" class="image">
-                                                    <img class="fit-image first-image" src="assets/images/products/medium-product/koren.png" alt="Product Image">
+                                                    <img class="fit-image first-image" src="<?php echo base_url();?>assets/images/products/medium-product/koren.png" alt="Product Image">
                                                 </a>
                                             </div>
                                         </div>
@@ -314,22 +314,22 @@
                                             <div class="card-body shadow-sm rounded d-flex mb-3" id="card-bank">
                                 <label class="fit-image ms-1">
                                     
-                                <a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a><img src="assets/images/payment/oppo.png" class="bank-icon rounded-circle"><strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ovo</strong> </label>
+                                <a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a><img src="<?php echo base_url();?>assets/images/payment/oppo.png" class="bank-icon rounded-circle"><strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ovo</strong> </label>
                                 
                             </div>
 
                              <div class="card-body shadow-sm rounded d-flex mb-3" id="card-bank">
-                                <label class="fit-image ms-1"><a> &nbsp;&nbsp;</a><img src="assets/images/payment/gopay.png" class="bank-icon rounded-circle"><strong> &nbsp;&nbsp;&nbsp;&nbsp;Gopay</strong> </label>
+                                <label class="fit-image ms-1"><a> &nbsp;&nbsp;</a><img src="<?php echo base_url();?>assets/images/payment/gopay.png" class="bank-icon rounded-circle"><strong> &nbsp;&nbsp;&nbsp;&nbsp;Gopay</strong> </label>
                                 
                             </div>
 
                              <div class="card-body shadow-sm rounded d-flex mb-3" id="card-bank">
-                                <label class="fit-image ms-1"><a> &nbsp;&nbsp;</a><img src="assets/images/payment/mdr.png" class="bank-icon rounded-circle"><strong> &nbsp;&nbsp;Mandiri</strong> </label>
+                                <label class="fit-image ms-1"><a> &nbsp;&nbsp;</a><img src="<?php echo base_url();?>assets/images/payment/mdr.png" class="bank-icon rounded-circle"><strong> &nbsp;&nbsp;Mandiri</strong> </label>
                                 
                             </div>
 
                               <div class="card-body shadow-sm rounded d-flex mb-3" id="card-bank">
-                                <label class="fit-image ms-1"><a> &nbsp;&nbsp;&nbsp;&nbsp;</a><img src="assets/images/payment/bnii.png" class="bank-icon rounded-circle"><strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BNI</strong> </label>
+                                <label class="fit-image ms-1"><a> &nbsp;&nbsp;&nbsp;&nbsp;</a><img src="<?php echo base_url();?>assets/images/payment/bnii.png" class="bank-icon rounded-circle"><strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BNI</strong> </label>
                                 
                             </div>
                                         </div>
@@ -440,19 +440,19 @@
                             <div class="swiper-container">
                                 <div class="swiper-wrapper">
                                     <a class="swiper-slide" href="#">
-                                        <img class="w-100" src="assets/images/products/large-product/1.png" alt="Product">
+                                        <img class="w-100" src="<?php echo base_url();?>assets/images/products/large-product/1.png" alt="Product">
                                     </a>
                                     <a class="swiper-slide" href="#">
-                                        <img class="w-100" src="assets/images/products/large-product/2.png" alt="Product">
+                                        <img class="w-100" src="<?php echo base_url();?>assets/images/products/large-product/2.png" alt="Product">
                                     </a>
                                     <a class="swiper-slide" href="#">
-                                        <img class="w-100" src="assets/images/products/large-product/3.png" alt="Product">
+                                        <img class="w-100" src="<?php echo base_url();?>assets/images/products/large-product/3.png" alt="Product">
                                     </a>
                                     <a class="swiper-slide" href="#">
-                                        <img class="w-100" src="assets/images/products/large-product/4.png" alt="Product">
+                                        <img class="w-100" src="<?php echo base_url();?>assets/images/products/large-product/4.png" alt="Product">
                                     </a>
                                     <a class="swiper-slide" href="#">
-                                        <img class="w-100" src="assets/images/products/large-product/5.png" alt="Product">
+                                        <img class="w-100" src="<?php echo base_url();?>assets/images/products/large-product/5.png" alt="Product">
                                     </a>
                                 </div>
 
@@ -554,7 +554,7 @@
                             <div class="payment-option mt-4 d-flex justify-content-start">
                                 <span><strong>Payment: </strong></span>
                                 <a href="#">
-                                    <img class="fit-image ms-1" src="assets/images/payment/payment_large.png" alt="Payment Option Image">
+                                    <img class="fit-image ms-1" src="<?php echo base_url();?>assets/images/payment/payment_large.png" alt="Payment Option Image">
                                 </a>
                             </div>
                             <!-- Payment Option End -->

@@ -27,7 +27,7 @@
                 <div class="col-md-6 pe-lg-9 pe-3 mb-6" data-aos="fade-up" data-aos-duration="1000">
                     <!-- About Thumb Start -->
                     <div class="about-thumb">
-                        <img class="fit-image" src="assets/images/about/Logooo.png" alt="About Image">
+                        <img class="fit-image" src="<?php echo base_url();?>assets/images/about/Logooo.png" alt="About Image">
                     </div>
                     <!-- About Thumb End -->
                 </div>
@@ -100,7 +100,7 @@
                                 <div class="swiper-slide">
                                     <!-- Testimonial Thumb Start -->
                                     <div class="testimonial-thumb text-center">
-                                        <img src="assets/images/testimonial/doni.png" alt="Testimonial Image">
+                                        <img src="<?php echo base_url();?>assets/images/testimonial/doni.png" alt="Testimonial Image">
                                         <h3 class="thumb-title">Doni</h3>
                                         <h6 class="thumb-subtitle">Customer</h6>
                                     </div>
@@ -112,7 +112,7 @@
                                 <div class="swiper-slide">
                                     <!-- Testimonial Thumb Start -->
                                     <div class="testimonial-thumb text-center">
-                                        <img src="assets/images/testimonial/kucing.png" alt="Testimonial Image">
+                                        <img src="<?php echo base_url();?>assets/images/testimonial/kucing.png" alt="Testimonial Image">
                                         <h3 class="thumb-title">Fira</h3>
                                         <h6 class="thumb-subtitle">Customer</h6>
                                     </div>
@@ -146,7 +146,7 @@
                     <div class="single-team-wrapper">
                         <div class="thumb">
                             <a href="contact.php">
-                                <img class="fit-image" src="assets/images/team/Catur.png" alt="Team Image">
+                                <img class="fit-image" src="<?php echo base_url();?>assets/images/team/Catur.png" alt="Team Image">
                             </a>
                             <!-- Social Shear Start -->
                             <div class="social-share">
@@ -170,7 +170,7 @@
                     <div class="single-team-wrapper">
                         <div class="thumb">
                             <a href="contact.php">
-                                <img class="fit-image" src="assets/images/team/Dedi.png" alt="Team Image">
+                                <img class="fit-image" src="<?php echo base_url();?>assets/images/team/Dedi.png" alt="Team Image">
                             </a>
                             <!-- Social Shear Start -->
                             <div class="social-share">
@@ -194,7 +194,7 @@
                     <div class="single-team-wrapper">
                         <div class="thumb">
                             <a href="contact.php">
-                                <img class="fit-image" src="assets/images/team/Alif.png" alt="Team Image">
+                                <img class="fit-image" src="<?php echo base_url();?>assets/images/team/Alif.png" alt="Team Image">
                             </a>
                             <!-- Social Shear Start -->
                             <div class="social-share">
@@ -218,7 +218,7 @@
                     <div class="single-team-wrapper">
                         <div class="thumb">
                             <a href="contact.php">
-                                <img class="fit-image" src="assets/images/team/Farhan.png" alt="Team Image">
+                                <img class="fit-image" src="<?php echo base_url();?>assets/images/team/Farhan.png" alt="Team Image">
                             </a>
                             <!-- Social Shear Start -->
                             <div class="social-share">
@@ -259,19 +259,19 @@
                             <div class="swiper-container">
                                 <div class="swiper-wrapper">
                                     <a class="swiper-slide" href="#">
-                                        <img class="w-100" src="assets/images/products/large-product/1.png" alt="Product">
+                                        <img class="w-100" src="<?php echo base_url();?>assets/images/products/large-product/1.png" alt="Product">
                                     </a>
                                     <a class="swiper-slide" href="#">
-                                        <img class="w-100" src="assets/images/products/large-product/2.png" alt="Product">
+                                        <img class="w-100" src="<?php echo base_url();?>assets/images/products/large-product/2.png" alt="Product">
                                     </a>
                                     <a class="swiper-slide" href="#">
-                                        <img class="w-100" src="assets/images/products/large-product/3.png" alt="Product">
+                                        <img class="w-100" src="<?php echo base_url();?>assets/images/products/large-product/3.png" alt="Product">
                                     </a>
                                     <a class="swiper-slide" href="#">
-                                        <img class="w-100" src="assets/images/products/large-product/4.png" alt="Product">
+                                        <img class="w-100" src="<?php echo base_url();?>assets/images/products/large-product/4.png" alt="Product">
                                     </a>
                                     <a class="swiper-slide" href="#">
-                                        <img class="w-100" src="assets/images/products/large-product/5.png" alt="Product">
+                                        <img class="w-100" src="<?php echo base_url();?>assets/images/products/large-product/5.png" alt="Product">
                                     </a>
                                 </div>
 
@@ -373,7 +373,7 @@
                             <div class="payment-option mt-4 d-flex justify-content-start">
                                 <span><strong>Payment: </strong></span>
                                 <a href="#">
-                                    <img class="fit-image ms-1" src="assets/images/payment/payment_large.png" alt="Payment Option Image">
+                                    <img class="fit-image ms-1" src="<?php echo base_url();?>assets/images/payment/payment_large.png" alt="Payment Option Image">
                                 </a>
                             </div>
                             <!-- Payment Option End -->

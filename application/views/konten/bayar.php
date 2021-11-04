@@ -38,7 +38,7 @@
                                                         <input type="text" id="display-name" placeholder="Rp.11.740.000" readonly class="btn btn-hover-dark" />
                                                     </div>
                                                     <div class="single-input-item mb-3">
-                                                        <label class="fit-image ms-1"><a> &nbsp;&nbsp;</a><img src="assets/images/payment/mdr.png" class="bank-icon rounded-circle"><strong > &nbsp;&nbsp;Bank Mandiri</strong> </label>
+                                                        <label class="fit-image ms-1"><a> &nbsp;&nbsp;</a><img src="<?php echo base_url();?>assets/images/payment/mdr.png" class="bank-icon rounded-circle"><strong > &nbsp;&nbsp;Bank Mandiri</strong> </label>
                                                         <input type="email" id="email" placeholder="896 1234 5678 9876"  readonly class="btn btn-primary" />
                                                     </div>
                                                     <div class="single-input-item mb-3">
@@ -84,19 +84,19 @@
                             <div class="swiper-container">
                                 <div class="swiper-wrapper">
                                     <a class="swiper-slide" href="#">
-                                        <img class="w-100" src="assets/images/products/large-product/1.png" alt="Product">
+                                        <img class="w-100" src="<?php echo base_url();?>assets/images/products/large-product/1.png" alt="Product">
                                     </a>
                                     <a class="swiper-slide" href="#">
-                                        <img class="w-100" src="assets/images/products/large-product/2.png" alt="Product">
+                                        <img class="w-100" src="<?php echo base_url();?>assets/images/products/large-product/2.png" alt="Product">
                                     </a>
                                     <a class="swiper-slide" href="#">
-                                        <img class="w-100" src="assets/images/products/large-product/3.png" alt="Product">
+                                        <img class="w-100" src="<?php echo base_url();?>assets/images/products/large-product/3.png" alt="Product">
                                     </a>
                                     <a class="swiper-slide" href="#">
-                                        <img class="w-100" src="assets/images/products/large-product/4.png" alt="Product">
+                                        <img class="w-100" src="<?php echo base_url();?>assets/images/products/large-product/4.png" alt="Product">
                                     </a>
                                     <a class="swiper-slide" href="#">
-                                        <img class="w-100" src="assets/images/products/large-product/5.png" alt="Product">
+                                        <img class="w-100" src="<?php echo base_url();?>assets/images/products/large-product/5.png" alt="Product">
                                     </a>
                                 </div>
 
@@ -198,7 +198,7 @@
                             <div class="payment-option mt-4 d-flex justify-content-start">
                                 <span><strong>Payment: </strong></span>
                                 <a href="#">
-                                    <img class="fit-image ms-1" src="assets/images/payment/payment_large.png" alt="Payment Option Image">
+                                    <img class="fit-image ms-1" src="<?php echo base_url();?>assets/images/payment/payment_large.png" alt="Payment Option Image">
                                 </a>
                             </div>
                             <!-- Payment Option End -->
