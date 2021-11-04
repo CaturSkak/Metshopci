@@ -99,7 +99,7 @@
                         <!-- Header Logo Start -->
                         <div class="col-lg-3 col-md-4 col-6">
                             <div class="header-logo">
-                                <a href="<?php echo base_url(); ?>Beranda"><img src="assets/images/logo/logoo.png" alt="Site Logo" /></a>
+                                <a href="<?php echo base_url(); ?>Beranda"><img src="<?php echo base_url();?>assets/images/logo/logoo.png" alt="Site Logo" /></a>
                             </div>
                         </div>
                         <!-- Header Logo End -->
@@ -138,7 +138,7 @@
                                             <li class="mega-menu-col">
                                                 <div class="megamenu-image">
                                                     <a href="shop.php">
-                                                        <img class="fit-image" src="assets/images/about/Logooo.png" alt="Megamenu Image">
+                                                        <img class="fit-image" src="<?php echo base_url();?>assets/images/about/Logooo.png" alt="Megamenu Image">
                                                     </a>
                                                 </div>
                                             </li>
@@ -160,10 +160,10 @@
                                             <li class="mega-menu-col">
                                                 <h4 class="mega-menu-title">Kategori</h4>
                                                 <ul class="mb-n2">
-                                                    <li><a href="jodoh-peliharaan.php">Hewan Peliharaan</a></li>
-                                                    <li><a href="jodoh-reptil.php">Reptil</a></li>
-                                                    <li><a href="jodoh-ikan.php">Ikan</a></li>
-                                                    <li><a href="jodoh-burung.php">Burung</a></li>
+                                                    <li><a href="jodohpeliharaan">Hewan Peliharaan</a></li>
+                                                    <li><a href="jodohreptil">Reptil</a></li>
+                                                    <li><a href="jodohikan">Ikan</a></li>
+                                                    <li><a href="jodohburung">Burung</a></li>
                                                 </ul>
                                               
                                             <li class="mega-menu-col">
@@ -178,7 +178,7 @@
                                     </li>
                                     </li>
                                     <li><a href="<?php echo base_url(); ?>About">Tentang</a></li>
-                                    <li><a href="contact.php">Kontak</a></li>
+                                    <li><a href="contact">Kontak</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -231,7 +231,7 @@
                                                 <!-- Single Cart Product Start -->
                                                 <div class="single-cart-product">
                                                     <div class="cart-product-thumb">
-                                                       <a href="single-product.php"><img src="assets\images\products\large-product/shiba inu.png" alt="Cart Product"></a>
+                                                       <a href="single-product.php"><img src="<?php echo base_url();?>assets\images\products\large-product/shiba inu.png" alt="Cart Product"></a>
                                                     </div>
                                                     <div class="cart-product-content">
                                                        <h3 class="title"><a href="single-product.php">Anjing Shiba Inu</a></h3>
@@ -260,7 +260,7 @@
                                                 <!-- Single Cart Product Start -->
                                                 <div class="single-cart-product">
                                                     <div class="cart-product-thumb">
-                                                       <a href="single-product.php"><img src="assets\images\products\large-product/kucing anggora1.png" alt="Cart Product"></a>
+                                                       <a href="single-product.php"><img src="<?php echo base_url();?>assets\images\products\large-product/kucing anggora1.png" alt="Cart Product"></a>
                                                     </div>
                                                     <div class="cart-product-content">
                                                         <h3 class="title"><a href="single-product.php">Kucing Anggora Asli</a></h3>

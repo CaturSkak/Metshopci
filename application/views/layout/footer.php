@@ -81,7 +81,7 @@
                     <div class="col-md-6 text-center text-md-end order-1 order-md-2 mb-4">
                         <div class="payment">
                             <a href="#/">
-                                <img class="fit-image" src="assets/images/payment/payment.png" alt="Payment">
+                                <img class="fit-image" src="<?php echo base_url();?>assets/images/payment/payment.png" alt="Payment">
                             </a>
                         </div>
                     </div>
