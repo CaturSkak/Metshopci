@@ -145,9 +145,9 @@
                                         </ul>
                                     </li>
                                     <li class="has-children">
-                                        <a href="<?php echo base_url();?>#">Halaman</a>
+                                        <a href="#">Halaman</a>
                                         <ul class="sub-menu">
-                                             <li><a href="<?php echo base_url();?>blog-left-sidebar">Artikel</a></li>
+                                             <li><a href="<?php echo base_url();?>blogleftsidebar">Artikel</a></li>
                                             <li><a href="<?php echo base_url();?>faq">FAQ</a></li>
                                             <li><a href="<?php echo base_url();?>login">Masuk</a></li>
                                             <li><a href="<?php echo base_url();?>register">Daftar</a></li>
@@ -155,15 +155,15 @@
                                     </li>
                           <li class="has-children">
 
-                                        <a href="<?php echo base_url();?>#">Jodoh</a>
+                                        <a href="#">Jodoh</a>
                                       <ul class="mega-menu">
                                             <li class="mega-menu-col">
                                                 <h4 class="mega-menu-title">Kategori</h4>
                                                 <ul class="mb-n2">
-                                                    <li><a href="<?php echo base_url();?>jodoh-peliharaan">Hewan Peliharaan</a></li>
-                                                    <li><a href="<?php echo base_url();?>jodoh-reptil">Reptil</a></li>
-                                                    <li><a href="<?php echo base_url();?>jodoh-ikan">Ikan</a></li>
-                                                    <li><a href="<?php echo base_url();?>jodoh-burung">Burung</a></li>
+                                                    <li><a href="<?php echo base_url();?>jodohpeliharaan">Hewan Peliharaan</a></li>
+                                                    <li><a href="<?php echo base_url();?>jodohreptil">Reptil</a></li>
+                                                    <li><a href="<?php echo base_url();?>jodohikan">Ikan</a></li>
+                                                    <li><a href="<?php echo base_url();?>jodohburung">Burung</a></li>
                                                 </ul>
                                               
                                             <li class="mega-menu-col">
@@ -247,7 +247,7 @@
 
                                                 <!-- Product Remove Start -->
                                                 <div class="cart-product-remove">
-                                                    <a href="<?php echo base_url();?>#/"><i class="icon-close"></i></a>
+                                                    <a href="#/"><i class="icon-close"></i></a>
                                                 </div>
                                                 <!-- Product Remove End -->
 
@@ -276,7 +276,7 @@
 
                                                 <!-- Product Remove Start -->
                                                 <div class="cart-product-remove">
-                                                    <a href="<?php echo base_url();?>#/"><i class="icon-close"></i></a>
+                                                    <a href="#/"><i class="icon-close"></i></a>
                                                 </div>
                                                 <!-- Product Remove End -->
 
@@ -300,7 +300,7 @@
                             <div class="payment-accordion">
                                  <div class="single-payment">
                                     <h5 class="panel-title mb-3">
-                                        <a class=" btn btn-outline-light btn-hover-primary w-100 collapse-off" data-bs-toggle="collapse" href="<?php echo base_url();?>#collapseExample" aria-expanded="false" aria-controls="collapseExample-2">
+                                        <a class=" btn btn-outline-light btn-hover-primary w-100 collapse-off" data-bs-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample-2">
                                             Liat Keranjang
                                         </a>
                                     </h5>
