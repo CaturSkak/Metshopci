@@ -212,7 +212,7 @@
 
                                 <!-- Header Action Button Start -->
                                 <div class="header-action-btn header-action-btn-cart d-none d-sm-flex">
-                                    <a class="cart-visible" href="<?php echo base_url();?>javascript:void(0)">
+                                    <a class="cart-visible" href="javascript:void(0)">
                                         <i class="icon-handbag icons"></i>
                                         <span class="header-action-num">2</span>
                                     </a>
@@ -351,7 +351,7 @@
                                 <!-- Header Action Button End -->
 
                                 <!-- Mobile Menu Hambarger Action Button Start -->
-                                <a href="<?php echo base_url();?>javascript:void(0)" class="header-action-btn header-action-btn-menu d-lg-none d-md-flex">
+                                <a href="javascript:void(0)" class="header-action-btn header-action-btn-menu d-lg-none d-md-flex">
                                     <i class="icon-menu"></i>
                                 </a>
                                 <!-- Mobile Menu Hambarger Action Button End -->
