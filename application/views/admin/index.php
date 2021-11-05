@@ -109,14 +109,14 @@
                         <div class="header">
                             <h2>Pesanan Yang Diterima</h2>
                             <ul class="header-dropdown dropdown dropdown-animated scale-left">
-                                <li> <a data-toggle="cardloading" data-loading-effect="pulse"><i class="icon-refresh"></i></a></li>
-                                <li><a  class="full-screen"><i class="icon-size-fullscreen"></i></a></li>
+                                <li> <a href="javascript:void(0);" data-toggle="cardloading" data-loading-effect="pulse"><i class="icon-refresh"></i></a></li>
+                                <li><a href="javascript:void(0);" class="full-screen"><i class="icon-size-fullscreen"></i></a></li>
                                 <li class="dropdown">
                                     <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="<?php echo base_url(); ?>javascript:void(0);">Tindakan</a></li>
-                                        <li><a href="<?php echo base_url(); ?>javascript:void(0);">Tindakan Lain</a></li>
-                                        <li><a href="<?php echo base_url(); ?>javascript:void(0);">Lain-nya</a></li>
+                                        <li><a href="javascript:void(0);">Tindakan</a></li>
+                                        <li><a href="javascript:void(0);">Tindakan Lain</a></li>
+                                        <li><a href="javascript:void(0);">Lain-nya</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -254,9 +254,9 @@
                                 <li class="dropdown">
                                     <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="<?php echo base_url(); ?>javascript:void(0);">Tindakan</a></li>
-                                        <li><a href="<?php echo base_url(); ?>javascript:void(0);">Tindakan Lain</a></li>
-                                        <li><a href="<?php echo base_url(); ?>javascript:void(0);">Lain-nya</a></li>
+                                        <li><a href="javascript:void(0);">Tindakan</a></li>
+                                        <li><a href="javascript:void(0);">Tindakan Lain</a></li>
+                                        <li><a href="javascript:void(0);">Lain-nya</a></li>
                                     </ul>
                                 </li>
                             </ul>

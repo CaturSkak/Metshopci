@@ -1,4 +1,3 @@
-<?php include 'header.php'?>
 <!doctype html>
 <html lang="en">
 
@@ -147,14 +146,17 @@
                                     <textarea class="form-control" placeholder="Deskripsi Hewan" aria-label="With textarea"></textarea>
                                 </div>
                                 <p>
-                                    <div class="card">
+                                
+                                <div class="card">
                                     <div class="header">
-                                        <h2>Masukan Gambar <small>Sesuai  hewan yang akan dijodohkan</small></h2>
+                                        <h2>Masukan Gambar <small>Sesuai Hewan Perjodohan</small></h2>
                                     </div>
                                     <div class="body">
-                                        <input type="file" id="dropify-event" >
+                                        <input type="file" class="dropify" >
                                     </div>
-                                    </div>
+                                </div>
+                                
+                            </div>
                                 </p>
                                     <div class="mail-left">
                                     <div class="mail-compose m-b-20">
@@ -178,18 +180,6 @@
 </div>
                     
 
-<!-- Javascript -->
-<script src="assets/bundles/libscripts.bundle.js"></script>    
-<script src="assets/bundles/vendorscripts.bundle.js"></script>
-
-<script src="../assets/vendor/dropify/js/dropify.min.js"></script>
-
-<script src="assets/bundles/mainscripts.bundle.js"></script>
-<script src="assets/js/pages/forms/dropify.js"></script>
-    
-<script src="assets/bundles/mainscripts.bundle.js"></script>
-
 </body>
 </html>
-
 

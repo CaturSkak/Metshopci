@@ -23,7 +23,7 @@
                         <li class="breadcrumb-item">Pembelian</li>
                         <li class="breadcrumb-item active">Info Pembelian</li>
                     </ul>
-                    <a href="<?php echo base_url(); ?>javascript:void(0);" class="btn btn-sm btn-primary" title="">Buat Baru</a>
+                    <a href="javascript:void(0);" class="btn btn-sm btn-primary" title="">Buat Baru</a>
                 </div>
             </div>
         </div>
@@ -36,14 +36,14 @@
                         <div class="header">
                             <h2>Pembelian MetShop Pet's<small>Silahkan Klik Konfirmasi Terima Pesanan atau Tolak Pesanan</small></h2>
                             <ul class="header-dropdown dropdown dropdown-animated scale-left">
-                                <li> <a href="<?php echo base_url(); ?>javascript:void(0);" data-toggle="cardloading" data-loading-effect="pulse"><i class="icon-refresh"></i></a></li>
-                                <li><a href="<?php echo base_url(); ?>javascript:void(0);" class="full-screen"><i class="icon-size-fullscreen"></i></a></li>
+                                <li> <a href="javascript:void(0);" data-toggle="cardloading" data-loading-effect="pulse"><i class="icon-refresh"></i></a></li>
+                                <li><a href="javascript:void(0);" class="full-screen"><i class="icon-size-fullscreen"></i></a></li>
                                 <li class="dropdown">
-                                    <a href="<?php echo base_url(); ?>javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
+                                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="<?php echo base_url(); ?>javascript:void(0);">Tindakan</a></li>
-                                        <li><a href="<?php echo base_url(); ?>javascript:void(0);">Tindakan Lainnya</a></li>
-                                        <li><a href="<?php echo base_url(); ?>javascript:void(0);">Lain-nya</a></li>
+                                        <li><a href="javascript:void(0);">Tindakan</a></li>
+                                        <li><a href="javascript:void(0);">Tindakan Lainnya</a></li>
+                                        <li><a href="javascript:void(0);">Lain-nya</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -78,13 +78,13 @@
                                             <td><div id="navbar-menu">
                                                 <ul class="nav navbar-nav">
                                                 <li class="dropdown dropdown-animated scale-left">
-                                                <a href="<?php echo base_url(); ?>javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown">
+                                                <a href="javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown">
                                                 <i class="icon-wallet"></i>
                                                 <span class="notification-dot"></span>
                                                 </a>
                                                 <ul class="dropdown-menu right_chat email">
                                                 <li>
-                                                <a href="<?php echo base_url(); ?>javascript:void(0);">
+                                                <a href="javascript:void(0);">
                                                     <div class="thumb">
                                                         <a class="image">
                                                         <img class="fit-image" width="300px" src="<?php echo base_url(); ?>assets/images/bni.png" alt="Product" />
@@ -92,8 +92,8 @@
                                                 </a>
                                             </li>
                                             </td>
-                                            <td><a href="<?php echo base_url(); ?>javascript:void(0);" class="btn btn-sm btn-primary" title="">Terima</a>
-                                            <a href="<?php echo base_url(); ?>javascript:void(0);" class="btn btn-sm btn-danger" title="">Tolak</a></td>
+                                            <td><a href="javascript:void(0);" class="btn btn-sm btn-primary" title="">Terima</a>
+                                            <a href="javascript:void(0);" class="btn btn-sm btn-danger" title="">Tolak</a></td>
                                             </td>
                                         </tr>
                                         <tr>
@@ -108,13 +108,13 @@
                                             <td><div id="navbar-menu">
                                                 <ul class="nav navbar-nav">
                                                 <li class="dropdown dropdown-animated scale-left">
-                                                <a href="<?php echo base_url(); ?>javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown">
+                                                <a href="javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown">
                                                 <i class="icon-wallet"></i>
                                                 <span class="notification-dot"></span>
                                                 </a>
                                                 <ul class="dropdown-menu right_chat email">
                                                 <li>
-                                                <a href="<?php echo base_url(); ?>javascript:void(0);">
+                                                <a href="javascript:void(0);">
                                                     <div class="thumb">
                                                         <a class="image">
                                                         <img class="fit-image" width="300px" src="<?php echo base_url(); ?>assets/images/mandiri.jpg" alt="Product" />
@@ -122,8 +122,8 @@
                                                 </a>
                                             </li>
                                             </td>
-                                            <td><a href="<?php echo base_url(); ?>javascript:void(0);" class="btn btn-sm btn-primary" title="">Terima</a>
-                                            <a href="<?php echo base_url(); ?>javascript:void(0);" class="btn btn-sm btn-danger" title="">Tolak</a></td>
+                                            <td><a href="javascript:void(0);" class="btn btn-sm btn-primary" title="">Terima</a>
+                                            <a href="javascript:void(0);" class="btn btn-sm btn-danger" title="">Tolak</a></td>
                                             </td>
                                         </tr>
                                         <tr>
@@ -138,13 +138,13 @@
                                             <td><div id="navbar-menu">
                                                 <ul class="nav navbar-nav">
                                                 <li class="dropdown dropdown-animated scale-left">
-                                                <a href="<?php echo base_url(); ?>javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown">
+                                                <a href="javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown">
                                                 <i class="icon-wallet"></i>
                                                 <span class="notification-dot"></span>
                                                 </a>
                                                 <ul class="dropdown-menu right_chat email">
                                                 <li>
-                                                <a href="<?php echo base_url(); ?>javascript:void(0);">
+                                                <a href="javascript:void(0);">
                                                     <div class="thumb">
                                                         <a class="image">
                                                         <img class="fit-image" width="300px" src="<?php echo base_url(); ?>assets/images/gopay.jpeg" alt="Product" />
@@ -167,13 +167,13 @@
                                             <td><div id="navbar-menu">
                                                 <ul class="nav navbar-nav">
                                                 <li class="dropdown dropdown-animated scale-left">
-                                                <a href="<?php echo base_url(); ?>javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown">
+                                                <a href="javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown">
                                                 <i class="icon-wallet"></i>
                                                 <span class="notification-dot"></span>
                                                 </a>
                                                 <ul class="dropdown-menu right_chat email">
                                                 <li>
-                                                <a href="<?php echo base_url(); ?>javascript:void(0);">
+                                                <a href="javascript:void(0);">
                                                     <div class="thumb">
                                                         <a class="image">
                                                         <img class="fit-image" width="300px" src="<?php echo base_url(); ?>assets/images/ovo.png" alt="Product" />
@@ -196,13 +196,13 @@
                                             <td><div id="navbar-menu">
                                                 <ul class="nav navbar-nav">
                                                 <li class="dropdown dropdown-animated scale-left">
-                                                <a href="<?php echo base_url(); ?>javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown">
+                                                <a href="javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown">
                                                 <i class="icon-wallet"></i>
                                                 <span class="notification-dot"></span>
                                                 </a>
                                                 <ul class="dropdown-menu right_chat email">
                                                 <li>
-                                                <a href="<?php echo base_url(); ?>javascript:void(0);">
+                                                <a href="javascript:void(0);">
                                                     <div class="thumb">
                                                         <a class="image">
                                                         <img class="fit-image" width="300px" src="<?php echo base_url(); ?>assets/images/bni.png" alt="Product" />
