@@ -20,7 +20,7 @@
                         <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>index"><i class="icon-home"></i></a></li>
                         <li class="breadcrumb-item active">Pesan</li>
                     </ul>
-                    <a href="<?php echo base_url(); ?>javascript:void(0);" class="btn btn-sm btn-primary" title="">Buat Baru</a>
+                 
                 </div>
             </div>
         </div>
@@ -32,7 +32,7 @@
                             <div class="chat-header clearfix">
                                 <div class="row clearfix">
                                     <div class="col-lg-6">
-                                        <a href="<?php echo base_url(); ?>javascript:void(0);" data-toggle="modal" data-target="#view_info">
+                                        <a href="javascript:void(0);" data-toggle="modal" data-target="#view_info">
                                             <img src="<?php echo base_url(); ?>assets/images/logo.png" alt="avatar" />
                                         </a>
                                         <div class="chat-about">
@@ -41,10 +41,10 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-6 hidden-sm text-right">
-                                        <a href="<?php echo base_url(); ?>javascript:void(0);" class="btn btn-warning"><i class="icon-camera text-light"></i></a>
-                                        <a href="<?php echo base_url(); ?>javascript:void(0);" class="btn btn-primary"><i class="icon-camcorder"></i></a>
-                                        <a href="<?php echo base_url(); ?>javascript:void(0);" class="btn btn-secondary"><i class="icon-settings"></i></a>
-                                        <a href="<?php echo base_url(); ?>javascript:void(0);" class="btn btn-secondary"><i class="icon-question"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-warning"><i class="icon-camera text-light"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-primary"><i class="icon-camcorder"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-secondary"><i class="icon-settings"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-secondary"><i class="icon-question"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -63,7 +63,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo base_url(); ?>javascript:void(0);">
+                                    <a href="javascript:void(0);">
                                         <div class="media">
                                             <img class="media-object " src="<?php echo base_url(); ?>assets/images/wiskas.jpg" alt="">
                                             <div class="media-body">
@@ -74,7 +74,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo base_url(); ?>javascript:void(0);">
+                                    <a href="javascript:void(0);">
                                         <div class="media">
                                             <img class="media-object " src="<?php echo base_url(); ?>assets/images/19.jpg" alt="">
                                             <div class="media-body">
@@ -85,7 +85,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo base_url(); ?>javascript:void(0);">
+                                    <a href="javascript:void(0);">
                                         <div class="media mb-0">
                                             <img class="media-object " src="<?php echo base_url(); ?>assets/images/bolt.png" alt="">
                                             <div class="media-body">
@@ -107,7 +107,7 @@
                             </div>
                             <ul class="right_chat list-unstyled mb-0">
                                 <li class="online">
-                                    <a href="<?php echo base_url(); ?>javascript:void(0);">
+                                    <a href="javascript:void(0);">
                                         <div class="media">
                                             <img class="media-object " src="<?php echo base_url(); ?>assets/images/16.jpg" alt="">
                                             <div class="media-body">
@@ -119,7 +119,7 @@
                                     </a>                            
                                 </li>
                                 <li class="online">
-                                    <a href="<?php echo base_url(); ?>javascript:void(0);">
+                                    <a href="javascript:void(0);">
                                         <div class="media">
                                             <img class="media-object " src="<?php echo base_url(); ?>assets/images/14.jpg" alt="">
                                             <div class="media-body">
@@ -131,7 +131,7 @@
                                     </a>                            
                                 </li>
                                 <li class="offline">
-                                    <a href="<?php echo base_url(); ?>javascript:void(0);">
+                                    <a href="javascript:void(0);">
                                         <div class="media">
                                             <img class="media-object " src="<?php echo base_url(); ?>assets/images/15.jpg" alt="">
                                             <div class="media-body">
@@ -143,7 +143,7 @@
                                     </a>                            
                                 </li>
                                 <li class="offline">
-                                    <a href="<?php echo base_url(); ?>javascript:void(0);">
+                                    <a href="javascript:void(0);">
                                         <div class="media">
                                             <img class="media-object " src="<?php echo base_url(); ?>assets/images/17.jpg" alt="">
                                             <div class="media-body">
@@ -155,7 +155,7 @@
                                     </a>                            
                                 </li>
                                 <li class="online">
-                                    <a href="<?php echo base_url(); ?>javascript:void(0);">
+                                    <a href="javascript:void(0);">
                                         <div class="media">
                                             <img class="media-object " src="<?php echo base_url(); ?>assets/images/13.jpg" alt="">
                                             <div class="media-body">
@@ -167,7 +167,7 @@
                                     </a>                            
                                 </li>
                                 <li class="online">
-                                    <a href="<?php echo base_url(); ?>javascript:void(0);">
+                                    <a href="javascript:void(0);">
                                         <div class="media">
                                             <img class="media-object " src="<?php echo base_url(); ?>assets/images/18.jpg" alt="">
                                             <div class="media-body">
@@ -179,7 +179,7 @@
                                     </a>                            
                                 </li>
                                 <li class="offline">
-                                    <a href="<?php echo base_url(); ?>javascript:void(0);">
+                                    <a href="javascript:void(0);">
                                         <div class="media">
                                             <img class="media-object " src="<?php echo base_url(); ?>assets/images/19.jpg" alt="">
                                             <div class="media-body">
