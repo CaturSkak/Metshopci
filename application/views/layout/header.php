@@ -113,31 +113,31 @@
                                       
                                     </li>
                                     <li class="has-children position-relative">
-                                        <a href="hewanumum.php">Beli</a>
+                                        <a href="<?php echo base_url();?>hewanumum">Beli</a>
                                         <ul class="mega-menu">
                                             <li class="mega-menu-col">
                                                 <h4 class="mega-menu-title">Kategori</h4>
                                                 <ul class="mb-n2">
-                                                    <li><a href="shop.php">Hewan Peliharaan</a></li>
-                                                    <li><a href="shop-left-sidebar.php">Reptil</a></li>
-                                                    <li><a href="shop-right-sidebar.php">Ikan</a></li>
-                                                    <li><a href="shop-list-fullwidth.php">Burung</a></li>
-                                                    <li><a href="shop4.php">Lain-Lain</a></li>
+                                                    <li><a href="<?php echo base_url();?>shop">Hewan Peliharaan</a></li>
+                                                    <li><a href="<?php echo base_url();?>shopleftsidebar">Reptil</a></li>
+                                                    <li><a href="<?php echo base_url();?>shoprightsidebar">Ikan</a></li>
+                                                    <li><a href="<?php echo base_url();?>shoplistfullwidth">Burung</a></li>
+                                                    <li><a href="<?php echo base_url();?>shop4">Lain-Lain</a></li>
                                                 </ul>
                                                 <li class="mega-menu-col">
                                                 <h4 class="mega-menu-title">Lainnya</h4>
                                                 <ul class="mb-n2">
                                                     <li><a href="<?php echo base_url(); ?>Profile">Akun saya</a></li>
-                                                    <li><a href="<?php echo base_url();?>login">Masuk | Daftar</a></li>
-                                                    <li><a href="wishlist.php">Daftar Keinginan</a></li>
-                                                    <li><a href="cart.php">Keranjang</a></li>
-                                                    <li><a href="checkout.php">Pesan</a></li>
-                                                    <li><a href="compare.php">Perbanding</a></li>
+                                                    <li><a href="login.php">Masuk | Daftar</a></li>
+                                                    <li><a href="<?php echo base_url(); ?>wishlist">Daftar Keinginan</a></li>
+                                                    <li><a href="<?php echo base_url(); ?>cart">Keranjang</a></li>
+                                                    <li><a href="<?php echo base_url(); ?>checkout">Pesan</a></li>
+                                                    <li><a href="<?php echo base_url(); ?>compare">Perbanding</a></li>
                                                 </ul>
                                             </li>
                                             <li class="mega-menu-col">
                                                 <div class="megamenu-image">
-                                                    <a href="shop.php">
+                                                    <a href="<?php echo base_url();?>shop">
                                                         <img class="fit-image" src="<?php echo base_url();?>assets/images/about/Logooo.png" alt="Megamenu Image">
                                                     </a>
                                                 </div>
@@ -147,10 +147,10 @@
                                     <li class="has-children">
                                         <a href="#">Halaman</a>
                                         <ul class="sub-menu">
-                                             <li><a href="<?php echo base_url(); ?>blogleftsidebar">Artikel</a></li>
-                                            <li><a href="<?php echo base_url(); ?>faq">FAQ</a></li>
-                                            <li><a href="<?php echo base_url();?>login">Masuk</a></li>
-                                            <li><a href="<?php echo base_url();?>register">Daftar</a></li>
+                                             <li><a href="blog-left-sidebar.php">Artikel</a></li>
+                                            <li><a href="faq.php">FAQ</a></li>
+                                            <li><a href="login.php">Masuk</a></li>
+                                            <li><a href="register.php">Daftar</a></li>
                                         </ul>
                                     </li>
                           <li class="has-children">
@@ -160,10 +160,10 @@
                                             <li class="mega-menu-col">
                                                 <h4 class="mega-menu-title">Kategori</h4>
                                                 <ul class="mb-n2">
-                                                    <li><a href="jodohpeliharaan">Hewan Peliharaan</a></li>
-                                                    <li><a href="jodohreptil">Reptil</a></li>
-                                                    <li><a href="jodohikan">Ikan</a></li>
-                                                    <li><a href="jodohburung">Burung</a></li>
+                                                    <li><a href="jodoh-peliharaan.php">Hewan Peliharaan</a></li>
+                                                    <li><a href="jodoh-reptil.php">Reptil</a></li>
+                                                    <li><a href="jodoh-ikan.php">Ikan</a></li>
+                                                    <li><a href="jodoh-burung.php">Burung</a></li>
                                                 </ul>
                                               
                                             <li class="mega-menu-col">
@@ -178,7 +178,7 @@
                                     </li>
                                     </li>
                                     <li><a href="<?php echo base_url(); ?>About">Tentang</a></li>
-                                    <li><a href="contact">Kontak</a></li>
+                                    <li><a href="contact.php">Kontak</a></li>
                                 </ul>
                             </div>
                         </div>
