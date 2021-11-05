@@ -22,16 +22,16 @@
 
 
 
-    <link rel="stylesheet" href=" <?php echo base_url(); ?>assets/css/plugins/swiper-bundle.min.css" />
-    <link rel="stylesheet" href=" <?php echo base_url(); ?>assets/css/plugins/animate.min.css" />
-    <link rel="stylesheet" href=" <?php echo base_url(); ?>assets/css/plugins/lightgallery.min.css" />
-    <link rel="stylesheet" href=" <?php echo base_url(); ?>assets/css/plugins/aos.min.css" />
-    <link rel="stylesheet" href=" <?php echo base_url(); ?>assets/css/plugins/nice-select.min.css" />
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/plugins/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/plugins/animate.min.css" />
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/plugins/lightgallery.min.css" />
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/plugins/aos.min.css" />
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/plugins/nice-select.min.css" />
 
-<link rel="icon" href="<?php echo base_url(); ?>logo.png" type="image/logo">
+<link rel="icon" href="<?php echo base_url();?><?php echo base_url(); ?>logo.png" type="image/logo">
 
 
-<link rel="stylesheet" href=" <?php echo base_url(); ?>assets/css/main.css" />
+<link rel="stylesheet" href="<?php echo base_url();?> <?php echo base_url(); ?>assets/css/main.css" />
 
 
 <script src=" <?php echo base_url(); ?>assets/bundles/libscripts.bundle.js"></script>    
@@ -46,7 +46,7 @@
     <!-- Main Style CSS -->
 
 
-    <link rel="stylesheet" href=" <?php echo base_url(); ?>assets/css/style.css" />
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/style.css" />
 
 
 
@@ -113,7 +113,7 @@
                                       
                                     </li>
                                     <li class="has-children position-relative">
-                                        <a href="<?php echo base_url();?>hewanumum">Beli</a>
+                                        <a href="<?php echo base_url();?><?php echo base_url();?>hewanumum">Beli</a>
                                         <ul class="mega-menu">
                                             <li class="mega-menu-col">
                                                 <h4 class="mega-menu-title">Kategori</h4>
@@ -128,7 +128,7 @@
                                                 <h4 class="mega-menu-title">Lainnya</h4>
                                                 <ul class="mb-n2">
                                                     <li><a href="<?php echo base_url(); ?>Profile">Akun saya</a></li>
-                                                    <li><a href="login.php">Masuk | Daftar</a></li>
+                                                    <li><a href="<?php echo base_url();?>login">Masuk | Daftar</a></li>
                                                     <li><a href="<?php echo base_url(); ?>wishlist">Daftar Keinginan</a></li>
                                                     <li><a href="<?php echo base_url(); ?>cart">Keranjang</a></li>
                                                     <li><a href="<?php echo base_url(); ?>checkout">Pesan</a></li>
@@ -145,30 +145,30 @@
                                         </ul>
                                     </li>
                                     <li class="has-children">
-                                        <a href="#">Halaman</a>
+                                        <a href="<?php echo base_url();?>#">Halaman</a>
                                         <ul class="sub-menu">
-                                             <li><a href="blog-left-sidebar.php">Artikel</a></li>
-                                            <li><a href="faq.php">FAQ</a></li>
-                                            <li><a href="login.php">Masuk</a></li>
-                                            <li><a href="register.php">Daftar</a></li>
+                                             <li><a href="<?php echo base_url();?>blog-left-sidebar">Artikel</a></li>
+                                            <li><a href="<?php echo base_url();?>faq">FAQ</a></li>
+                                            <li><a href="<?php echo base_url();?>login">Masuk</a></li>
+                                            <li><a href="<?php echo base_url();?>register">Daftar</a></li>
                                         </ul>
                                     </li>
                           <li class="has-children">
 
-                                        <a href="#">Jodoh</a>
+                                        <a href="<?php echo base_url();?>#">Jodoh</a>
                                       <ul class="mega-menu">
                                             <li class="mega-menu-col">
                                                 <h4 class="mega-menu-title">Kategori</h4>
                                                 <ul class="mb-n2">
-                                                    <li><a href="jodoh-peliharaan.php">Hewan Peliharaan</a></li>
-                                                    <li><a href="jodoh-reptil.php">Reptil</a></li>
-                                                    <li><a href="jodoh-ikan.php">Ikan</a></li>
-                                                    <li><a href="jodoh-burung.php">Burung</a></li>
+                                                    <li><a href="<?php echo base_url();?>jodoh-peliharaan">Hewan Peliharaan</a></li>
+                                                    <li><a href="<?php echo base_url();?>jodoh-reptil">Reptil</a></li>
+                                                    <li><a href="<?php echo base_url();?>jodoh-ikan">Ikan</a></li>
+                                                    <li><a href="<?php echo base_url();?>jodoh-burung">Burung</a></li>
                                                 </ul>
                                               
                                             <li class="mega-menu-col">
                                                 <div class="megamenu-image">
-                                                    <a href="shop.php">
+                                                    <a href="<?php echo base_url();?>shop">
                                                         <img class="fit-image" src="<?php echo base_url(); ?>assets/images/about/Logooo.png" alt="Megamenu Image">
                                                     </a>
                                                 </div>
@@ -178,7 +178,7 @@
                                     </li>
                                     </li>
                                     <li><a href="<?php echo base_url(); ?>About">Tentang</a></li>
-                                    <li><a href="contact.php">Kontak</a></li>
+                                    <li><a href="<?php echo base_url();?>contact">Kontak</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -212,7 +212,7 @@
 
                                 <!-- Header Action Button Start -->
                                 <div class="header-action-btn header-action-btn-cart d-none d-sm-flex">
-                                    <a class="cart-visible" href="javascript:void(0)">
+                                    <a class="cart-visible" href="<?php echo base_url();?>javascript:void(0)">
                                         <i class="icon-handbag icons"></i>
                                         <span class="header-action-num">2</span>
                                     </a>
@@ -231,10 +231,10 @@
                                                 <!-- Single Cart Product Start -->
                                                 <div class="single-cart-product">
                                                     <div class="cart-product-thumb">
-                                                       <a href="single-product.php"><img src="<?php echo base_url();?>assets\images\products\large-product/shiba inu.png" alt="Cart Product"></a>
+                                                       <a href="<?php echo base_url();?>single-product"><img src="<?php echo base_url();?>assets\images\products\large-product/shiba inu.png" alt="Cart Product"></a>
                                                     </div>
                                                     <div class="cart-product-content">
-                                                       <h3 class="title"><a href="single-product.php">Anjing Shiba Inu</a></h3>
+                                                       <h3 class="title"><a href="<?php echo base_url();?>single-product">Anjing Shiba Inu</a></h3>
                                                         <div class="product-quty-price">
                                                             <span class="cart-quantity">Jumlah: <strong class="text-primary"> 1 </strong></span>
                                                             <span class="price">
@@ -247,7 +247,7 @@
 
                                                 <!-- Product Remove Start -->
                                                 <div class="cart-product-remove">
-                                                    <a href="#/"><i class="icon-close"></i></a>
+                                                    <a href="<?php echo base_url();?>#/"><i class="icon-close"></i></a>
                                                 </div>
                                                 <!-- Product Remove End -->
 
@@ -260,10 +260,10 @@
                                                 <!-- Single Cart Product Start -->
                                                 <div class="single-cart-product">
                                                     <div class="cart-product-thumb">
-                                                       <a href="single-product.php"><img src="<?php echo base_url();?>assets\images\products\large-product/kucing anggora1.png" alt="Cart Product"></a>
+                                                       <a href="<?php echo base_url();?>single-product"><img src="<?php echo base_url();?>assets\images\products\large-product/kucing anggora1.png" alt="Cart Product"></a>
                                                     </div>
                                                     <div class="cart-product-content">
-                                                        <h3 class="title"><a href="single-product.php">Kucing Anggora Asli</a></h3>
+                                                        <h3 class="title"><a href="<?php echo base_url();?>single-product">Kucing Anggora Asli</a></h3>
                                                         <div class="product-quty-price">
                                                             <span class="cart-quantity">Jumlah: <strong class="text-primary"> 1 </strong></span>
                                                             <span class="price">
@@ -276,7 +276,7 @@
 
                                                 <!-- Product Remove Start -->
                                                 <div class="cart-product-remove">
-                                                    <a href="#/"><i class="icon-close"></i></a>
+                                                    <a href="<?php echo base_url();?>#/"><i class="icon-close"></i></a>
                                                 </div>
                                                 <!-- Product Remove End -->
 
@@ -300,7 +300,7 @@
                             <div class="payment-accordion">
                                  <div class="single-payment">
                                     <h5 class="panel-title mb-3">
-                                        <a class=" btn btn-outline-light btn-hover-primary w-100 collapse-off" data-bs-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample-2">
+                                        <a class=" btn btn-outline-light btn-hover-primary w-100 collapse-off" data-bs-toggle="collapse" href="<?php echo base_url();?>#collapseExample" aria-expanded="false" aria-controls="collapseExample-2">
                                             Liat Keranjang
                                         </a>
                                     </h5>
@@ -309,7 +309,7 @@
 
                                 <div class="card-body shadow-sm rounded d-flex mb-3" >
                               
-                                <a href="cart.php" class=" btn btn-outline-light btn-hover-primary w-100 "> Keranjang Pembelian</a> 
+                                <a href="<?php echo base_url();?>cart" class=" btn btn-outline-light btn-hover-primary w-100 "> Keranjang Pembelian</a> 
                                 
                                 
                             </div>
@@ -317,7 +317,7 @@
                                             <div class="card-body shadow-sm rounded d-flex mb-3" >
                               
                                     
-                              <a href= "keranjangjodoh.php" class=" btn btn-outline-light btn-hover-primary w-100 "> Keranjang Jodoh</a> 
+                              <a href= "keranjangjodoh" class=" btn btn-outline-light btn-hover-primary w-100 "> Keranjang Jodoh</a> 
                                 
                             </div>
                         </div>
@@ -325,7 +325,7 @@
                                 </div>
                                 <div class="single-payment">
                                     <h5 class="panel-title mb-3">
-                                        <a class="btn btn-outline-light btn-hover-primary w-100 collapse-off"  href="checkout.php" >
+                                        <a class="btn btn-outline-light btn-hover-primary w-100 collapse-off"  href="<?php echo base_url();?>checkout" >
                                             Pesan
                                         </a>
                                     </h5>
@@ -343,7 +343,7 @@
 
                                 </div>
                                 <div class="header-action-btn header-action-btn-cart d-flex d-sm-none">
-                                    <a href="cart.php">
+                                    <a href="<?php echo base_url();?>cart">
                                         <i class="icon-handbag icons"></i>
                                         <span class="header-action-num">3</span>
                                     </a>
@@ -351,7 +351,7 @@
                                 <!-- Header Action Button End -->
 
                                 <!-- Mobile Menu Hambarger Action Button Start -->
-                                <a href="javascript:void(0)" class="header-action-btn header-action-btn-menu d-lg-none d-md-flex">
+                                <a href="<?php echo base_url();?>javascript:void(0)" class="header-action-btn header-action-btn-menu d-lg-none d-md-flex">
                                     <i class="icon-menu"></i>
                                 </a>
                                 <!-- Mobile Menu Hambarger Action Button End -->
