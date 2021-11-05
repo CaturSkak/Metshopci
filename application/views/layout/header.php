@@ -113,7 +113,7 @@
                                       
                                     </li>
                                     <li class="has-children position-relative">
-                                        <a href="<?php echo base_url();?><?php echo base_url();?>hewanumum">Beli</a>
+                                        <a href="<?php echo base_url();?>hewanumum">Beli</a>
                                         <ul class="mega-menu">
                                             <li class="mega-menu-col">
                                                 <h4 class="mega-menu-title">Kategori</h4>
