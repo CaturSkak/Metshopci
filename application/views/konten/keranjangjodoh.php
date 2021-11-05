@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,10 +10,10 @@
             <div class="row">
                 <div class="col-12 text-center">
                     <div class="breadcrumb-wrapper">
-                        <h2 class="breadcrumb-title">Keranjang</h2>
+                        <h2 class="breadcrumb-title">Keranjang Perjodohan</h2>
                         <ul>
                             <li><a href="<?php echo base_url();?>index.php">Beranda</a></li>
-                            <li>Keranjang</li>
+                            <li>Keranjang Perjodohan</li>
                         </ul>
                     </div>
                 </div>
@@ -48,35 +49,35 @@
                             <!-- Table Body Start -->
                             <tbody>
                                 <tr>
-                                    <td class="pro-thumbnail"><a href="#"><img class="fit-image" src="<?php echo base_url();?>assets\images\products\large-product/shiba inu.png" alt="Product" /></a></td>
+                                    <td class="pro-thumbnail"><a href="=#"><img class="fit-image" src="<?php echo base_url();?>assets\images\products\large-product/shiba inu.png" alt="Product" /></a></td>
                                     <td class="pro-title"><a href="#">Anjing Shiba Inu</a></td>
-                                    <td class="pro-price"><span>Rp.6.000.000</span></td>
+                                    <td class="pro-price"><span>Rp.105.000/Hari</span></td>
                                     <td class="pro-quantity">
                                         <div class="quantity">
                                             <div class="cart-plus-minus">
-                                                <input class="cart-plus-minus-box" value="1" type="text">
+                                                <input class="cart-plus-minus-box" value="6" type="text">
                                                 <div class="dec qtybutton">-</div>
                                                 <div class="inc qtybutton">+</div>
                                             </div>
                                         </div>
                                     </td>
-                                    <td class="pro-subtotal"><span>Rp.6.000.000</span></td>
+                                    <td class="pro-subtotal"><span>Rp.630.000</span></td>
                                     <td class="pro-remove"><a href="#"><i class="ti-trash"></i></a></td>
                                 </tr>
                                 <tr>
-                                    <td class="pro-thumbnail"><a href="#"><img class="fit-image" src="<?php echo base_url();?>assets\images\products\large-product/kucing anggora1.png" alt="Product" /></a></td>
-                                    <td class="pro-title"><a href="#">Kucing Anggora Asli</a></td>
-                                    <td class="pro-price"><span>Rp.5.740.000</span></td>
+                                    <td class="pro-thumbnail"><a href="#"><img class="fit-image" src="<?php echo base_url();?>assets/images/products/medium-product/persia.png" alt="Product" /></a></td>
+                                    <td class="pro-title"><a href="#">Kucing Persia Asli</a></td>
+                                    <td class="pro-price"><span>Rp.45.000/Hari</span></td>
                                     <td class="pro-quantity">
                                         <div class="quantity">
                                             <div class="cart-plus-minus">
-                                                <input class="cart-plus-minus-box" value="1" type="text">
+                                                <input class="cart-plus-minus-box" value="6" type="text">
                                                 <div class="dec qtybutton">-</div>
                                                 <div class="inc qtybutton">+</div>
                                             </div>
                                         </div>
                                     </td>
-                                    <td class="pro-subtotal"><span>Rp.5.740.000</span></td>
+                                    <td class="pro-subtotal"><span>Rp.270.000</span></td>
                                     <td class="pro-remove"><a href="#"><i class="ti-trash"></i></a></td>
                                 </tr>
                             
@@ -92,8 +93,8 @@
 
                         <!-- Cart Button left Side Start -->
                         <div class="cart-btn-lef-side mb-4">
-                            <a href="#" class="btn btn btn-gray-deep btn-hover-primary">Belanja Lagi</a>
-                            <a href="#" class="btn btn btn-gray-deep btn-hover-primary">Perbarui daftar Keranjang</a>
+                            <a href="<?php echo base_url();?>jodoh-peliharaan.php" class="btn btn btn-gray-deep btn-hover-primary">Cari Lagi</a>
+                            <a href="<#" class="btn btn btn-gray-deep btn-hover-primary">Perbarui daftar Keranjang</a>
                         </div>
                         <!-- Cart Button left Side End -->
 
@@ -127,11 +128,11 @@
                                 <table class="table">
                                     <tr>
                                         <td>Sub Total</td>
-                                        <td>Rp.11.740.000</td>
+                                        <td>Rp.900.000</td>
                                     </tr>
                                     <tr>
                                         <td>Pengiriman</td>
-                                        <td>Rp.90.000</td>
+                                        <td>-</td>
                                     </tr>
                                      <tr>
                                         <td>Pembayaran</td>
@@ -139,7 +140,7 @@
                                     </tr>
                                     <tr class="total">
                                         <td>Total</td>
-                                        <td class="total-amount">Rp.11.830.000</td>
+                                        <td class="total-amount">Rp.900.000</td>
                                     </tr>
                                 </table>
                             </div>
@@ -149,7 +150,7 @@
                         <!-- Cart Calculate Items End -->
 
                         <!-- Cart Checktout Button Start -->
-                        <a href="<?php echo base_url();?>checkout.php" class="btn btn btn-gray-deep btn-hover-primary mt-6">Proses Pembelian</a>
+                        <a href="<?php echo base_url();?>checkoutjodoh" class="btn btn btn-gray-deep btn-hover-primary mt-6">Proses Pemesanan</a>
                         <!-- Cart Checktout Button End -->
 
                     </div>
@@ -161,6 +162,8 @@
         </div>
     </div>
     <!-- Shopping Cart Section End -->
+
+
     <!-- Modal Start  -->
     <div class="modalquickview modal fade" id="quick-view" tabindex="-1" aria-labelledby="quick-view" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">

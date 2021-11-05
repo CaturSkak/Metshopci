@@ -57,7 +57,7 @@
                                                        <label class="fit-image ms-1"><a > Setelah Melakukan pembayaran silahkan konfirmasi pembayaran dengan mengirimkan bukti pembayaran di Akun Saya-Pesanan</a> </label>
                                                     </div>
                                                     <div class="single-input-item single-item-button mt-6">
-                                                        <a href="my-account.php" class="btn btn btn-primary btn-hover-dark rounded-0">Bayar</a>
+                                                        <a href="<?php echo base_url();?>profile" class="btn btn btn-primary btn-hover-dark rounded-0">Bayar</a>
                                                     </div>
                                                 </form>
                                             </div>
