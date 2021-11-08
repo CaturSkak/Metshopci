@@ -416,8 +416,6 @@
                             <li ><a href="<?php echo base_url(); ?>formsbasic">Tambah Hewan</a></li>
                             <li ><a href="<?php echo base_url(); ?>forms-advanced">Daftar Hewan</a></li>
                             <li ><a href="<?php echo base_url(); ?>forms-validation">Daftar Perjodohan</a></li>
-                            <li ><a href="<?php echo base_url(); ?>formsadvanced">Daftar Hewan</a></li>
-                            <li ><a href="<?php echo base_url(); ?>formsvalidation">Daftar Perjodohan</a></li>
                         </ul>
                     </li>
                     <li>
@@ -436,7 +434,6 @@
                             <li><a href="<?php echo base_url(); ?>pagelogin">Masuk</a></li>
                             <li><a href="<?php echo base_url(); ?>pageregister">Daftar</a></li>
                             <li><a href="<?php echo base_url(); ?>pagelockscreen">Kunci Layar</a></li>
-                            <li><a href="<?php echo base_url(); ?>pageforgotpassword">Lupa Kata Sandi</a></li>
                             <li><a href="<?php echo base_url(); ?>pageforgotpassword">Lupa Kata Sandi</a></li>
                         </ul>
                     </li>
