@@ -214,7 +214,7 @@
                             </ul>
                         </li>
                         <li><a href="<?php echo base_url(); ?>javascript:void(0);" class="right_toggle icon-menu" title="Right Menu"><i class="icon-settings"></i></a></li>
-                        <li><a href="<?php echo base_url(); ?>page-login" class="icon-menu"><i class="icon-power"></i></a></li>
+                        <li><a href="<?php echo base_url(); ?>pagelogin" class="icon-menu"><i class="icon-power"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -392,7 +392,7 @@
                         <li><a href="<?php echo base_url(); ?>AdminChat"><i class="icon-envelope-open"></i>Pesan</a></li>
                        
                         <li class="divider"></li>
-                        <li><a href="<?php echo base_url(); ?>page-login"><i class="icon-power"></i>Keluar</a></li>
+                        <li><a href="<?php echo base_url(); ?>pagelogin"><i class="icon-power"></i>Keluar</a></li>
                     </ul>
                 </div>
             </div>  
@@ -413,7 +413,7 @@
                         <ul>
                             <li ><a href="<?php echo base_url(); ?>formsbasic">Tambah Hewan</a></li>
                             <li ><a href="<?php echo base_url(); ?>forms-advanced">Daftar Hewan</a></li>
-                            <li ><a href="<?php echo base_url(); ?>formsvalidation">Daftar Perjodohan</a></li>
+                            <li ><a href="<?php echo base_url(); ?>forms-validation">Daftar Perjodohan</a></li>
                         </ul>
                     </li>
                     <li>
@@ -429,10 +429,10 @@
                     <li>
                         <a href="<?php echo base_url(); ?>#Authentication" class="has-arrow"><i class="icon-lock"></i><span>Auntentifikasi</span></a>
                         <ul>                                    
-                            <li><a href="<?php echo base_url(); ?>page-login">Masuk</a></li>
-                            <li><a href="<?php echo base_url(); ?>page-register">Daftar</a></li>
-                            <li><a href="<?php echo base_url(); ?>page-lockscreen">Kunci Layar</a></li>
-                            <li><a href="<?php echo base_url(); ?>page-forgot-password">Lupa Kata Sandi</a></li>
+                            <li><a href="<?php echo base_url(); ?>pagelogin">Masuk</a></li>
+                            <li><a href="<?php echo base_url(); ?>pageregister">Daftar</a></li>
+                            <li><a href="<?php echo base_url(); ?>pagelockscreen">Kunci Layar</a></li>
+                            <li><a href="<?php echo base_url(); ?>pageforgotpassword">Lupa Kata Sandi</a></li>
                         </ul>
                     </li>
                     
