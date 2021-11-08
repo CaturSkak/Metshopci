@@ -45,16 +45,17 @@
                         </div>
                         <div class="body">
                             <div class="table-responsive">
-                                <table class="table">
-                                    <thead>
+                                <table class="table table-hover js-basic-example dataTable table-custom mb-0">
+                                    <thead  class="table-dark">
                                         <tr>
                                             <th>No</th>
                                             <th>Nama</th>
                                             <th>Alamat</th>
                                             <th>Tanggal Pemesanan</th>
                                             <th>Tipe</th>
-                                            <th>Rincian pemesanan</th>
-                                            <th>Foto Hewan Perjodohan Milik Customer</th>
+                                            <th>Jenis Hewan Pemesanan</th>
+                                            <th>Jenis Hewan Customer</th>
+                                            <th>Foto Hewan Customer</th>
                                             <th>Jumlah Hari</th>
                                             <th>Harga</th>
                                             <th>Pembayaran</th>
@@ -70,6 +71,7 @@
                                             <td>19 Oktober 2021</td>
                                             <td>Jodoh</td>
                                             <td>Kucing Persia Asli</td>
+                                            <td>Kucing Anggora Asli</td>
                                              <td><div id="navbar-menu">
                                                 <ul class="nav navbar-nav">
                                                 <li class="dropdown dropdown-animated scale-left">
@@ -118,7 +120,8 @@
                                             <td>19 Oktober 2021</td>
                                             <td>Jodoh</td>
                                             <td>Kucing Anggora Asli</td>
-                                             <td><div id="navbar-menu">
+                                            <td>Kucing Persia Asli</td>
+                                            <td><div id="navbar-menu">
                                                 <ul class="nav navbar-nav">
                                                 <li class="dropdown dropdown-animated scale-left">
                                                 <a href="javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown">

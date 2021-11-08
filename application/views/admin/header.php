@@ -46,7 +46,7 @@
 <!-- Page Loader -->
 <div class="page-loader-wrapper">
     <div class="loader">
-        <div class="m-t-30"><img src="<?php echo base_url(); ?><?php echo base_url(); ?>light/assets/images/kucing1.gif" width="150" height="125" alt="Neko"></div>
+        <div class="m-t-30"><img src="<?php echo base_url(); ?>light/assets/images/kucing1.gif" width="150" height="125" alt="Neko"></div>
         <p>Sedang Memuat...</p>        
     </div>
 </div>
@@ -413,7 +413,7 @@
                         <ul>
                             <li ><a href="<?php echo base_url(); ?>formsbasic">Tambah Hewan</a></li>
                             <li ><a href="<?php echo base_url(); ?>forms-advanced">Daftar Hewan</a></li>
-                            <li ><a href="<?php echo base_url(); ?>forms-validation">Daftar Perjodohan</a></li>
+                            <li ><a href="<?php echo base_url(); ?>formsvalidation">Daftar Perjodohan</a></li>
                         </ul>
                     </li>
                     <li>
