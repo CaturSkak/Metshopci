@@ -81,7 +81,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="<?php echo base_url(); ?>app-taskboard">
+                                <a href="<?php echo base_url(); ?>apptaskboard">
                                     <i class="icon-list"></i>
                                     <span>Task</span>
                                 </a>
@@ -423,7 +423,7 @@
                             <li><a href="<?php echo base_url(); ?>blog-post">Buat Artikel Baru</a></li>
                         </ul>
                     </li>
-                    <li><a href="<?php echo base_url(); ?>app-taskboard"><i class="icon-list"></i><span>Papan tugas</span></a></li>                    
+                    <li><a href="<?php echo base_url(); ?>apptaskboard"><i class="icon-list"></i><span>Papan tugas</span></a></li>                    
    
                     <li><a href="<?php echo base_url(); ?>app-contact"><i class="icon-book-open"></i><span>Kontak</span></a></li>              
                     <li>

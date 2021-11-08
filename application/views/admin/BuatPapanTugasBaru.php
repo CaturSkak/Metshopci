@@ -1,4 +1,4 @@
-<?php include 'header.php'?>
+
 <!doctype html>
 <html lang="en">
 
@@ -19,8 +19,8 @@
                 </div>            
                 <div class="col-md-6 col-sm-12 text-right">
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.php"><i class="icon-home"></i></a></li>
-                        <li class="breadcrumb-item active"><a href="app-taskboard.php">Papan Tugas</li></a>
+                        <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>index.php"><i class="icon-home"></i></a></li>
+                        <li class="breadcrumb-item active"><a href="<?php echo base_url(); ?>apptaskboard">Papan Tugas</li></a>
                     </ul>
                 </div>
             </div>
@@ -58,8 +58,8 @@
                             <p>
                             <div class="summernote">
                           
-                                <h3 class="m-b-0">Halo dengan Admin,</h3>
-                                <h4 class="m-t-0">Tulis Diskripsi pengerjaan nya.</h4>
+                                <h5 class="m-b-0">Halo dengan Admin,</h5>
+                                <h5 class="m-t-0">Tulis Diskripsi pengerjaan nya.</h5>
                                 <p></p>
                             </div>
                             <button type="button" class="btn btn-block btn-primary m-t-20">Tambah</button>
@@ -77,17 +77,17 @@
 </div>
 
 <!-- Javascript -->
-<script src="assets/bundles/libscripts.bundle.js"></script>    
-<script src="assets/bundles/vendorscripts.bundle.js"></script>
+<script src="<?php echo base_url(); ?>assets/bundles/libscripts.bundle.js"></script>    
+<script src="<?php echo base_url(); ?>assets/bundles/vendorscripts.bundle.js"></script>
 
 
-<script src="../assets/vendor/dropify/js/dropify.min.js"></script>
+<script src="<?php echo base_url(); ?>../assets/vendor/dropify/js/dropify.min.js"></script>
 
-<script src="assets/bundles/mainscripts.bundle.js"></script>
-<script src="assets/js/pages/forms/dropify.js"></script>
-<script src="../assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/bundles/mainscripts.bundle.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/pages/forms/dropify.js"></script>
+<script src="<?php echo base_url(); ?>../assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
 
-<script src="../assets/vendor/summernote/dist/summernote.js"></script>
+<script src="<?php echo base_url(); ?>../assets/vendor/summernote/dist/summernote.js"></script>
 
 </body>
 </html>
