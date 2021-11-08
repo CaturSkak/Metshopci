@@ -1,4 +1,4 @@
-<?php include 'header.php'?>
+
 <!doctype html>
 <html lang="en">
 
@@ -16,7 +16,7 @@
                 </div>            
                 <div class="col-md-6 col-sm-12 text-right">
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.php"><i class="icon-home"></i></a></li>
+                        <li class="breadcrumb-item"><a href="<?php echo base_url();?>index"><i class="icon-home"></i></a></li>
                         <li class="breadcrumb-item">Halaman</li>
                         <li class="breadcrumb-item active">Profil Saya</li>
                     </ul>
@@ -30,7 +30,7 @@
                 <div class="col-lg-4 col-md-12">
                     <div class="card profile-header">
                         <div class="body text-center">
-                            <div class="profile-image mb-3"><img src="../assets/images/admin.jpg" class="rounded-circle" alt=""></div>
+                            <div class="profile-image mb-3"><img src="assets/images/admin.jpg" class="rounded-circle" alt=""></div>
                             <div>
                                 <h4 class="mb-0"><strong>Mimin</strong></h4>
                                 <span>Malang,Jawa Timur</span>
@@ -82,11 +82,11 @@
                             <h2>Toko MetShopPet's I</h2>
                         </div>
                         <div class="body">
-                        <img class="img-fluid" src="../assets/images/gd1.png" alt="img">
+                        <img class="img-fluid" src="assets/images/gd1.png" alt="img">
                         <div class="header bline">
                             <h2>Toko MetShopPet's II</h2>
                         </div>
-                        <img class="img-fluid" src="../assets/images/gd.png" alt="img">
+                        <img class="img-fluid" src="assets/images/gd.png" alt="img">
                             <ul class="right_chat list-unstyled mb-0">
                                 <li>
                                     <a href="javascript:void(0);">
@@ -265,10 +265,10 @@
 <script src="assets/bundles/vendorscripts.bundle.js"></script>
 
 <script src="assets/bundles/knob.bundle.js"></script><!-- Jquery Knob-->
-<script src="../assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+<script src="assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
 
 <script src="assets/bundles/mainscripts.bundle.js"></script>
-<script src="../assets/vendor/summernote/dist/summernote.js"></script>
+<script src="assets/vendor/summernote/dist/summernote.js"></script>
 
 <script>
     $(function () {

@@ -46,7 +46,7 @@
 <!-- Page Loader -->
 <div class="page-loader-wrapper">
     <div class="loader">
-        <div class="m-t-30"><img src="<?php echo base_url(); ?>light/assets/images/kucing1.gif" width="150" height="125" alt="Neko"></div>
+        <div class="m-t-30"><img src="<?php echo base_url(); ?>assets/images/kucing1.gif" width="150" height="125" alt="Neko"></div>
         <p>Sedang Memuat...</p>        
     </div>
 </div>
@@ -60,22 +60,22 @@
 
             <div class="navbar-left">
                 <div class="navbar-btn">
-                    <a href="<?php echo base_url(); ?>BerandaAdmin"><img src="<?php echo base_url(); ?><?php echo base_url(); ?>light/assets/images/icon-light.svg" alt="HexaBit Logo" class="img-fluid logo"></a>
+                    <a href="<?php echo base_url(); ?>BerandaAdmin"><img src="<?php echo base_url(); ?>light/assets/images/icon-light.svg" alt="HexaBit Logo" class="img-fluid logo"></a>
                     <button type="button" class="btn-toggle-offcanvas"><i class="lnr lnr-menu fa fa-bars"></i></button>
                 </div>
-                <a href="<?php echo base_url(); ?>javascript:void(0);" class="icon-menu btn-toggle-fullwidth"><i class="fa fa-arrow-left"></i></a>
+                <a href="javascript:void(0);" class="icon-menu btn-toggle-fullwidth"><i class="fa fa-arrow-left"></i></a>
                 <ul class="nav navbar-nav">
                     <li class="dropdown dropdown-animated scale-right">
-                        <a href="<?php echo base_url(); ?>javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown"><i class="icon-grid"></i></a>
+                        <a href="javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown"><i class="icon-grid"></i></a>
                         <ul class="dropdown-menu menu-icon app_menu">
                             <li>
-                                <a href="<?php echo base_url(); ?>forms-advanced">
+                                <a href="<?php echo base_url(); ?>formsadvanced">
                                     <i class="fa fa-github-alt"></i>
                                     <span>Hewan</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="<?php echo base_url(); ?>AdminChat">
+                                <a href="<?php echo base_url(); ?>apppesan">
                                     <i class="icon-bubbles"></i>
                                     <span>Chat</span>
                                 </a>
@@ -87,7 +87,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="<?php echo base_url(); ?>blog-list">
+                                <a href="<?php echo base_url(); ?>bloglist">
                                     <i class="icon-globe"></i>
                                     <span>Blog</span>
                                 </a>
@@ -95,7 +95,7 @@
                         </ul>
                     </li>
                     
-                    <li><a href="<?php echo base_url(); ?>AdminChat" class="icon-menu d-none d-sm-block"><i class="icon-bubbles"></i></a></li>                    
+                    <li><a href="<?php echo base_url(); ?>apppesan" class="icon-menu d-none d-sm-block"><i class="icon-bubbles"></i></a></li>                    
                 </ul>
             </div>
             
@@ -108,15 +108,15 @@
                 <div id="navbar-menu">
                     <ul class="nav navbar-nav">
                         <li class="dropdown dropdown-animated scale-left">
-                            <a href="<?php echo base_url(); ?>javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown">
+                            <a href="javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown">
                                 <i class="icon-envelope"></i>
                                 <span class="notification-dot"></span>
                             </a>
                             <ul class="dropdown-menu right_chat email">
                                 <li>
-                                    <a href="<?php echo base_url(); ?>AdminChat">
+                                    <a href="<?php echo base_url(); ?>apppesan">
                                         <div class="media">
-                                            <img class="media-object " src="<?php echo base_url(); ?><?php echo base_url(); ?>light/assets/images/12.jpg" alt="">
+                                            <img class="media-object " src="<?php echo base_url(); ?>light/assets/images/12.jpg" alt="">
                                             <div class="media-body">
                                                 <span class="name">Doni S. <small class="float-right">23 Juni</small></span>
                                                 <span class="message">pesanan anda sudah saya terima!</span>
@@ -125,7 +125,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo base_url(); ?>javascript:void(0);">
+                                    <a href="javascript:void(0);">
                                         <div class="media">
                                             <img class="media-object " src="<?php echo base_url(); ?>light/assets/images/wiskas.jpg" alt="">
                                             <div class="media-body">
@@ -136,7 +136,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo base_url(); ?>javascript:void(0);">
+                                    <a href="javascript:void(0);">
                                         <div class="media">
                                             <img class="media-object " src="<?php echo base_url(); ?>light/assets/images/19.jpg" alt="">
                                             <div class="media-body">
@@ -147,7 +147,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo base_url(); ?>javascript:void(0);">
+                                    <a href="javascript:void(0);">
                                         <div class="media mb-0">
                                             <img class="media-object " src="<?php echo base_url(); ?>light/assets/images/bolt.png" alt="">
                                             <div class="media-body">
@@ -160,14 +160,14 @@
                             </ul>
                         </li>
                         <li class="dropdown dropdown-animated scale-left">
-                            <a href="<?php echo base_url(); ?>javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown">
+                            <a href="javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown">
                                 <i class="icon-bell"></i>
                                 <span class="notification-dot"></span>
                             </a>
                             <ul class="dropdown-menu feeds_widget">
                                 <li class="header">You have 5 new Notifications</li>
                                 <li>
-                                    <a href="<?php echo base_url(); ?>javascript:void(0);">
+                                    <a href="javascript:void(0);">
                                         <div class="feeds-left"><i class="fa fa-thumbs-o-up text-success"></i></div>
                                         <div class="feeds-body">
                                             <h4 class="title text-success">7 masukkan Baru <small class="float-right text-muted">Today</small></h4>
@@ -176,7 +176,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo base_url(); ?>javascript:void(0);">
+                                    <a href="javascript:void(0);">
                                         <div class="feeds-left"><i class="fa fa-user"></i></div>
                                         <div class="feeds-body">
                                             <h4 class="title">Pengguna Baru<small class="float-right text-muted">10:45</small></h4>
@@ -185,7 +185,7 @@
                                     </a>
                                 </li>
                          <li>
-                                    <a href="<?php echo base_url(); ?>javascript:void(0);">
+                                    <a href="javascript:void(0);">
                                         <div class="feeds-left"><i class="fa fa-question-circle text-warning"></i></div>
                                         <div class="feeds-body">
                                             <h4 class="title text-warning">Peringatan Server <small class="float-right text-muted">10:50</small></h4>
@@ -194,7 +194,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo base_url(); ?>javascript:void(0);">
+                                    <a href="javascript:void(0);">
                                         <div class="feeds-left"><i class="fa fa-check text-danger"></i></div>
                                         <div class="feeds-body">
                                             <h4 class="title text-danger">Isu Terselesaikan <small class="float-right text-muted">11:05</small></h4>
@@ -203,7 +203,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo base_url(); ?>javascript:void(0);">
+                                    <a href="javascript:void(0);">
                                         <div class="feeds-left"><i class="fa fa-shopping-basket"></i></div>
                                         <div class="feeds-body">
                                             <h4 class="title">7 Pesanan baru <small class="float-right text-muted">11:35</small></h4>
@@ -215,6 +215,8 @@
                         </li>
                         <li><a href="<?php echo base_url(); ?>javascript:void(0);" class="right_toggle icon-menu" title="Right Menu"><i class="icon-settings"></i></a></li>
                         <li><a href="<?php echo base_url(); ?>pagelogin" class="icon-menu"><i class="icon-power"></i></a></li>
+                        <li><a href="javascript:void(0);" class="right_toggle icon-menu" title="Right Menu"><i class="icon-settings"></i></a></li>
+                        <li><a href="<?php echo base_url(); ?>page-login" class="icon-menu"><i class="icon-power"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -223,8 +225,8 @@
 
     <div id="rightbar" class="rightbar">
         <ul class="nav nav-tabs-new">
-            <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="<?php echo base_url(); ?>#setting">Settings</a></li>
-            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="<?php echo base_url(); ?>#chat">Chat</a></li>            
+            <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#setting">Settings</a></li>
+            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#chat">Chat</a></li>            
         </ul>
         <div class="tab-content">
             <div class="tab-pane active" id="setting">
@@ -308,7 +310,7 @@
                         <h6>Recent</h6>                        
                         <ul class="right_chat list-unstyled mb-0">
                             <li class="online">
-                                <a href="<?php echo base_url(); ?>javascript:void(0);">
+                                <a href="javascript:void(0);">
                                     <div class="media">
                                         <img class="media-object " src="<?php echo base_url(); ?>light/assets/images/xs/avatar4.jpg" alt="">
                                         <div class="media-body">
@@ -320,7 +322,7 @@
                                 </a>                            
                             </li>
                             <li class="online">
-                                <a href="<?php echo base_url(); ?>javascript:void(0);">
+                                <a href="javascript:void(0);">
                                     <div class="media">
                                         <img class="media-object " src="<?php echo base_url(); ?>light/assets/images/xs/avatar5.jpg" alt="">
                                         <div class="media-body">
@@ -332,7 +334,7 @@
                                 </a>                            
                             </li>
                             <li class="offline">
-                                <a href="<?php echo base_url(); ?>javascript:void(0);">
+                                <a href="javascript:void(0);">
                                     <div class="media">
                                         <img class="media-object " src="<?php echo base_url(); ?>light/assets/images/xs/avatar2.jpg" alt="">
                                         <div class="media-body">
@@ -344,7 +346,7 @@
                                 </a>                            
                             </li>
                             <li class="offline">
-                                <a href="<?php echo base_url(); ?>javascript:void(0);">
+                                <a href="javascript:void(0);">
                                     <div class="media">
                                         <img class="media-object " src="<?php echo base_url(); ?>light/assets/images/xs/avatar1.jpg" alt="">
                                         <div class="media-body">
@@ -356,7 +358,7 @@
                                 </a>                            
                             </li>
                             <li class="online">
-                                <a href="<?php echo base_url(); ?>javascript:void(0);">
+                                <a href="javascript:void(0);">
                                     <div class="media">
                                         <img class="media-object " src="<?php echo base_url(); ?>light/assets/images/xs/avatar3.jpg" alt="">
                                         <div class="media-body">
@@ -386,10 +388,10 @@
                 </div>
                 <div class="dropdown">
                     <span>Selamat Datang,</span>
-                    <a href="<?php echo base_url(); ?>javascript:void(0);" class="dropdown-toggle user-name" data-toggle="dropdown"><strong>Mimin</strong></a>
+                    <a href="javascript:void(0);" class="dropdown-toggle user-name" data-toggle="dropdown"><strong>Mimin</strong></a>
                     <ul class="dropdown-menu dropdown-menu-right account">
-                        <li><a href="<?php echo base_url(); ?>page-profile"><i class="icon-user"></i>Profil Saya</a></li>
-                        <li><a href="<?php echo base_url(); ?>AdminChat"><i class="icon-envelope-open"></i>Pesan</a></li>
+                        <li><a href="<?php echo base_url(); ?>pageprofile"><i class="icon-user"></i>Profil Saya</a></li>
+                        <li><a href="<?php echo base_url(); ?>apppesan"><i class="icon-envelope-open"></i>Pesan</a></li>
                        
                         <li class="divider"></li>
                         <li><a href="<?php echo base_url(); ?>pagelogin"><i class="icon-power"></i>Keluar</a></li>
@@ -402,36 +404,39 @@
                    
                     <li><a href="<?php echo base_url(); ?>apppesan"><i class="icon-bubbles"></i><span>Pesan</span></a></li>
                     <li>
-                        <a href="<?php echo base_url(); ?>#Tables" class="has-arrow"><i class="icon-basket"></i><span>Transaksi</span></a>
+                        <a href="#Tables" class="has-arrow"><i class="icon-basket"></i><span>Transaksi</span></a>
                         <ul>
                             <li><a href="<?php echo base_url(); ?>tablebasic">Pembelian</a></li>
                             <li><a href="<?php echo base_url(); ?>tablenormal">Perjodohan</a></li>
                         </ul>
                     </li>
                     <li >
-                        <a href="<?php echo base_url(); ?>#forms" class="has-arrow"><i class="fa fa-github-alt"></i><span>Hewan</span></a>
+                        <a href="#forms" class="has-arrow"><i class="fa fa-github-alt"></i><span>Hewan</span></a>
                         <ul>
                             <li ><a href="<?php echo base_url(); ?>formsbasic">Tambah Hewan</a></li>
                             <li ><a href="<?php echo base_url(); ?>forms-advanced">Daftar Hewan</a></li>
                             <li ><a href="<?php echo base_url(); ?>forms-validation">Daftar Perjodohan</a></li>
+                            <li ><a href="<?php echo base_url(); ?>formsadvanced">Daftar Hewan</a></li>
+                            <li ><a href="<?php echo base_url(); ?>formsvalidation">Daftar Perjodohan</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="<?php echo base_url(); ?>#Blog" class="has-arrow"><i class="icon-globe"></i><span>Halaman</span></a>
+                        <a href="#Blog" class="has-arrow"><i class="icon-globe"></i><span>Halaman</span></a>
                         <ul>
-                            <li><a href="<?php echo base_url(); ?>blog-list">Artikel</a></li>
-                            <li><a href="<?php echo base_url(); ?>blog-post">Buat Artikel Baru</a></li>
+                            <li><a href="<?php echo base_url(); ?>bloglist">Artikel</a></li>
+                            <li><a href="<?php echo base_url(); ?>blogpost">Buat Artikel Baru</a></li>
                         </ul>
                     </li>
                     <li><a href="<?php echo base_url(); ?>apptaskboard"><i class="icon-list"></i><span>Papan tugas</span></a></li>                    
    
-                    <li><a href="<?php echo base_url(); ?>app-contact"><i class="icon-book-open"></i><span>Kontak</span></a></li>              
+                    <li><a href="<?php echo base_url(); ?>appcontact"><i class="icon-book-open"></i><span>Kontak</span></a></li>              
                     <li>
-                        <a href="<?php echo base_url(); ?>#Authentication" class="has-arrow"><i class="icon-lock"></i><span>Auntentifikasi</span></a>
+                        <a href="#Authentication" class="has-arrow"><i class="icon-lock"></i><span>Auntentifikasi</span></a>
                         <ul>                                    
                             <li><a href="<?php echo base_url(); ?>pagelogin">Masuk</a></li>
                             <li><a href="<?php echo base_url(); ?>pageregister">Daftar</a></li>
                             <li><a href="<?php echo base_url(); ?>pagelockscreen">Kunci Layar</a></li>
+                            <li><a href="<?php echo base_url(); ?>pageforgotpassword">Lupa Kata Sandi</a></li>
                             <li><a href="<?php echo base_url(); ?>pageforgotpassword">Lupa Kata Sandi</a></li>
                         </ul>
                     </li>

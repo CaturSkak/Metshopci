@@ -1,4 +1,3 @@
-<?php include 'header.php'?>
 <!doctype html>
 <html lang="en">
 
@@ -19,12 +18,12 @@
                 </div>            
                 <div class="col-md-6 col-sm-12 text-right">
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.php"><i class="icon-home"></i></a></li>
+                        <li class="breadcrumb-item"><a href="<?php echo base_url();?>index.php"><i class="icon-home"></i></a></li>
                         <li class="breadcrumb-item active">Kontak</li>
                     </ul>
-                    <a href="app-contact.php" class="btn btn-sm btn-success" title=""><i class="fa fa-list"></i></a>
-                    <a href="app-contact-grid.php" class="btn btn-sm btn-outline-success" title=""><i class="fa fa-th-large"></i></a>                    
-                    <a href="buat_kontak_baru.php" class="btn btn-sm btn-primary">Buat Baru</a>
+                    <a href="<?php echo base_url();?>appcontact" class="btn btn-sm btn-success" title=""><i class="fa fa-list"></i></a>
+                    <a href="<?php echo base_url();?>appcontactgrid" class="btn btn-sm btn-outline-success" title=""><i class="fa fa-th-large"></i></a>                    
+                    <a href="<?php echo base_url();?>buatkontakbaru" class="btn btn-sm btn-primary">Buat Baru</a>
                 </div>
             </div>
         </div>
@@ -60,7 +59,7 @@
                                                 </label>
                                             </td>
                                             <td>
-                                                <img src="../assets/images/budi.jpg" class="rounded-circle avatar" alt="">
+                                                <img src="<?php echo base_url();?>assets/images/budi.jpg" class="rounded-circle avatar" alt="">
                                                 <p class="c_name">(Karyawan) Budi Budiman</p>
                                             </td>
                                             <td>bubud890@gmail.com</td>
@@ -83,7 +82,7 @@
                                                 </label>
                                             </td>
                                             <td>
-                                                <img src="../assets/images/anastashia.jpg" class="rounded-circle avatar" alt="">
+                                                <img src="<?php echo base_url();?>assets/images/anastashia.jpg" class="rounded-circle avatar" alt="">
                                                 <p class="c_name">(Pemasok) Anatashia Wina </p>
                                             </td>
                                             <td>anastashiawina2104@gmail.com</td>
@@ -106,7 +105,7 @@
                                                 </label>
                                             </td>
                                             <td>
-                                                <img src="../assets/images/okta.jpg" class="rounded-circle avatar" alt="">
+                                                <img src="<?php echo base_url();?>assets/images/okta.jpg" class="rounded-circle avatar" alt="">
                                                 <p class="c_name">(Sponsorship) Okta Wina</p>
                                             </td>
                                             <td>oktawina11@gmail.com</td>
@@ -129,7 +128,7 @@
                                                 </label>
                                             </td>
                                             <td>
-                                                <img src="../assets/images/abdul.jpeg" class="rounded-circle avatar" alt="">
+                                                <img src="<?php echo base_url();?>assets/images/abdul.jpeg" class="rounded-circle avatar" alt="">
                                                 <p class="c_name">(Karyawan) Abdul Sinaga</p>
                                             </td>
                                             <td>abdulsinaga@gmail.com</td>
@@ -152,7 +151,7 @@
                                                 </label>
                                             </td>
                                             <td>
-                                                <img src="../assets/images/susi.jpg" class="rounded-circle avatar" alt="">
+                                                <img src="<?php echo base_url();?>assets/images/susi.jpg" class="rounded-circle avatar" alt="">
                                                 <p class="c_name">(Pemasok) Susi Susanti</p>
                                             </td>
                                             <td>susisu@gmail.com</td>
@@ -175,7 +174,7 @@
                                                 </label>
                                             </td>
                                             <td>
-                                                <img src="../assets/images/Eri.jpg" class="rounded-circle avatar" alt="">
+                                                <img src="<?php echo base_url();?>assets/images/Eri.jpg" class="rounded-circle avatar" alt="">
                                                 <p class="c_name">(Karyawan) Eri Budiono</p>
                                             </td>
                                             <td>eribudi@gmail.com</td>
@@ -198,7 +197,7 @@
                                                 </label>
                                             </td>
                                             <td>
-                                                <img src="../assets/images/Ani.jpg" class="rounded-circle avatar" alt="">
+                                                <img src="<?php echo base_url();?>assets/images/Ani.jpg" class="rounded-circle avatar" alt="">
                                                 <p class="c_name">(Sponsorship) Ani Sabrina</p>
                                             </td>
                                             <td>anisabi@gmail.com</td>
@@ -221,7 +220,7 @@
                                                 </label>
                                             </td>
                                             <td>
-                                                <img src="../assets/images/beri.jpg" class="rounded-circle avatar" alt="">
+                                                <img src="<?php echo base_url();?>assets/images/beri.jpg" class="rounded-circle avatar" alt="">
                                                 <p class="c_name">(Sponsorship) Beri Budi</p>
                                             </td>
                                             <td>beribudi@gmail.com</td>
@@ -314,12 +313,12 @@
 </div>
 
 <!-- Javascript -->
-<script src="assets/bundles/libscripts.bundle.js"></script>    
-<script src="assets/bundles/vendorscripts.bundle.js"></script>
+<script src="<?php echo base_url();?>assets/bundles/libscripts.bundle.js"></script>    
+<script src="<?php echo base_url();?>assets/bundles/vendorscripts.bundle.js"></script>
 
-<script src="../assets/vendor/sweetalert/sweetalert.min.js"></script><!-- SweetAlert Plugin Js -->
+<script src="<?php echo base_url();?>assets/vendor/sweetalert/sweetalert.min.js"></script><!-- SweetAlert Plugin Js -->
 
-<script src="assets/bundles/mainscripts.bundle.js"></script>
-<script src="assets/js/pages/ui/dialogs.js"></script>
+<script src="<?php echo base_url();?>assets/bundles/mainscripts.bundle.js"></script>
+<script src="<?php echo base_url();?>assets/js/pages/ui/dialogs.js"></script>
 </body>
 </html>

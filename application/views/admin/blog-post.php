@@ -1,15 +1,9 @@
-<?php include 'header.php'?>
 <!doctype html>
 <html lang="en">
 
-
 <body class="theme-orange">
 
-
-
     <div id="wrapper">
-
-   
 
         <div id="main-content">
             <div class="block-header">
@@ -19,8 +13,8 @@
                     </div>            
                     <div class="col-md-6 col-sm-12 text-right">
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.php"><i class="icon-home"></i></a></li>
-                            <li class="breadcrumb-item active"><a href="blog-list.php">Artikel</li></a>
+                            <li class="breadcrumb-item"><a href="<?php echo base_url();?>index"><i class="iconhome"></i></a></li>
+                            <li class="breadcrumb-item active"><a href="<?php echo base_url();?>bloglist">Artikel</li></a>
                         </ul>
                     </div>
                 </div>
@@ -46,16 +40,15 @@
                                     </select>
                                 </div>
     
-                        <div class="card">
+                    <div class="card">
                             <div class="header">
                                 <h2>Masukan Gambar <small>yang berhubungan dengan artikel</small></h2>
                             </div>
                             <div class="body">
                                 <input type="file" id="dropify-event" >
                             </div>
-                        </div>   
-    
-    
+                    </div>   
+
                                 <div class="summernote">
                               
                                     <h3 class="m-b-0">Halo dengan Admin,</h3>
@@ -65,25 +58,23 @@
                                 <button type="button" class="btn btn-block btn-primary m-t-20">Posting</button>
                             </div>
                         </div>
-                        </div>   
+                    </div>   
                 </div>
-    
             </div>
         </div>
-        
-    </div>
+   </div>
 
 <!-- Javascript -->
-<script src="assets/bundles/libscripts.bundle.js"></script>    
-<script src="assets/bundles/vendorscripts.bundle.js"></script>
+<script src="<?php echo base_url();?>light/assets/bundles/libscripts.bundle.js"></script>    
+<script src="<?php echo base_url();?>light/assets/bundles/vendorscripts.bundle.js"></script>
 
 
-<script src="../assets/vendor/dropify/js/dropify.min.js"></script>
+<script src="<?php echo base_url();?>light/assets/vendor/dropify/js/dropify.min.js"></script>
 
-<script src="assets/bundles/mainscripts.bundle.js"></script>
-<script src="assets/js/pages/forms/dropify.js"></script>
+<script src="<?php echo base_url();?>light/assets/bundles/mainscripts.bundle.js"></script>
+<script src="<?php echo base_url();?>light/assets/js/pages/forms/dropify.js"></script>
 
-<script src="../assets/vendor/summernote/dist/summernote.js"></script>
+<script src="<?php echo base_url();?>light/assets/vendor/summernote/dist/summernote.js"></script>
 
 </body>
 </html>

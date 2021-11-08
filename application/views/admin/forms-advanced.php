@@ -1,11 +1,11 @@
-<?php include 'header.php'?>
+
 <!doctype html>
 <html lang="en">
 <head>
     <!-- Plugins CSS (All Plugins Files) -->
-    <link rel="stylesheet" href="assets/css/plugins/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="<?php echo base_url();?>light/assets/css/plugins/swiper-bundle.min.css" />
 <!-- Main Style CSS -->
-<link rel="stylesheet" href="assets/css/style.css" />
+<link rel="stylesheet" href="<?php echo base_url();?>light/assets/css/style.css" />
 </head>
 <body class="theme-orange">
 
@@ -21,7 +21,7 @@
                 </div>            
                 <div class="col-md-6 col-sm-12 text-right">
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.html"><i class="icon-home"></i></a></li>
+                        <li class="breadcrumb-item"><a href="<?php echo base_url();?>index.html"><i class="icon-home"></i></a></li>
                         <li class="breadcrumb-item">Produk</li>
                         <li class="breadcrumb-item active">Daftar Produk/Hewan</li>
                     </ul>
@@ -48,7 +48,7 @@
                             </ul>
                         </div>
                         <div  class="body">
-                        <a href="forms-basic.php" class="btn btn-sm btn-primary" title="">Tambah Produk / Hewan</a>
+                        <a href="<?php echo base_url();?>formsbasic" class="btn btn-sm btn-primary" title="">Tambah Produk / Hewan</a>
                         </div>
                         <div class="body">
                             <div class="table-responsive">
@@ -74,14 +74,14 @@
                                                 Kucing Anggora Asli</td>
                                             <td>Rp.5.740.000</td>
                                             <td>1</td>
-                                            <td><img class="fit-image" src="../assets/images/products/small-product/kucing.png" alt="Product" /></td>
+                                            <td><img class="fit-image" src="<?php echo base_url();?>assets/images/products/small-product/kucing.png" alt="Product" /></td>
                                             <td>
                                         
                                             <a  href="#/" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view" title="Quickview" class="btn btn-primary"><button class="btn btn-primary " ><i class="icon icon-info"></i></button></a>
                                         </td>
                                             <td>                                            
 
-                                                <a href="forms-wizard.php" button type="button" class="btn btn-info"  title="Edit"><i class="fa fa-edit"></i></button></a>
+                                                <a href="<?php echo base_url();?>formswizard" button type="button" class="btn btn-info"  title="Edit"><i class="fa fa-edit"></i></button></a>
 
                                                 <button type="button"  class="btn btn-danger js-sweetalert" data-type="confirm" title="Delete"><i class="fa fa-trash-o"></i></button>
                                             </td>
@@ -94,13 +94,13 @@
                                                 Kucing Anggora Mix Persia</td>
                                             <td>Rp.4.000.000</td>
                                             <td>1</td>
-                                            <td><img class="fit-image" src="../assets/images/products/small-product/kucing.png" alt="Product" /></td>
+                                            <td><img class="fit-image" src="<?php echo base_url();?>assets/images/products/small-product/kucing.png" alt="Product" /></td>
                                             <td>
                                             <a  href="#/" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view" title="Quickview" class="btn btn-primary"><button class="btn btn-primary " ><i class="icon icon-info"></i></button></a>
                                             </td>
                                             <td>                                            
 
-                                                <a href="forms-wizard.php" button type="button" class="btn btn-info"  title="Edit"><i class="fa fa-edit"></i></button></a>
+                                                <a href="<?php echo base_url();?>formswizard" button type="button" class="btn btn-info"  title="Edit"><i class="fa fa-edit"></i></button></a>
 
                                                 <button type="button"  class="btn btn-danger js-sweetalert" data-type="confirm" title="Delete"><i class="fa fa-trash-o"></i></button>
                                             </td>
@@ -113,13 +113,13 @@
                                                 Kucing Persia Asli</td>
                                             <td>Rp.5.000.000</td>
                                             <td>1</td>
-                                            <td><img class="fit-image" src="../assets/images/products/small-product/kucing.png" alt="Product" /></td>
+                                            <td><img class="fit-image" src="<?php echo base_url();?>assets/images/products/small-product/kucing.png" alt="Product" /></td>
                                             <td>
                                             <a  href="#/" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view" title="Quickview" class="btn btn-primary"><button class="btn btn-primary " ><i class="icon icon-info"></i></button></a>
                                             </td>
                                             <td>                                            
 
-                                                <a href="forms-wizard.php" button type="button" class="btn btn-info"  title="Edit"><i class="fa fa-edit"></i></button></a>
+                                                <a href="<?php echo base_url();?>formswizard" button type="button" class="btn btn-info"  title="Edit"><i class="fa fa-edit"></i></button></a>
 
                                                 <button type="button"  class="btn btn-danger js-sweetalert" data-type="confirm" title="Delete"><i class="fa fa-trash-o"></i></button>
                                             </td>
@@ -132,13 +132,13 @@
                                                 Kucing Mainecoon</td>
                                             <td>Rp.18.000.000</td>
                                             <td>1</td>
-                                            <td><img class="fit-image" src="../assets/images/products/small-product/kucing.png" alt="Product" /></td>
+                                            <td><img class="fit-image" src="<?php echo base_url();?>assets/images/products/small-product/kucing.png" alt="Product" /></td>
                                             <td>
                                             <a  href="#/" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view" title="Quickview" class="btn btn-primary"><button class="btn btn-primary " ><i class="icon icon-info"></i></button></a>
                                             </td>
                                             <td>                                            
 
-                                                <a href="forms-wizard.php" button type="button" class="btn btn-info"  title="Edit"><i class="fa fa-edit"></i></button></a>
+                                                <a href="<?php echo base_url();?>formswizard" button type="button" class="btn btn-info"  title="Edit"><i class="fa fa-edit"></i></button></a>
 
                                                 <button type="button"  class="btn btn-danger js-sweetalert" data-type="confirm" title="Delete"><i class="fa fa-trash-o"></i></button>
                                             </td>
@@ -151,13 +151,13 @@
                                                 Anjing Chihuahua</td>
                                             <td>Rp.16.000.000</td>
                                             <td>1</td>
-                                            <td><img class="fit-image" src="../assets/images/products/small-product/kucing.png" alt="Product" /></td>
+                                            <td><img class="fit-image" src="<?php echo base_url();?>assets/images/products/small-product/kucing.png" alt="Product" /></td>
                                             <td>
    <a  href="#/" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view" title="Quickview" class="btn btn-primary"><button class="btn btn-primary " ><i class="icon icon-info"></i></button></a>
                                             </td>
                                             <td>                                            
 
-                                                <a href="forms-wizard.php" button type="button" class="btn btn-info"  title="Edit"><i class="fa fa-edit"></i></button></a>
+                                                <a href="<?php echo base_url();?>formswizard" button type="button" class="btn btn-info"  title="Edit"><i class="fa fa-edit"></i></button></a>
 
                                                 <button type="button"  class="btn btn-danger js-sweetalert" data-type="confirm" title="Delete"><i class="fa fa-trash-o"></i></button>
                                             </td>
@@ -170,13 +170,13 @@
                                                 Anjing Shiba Inu</td>
                                             <td>Rp.6.000.000</td>
                                             <td>1</td>
-                                            <td><img class="fit-image" src="../assets/images/products/small-product/kucing.png" alt="Product" /></td>
+                                            <td><img class="fit-image" src="<?php echo base_url();?>assets/images/products/small-product/kucing.png" alt="Product" /></td>
                                             <td>
    <a  href="#/" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view" title="Quickview" class="btn btn-primary"><button class="btn btn-primary " ><i class="icon icon-info"></i></button></a>
                                             </td>
                                             <td>                                            
 
-                                                <a href="forms-wizard.php" button type="button" class="btn btn-info"  title="Edit"><i class="fa fa-edit"></i></button></a>
+                                                <a href="<?php echo base_url();?>formswizard" button type="button" class="btn btn-info"  title="Edit"><i class="fa fa-edit"></i></button></a>
 
                                                 <button type="button"  class="btn btn-danger js-sweetalert" data-type="confirm" title="Delete"><i class="fa fa-trash-o"></i></button>
                                             </td>
@@ -190,13 +190,13 @@
                                                 Anjing Alaskan Malamute</td>
                                             <td>Rp.15.000.000</td>
                                             <td>1</td>
-                                            <td><img class="fit-image" src="../assets/images/products/small-product/kucing.png" alt="Product" /></td>
+                                            <td><img class="fit-image" src="<?php echo base_url();?>assets/images/products/small-product/kucing.png" alt="Product" /></td>
                                             <td>
    <a  href="#/" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view" title="Quickview" class="btn btn-primary"><button class="btn btn-primary " ><i class="icon icon-info"></i></button></a>
                                             </td>
                                             <td>                                            
 
-                                                <a href="forms-wizard.php" button type="button" class="btn btn-info"  title="Edit"><i class="fa fa-edit"></i></button></a>
+                                                <a href="<?php echo base_url();?>formswizard" button type="button" class="btn btn-info"  title="Edit"><i class="fa fa-edit"></i></button></a>
 
                                                 <button type="button"  class="btn btn-danger js-sweetalert" data-type="confirm" title="Delete"><i class="fa fa-trash-o"></i></button>
                                             </td>
@@ -213,7 +213,7 @@
                                     <li class="page-item"><a class="page-link" href="javascript:void(0);">2</a></li>
                                     <li class="page-item"><a class="page-link" href="javascript:void(0);">3</a></li>
                                     <li class="page-item">
-                                        <a class="page-link rounded-0" href="shop-left-sidebar2.pph" aria-label="Next">
+                                        <a class="page-link rounded-0" href="<?php echo base_url();?>shopleftsidebar2" aria-label="Next">
                                             <span aria-hidden="true">&raquo;</span>
                                         </a>
                                     </li>
@@ -239,16 +239,16 @@
                             <div class="swiper-container">
                                 <div class="swiper-wrapper">
                                     
-                                <a class="swiper-slide w-100" href="assets/images/products/medium-product/persia.png">
-                                    <img class="w-100" src="assets/images/products/medium-product/persia.png" alt="Product">
-                                <a class="swiper-slide w-100" href="assets/images/products/medium-product/kucing_persia_putih_jantan.jpg">
-                                    <img class="w-100" src="assets/images/products/medium-product/kucing_persia_putih_jantan.jpg" alt="Product">
+                                <a class="swiper-slide w-100" href="<?php echo base_url();?>assets/images/products/medium-product/persia.png">
+                                    <img class="w-100" src="<?php echo base_url();?>assets/images/products/medium-product/persia.png" alt="Product">
+                                <a class="swiper-slide w-100" href="<?php echo base_url();?>assets/images/products/medium-product/kucing_persia_putih_jantan.jpg">
+                                    <img class="w-100" src="<?php echo base_url();?>assets/images/products/medium-product/kucing_persia_putih_jantan.jpg" alt="Product">
                                 </a>
-                                <a class="swiper-slide w-100" href="assets/images/products/medium-product/735_5.jpg">
-                                    <img class="w-100" src="assets/images/products/medium-product/735_5.jpg" alt="Product">
+                                <a class="swiper-slide w-100" href="<?php echo base_url();?>assets/images/products/medium-product/735_5.jpg">
+                                    <img class="w-100" src="<?php echo base_url();?>assets/images/products/medium-product/735_5.jpg" alt="Product">
                                 </a>
-                                <a class="swiper-slide w-100" href="assets/images/products/medium-product/putih.jpg">
-                                    <img class="w-100" src="assets/images/products/medium-product/putih.jpg" alt="Product">
+                                <a class="swiper-slide w-100" href="<?php echo base_url();?>assets/images/products/medium-product/putih.jpg">
+                                    <img class="w-100" src="<?php echo base_url();?>assets/images/products/medium-product/putih.jpg" alt="Product">
                                 </a>
 
                                 
@@ -331,23 +331,23 @@
 
 
 <!-- Javascript -->
-<script src="assets/bundles/libscripts.bundle.js"></script>    
-<script src="assets/bundles/vendorscripts.bundle.js"></script>
+<script src="<?php echo base_url();?>assets/bundles/libscripts.bundle.js"></script>    
+<script src="<?php echo base_url();?>assets/bundles/vendorscripts.bundle.js"></script>
 
-<script src="../assets/vendor/sweetalert/sweetalert.min.js"></script><!-- SweetAlert Plugin Js --> 
+<script src="<?php echo base_url();?>assets/vendor/sweetalert/sweetalert.min.js"></script><!-- SweetAlert Plugin Js --> 
     
 <!-- Plugins JS -->
-<script src="assets/js/plugins/swiper-bundle.min.js"></script>
+<script src="<?php echo base_url();?>assets/js/plugins/swiper-bundle.min.js"></script>
 
 <!-- Vendor JS -->
 
-<script src="assets/js/vendor/bootstrap.min.js"></script>
+<script src="<?php echo base_url();?>assets/js/vendor/bootstrap.min.js"></script>
  <!--Main JS-->
- <script src="assets/js/main.js"></script>
+ <script src="<?php echo base_url();?>assets/js/main.js"></script>
 
-<script src="assets/bundles/mainscripts.bundle.js"></script>
-<script src="assets/js/pages/forms/advanced-form-elements.js"></script>
-<script src="assets/js/pages/ui/dialogs.js"></script>
+<script src="<?php echo base_url();?>assets/bundles/mainscripts.bundle.js"></script>
+<script src="<?php echo base_url();?>assets/js/pages/forms/advanced-form-elements.js"></script>
+<script src="<?php echo base_url();?>assets/js/pages/ui/dialogs.js"></script>
 </body>
 </html>
 
