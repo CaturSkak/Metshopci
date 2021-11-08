@@ -25,7 +25,7 @@
                     <div class="col mb-8">
                     <div class="single-blog-wrapper">
                         <div class="blog-thumb thumb-effect">
-                            <img class="img-fluid" src="<?php echo base_url(); ?>assets/images/121.jpg" alt="img">
+                            <img class="fit-image" width="300px" src="<?php echo base_url(); ?>assets/images/121.jpg" alt="img" >
                         </div>
                         <div class="blog-content">
                             <div class="content">
@@ -44,7 +44,7 @@
             </div>
                 <div class="col mb-8 col-17 col-md-6">
                     <div class="single-blog-wrapper">
-                        <img class="img-fluid" src="<?php echo base_url(); ?>assets/images/111.jpg" alt="img">
+                        <img class="fit-image" width="300px" src="<?php echo base_url(); ?>assets/images/111.jpg" alt="img">
                         <div class="blog-content">                    
                             <div class="content">
                                 <h4 class="title">Tips Pemberian Pakan Ikan Hias</h4>
@@ -63,7 +63,7 @@
 
                 <div class="col mb-8">
                     <div class="single-blog-wrapper">
-                        <img class="img-fluid" src="<?php echo base_url(); ?>assets/images/131.jpg" alt="img">
+                        <img class="fit-image" width="300px" src="<?php echo base_url(); ?>assets/images/131.jpg" alt="img">
                         <div class="body">                    
                             <div class="content">
                                 <h4 class="title">15 Cara Merawat Burung</h4>
@@ -82,7 +82,7 @@
                     
                 <div class="col mb-8">
                     <div class="single-blog-wrapper">
-                        <img class="img-fluid" src="<?php echo base_url(); ?>assets/images/212.jpg" alt="img">
+                        <img class="fit-image" width="300px" src="<?php echo base_url(); ?>assets/images/212.jpg" alt="img" >
                         <div class="body">                    
                             <div class="content">
                                 <h4 class="title">Mengenal Vaksin Penting untuk Hewan Peliharaan</h4>

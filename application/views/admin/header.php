@@ -6,9 +6,9 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<meta name="description" content="HexaBit Bootstrap 4x Admin Template">
-<meta name="author" content="WrapTheme, www.thememakker.com">
 
+<link rel="icon" href="<?php echo base_url(); ?>light/ass<meta name="description" content="HexaBit Bootstrap 4x Admin Template">
+<meta name="author" content="WrapTheme, www.thememakker.com">
 <link rel="icon" href="<?php echo base_url(); ?>light/assets/logo.png" type="image/logo">
 <!-- VENDOR CSS -->
 <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/fullcalendar/fullcalendar.min.css">
@@ -116,7 +116,7 @@
                                 <li>
                                     <a href="<?php echo base_url(); ?>apppesan">
                                         <div class="media">
-                                            <img class="media-object " src="<?php echo base_url(); ?>light/assets/images/12.jpg" alt="">
+                                            <img class="media-object " src="<?php echo base_url(); ?>assets/images/12.jpg" alt="">
                                             <div class="media-body">
                                                 <span class="name">Doni S. <small class="float-right">23 Juni</small></span>
                                                 <span class="message">pesanan anda sudah saya terima!</span>
@@ -127,7 +127,7 @@
                                 <li>
                                     <a href="javascript:void(0);">
                                         <div class="media">
-                                            <img class="media-object " src="<?php echo base_url(); ?>light/assets/images/wiskas.jpg" alt="">
+                                            <img class="media-object " src="<?php echo base_url(); ?>assets/images/wiskas.jpg" alt="">
                                             <div class="media-body">
                                                 <span class="name">Cs Whiskas <small class="float-right">25 Juni</small></span>
                                                 <span class="message">Mohon Maaf Bapak Kami dari pihak Whiskas ingin memberikan sponsorshiplight</span>
@@ -138,7 +138,7 @@
                                 <li>
                                     <a href="javascript:void(0);">
                                         <div class="media">
-                                            <img class="media-object " src="<?php echo base_url(); ?>light/assets/images/19.jpg" alt="">
+                                            <img class="media-object " src="<?php echo base_url(); ?>assets/images/19.jpg" alt="">
                                             <div class="media-body">
                                                 <span class="name">Sonia Vita Sari <small class="float-right">27 Juni</small></span>
                                                 <span class="message">Ada Banya Pembelihan hewan yang sudah dibayar di Acc oleh Bapak/Ibu...</span>
@@ -149,7 +149,7 @@
                                 <li>
                                     <a href="javascript:void(0);">
                                         <div class="media mb-0">
-                                            <img class="media-object " src="<?php echo base_url(); ?>light/assets/images/bolt.png" alt="">
+                                            <img class="media-object " src="<?php echo base_url(); ?>assets/images/bolt.png" alt="">
                                             <div class="media-body">
                                                 <span class="name">Cs Bolt M.A. <small class="float-right">30 Juni</small></span>
                                                 <span class="message">KamI Menawarkan Produk Kami kepada Toko MetShopPet's yaitu Bolt</span>
@@ -213,8 +213,6 @@
                                 </li>
                             </ul>
                         </li>
-                        <li><a href="<?php echo base_url(); ?>javascript:void(0);" class="right_toggle icon-menu" title="Right Menu"><i class="icon-settings"></i></a></li>
-                        <li><a href="<?php echo base_url(); ?>pagelogin" class="icon-menu"><i class="icon-power"></i></a></li>
                         <li><a href="javascript:void(0);" class="right_toggle icon-menu" title="Right Menu"><i class="icon-settings"></i></a></li>
                         <li><a href="<?php echo base_url(); ?>page-login" class="icon-menu"><i class="icon-power"></i></a></li>
                     </ul>
