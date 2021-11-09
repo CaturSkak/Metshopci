@@ -79,28 +79,28 @@
                                                             <td>21 Feb 2021</td>
                                                             <td>Belum dikonfirmasi</td>
                                                             <td>Rp.6.000.000</td>
-                                                            <td><a href="konfirmasi-pesanan.php" class="btn btn btn-dark btn-hover-primary btn-sm rounded-0">Lihat</a></td>
+                                                            <td><a href="konfirmasipesanan" class="btn btn btn-dark btn-hover-primary btn-sm rounded-0">Lihat</a></td>
                                                         </tr>
                                                         <tr>
                                                             <td>2</td>
                                                             <td>12 Maret 2021</td>
                                                             <td>Belum dikonfirmasi</td>
                                                             <td>Rp.5.740.000</td>
-                                                            <td><a href="konfirmasi-pesanan.php" class="btn btn btn-dark btn-hover-primary btn-sm rounded-0">Lihat</a></td>
+                                                            <td><a href="konfirmasipesanan" class="btn btn btn-dark btn-hover-primary btn-sm rounded-0">Lihat</a></td>
                                                         </tr>
                                                         <tr>
                                                             <td>3</td>
                                                             <td>22 Juli, 2021</td>
                                                             <td>Sudah Lunas</td>
                                                             <td>Rp.2.000.000</td>
-                                                            <td><a href="konfirmasi-pesanan.php" class="btn btn btn-dark btn-hover-primary btn-sm rounded-0">Lihat</a></td>
+                                                            <td><a href="konfirmasipesanan" class="btn btn btn-dark btn-hover-primary btn-sm rounded-0">Lihat</a></td>
                                                         </tr>
                                                         <tr>
                                                             <td>4</td>
                                                             <td>12 Juni, 2019</td>
                                                             <td>Belum dikonfirmasi</td>
                                                             <td>Rp.1.000.000</td>
-                                                            <td><a href="konfirmasi-pesanan.php" class="btn btn btn-dark btn-hover-primary btn-sm rounded-0">Lihat</a></td>
+                                                            <td><a href="konfirmasipesanan" class="btn btn btn-dark btn-hover-primary btn-sm rounded-0">Lihat</a></td>
                                                         </tr>
                                                     </tbody>
                                                 </table>

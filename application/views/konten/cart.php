@@ -149,7 +149,7 @@
                         <!-- Cart Calculate Items End -->
 
                         <!-- Cart Checktout Button Start -->
-                        <a href="<?php echo base_url();?>checkout.php" class="btn btn btn-gray-deep btn-hover-primary mt-6">Proses Pembelian</a>
+                        <a href="<?php echo base_url();?>checkout" class="btn btn btn-gray-deep btn-hover-primary mt-6">Proses Pembelian</a>
                         <!-- Cart Checktout Button End -->
 
                     </div>

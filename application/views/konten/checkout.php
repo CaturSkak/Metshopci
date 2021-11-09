@@ -464,7 +464,7 @@
                                 
                             <div class="order-button-payment">
 
-                                <a href="<?php echo base_url();?>bayar.php" class="btn btn-primary btn-hover-secondary rounded-0 w-100">Checkout</a>
+                                <a href="<?php echo base_url();?>bayar" class="btn btn-primary btn-hover-secondary rounded-0 w-100">Checkout</a>
                   
                             </div>
                         </div>
