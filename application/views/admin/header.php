@@ -46,7 +46,7 @@
 <!-- Page Loader -->
 <div class="page-loader-wrapper">
     <div class="loader">
-        <div class="m-t-30"><img src="<?php echo base_url(); ?><?php echo base_url(); ?>light/assets/images/kucing1.gif" width="150" height="125" alt="Neko"></div>
+        <div class="m-t-30"><img src="<?php echo base_url(); ?>light/assets/images/kucing1.gif" width="150" height="125" alt="Neko"></div>
         <p>Sedang Memuat...</p>        
     </div>
 </div>
