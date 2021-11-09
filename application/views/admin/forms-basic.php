@@ -17,7 +17,7 @@
                 </div>            
                 <div class="col-md-6 col-sm-12 text-right">
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.html"><i class="icon-home"></i></a></li>
+                        <li class="breadcrumb-item"><a href="<?php echo base_url();?>index.html"><i class="icon-home"></i></a></li>
  
                         <li class="breadcrumb-item active">Hewan dan Produk</li>
                     </ul>
@@ -80,7 +80,7 @@
                             </p>
                                     <div class="mail-left">
                                     <div class="mail-compose m-b-20">
-                                            <a href="forms-advanced.php" class="btn btn-danger btn-block"> Tambah</a>
+                                            <a href="<?php echo base_url();?>formsadvanced" class="btn btn-danger btn-block"> Tambah</a>
                                     </div>		
                                 </div>
                             </div>
@@ -160,7 +160,7 @@
                                 </p>
                                     <div class="mail-left">
                                     <div class="mail-compose m-b-20">
-                                            <a href="forms-advanced.php" class="btn btn-danger btn-block"> Tambah</a>
+                                            <a href="<?php echo base_url();?>formsvalidation" class="btn btn-danger btn-block"> Tambah</a>
                                             </right>
                                     </div>		
                                 </div>
