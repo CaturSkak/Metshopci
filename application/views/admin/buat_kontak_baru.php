@@ -1,15 +1,10 @@
-<?php include 'header.php'?>
 <!doctype html>
 <html lang="en">
 
 
 <body class="theme-orange">
 
-
-
     <div id="wrapper">
-
-   
 
     <div id="main-content">
         <div class="block-header">
@@ -19,8 +14,8 @@
                 </div>            
                 <div class="col-md-6 col-sm-12 text-right">
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.php"><i class="icon-home"></i></a></li>
-                        <li class="breadcrumb-item active"><a href="app-contact.php">Kontak</li></a>
+                        <li class="breadcrumb-item"><a href="<?php echo base_url();?>index"><i class="icon-home"></i></a></li>
+                        <li class="breadcrumb-item active"><a href="<?php echo base_url();?>appcontact">Kontak</li></a>
                     </ul>
                 </div>
             </div>
@@ -62,16 +57,16 @@
         </div>
 
 <!-- Javascript -->
-<script src="assets/bundles/libscripts.bundle.js"></script>    
-<script src="assets/bundles/vendorscripts.bundle.js"></script>
+<script src="<?php echo base_url();?>assets/bundles/libscripts.bundle.js"></script>    
+<script src="<?php echo base_url();?>assets/bundles/vendorscripts.bundle.js"></script>
 
 
-<script src="../assets/vendor/dropify/js/dropify.min.js"></script>
+<script src="<?php echo base_url();?>../assets/vendor/dropify/js/dropify.min.js"></script>
 
-<script src="assets/bundles/mainscripts.bundle.js"></script>
-<script src="assets/js/pages/forms/dropify.js"></script>
+<script src="<?php echo base_url();?>assets/bundles/mainscripts.bundle.js"></script>
+<script src="<?php echo base_url();?>assets/js/pages/forms/dropify.js"></script>
 
-<script src="../assets/vendor/summernote/dist/summernote.js"></script>
+<script src="<?php echo base_url();?>../assets/vendor/summernote/dist/summernote.js"></script>
 
 </body>
 </html>

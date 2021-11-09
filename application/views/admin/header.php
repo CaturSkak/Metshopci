@@ -423,9 +423,9 @@
                             <li><a href="<?php echo base_url(); ?>blogpost">Buat Artikel Baru</a></li>
                         </ul>
                     </li>
-                    <li><a href="<?php echo base_url(); ?>app-taskboard"><i class="icon-list"></i><span>Papan tugas</span></a></li>                    
+                    <li><a href="<?php echo base_url(); ?>apptaskboard"><i class="icon-list"></i><span>Papan tugas</span></a></li>                    
    
-                    <li><a href="<?php echo base_url(); ?>app-contact"><i class="icon-book-open"></i><span>Kontak</span></a></li>              
+                    <li><a href="<?php echo base_url(); ?>appcontact"><i class="icon-book-open"></i><span>Kontak</span></a></li>              
                     <li>
                         <a href="#Authentication" class="has-arrow"><i class="icon-lock"></i><span>Auntentifikasi</span></a>
                         <ul>                                    
