@@ -75,7 +75,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="<?php echo base_url(); ?>AdminChat">
+                                <a href="<?php echo base_url(); ?>apppesan">
                                     <i class="icon-bubbles"></i>
                                     <span>Chat</span>
                                 </a>
@@ -95,7 +95,7 @@
                         </ul>
                     </li>
                     
-                    <li><a href="<?php echo base_url(); ?>AdminChat" class="icon-menu d-none d-sm-block"><i class="icon-bubbles"></i></a></li>                    
+                    <li><a href="<?php echo base_url(); ?>apppesan" class="icon-menu d-none d-sm-block"><i class="icon-bubbles"></i></a></li>                    
                 </ul>
             </div>
             
@@ -114,7 +114,7 @@
                             </a>
                             <ul class="dropdown-menu right_chat email">
                                 <li>
-                                    <a href="<?php echo base_url(); ?>AdminChat">
+                                    <a href="<?php echo base_url(); ?>apppesan">
                                         <div class="media">
                                             <img class="media-object " src="<?php echo base_url(); ?>light/assets/images/12.jpg" alt="">
                                             <div class="media-body">
@@ -389,7 +389,7 @@
                     <a href="javascript:void(0);" class="dropdown-toggle user-name" data-toggle="dropdown"><strong>Mimin</strong></a>
                     <ul class="dropdown-menu dropdown-menu-right account">
                         <li><a href="<?php echo base_url(); ?>pageprofile"><i class="icon-user"></i>Profil Saya</a></li>
-                        <li><a href="<?php echo base_url(); ?>AdminChat"><i class="icon-envelope-open"></i>Pesan</a></li>
+                        <li><a href="<?php echo base_url(); ?>apppesan"><i class="icon-envelope-open"></i>Pesan</a></li>
                        
                         <li class="divider"></li>
                         <li><a href="<?php echo base_url(); ?>pagelogin"><i class="icon-power"></i>Keluar</a></li>
