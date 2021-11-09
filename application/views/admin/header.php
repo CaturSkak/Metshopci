@@ -413,7 +413,7 @@
                         <ul>
                             <li ><a href="<?php echo base_url(); ?>formsbasic">Tambah Hewan</a></li>
                             <li ><a href="<?php echo base_url(); ?>forms-advanced">Daftar Hewan</a></li>
-                            <li ><a href="<?php echo base_url(); ?>forms-validation">Daftar Perjodohan</a></li>
+                            <li ><a href="<?php echo base_url(); ?>formsvalidation">Daftar Perjodohan</a></li>
                         </ul>
                     </li>
                     <li>

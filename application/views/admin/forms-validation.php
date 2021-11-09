@@ -1,11 +1,11 @@
-<?php include 'header.php'?>
+
 <!doctype html>
 <html lang="en">
 <head>
-    <!-- Plugins CSS (All Plugins Files) -->
-    <link rel="stylesheet" href="assets/css/plugins/swiper-bundle.min.css" />
+<!-- Plugins CSS (All Plugins Files) -->
+    <link rel="stylesheet" href="light/assets/css/plugins/swiper-bundle.min.css" />
 <!-- Main Style CSS -->
-<link rel="stylesheet" href="assets/css/style.css" />
+<link rel="stylesheet" href="light/assets/css/style.css" />
 </head>
 <body class="theme-orange">
 
@@ -74,7 +74,7 @@
                                                 Kucing Anggora Asli</td>
                                             <td>Rp.35.000/Hari</td>
                                             <td>1</td>
-                                            <td><img class="fit-image" src="../assets/images/products/small-product/kucing.png" alt="Product" /></td>
+                                            <td><img class="fit-image" src="assets/images/products/small-product/kucing.png" alt="Product" /></td>
                                             <td>
                                             <a  href="#/" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view" title="Quickview" class="btn btn-primary"><button class="btn btn-primary " ><i class="icon icon-info"></i></button></a>
                                             </td>
@@ -93,7 +93,7 @@
                                                 Kucing Anggora Mix Persia</td>
                                             <td>Rp.30.000/Hari</td>
                                             <td>1</td>
-                                            <td><img class="fit-image" src="../assets/images/products/small-product/kucing.png" alt="Product" /></td>
+                                            <td><img class="fit-image" src="assets/images/products/small-product/kucing.png" alt="Product" /></td>
                                             <td>
                                             <a  href="#/" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view" title="Quickview" class="btn btn-primary"><button class="btn btn-primary " ><i class="icon icon-info"></i></button></a>
                                             </td>
@@ -112,7 +112,7 @@
                                                 Kucing Persia Asli</td>
                                             <td>Rp.35.000/Hari</td>
                                             <td>1</td>
-                                            <td><img class="fit-image" src="../assets/images/products/small-product/kucing.png" alt="Product" /></td>
+                                            <td><img class="fit-image" src="assets/images/products/small-product/kucing.png" alt="Product" /></td>
                                             <td>
                                             <a  href="#/" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view" title="Quickview" class="btn btn-primary"><button class="btn btn-primary " ><i class="icon icon-info"></i></button></a>
                                             </td>
@@ -131,7 +131,7 @@
                                                 Kucing Mainecoon</td>
                                             <td>Rp.55.000/Hari</td>
                                             <td>1</td>
-                                            <td><img class="fit-image" src="../assets/images/products/small-product/kucing.png" alt="Product" /></td>
+                                            <td><img class="fit-image" src="assets/images/products/small-product/kucing.png" alt="Product" /></td>
                                             <td>
                                         <a  href="#/" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view" title="Quickview" class="btn btn-primary"><button class="btn btn-primary " ><i class="icon icon-info"></i></button></a>
                                             </td>
@@ -150,7 +150,7 @@
                                                 Anjing Chihuahua</td>
                                             <td>Rp.75.000/Hari</td>
                                             <td>1</td>
-                                            <td><img class="fit-image" src="../assets/images/products/small-product/kucing.png" alt="Product" /></td>
+                                            <td><img class="fit-image" src="assets/images/products/small-product/kucing.png" alt="Product" /></td>
                                             <td>
                                         <a  href="#/" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view" title="Quickview" class="btn btn-primary"><button class="btn btn-primary " ><i class="icon icon-info"></i></button></a>
                                             </td>
@@ -169,7 +169,7 @@
                                                 Anjing Shiba Inu</td>
                                             <td>Rp.105.000/Hari</td>
                                             <td>1</td>
-                                            <td><img class="fit-image" src="../assets/images/products/small-product/kucing.png" alt="Product" /></td>
+                                            <td><img class="fit-image" src="assets/images/products/small-product/kucing.png" alt="Product" /></td>
                                             <td>
                                         <a  href="#/" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view" title="Quickview" class="btn btn-primary"><button class="btn btn-primary " ><i class="icon icon-info"></i></button></a>
                                             </td>
@@ -188,7 +188,7 @@
                                                 Anjing Alaskan Malamute</td>
                                             <td>Rp.305.000/Hari</td>
                                             <td>1</td>
-                                            <td><img class="fit-image" src="../assets/images/products/small-product/kucing.png" alt="Product" /></td>
+                                            <td><img class="fit-image" src="assets/images/products/small-product/kucing.png" alt="Product" /></td>
                                             <td>
                                         <a  href="#/" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view" title="Quickview" class="btn btn-primary"><button class="btn btn-primary " ><i class="icon icon-info"></i></button></a>
                                             </td>
@@ -334,7 +334,7 @@
 <script src="assets/bundles/libscripts.bundle.js"></script>    
 <script src="assets/bundles/vendorscripts.bundle.js"></script>
 
-<script src="../assets/vendor/sweetalert/sweetalert.min.js"></script><!-- SweetAlert Plugin Js -->
+<script src="assets/vendor/sweetalert/sweetalert.min.js"></script><!-- SweetAlert Plugin Js -->
 
     
 <!-- Plugins JS -->
