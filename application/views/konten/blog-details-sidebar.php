@@ -101,7 +101,7 @@
                                 <!-- Social Shear Start -->
                                 <div class="social-share mb-4">
                                     <div class="widget-social">
-                                        <span>Share: </span>
+                                        <span>Bagikan: </span>
                                         <a title="Twitter" href="#/"><i class="icon-social-twitter"></i></a>
                                         <a title="Instagram" href="#/"><i class="icon-social-instagram"></i></a>
                                         <a title="Linkedin" href="#/"><i class="icon-social-linkedin"></i></a>
@@ -118,30 +118,30 @@
 
                         <!-- Blog Details Comments area Start -->
                         <div class="blog-details-comment-area mb-n6">
-                            <h2 class="blog-desc-title mb-6 mt-8">Comments</h2>
+                            <h2 class="blog-desc-title mb-6 mt-8">Komentar</h2>
                             <div class="blog-details-comment-wrapper mb-6">
                                 <div class="thumb">
-                                    <img class="fit-image" src="assets/images/blog/small-size/95x95.jpg" alt="Blog Review">
+                                    <img class="fit-image" src="assets/images/12.jpg" alt="Blog Review">
                                 </div>
                                 <div class="content">
                                     <h4 class="title">Julianto</h4>
                                     <ul class="meta">
-                                        <li>27 Oct 2021</li>
+                                        <li>27 Oktober 2021</li>
                                     </ul>
-                                    <p>Praesent bibendum risus pellentesque faucibus rhoncus. Etiam a mollis odio. Integer urna nisl, fermentum eu mollis et, gravida eu elit. Excepteur sint occaecat cupidatat.</p>
+                                    <p>Wah Terimakasih telah memberitahu saya tentang memelihara kucing.</p>
                                 </div>
                             </div>
 
                             <div class="blog-details-comment-wrapper mb-6">
                                 <div class="thumb">
-                                    <img class="fit-image" src="assets/images/blog/small-size/95x95-2.jpg" alt="Blog Review">
+                                    <img class="fit-image" src="assets/images/17.jpg" alt="Blog Review">
                                 </div>
                                 <div class="content">
-                                    <h4 class="title">Fira</h4>
+                                    <h4 class="title">Safira</h4>
                                     <ul class="meta">
-                                        <li>27 Oct 2021</li>
+                                        <li>27 Oktober 2021</li>
                                     </ul>
-                                    <p>Praesent bibendum risus pellentesque faucibus rhoncus. Etiam a mollis odio. Integer urna nisl, fermentum eu mollis et, gravida eu elit. Excepteur sint occaecat cupidatat.</p>
+                                    <p>Sangat Bermanfaat sekali Blog ini, terus tingkatkan.</p>
                                 </div>
                             </div>
                         </div>
@@ -149,14 +149,14 @@
 
                         <!-- Comments Post Area Start -->
                         <div class="comment-post-area">
-                            <h2 class="blog-desc-title mb-6 pt-8">Post a Comment</h2>
+                            <h2 class="blog-desc-title mb-6 pt-8">Kirimkan Komentar Anda</h2>
                             <form action="#">
                                 <div class="row">
 
                                     <!-- Name Input Start -->
                                     <div class="col-md-6 col-custom">
                                         <div class="input-item mb-4">
-                                            <input class="rounded-0 w-100 input-area name" type="text" placeholder="Name">
+                                            <input class="rounded-0 w-100 input-area name" type="text" placeholder="Nama">
                                         </div>
                                     </div>
                                     <!-- Name Input End -->
@@ -172,14 +172,14 @@
                                     <!-- Message Input Start -->
                                     <div class="col-12 col-custom">
                                         <div class="input-item mb-4">
-                                            <textarea cols="30" rows="10" name="comment" class="rounded-0 w-100 custom-textarea input-area" placeholder="Message" spellcheck="false" data-gramm="false"></textarea>
+                                            <textarea cols="30" rows="10" name="comment" class="rounded-0 w-100 custom-textarea input-area" placeholder="Tulis Pesan" spellcheck="false" data-gramm="false"></textarea>
                                         </div>
                                     </div>
                                     <!-- Message Input End -->
 
                                     <!-- Submit Button Start -->
                                     <div class="col-12 col-custom mt-4">
-                                        <button type="submit" class="btn btn-primary btn-hover-dark">Send Message</button>
+                                        <button type="submit" class="btn btn-primary btn-hover-dark">Kirim Pesan</button>
                                     </div>
                                     <!-- Submit Button End -->
 

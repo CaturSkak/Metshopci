@@ -52,7 +52,7 @@
                         <h4 class="m-t-0">Wabah COVID-19 tak hanya menginfeksi manusia, tetapi juga hewan-hewan. Beberapa penemuan kasus hewan positif covid ditemukan di dunia. Di antaranya harimau malaya di Kebun Binatang Bronx, New York, Amerika Serikat, seekor anjing di Hong Kong, dan dua kucing di New York. Kasus ini terjadi akibat penularan dari manusia.</h4>
                         <p></p>
                     </div>
-                    <button type="button" class="btn btn-block btn-primary m-t-20">Edit</button>
+                    <a href="<?php echo base_url();?>bloglist" button type="button" class="btn btn-block btn-primary m-t-20">Edit</a></button>
                 </div>
             </div>
         </div>

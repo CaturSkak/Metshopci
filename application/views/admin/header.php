@@ -214,7 +214,7 @@
                             </ul>
                         </li>
                         <li><a href="javascript:void(0);" class="right_toggle icon-menu" title="Right Menu"><i class="icon-settings"></i></a></li>
-                        <li><a href="<?php echo base_url(); ?>page-login" class="icon-menu"><i class="icon-power"></i></a></li>
+                        <li><a href="<?php echo base_url(); ?>pagelogin" class="icon-menu"><i class="icon-power"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -376,7 +376,7 @@
 
     <div id="left-sidebar" class="sidebar">
         <div class="navbar-brand">
-            <a href="<?php echo base_url(); ?>index"><img src="<?php echo base_url(); ?>light/logo.png" alt="HexaBit Logo" class="img-fluid logo"><span>MetShop Pet's</span></a>
+            <a href="<?php echo base_url(); ?>BerandaAdmin"><img src="<?php echo base_url(); ?>light/logo.png" alt="HexaBit Logo" class="img-fluid logo"><span>MetShop Pet's</span></a>
             <button type="button" class="btn-toggle-offcanvas btn btn-sm btn-default float-right"><i class="lnr lnr-menu fa fa-chevron-circle-left"></i></button>
         </div>
         <div class="sidebar-scroll">

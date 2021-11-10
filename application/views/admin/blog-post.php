@@ -55,7 +55,7 @@
                                     <h4 class="m-t-0">Hewan Peliharaan itu.</h4>
                                     <p></p>
                                 </div>
-                                <button type="button" class="btn btn-block btn-primary m-t-20">Posting</button>
+                                <a href="<?php echo base_url();?>bloglist" button type="button" class="btn btn-block btn-primary m-t-20">Posting</a></button>
                             </div>
                         </div>
                     </div>   

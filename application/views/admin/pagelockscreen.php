@@ -69,7 +69,7 @@
                                 <div class="form-group">
                                     <input type="password" class="form-control" placeholder="Masukkan Kata Sandi ...">                                    
                                 </div>
-                                <button type="submit" class="btn btn-primary btn-lg btn-block">Masuk</button>                                
+                                <a href="<?php echo base_url();?>BerandaAdmin" button type="submit" class="btn btn-primary btn-lg btn-block">Masuk</a></button>                                
                             </form>
                         </div>
                     </div>
