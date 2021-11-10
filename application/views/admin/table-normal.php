@@ -167,8 +167,112 @@
                         </div>
                     </div>
                 </div>
-                
+            
+   <!-- Modal Start  -->
+   <div class="modalquickview modal fade" id="quick-view" tabindex="-1" aria-labelledby="quick-view" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+               
+                <div class="row">
+                    <div class="col-md-6 col-12">
 
+                        <!-- Product Details Image Start -->
+                        <div class="modal-product-carousel">
+
+                            <!-- Single Product Image Start -->
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    
+                                <a class="swiper-slide w-100" href="<?php echo base_url();?>assets/images/products/medium-product/persia.png">
+                                    <img class="w-100" src="<?php echo base_url();?>assets/images/products/medium-product/persia.png" alt="Product">
+                                <a class="swiper-slide w-100" href="<?php echo base_url();?>assets/images/products/medium-product/kucing_persia_putih_jantan.jpg">
+                                    <img class="w-100" src="<?php echo base_url();?>assets/images/products/medium-product/kucing_persia_putih_jantan.jpg" alt="Product">
+                                </a>
+                                <a class="swiper-slide w-100" href="<?php echo base_url();?>assets/images/products/medium-product/735_5.jpg">
+                                    <img class="w-100" src="<?php echo base_url();?>assets/images/products/medium-product/735_5.jpg" alt="Product">
+                                </a>
+                                <a class="swiper-slide w-100" href="<?php echo base_url();?>assets/images/products/medium-product/putih.jpg">
+                                    <img class="w-100" src="<?php echo base_url();?>assets/images/products/medium-product/putih.jpg" alt="Product">
+                                </a>
+
+                                
+                                </div>
+
+                                <!-- Swiper Pagination Start -->
+                                <!-- <div class="swiper-pagination d-md-none"></div> -->
+                                <!-- Swiper Pagination End -->
+
+                                <!-- Next Previous Button Start -->
+                                <div class="swiper-product-button-next swiper-button-next"><i class="ti-arrow-right"></i></div>
+                                <div class="swiper-product-button-prev swiper-button-prev"><i class="ti-arrow-left"></i></div>
+                                <!-- Next Previous Button End -->
+                            </div>
+                            <!-- Single Product Image End -->
+
+                        </div>
+                        <!-- Product Details Image End -->
+
+                    </div>
+                    <div class="col-md-6 col-12 overflow-hidden position-relative">
+
+                        <!-- Product Summery Start -->
+                        <div class="product-summery position-relative">
+
+                            <!-- Product Head Start -->
+                            <div class="product-head mb-3">
+                                <h2 class="product-title">Kucing Persia Peaknose</h2>
+                            </div>
+                            <!-- Product Head End -->
+
+                            
+
+                            <!-- Price Box Start -->
+                            <div class="sku mb-3">
+                            <span>Kategori</span>
+                                <span>Hewan Peliharaan</span>
+                            </div>
+                            <!-- SKU End -->
+
+                            <!-- Product Inventory Start -->
+                        <div class="product-inventroy mb-3">
+                            <span class="inventroy-title"> <strong>Info :</strong></span>
+                            <span class="inventory-varient">Tersedia</span>
+                     
+                        <!-- Product Inventory End -->
+
+                        <!-- Description Start -->
+                        <p ><p>Kucing Persia Peaknose</p>
+                        <p>Jantan</p>
+                        <p>Umur 3-4 Bulan</p>
+                        <p>No Kutu No Jamur</p>
+                        <p>No Cacat</p>
+                        <p>Obat Cacing Rutin</p>
+                        <p>Linca Dan Pinter</p>
+                        <p>Di Jamin Sehat, Sudah Vaksin</p>
+                        <p>
+
+                        Di Butuhkan Betina Jenis Kucing Persia Peaknose/Kucing Anggora/Kucing Persia Asli</p>
+
+
+                        <p>Melayani Pengiriman Luar Kota Dan Dalam Kota</p>
+                        <!-- Description End -->
+
+                    </div>
+                  
+
+                       
+
+                        </div>
+                        <!-- Product Summery End -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal End  -->
+
+    
 <!-- Javascript -->
 <script src="<?php echo base_url(); ?>assets/bundles/libscripts.bundle.js"></script>    
 <script src="<?php echo base_url(); ?>assets/bundles/vendorscripts.bundle.js"></script>
