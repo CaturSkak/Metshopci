@@ -1043,8 +1043,8 @@
 
                         <!-- Blog Thumb Start -->
                         <div class="blog-thumb thumb-effect">
-                            <a class="image" href="blog-details.php">
-                                <img class="fit-image" src="<?php echo base_url();?>assets/images/blog/kucing.jpg" alt="Blog Image">
+                            <a class="image" href="blogdetails">
+                                <img class="fit-image" width="300px" src="<?php echo base_url();?>assets/images/blog/kucing.jpg" alt="Blog Image">
                             </a>
                         </div>
                         <!-- Blog Thumb End -->
@@ -1057,9 +1057,9 @@
                                     <li><span>27, Januari, 2021</span></li>
                                 </ul>
                             </div>
-                            <h2 class="blog-title"><a href="blog-details.php">Cara Menangani Kucing Kesayangan yang Terkena Diare</a></h2>
+                            <h2 class="blog-title"><a href="blogdetails">Cara Menangani Kucing Kesayangan yang Terkena Diare</a></h2>
                             <p>Halodoc, Jakarta - Diare termasuk masalah kesehatan yang jarang terjadi pada kucing. Namun, jika ini terjadi pada kucing peliharaan kamu, tandanya ia sedang mengalami masalah kesehatan pada pencernaannya. Apabila diare terbilang singkat, kamu tidak perlu khawatir karena biasanya ini terjadi akibat adanya zat pemicu dalam makanan atau minumannya. Ut...</p>
-                            <a class="more-link" href="blog-details.php">Baca Selengkapnya</a>
+                            <a class="more-link" href="blogdetails">Baca Selengkapnya</a>
                         </div>
                         <!-- Blog Content End -->
 
@@ -1073,8 +1073,8 @@
 
                         <!-- Blog Thumb Start -->
                         <div class="blog-thumb thumb-effect">
-                            <a class="image" href="blog-details.php">
-                                <img class="fit-image" src="<?php echo base_url();?>assets/images/blog/ikancupang.jpeg" alt="Blog Image">
+                            <a class="image" href="blogdetails">
+                                <img class="fit-image" src="<?php echo base_url();?>assets/images/blog/ikancupang.jpeg" width="300px" alt="Blog Image">
                             </a>
                         </div>
                         <!-- Blog Thumb End -->
@@ -1087,9 +1087,9 @@
                                     <li><span>12, Februari, 2021</span></li>
                                 </ul>
                             </div>
-                            <h2 class="blog-title"><a href="blog-details2.php">Cara Membedakan Ikan Cupang Jantan dan Betina</a></h2>
+                            <h2 class="blog-title"><a href="blogdetails2">Cara Membedakan Ikan Cupang Jantan dan Betina</a></h2>
                             <p>Jakarta - Ikan cupang mempunyai tampilan yang indah yang membuat banyak orang kecanduan memeliharanya. Namun penampilan ikan ini juga tergantung jenis kelaminnya, apakah ikan cupang jantan atau ikan cupang betina. Perbedaan ikan cupang jantan dengan betina secara penampilan adalah secara penampilan tubuhnya lebih langsing. Ut...</p>
-                            <a class="more-link" href="blog-details2.php">Baca Selengkapnya</a>
+                            <a class="more-link" href="blogdetails2">Baca Selengkapnya</a>
                         </div>
                         <!-- Blog Content End -->
 
@@ -1103,8 +1103,8 @@
 
                         <!-- Blog Thumb Start -->
                         <div class="blog-thumb thumb-effect">
-                            <a class="image" href="blog-details.php">
-                                <img class="fit-image" src="<?php echo base_url();?>assets/images/blog/anjing.jpg" alt="Blog Image">
+                            <a class="image" href="blogdetails">
+                                <img class="fit-image" src="<?php echo base_url();?>assets/images/blog/anjing.jpg" width="300px" alt="Blog Image">
                             </a>
                         </div>
                         <!-- Blog Thumb End -->
@@ -1117,9 +1117,9 @@
                                     <li><span>20, Maret, 2021</span></li>
                                 </ul>
                             </div>
-                            <h2 class="blog-title"><a href="blog-details3.php">Tips merawat anjing peliharaan untuk pemula</a></h2>
+                            <h2 class="blog-title"><a href="blogdetails3">Tips merawat anjing peliharaan untuk pemula</a></h2>
                             <p>Selain dikenal sebagai hewan peliharaan yang setia, anjing juga bisa menjadi penjaga rumah yang baik. Banyak yang percaya kalo memelihara anjing bisa meredakan stress dan mengurangi rasa kesepian. Memiliki anjing sebagai hewan peliharaan pun bahkan bisa dijadikan sebagai kebanggaan karena selain lucu, hewan yang satu ini pun juga cerdas lho! Ut...</p>
-                            <a class="more-link" href="blog-details3.php">Baca Selengkapnya</a>
+                            <a class="more-link" href="blogdetails3">Baca Selengkapnya</a>
                         </div>
                         <!-- Blog Content End -->
 

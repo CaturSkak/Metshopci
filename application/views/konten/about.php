@@ -10,7 +10,7 @@
                     <div class="breadcrumb-wrapper">
                         <h2 class="breadcrumb-title">Tentang Kami</h2>
                         <ul>
-                            <li><a href="index.php">Beranda</a></li>
+                            <li><a href="index">Beranda</a></li>
                             <li>Tentang Kami</li>
                         </ul>
                     </div>
@@ -42,7 +42,7 @@
                             <li><span><i class="ti-angle-double-right"></i></span> Bisa Menjodohkan Hewan Peliharaan DLL.</li>
                             <li><span><i class="ti-angle-double-right"></i></span> Pelayanannya sangat memuaskan pelanggan</li>
                         </ul>
-                        <a href="contact.php" class="btn btn-primary btn-hover-dark">Hubungi Kami</a>
+                        <a href="contact" class="btn btn-primary btn-hover-dark">Hubungi Kami</a>
                     </div>
                     <!-- About Content End -->
                 </div>
@@ -145,7 +145,7 @@
                     <!-- Single Team Wrapper Start -->
                     <div class="single-team-wrapper">
                         <div class="thumb">
-                            <a href="contact.php">
+                            <a href="contact">
                                 <img class="fit-image" src="<?php echo base_url();?>assets/images/team/Catur.png" alt="Team Image">
                             </a>
                             <!-- Social Shear Start -->
@@ -169,7 +169,7 @@
                     <!-- Single Team Wrapper Start -->
                     <div class="single-team-wrapper">
                         <div class="thumb">
-                            <a href="contact.php">
+                            <a href="contact">
                                 <img class="fit-image" src="<?php echo base_url();?>assets/images/team/Dedi.png" alt="Team Image">
                             </a>
                             <!-- Social Shear Start -->
@@ -193,7 +193,7 @@
                     <!-- Single Team Wrapper Start -->
                     <div class="single-team-wrapper">
                         <div class="thumb">
-                            <a href="contact.php">
+                            <a href="contact">
                                 <img class="fit-image" src="<?php echo base_url();?>assets/images/team/Alif.png" alt="Team Image">
                             </a>
                             <!-- Social Shear Start -->
@@ -217,7 +217,7 @@
                     <!-- Single Team Wrapper Start -->
                     <div class="single-team-wrapper">
                         <div class="thumb">
-                            <a href="contact.php">
+                            <a href="contact">
                                 <img class="fit-image" src="<?php echo base_url();?>assets/images/team/Farhan.png" alt="Team Image">
                             </a>
                             <!-- Social Shear Start -->
@@ -350,9 +350,9 @@
                             <div class="cart-btn action-btn mb-6">
                                 <div class="action-cart-btn-wrapper d-flex justify-content-start">
                                     <div class="add-to_cart">
-                                        <a class="btn btn-primary btn-hover-dark rounded-0" href="cart.php">Add to cart</a>
+                                        <a class="btn btn-primary btn-hover-dark rounded-0" href="cart">Add to cart</a>
                                     </div>
-                                    <a href="wishlist.php" title="Wishlist" class="action"><i class="ti-heart"></i></a>
+                                    <a href="wishlist" title="Wishlist" class="action"><i class="ti-heart"></i></a>
                                 </div>
                             </div>
                             <!-- Cart Button End -->
@@ -426,61 +426,61 @@
                             <li class="has-children">
                                 <a href="#">Home <i class="fa fa-angle-down"></i></a>
                                 <ul class="dropdown">
-                                    <li><a href="index.php">Home One</a></li>
-                                    <li><a href="index-2.php">Home Two</a></li>
-                                    <li><a href="index-3.php">Home Three</a></li>
-                                    <li><a href="index-4.php">Home Four</a></li>
+                                    <li><a href="index">Home One</a></li>
+                                    <li><a href="index-2">Home Two</a></li>
+                                    <li><a href="index-3">Home Three</a></li>
+                                    <li><a href="index-4">Home Four</a></li>
                                 </ul>
                             </li>
                             <li class="has-children">
                                 <a href="#">Shop <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                 <ul class="dropdown">
-                                    <li><a href="shop.php">Shop Grid</a></li>
-                                    <li><a href="shop-left-sidebar.php">Shop Left Sidebar</a></li>
-                                    <li><a href="shop-right-sidebar.php">Shop Right Sidebar</a></li>
-                                    <li><a href="shop-list-fullwidth.php">Shop List Fullwidth</a></li>
-                                    <li><a href="shop-list-left-sidebar.php">Shop List Left Sidebar</a></li>
-                                    <li><a href="shop-list-right-sidebar.php">Shop List Right Sidebar</a></li>
-                                    <li><a href="wishlist.php">Wishlist</a></li>
-                                    <li><a href="cart.php">Shopping Cart</a></li>
-                                    <li><a href="checkout.php">Checkout</a></li>
-                                    <li><a href="compare.php">Compare</a></li>
+                                    <li><a href="shop">Shop Grid</a></li>
+                                    <li><a href="shop-left-sidebar">Shop Left Sidebar</a></li>
+                                    <li><a href="shop-right-sidebar">Shop Right Sidebar</a></li>
+                                    <li><a href="shop-list-fullwidth">Shop List Fullwidth</a></li>
+                                    <li><a href="shop-list-left-sidebar">Shop List Left Sidebar</a></li>
+                                    <li><a href="shop-list-right-sidebar">Shop List Right Sidebar</a></li>
+                                    <li><a href="wishlist">Wishlist</a></li>
+                                    <li><a href="cart">Shopping Cart</a></li>
+                                    <li><a href="checkout">Checkout</a></li>
+                                    <li><a href="compare">Compare</a></li>
                                 </ul>
                             </li>
                             <li class="has-children">
                                 <a href="#">Product <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                 <ul class="dropdown">
-                                    <li><a href="single-product.php">Single Product</a></li>
-                                    <li><a href="single-product-sale.php">Single Product Sale</a></li>
-                                    <li><a href="single-product-group.php">Single Product Group</a></li>
-                                    <li><a href="single-product-normal.php">Single Product Normal</a></li>
-                                    <li><a href="single-product-affiliate.php">Single Product Affiliate</a></li>
-                                    <li><a href="single-product-slider.php">Single Product Slider</a></li>
+                                    <li><a href="single-product">Single Product</a></li>
+                                    <li><a href="single-product-sale">Single Product Sale</a></li>
+                                    <li><a href="single-product-group">Single Product Group</a></li>
+                                    <li><a href="single-product-normal">Single Product Normal</a></li>
+                                    <li><a href="single-product-affiliate">Single Product Affiliate</a></li>
+                                    <li><a href="single-product-slider">Single Product Slider</a></li>
                                 </ul>
                             </li>
                             <li class="has-children">
                                 <a href="#">Pages <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                 <ul class="dropdown">
-                                    <li><a href="about.php">About Us</a></li>
-                                    <li><a href="contact.php">Contact</a></li>
-                                    <li><a href="faq.php">Faq</a></li>
-                                    <li><a href="error-404.php">Error 404</a></li>
-                                    <li><a href="my-account.php">My Account</a></li>
-                                    <li><a href="login.php">Login | Register</a></li>
+                                    <li><a href="about">About Us</a></li>
+                                    <li><a href="contact">Contact</a></li>
+                                    <li><a href="faq">Faq</a></li>
+                                    <li><a href="error-404">Error 404</a></li>
+                                    <li><a href="my-account">My Account</a></li>
+                                    <li><a href="login">Login | Register</a></li>
                                 </ul>
                             </li>
                             <li class="has-children">
                                 <a href="#">Blog <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                 <ul class="dropdown">
-                                    <li><a href="blog.php">Blog</a></li>
-                                    <li><a href="blog-left-sidebar.php">Blog Left Sidebar</a></li>
-                                    <li><a href="blog-right-sidebar.php">Blog Right Sidebar</a></li>
-                                    <li><a href="blog-details.php">Blog Details</a></li>
-                                    <li><a href="blog-details-sidebar.php">Blog Details Sidebar</a></li>
+                                    <li><a href="blog">Blog</a></li>
+                                    <li><a href="blog-left-sidebar">Blog Left Sidebar</a></li>
+                                    <li><a href="blog-right-sidebar">Blog Right Sidebar</a></li>
+                                    <li><a href="blog-details">Blog Details</a></li>
+                                    <li><a href="blog-details-sidebar">Blog Details Sidebar</a></li>
                                 </ul>
                             </li>
-                            <li><a href="about.php">About</a></li>
-                            <li><a href="contact.php">Contact</a></li>
+                            <li><a href="about">About</a></li>
+                            <li><a href="contact">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
