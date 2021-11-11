@@ -72,7 +72,7 @@
                                     <label for="signup-password" class="control-label sr-only">Password</label>
                                     <input type="password" class="form-control" id="signup-password" placeholder="Kata Sandi">
                                 </div>
-                                <button type="submit" class="btn btn-primary btn-lg btn-block">Daftar</button>                                
+                                <a href="<?php echo base_url();?>pagelogin" button type="submit" class="btn btn-primary btn-lg btn-block">Daftar</a></button>                                
                             </form>
                             <div class="separator-linethrough"><span>Atau</span></div>
                             <button class="btn btn-signin-social"><i class="fa fa-google google-color" aria-hidden="true"></i> Masuk Dengan Gmail</button> 
