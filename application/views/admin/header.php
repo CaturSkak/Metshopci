@@ -376,7 +376,7 @@
 
     <div id="left-sidebar" class="sidebar">
         <div class="navbar-brand">
-            <a href="<?php echo base_url(); ?>index"><img src="<?php echo base_url(); ?>light/logo.png" alt="HexaBit Logo" class="img-fluid logo"><span>MetShop Pet's</span></a>
+            <a href="<?php echo base_url(); ?>BerandaAdmin"><img src="<?php echo base_url(); ?>light/logo.png" alt="HexaBit Logo" class="img-fluid logo"><span>MetShop Pet's</span></a>
             <button type="button" class="btn-toggle-offcanvas btn btn-sm btn-default float-right"><i class="lnr lnr-menu fa fa-chevron-circle-left"></i></button>
         </div>
         <div class="sidebar-scroll">
