@@ -47,7 +47,7 @@
                         <div class="body">
                             <input type="file" id="dropify-event" data-default-file="">
                         </div>
-                        <button type="button" class="btn btn-block btn-primary m-t-20">Tambah</button>
+                        <a href="<?php echo base_url();?>appcontact" button type="button" class="btn btn-block btn-primary m-t-20">Tambah</a></button>
                     </div>   
                 </div>
             </div>

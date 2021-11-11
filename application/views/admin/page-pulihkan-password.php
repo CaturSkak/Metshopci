@@ -20,7 +20,6 @@
 </head>
 
 <body class="theme-orange">
-    
     <!-- WRAPPER -->
 	<div id="wrapper" class="auth-main">
         <div class="container">
@@ -61,14 +60,14 @@
                             <p class="lead">Pulihkan Kata Sandi</p>
                         </div>
                         <div class="body">
-                            <p>Silakan masukkan alamat email Anda di bawah ini untuk menerima kode verifikasi untuk mengatur ulang kata sandi.</p>
+                            <p>Silakan masukkan Kata Sandi Baru Anda untuk Masuk.</p>
                             <form class="form-auth-small" action="BerandaAdmin">
                                 <div class="form-group">                                    
-                                    <input type="password" class="form-control" id="signup-password" placeholder="Email">
+                                    <input type="password" class="form-control" id="signup-password" placeholder="Kata Sandi Baru">
                                 </div>
-                                <a href="<?php echo base_url();?>pagekodeverifikasi" button type="submit" class="btn btn-primary btn-lg btn-block">Kirim</a></button>
+                                <a href="<?php echo base_url();?>pagelogin" button type="submit" class="btn btn-primary btn-lg btn-block">Atur Ulang Kata Sandi</a></button>
                                 <div class="bottom">
-                                    <span class="helper-text">Tahu Kata Sandi? <a href="<?php echo base_url(); ?>pagelogin">Masuk</a></span>
+                                    
                                 </div>
                             </form>
                         </div>

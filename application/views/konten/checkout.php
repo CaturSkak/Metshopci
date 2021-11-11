@@ -29,7 +29,7 @@
 
                         <!-- Title Start -->
                         <h3 class="title">Sudah Punya Akun? <span id="showlogin">Klik disini untuk Login</span></h3>
-                        <!-- Title End -->
+                        <!-- Title End --
 
                         <!-- Checkout Login Start -->
                         <div id="checkout-login" class="coupon-content">
@@ -431,7 +431,7 @@
                             </div>
 
                              <div class="card-body shadow-sm rounded d-flex mb-3" id="card-bank">
-                               <label class="fit-image ms-1"><input required type="radio" class="pixel-radio ml-auto align-self-center mb-3"  type="radio"></input  type="radio" name="tipebayar" value="bri" required><a> &nbsp;&nbsp;&nbsp;&nbsp;</a><img src="<?php echo base_url();?>assets/images/payment/bnii.png" class="bank-icon rounded-circle"><strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BNI</strong> </label>
+                               <label class="fancy-checkbox element-left"><input required type="radio" class="pixel-radio ml-auto align-self-center mb-3"  type="radio"></input  type="checkbox" name="tipebayar" value="bri" required><a> &nbsp;&nbsp;&nbsp;&nbsp;</a><img src="<?php echo base_url();?>assets/images/payment/bnii.png" class="bank-icon rounded-circle"><strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BNI</strong> </label>
                                 
                             </div>
                                         </div>

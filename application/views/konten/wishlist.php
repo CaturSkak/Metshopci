@@ -11,7 +11,7 @@
                     <div class="breadcrumb-wrapper">
                         <h2 class="breadcrumb-title">Daftar Keinginan</h2>
                         <ul>
-                            <li><a href="<?php echo base_url();?>index.html">Beranda</a></li>
+                            <li><a href="<?php echo base_url();?>index">Beranda</a></li>
                             <li>Daftar Keinginan</li>
                         </ul>
                     </div>
@@ -41,35 +41,35 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td class="pro-thumbnail"><a href="<?php echo base_url();?>single-product.html"><img class="fit-image" src="<?php echo base_url();?>assets\images\products\large-product/shiba inu.png" alt="Product" /></a></td>
-                                    <td class="pro-title"><a href="<?php echo base_url();?>single-product.html">Anjing Shiba Inu</a></td>
+                                    <td class="pro-thumbnail"><a href="<?php echo base_url();?>single-product"><img class="fit-image" src="<?php echo base_url();?>assets\images\products\large-product/shiba inu.png" alt="Product" /></a></td>
+                                    <td class="pro-title"><a href="<?php echo base_url();?>single-product">Anjing Shiba Inu</a></td>
                                     <td class="pro-price"><span>Rp.6.000.000</span></td>
                                     <td class="pro-stock"><span>Tersedia</span></td>
-                                    <td class="pro-cart"><a href="<?php echo base_url();?>cart.html" class="btn btn-primary btn-hover-dark">Tambah ke keranjang</a></td>
+                                    <td class="pro-cart"><a href="<?php echo base_url();?>cart" class="btn btn-primary btn-hover-dark">Tambah ke keranjang</a></td>
                                     <td class="pro-remove"><a href="<?php echo base_url();?>#/"><i class="ti-trash"></i></a></td>
                                 </tr>
                                 <tr>
-                                    <td class="pro-thumbnail"><a href="<?php echo base_url();?>single-product.html"><img class="fit-image" src="<?php echo base_url();?>assets\images\products\large-product/kucing anggora1.png" alt="Product" /></a></td>
-                                    <td class="pro-title"><a href="<?php echo base_url();?>single-product.html">Kucing Persia Asli</a></td>
+                                    <td class="pro-thumbnail"><a href="<?php echo base_url();?>single-product"><img class="fit-image" src="<?php echo base_url();?>assets\images\products\large-product/kucing anggora1.png" alt="Product" /></a></td>
+                                    <td class="pro-title"><a href="<?php echo base_url();?>single-product">Kucing Persia Asli</a></td>
                                     <td class="pro-price"><span>Rp.5.740.000</span></td>
                                     <td class="pro-stock"><span>Tersedia</span></td>
-                                    <td class="pro-cart"><a href="<?php echo base_url();?>cart.html" class="btn btn-primary btn-hover-dark">Tambah ke keranjang</a></td>
+                                    <td class="pro-cart"><a href="<?php echo base_url();?>cart" class="btn btn-primary btn-hover-dark">Tambah ke keranjang</a></td>
                                     <td class="pro-remove"><a href="<?php echo base_url();?>#/"><i class="ti-trash"></i></a></td>
                                 </tr>
                                 <tr>
-                                    <td class="pro-thumbnail"><a href="<?php echo base_url();?>single-product.html"><img class="fit-image" src="<?php echo base_url();?>assets/images/products/medium-product/Iguana Hijau.png" alt="Product" /></a></td>
-                                    <td class="pro-title"><a href="<?php echo base_url();?>single-product.html">Iguana Hijau</a></td>
+                                    <td class="pro-thumbnail"><a href="<?php echo base_url();?>single-product"><img class="fit-image" src="<?php echo base_url();?>assets/images/products/medium-product/Iguana Hijau.png" alt="Product" /></a></td>
+                                    <td class="pro-title"><a href="<?php echo base_url();?>single-product">Iguana Hijau</a></td>
                                     <td class="pro-price"><span>Rp.500.000</span></td>
                                     <td class="pro-stock"><span>Tersedia</span></td>
-                                    <td class="pro-cart"><a href="<?php echo base_url();?>cart.html" class="btn btn-primary btn-hover-dark">Tambah ke keranjang</a></td>
+                                    <td class="pro-cart"><a href="<?php echo base_url();?>cart" class="btn btn-primary btn-hover-dark">Tambah ke keranjang</a></td>
                                     <td class="pro-remove"><a href="<?php echo base_url();?>#/"><i class="ti-trash"></i></a></td>
                                 </tr>
                                 <tr>
-                                    <td class="pro-thumbnail"><a href="<?php echo base_url();?>single-product.html"><img class="fit-image" src="<?php echo base_url();?>assets/images/products/medium-product/muckin.jpeg" alt="Product" /></a></td>
-                                    <td class="pro-title"><a href="<?php echo base_url();?>single-product.html">Kucing Muckin Kitten</a></td>
+                                    <td class="pro-thumbnail"><a href="<?php echo base_url();?>single-product"><img class="fit-image" src="<?php echo base_url();?>assets/images/products/medium-product/muckin.jpeg" alt="Product" /></a></td>
+                                    <td class="pro-title"><a href="<?php echo base_url();?>single-product">Kucing Muckin Kitten</a></td>
                                     <td class="pro-price"><span>Rp.900.000</span></td>
                                     <td class="pro-stock"><span>Habis</span></td>
-                                    <td class="pro-cart"><a href="<?php echo base_url();?>cart.html" class="btn btn-primary btn-hover-dark disabled">Tambah ke keranjang</a></td>
+                                    <td class="pro-cart"><a href="<?php echo base_url();?>cart" class="btn btn-primary btn-hover-dark disabled">Tambah ke keranjang</a></td>
                                     <td class="pro-remove"><a href="<?php echo base_url();?>#/"><i class="ti-trash"></i></a></td>
                                 </tr>
                             </tbody>
@@ -188,9 +188,9 @@
                             <div class="cart-btn action-btn mb-6">
                                 <div class="action-cart-btn-wrapper d-flex justify-content-start">
                                     <div class="add-to_cart">
-                                        <a class="btn btn-primary btn-hover-dark rounded-0" href="<?php echo base_url();?>cart.html">Add to cart</a>
+                                        <a class="btn btn-primary btn-hover-dark rounded-0" href="<?php echo base_url();?>cart">Add to cart</a>
                                     </div>
-                                    <a href="<?php echo base_url();?>wishlist.html" title="Wishlist" class="action"><i class="ti-heart"></i></a>
+                                    <a href="<?php echo base_url();?>wishlist" title="Wishlist" class="action"><i class="ti-heart"></i></a>
                                 </div>
                             </div>
                             <!-- Cart Button End -->
@@ -264,61 +264,61 @@
                             <li class="has-children">
                                 <a href="<?php echo base_url();?>#">Home <i class="fa fa-angle-down"></i></a>
                                 <ul class="dropdown">
-                                    <li><a href="<?php echo base_url();?>index.html">Home One</a></li>
-                                    <li><a href="<?php echo base_url();?>index-2.html">Home Two</a></li>
-                                    <li><a href="<?php echo base_url();?>index-3.html">Home Three</a></li>
-                                    <li><a href="<?php echo base_url();?>index-4.html">Home Four</a></li>
+                                    <li><a href="<?php echo base_url();?>index">Home One</a></li>
+                                    <li><a href="<?php echo base_url();?>index-2">Home Two</a></li>
+                                    <li><a href="<?php echo base_url();?>index-3">Home Three</a></li>
+                                    <li><a href="<?php echo base_url();?>index-4">Home Four</a></li>
                                 </ul>
                             </li>
                             <li class="has-children">
                                 <a href="<?php echo base_url();?>#">Shop <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                 <ul class="dropdown">
-                                    <li><a href="<?php echo base_url();?>shop.html">Shop Grid</a></li>
-                                    <li><a href="<?php echo base_url();?>shop-left-sidebar.html">Shop Left Sidebar</a></li>
-                                    <li><a href="<?php echo base_url();?>shop-right-sidebar.html">Shop Right Sidebar</a></li>
-                                    <li><a href="<?php echo base_url();?>shop-list-fullwidth.html">Shop List Fullwidth</a></li>
-                                    <li><a href="<?php echo base_url();?>shop-list-left-sidebar.html">Shop List Left Sidebar</a></li>
-                                    <li><a href="<?php echo base_url();?>shop-list-right-sidebar.html">Shop List Right Sidebar</a></li>
-                                    <li><a href="<?php echo base_url();?>wishlist.html">Wishlist</a></li>
-                                    <li><a href="<?php echo base_url();?>cart.html">Shopping Cart</a></li>
-                                    <li><a href="<?php echo base_url();?>checkout.html">Checkout</a></li>
-                                    <li><a href="<?php echo base_url();?>compare.html">Compare</a></li>
+                                    <li><a href="<?php echo base_url();?>shop">Shop Grid</a></li>
+                                    <li><a href="<?php echo base_url();?>shop-left-sidebar">Shop Left Sidebar</a></li>
+                                    <li><a href="<?php echo base_url();?>shop-right-sidebar">Shop Right Sidebar</a></li>
+                                    <li><a href="<?php echo base_url();?>shop-list-fullwidth">Shop List Fullwidth</a></li>
+                                    <li><a href="<?php echo base_url();?>shop-list-left-sidebar">Shop List Left Sidebar</a></li>
+                                    <li><a href="<?php echo base_url();?>shop-list-right-sidebar">Shop List Right Sidebar</a></li>
+                                    <li><a href="<?php echo base_url();?>wishlist">Wishlist</a></li>
+                                    <li><a href="<?php echo base_url();?>cart">Shopping Cart</a></li>
+                                    <li><a href="<?php echo base_url();?>checkout">Checkout</a></li>
+                                    <li><a href="<?php echo base_url();?>compare">Compare</a></li>
                                 </ul>
                             </li>
                             <li class="has-children">
                                 <a href="<?php echo base_url();?>#">Product <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                 <ul class="dropdown">
-                                    <li><a href="<?php echo base_url();?>single-product.html">Single Product</a></li>
-                                    <li><a href="<?php echo base_url();?>single-product-sale.html">Single Product Sale</a></li>
-                                    <li><a href="<?php echo base_url();?>single-product-group.html">Single Product Group</a></li>
-                                    <li><a href="<?php echo base_url();?>single-product-normal.html">Single Product Normal</a></li>
-                                    <li><a href="<?php echo base_url();?>single-product-affiliate.html">Single Product Affiliate</a></li>
-                                    <li><a href="<?php echo base_url();?>single-product-slider.html">Single Product Slider</a></li>
+                                    <li><a href="<?php echo base_url();?>single-product">Single Product</a></li>
+                                    <li><a href="<?php echo base_url();?>single-product-sale">Single Product Sale</a></li>
+                                    <li><a href="<?php echo base_url();?>single-product-group">Single Product Group</a></li>
+                                    <li><a href="<?php echo base_url();?>single-product-normal">Single Product Normal</a></li>
+                                    <li><a href="<?php echo base_url();?>single-product-affiliate">Single Product Affiliate</a></li>
+                                    <li><a href="<?php echo base_url();?>single-product-slider">Single Product Slider</a></li>
                                 </ul>
                             </li>
                             <li class="has-children">
                                 <a href="<?php echo base_url();?>#">Pages <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                 <ul class="dropdown">
-                                    <li><a href="<?php echo base_url();?>about.html">About Us</a></li>
-                                    <li><a href="<?php echo base_url();?>contact.html">Contact</a></li>
-                                    <li><a href="<?php echo base_url();?>faq.html">Faq</a></li>
-                                    <li><a href="<?php echo base_url();?>error-404.html">Error 404</a></li>
-                                    <li><a href="<?php echo base_url();?>my-account.html">My Account</a></li>
-                                    <li><a href="<?php echo base_url();?>login.html">Login | Register</a></li>
+                                    <li><a href="<?php echo base_url();?>about">About Us</a></li>
+                                    <li><a href="<?php echo base_url();?>contact">Contact</a></li>
+                                    <li><a href="<?php echo base_url();?>faq">Faq</a></li>
+                                    <li><a href="<?php echo base_url();?>error-404">Error 404</a></li>
+                                    <li><a href="<?php echo base_url();?>my-account">My Account</a></li>
+                                    <li><a href="<?php echo base_url();?>login">Login | Register</a></li>
                                 </ul>
                             </li>
                             <li class="has-children">
                                 <a href="<?php echo base_url();?>#">Blog <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                 <ul class="dropdown">
-                                    <li><a href="<?php echo base_url();?>blog.html">Blog</a></li>
-                                    <li><a href="<?php echo base_url();?>blog-left-sidebar.html">Blog Left Sidebar</a></li>
-                                    <li><a href="<?php echo base_url();?>blog-right-sidebar.html">Blog Right Sidebar</a></li>
-                                    <li><a href="<?php echo base_url();?>blog-details.html">Blog Details</a></li>
-                                    <li><a href="<?php echo base_url();?>blog-details-sidebar.html">Blog Details Sidebar</a></li>
+                                    <li><a href="<?php echo base_url();?>blog">Blog</a></li>
+                                    <li><a href="<?php echo base_url();?>blog-left-sidebar">Blog Left Sidebar</a></li>
+                                    <li><a href="<?php echo base_url();?>blog-right-sidebar">Blog Right Sidebar</a></li>
+                                    <li><a href="<?php echo base_url();?>blog-details">Blog Details</a></li>
+                                    <li><a href="<?php echo base_url();?>blog-details-sidebar">Blog Details Sidebar</a></li>
                                 </ul>
                             </li>
-                            <li><a href="<?php echo base_url();?>about.html">About</a></li>
-                            <li><a href="<?php echo base_url();?>contact.html">Contact</a></li>
+                            <li><a href="<?php echo base_url();?>about">About</a></li>
+                            <li><a href="<?php echo base_url();?>contact">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
