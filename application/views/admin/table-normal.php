@@ -1,7 +1,12 @@
 
 <!doctype html>
 <html lang="en">
-
+<head>
+<!-- Plugins CSS (All Plugins Files) -->
+    <link rel="stylesheet" href="<?php echo base_url();?>light/assets/css/plugins/swiper-bundle.min.css" />
+<!-- Main Style CSS -->
+<link rel="stylesheet" href="<?php echo base_url();?>light/assets/css/style.css" />
+</head>
 <body class="theme-orange">
 
 
@@ -74,20 +79,9 @@
                                             <td>Kucing Anggora Asli</td>
                                              <td><div id="navbar-menu">
                                                 <ul class="nav navbar-nav">
-                                                <li class="dropdown dropdown-animated scale-left">
-                                                <a href="javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown">
-                                                <i class="icon-picture"></i>
-                                                <span class="notification-dot"></span>
-                                                </a>
+                                                <a  href="#/" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view" title="Quickview" class="btn btn-primary"><button class="btn btn-primary " ><i class="icon icon-info"></i></button></a>
                                                 <ul class="dropdown-menu right_chat email">
-                                                <li>
-                                                <a href="javascript:void(0);">
-                                                    <div class="thumb">
-                                                        <a class="image">
-                                                        <img class="fit-image" width="300px" src="<?php echo base_url(); ?>assets/images/jodohbetina.jpg" alt="Product" />
-                                                    </div>
-                                                </a>
-                                            </li>
+                                              
                                             </td>
                                             <td>7</td>
                                             <td>Rp.245.000</td>
@@ -121,22 +115,8 @@
                                             <td>Jodoh</td>
                                             <td>Kucing Anggora Asli</td>
                                             <td>Kucing Persia Asli</td>
-                                            <td><div id="navbar-menu">
-                                                <ul class="nav navbar-nav">
-                                                <li class="dropdown dropdown-animated scale-left">
-                                                <a href="javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown">
-                                                <i class="icon-picture"></i>
-                                                <span class="notification-dot"></span>
-                                                </a>
-                                                <ul class="dropdown-menu right_chat email">
-                                                <li>
-                                                <a href="javascript:void(0);">
-                                                    <div class="thumb">
-                                                        <a class="image">
-                                                        <img class="fit-image" width="300px" src="<?php echo base_url(); ?>assets/images/jodohbetina2.jpg" alt="Product" />
-                                                    </div>
-                                                </a>
-                                            </li>
+                                            <td>
+                                            <a  href="#/" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view" title="Quickview" class="btn btn-primary"><button class="btn btn-primary " ><i class="icon icon-info"></i></button></a>
                                             </td>
                                             <td>7</td>
                                             <td>Rp.245.000</td>
@@ -248,12 +228,8 @@
                         <p>No Cacat</p>
                         <p>Obat Cacing Rutin</p>
                         <p>Linca Dan Pinter</p>
-                        <p>Di Jamin Sehat, Sudah Vaksin</p>
-                        <p>
-
-                        Di Butuhkan Betina Jenis Kucing Persia Peaknose/Kucing Anggora/Kucing Persia Asli</p>
-
-
+                        <p> Sehat, Sudah Vaksin</p>
+                       
                         <p>Melayani Pengiriman Luar Kota Dan Dalam Kota</p>
                         <!-- Description End -->
 
@@ -276,7 +252,22 @@
 <!-- Javascript -->
 <script src="<?php echo base_url(); ?>assets/bundles/libscripts.bundle.js"></script>    
 <script src="<?php echo base_url(); ?>assets/bundles/vendorscripts.bundle.js"></script>
+<script src="<?php echo base_url();?>assets/vendor/sweetalert/sweetalert.min.js"></script><!-- SweetAlert Plugin Js -->
+
+  
+<!-- Plugins JS -->
+<script src="<?php echo base_url();?>light/assets/js/plugins/swiper-bundle.min.js"></script>
+
+
+<!-- Vendor JS -->
+
+<script src="<?php echo base_url();?>light/assets/js/vendor/bootstrap.min.js"></script>
+ <!--Main JS-->
+ <script src="<?php echo base_url();?>light/assets/js/main.js"></script>
+
 
 <script src="<?php echo base_url(); ?>assets/bundles/mainscripts.bundle.js"></script>
+<script src="<?php echo base_url();?>light/assets/js/pages/forms/advanced-form-elements.js"></script>
+<script src="<?php echo base_url();?>light/assets/js/pages/ui/dialogs.js"></script>
 </body>
 </html>

@@ -329,16 +329,16 @@
     <!-- Modal End  -->
 
 
-
+  
 <!-- Javascript -->
-<script src="<?php echo base_url();?>light/assets/bundles/libscripts.bundle.js"></script>    
-<script src="<?php echo base_url();?>light/assets/bundles/vendorscripts.bundle.js"></script>
-
+<script src="<?php echo base_url(); ?>assets/bundles/libscripts.bundle.js"></script>    
+<script src="<?php echo base_url(); ?>assets/bundles/vendorscripts.bundle.js"></script>
 <script src="<?php echo base_url();?>assets/vendor/sweetalert/sweetalert.min.js"></script><!-- SweetAlert Plugin Js -->
 
-    
+  
 <!-- Plugins JS -->
 <script src="<?php echo base_url();?>light/assets/js/plugins/swiper-bundle.min.js"></script>
+
 
 <!-- Vendor JS -->
 
@@ -346,11 +346,10 @@
  <!--Main JS-->
  <script src="<?php echo base_url();?>light/assets/js/main.js"></script>
 
-<script src="<?php echo base_url();?>light/assets/bundles/mainscripts.bundle.js"></script>
+
+<script src="<?php echo base_url(); ?>assets/bundles/mainscripts.bundle.js"></script>
 <script src="<?php echo base_url();?>light/assets/js/pages/forms/advanced-form-elements.js"></script>
 <script src="<?php echo base_url();?>light/assets/js/pages/ui/dialogs.js"></script>
-
-
  
 </body>
 </html>
