@@ -2,103 +2,186 @@
 <!doctype html>
 <html lang="en">
 
-
 <body class="theme-orange">
+
 
 <div id="wrapper">
 
     
-
-    <div id="main-content">
-        <div class="block-header">
-            <div class="row clearfix">
-                <div class="col-md-6 col-sm-12">
-                    <h2>Pesan</h2>
-                </div>            
-                <div class="col-md-6 col-sm-12 text-right">
-                    <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>index"><i class="icon-home"></i></a></li>
-                        <li class="breadcrumb-item active">Pesan</li>
-                    </ul>
-                 
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid">            
-            <div class="row clearfix">
-                <div class="col-lg-12">
-                    <div class="card chat-app">
-                        <div class="chat">
-                            <div class="chat-header clearfix">
-                                <div class="row clearfix">
-                                    <div class="col-lg-6">
-                                        <a href="javascript:void(0);" data-toggle="modal" data-target="#view_info">
-                                            <img src="<?php echo base_url(); ?>assets/images/logo.png" alt="avatar" />
-                                        </a>
-                                        <div class="chat-about">
-                                            <h6 class="m-b-0">Admin </h6>
-                                            <small>Online</small>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 hidden-sm text-right">
-                                        <a href="javascript:void(0);" class="btn btn-warning"><i class="icon-camera text-light"></i></a>
-                                        <a href="javascript:void(0);" class="btn btn-primary"><i class="icon-camcorder"></i></a>
-                                        <a href="javascript:void(0);" class="btn btn-secondary"><i class="icon-settings"></i></a>
-                                        <a href="javascript:void(0);" class="btn btn-secondary"><i class="icon-question"></i></a>
-                                    </div>
-                                </div>
+    <div id="main-content">        
+        <div class="mail-inbox">
+            
+            <div class="mail-right check-all-parent">
+                <div class="header d-flex align-center">
+                    <h2>Pesan Masuk</h2>
+                    <form class="ml-auto">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Cari Disini.." aria-label="Search Mail" aria-describedby="search-mail">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="search-mail"><i class="icon-magnifier"></i></span>
                             </div>
-                            <div class="chat-history">
-                                <ul class="right_chat email">
-                               
-                                <li>
-                                    <a href="<?php echo base_url(); ?>appchat">
-                                        <div class="media">
-                                            <img class="media-object " src="<?php echo base_url(); ?>assets/images/12.jpg" alt="">
-                                            <div class="media-body">
-                                                <span class="name">Muhammad Doni S. <small class="float-right">27 Juni</small></span>
-                                                <span class="message">Oh, ya kak ready silahkan kakak ke menu beli untuk memesan nya.</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0);">
-                                        <div class="media">
-                                            <img class="media-object " src="<?php echo base_url(); ?>assets/images/wiskas.jpg" alt="">
-                                            <div class="media-body">
-                                                <span class="name">Cs Whiskas <small class="float-right">25 Juni</small></span>
-                                                <span class="message">Mohon Maaf Bapak Kami dari pihak Whiskas ingin memberikan sponsorship..</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0);">
-                                        <div class="media">
-                                            <img class="media-object " src="<?php echo base_url(); ?>assets/images/19.jpg" alt="">
-                                            <div class="media-body">
-                                                <span class="name">Sonia Vita Sari <small class="float-right">27 Juni</small></span>
-                                                <span class="message">Ada Banya Pembelihan hewan yang sudah dibayar di Acc oleh Bapak/Ibu...</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0);">
-                                        <div class="media mb-0">
-                                            <img class="media-object " src="<?php echo base_url(); ?>assets/images/bolt.png" alt="">
-                                            <div class="media-body">
-                                                <span class="name">Cs Bolt M.A. <small class="float-right">30 Juni</small></span>
-                                                <span class="message">KamI Menawarkan Produk Kami kepada Toko MetShopPet's yaitu Bolt</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
+                        </div>
+                    </form>
+                </div>
+                <div class="mail-list">
+                <ul class="list-unstyled">
+                <li class="clearfix">
+                            <div class="mail-detail-left">
+                                
+                            <a href="javascript:void(0);" data-toggle="modal" data-target="#view_info">
+                                            <img style="width: 50px;" class="rounded-circle avatar" src="<?php echo base_url(); ?>assets/images/logo.png" alt="avatar" />
+                                        </a>
+                            </div>
+                            <div class="mail-detail-right">
+                                <h6 class="sub"><a href="app-inbox-detail.php" class="mail-detail-expand">Admin</a></h6></h6>
+                                <p class="dep">Online</p>
+                                
                             </div>
                             
+                </li>
+                    <div class="mail-action clearfix pull-left">
+                        <div class="fancy-checkbox d-inline-block">
+                            <label>
+                                <input class="check-all" type="checkbox" name="checkbox">
+                                <span></span>
+                            </label>
                         </div>
-                        <div id="plist" class="people-list">
+                        <div class="btn-group">
+                            <a href="<?php echo base_url(); ?>apppesan" class="btn btn-warning btn-sm hidden-sm"><i class="icon icon-refresh"></i></a>
+                            <a href="javascript:void(0);" class="btn btn-primary btn-sm hidden-sm"><i class="icon icon-pin"></i></a>
+                            <button class="btn btn-danger btn-sm js-sweetalert" title="Delete" type="button" data-type="confirm"><i class="fa fa-trash"></i></button>
+                        </div>
+                        
+                        <div class="pull-right ml-auto">
+                        <div class="pagination-email d-flex">
+                         
+                            <div class="btn-group m-l-20">
+                                <button type="button" class="btn btn-default btn-sm"><i class="fa fa-angle-left"></i></button>
+                                <button type="button" class="btn btn-default btn-sm"><i class="fa fa-angle-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    
+                </ul>
+                </div>
+                <br>
+                <div class="mail-list">
+                    <ul class="list-unstyled">
+                        <li class="clearfix">
+                            <div class="mail-detail-left">
+                            
+                            <label class="fancy-checkbox">
+                                <a href="<?php echo base_url(); ?>appchat"><img style="width: 50px;" class="rounded-circle avatar" src="<?php echo base_url(); ?>assets/images/12.jpg" alt=""></a>
+                            </label>
+                          
+                            </div>
+                            
+                            <div class="mail-detail-right" >
+                                <h6 class="sub"><a href="<?php echo base_url(); ?>appchat" class="mail-detail-expand">Muhammad Doni S.</a></h6></h6>
+                                <p class="dep" href="<?php echo base_url(); ?>appchat">Oh, ya kak ready silahkan kakak ke menu beli untuk memesan nya....</p>
+                                <span class="time" ><i class="icon icon-pin"></i> 23 Juni</span>
+                            </div>
+                            
+                            <div class="hover-action">
+                            
+                                <button class="btn btn-warning btn-sm "  > <input type="checkbox" name="checkbox" class="checkbox-tick"></button>
+                                
+                                <button class="btn btn-danger btn-sm js-sweetalert" title="Delete" type="button" data-type="confirm"><i class="fa fa-trash-o"></i></button>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <div class="mail-detail-left">
+                                <label class="fancy-checkbox">
+                                <a href="javascript:void(0);"><img style="width: 50px;" class="rounded-circle avatar" src="<?php echo base_url(); ?>assets/images/wiskas.jpg" alt=""></a>
+                            </label>
+                                
+                            </div>
+                            <div class="mail-detail-right">
+                                <h6 class="sub"><a href="app-inbox-detail.php" class="mail-detail-expand">CS Whiskas</a></h6>
+                                <p class="dep">Mohon Maaf Bapak Kami dari pihak Whiskas ingin memberikan sponsorship untuk toko MetShopPet's.</p>
+                                <span class="time"><i class="icon icon-pin"></i> 25 Juni</span>
+                            </div>
+                            <div class="hover-action">
+                                <button class="btn btn-warning btn-sm "  type="checkbox" name="checkbox" class="checkbox-tick"> <input type="checkbox" name="checkbox" class="checkbox-tick"></button>
+                               
+                                <button class="btn btn-danger btn-sm js-sweetalert" title="Delete" type="button" data-type="confirm"><i class="fa fa-trash-o"></i></button>
+                            </div>
+                        </li>
+                        <li class="clearfix unread">
+                            <div class="mail-detail-left">
+                                <label class="fancy-checkbox">
+                                <a href="javascript:void(0);"><img style="width: 50px;" class="rounded-circle avatar" src="<?php echo base_url(); ?>assets/images/19.jpg" alt=""></a>
+                            </label>
+                                
+                            </div>
+                            <div class="mail-detail-right">
+                                <h6 class="sub"><a href="app-inbox-detail.php" class="mail-detail-expand">Sonia Vita sari</a></h6>
+                                <p class="dep">Ada Banya Pembelihan hewan yang sudah dibayar di Acc oleh Bapak/Ibu Admin silahkan di...</p>
+                                <span class="time">27 Juni</span>
+                            </div>
+                            <div class="hover-action">
+                                <button class="btn btn-warning btn-sm "  type="checkbox" name="checkbox" class="checkbox-tick"> <input type="checkbox" name="checkbox" class="checkbox-tick"></button>
+                                <button class="btn btn-danger btn-sm js-sweetalert" title="Delete" type="button" data-type="confirm"><i class="fa fa-trash-o"></i></button>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <div class="mail-detail-left">
+                                <label class="fancy-checkbox">
+                                <a href="javascript:void(0);"><img style="width: 50px;" class="rounded-circle avatar" src="<?php echo base_url(); ?>assets/images/bolt.jpg" alt=""></a>
+                            </label>
+                                <a href="javascript:void(0);" class="mail-star"><i ></i></a>
+                            </div>
+                            <div class="mail-detail-right">
+                                <h6 class="sub"><a href="app-inbox-detail.php" class="mail-detail-expand">CS Bolt M.A.</a></h6>
+                                <p class="dep">KamI Menawarkan Produk Kami kepada Toko MetShopPet's yaitu Bolt makanan Anjing yang Banyak.... </p>
+                                <span class="time">30 Juni</span>
+                            </div>
+                            <div class="hover-action">
+                                <button class="btn btn-warning btn-sm "  type="checkbox" name="checkbox" class="checkbox-tick"> <input type="checkbox" name="checkbox" class="checkbox-tick"></button>
+                                <button class="btn btn-danger btn-sm js-sweetalert" title="Delete" type="button" data-type="confirm"><i class="fa fa-trash-o"></i></button>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <div class="mail-detail-left">
+                                <label class="fancy-checkbox">
+                                <a href="javascript:void(0);"><img style="width: 50px;" class="rounded-circle avatar" src="<?php echo base_url(); ?>assets/images/16.jpg" alt=""></a>
+                            </label>
+                                <a href="javascript:void(0);" class="mail-star"><i ></i></a>
+                            </div>
+                            <div class="mail-detail-right">
+                                <h6 class="sub"><a href="app-inbox-detail.php" class="mail-detail-expand">Frank Camly</a></h6>
+                                <p class="dep"><span class="m-r-10">[WrapTheme]</span>Lorem Ipsum is simply dumm dummy text of the printing and typesetting industry.</p>
+                                <span class="time"><i ></i> 31 Juni</span>
+                            </div>
+                            <div class="hover-action">
+                                <button class="btn btn-warning btn-sm "  type="checkbox" name="checkbox" class="checkbox-tick"> <input type="checkbox" name="checkbox" class="checkbox-tick"></button>
+                                <button class="btn btn-danger btn-sm js-sweetalert" title="Delete" type="button" data-type="confirm"><i class="fa fa-trash-o"></i></button>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <div class="mail-detail-left">
+                                <label class="fancy-checkbox">
+                                <a href="javascript:void(0);"><img style="width: 50px;" class="rounded-circle avatar" src="<?php echo base_url(); ?>assets/images/14.jpg" alt=""></a>
+                            </label>
+                                <a href="javascript:void(0);" class="mail-star"><i ></i></a>
+                            </div>
+                            <div class="mail-detail-right">
+                                <h6 class="sub"><a href="app-inbox-detail.php" class="mail-detail-expand">Rochelle Barton</a></h6>
+                                <p class="dep">Untuk Bapak/Ibu Admin Apakah Hewan yang mau dijodohkan ini Harus dibersihkan/dimandikan terlibih dahulu.</p>
+                                <span class="time">14 Juli</span>
+                            </div>
+                            <div class="hover-action">
+                                <button class="btn btn-warning  "  type="checkbox" name="checkbox" class="checkbox-tick"> <input type="checkbox" name="checkbox" class="checkbox-tick"></button>
+                                <button class="btn btn-danger btn-sm js-sweetalert" title="Delete" type="button" data-type="confirm"><i class="fa fa-trash-o"></i></button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mail-left">
+                <div class="mail-compose m-b-20">
+                     <div id="plist" class="people-list">
                             <div class="input-group mb-3">
                                 <input type="text" class="form-control" placeholder="Cari...">
                                 <div class="input-group-append">
@@ -192,7 +275,6 @@
                                 </li>
                             </ul>
                         </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -200,40 +282,18 @@
     
 </div>
 
-<!-- Default Size -->
-<div class="modal fade" id="view_info" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h6 class="title" id="defaultModalLabel">User Details</h6>
-            </div>
-            <div class="modal-body">
-                <div class="body top_counter">
-                    <div class="icon">
-                        <img src="<?php echo base_url(); ?>assets/images/xs/avatar2.jpg" class="rounded-circle" alt="">
-                    </div>
-                    <div class="content m-t-5">
-                        <div>Admin MetShopPet's</div>
-                        <h6>Ahmad Catur Y.</h6>
-                    </div>
-                </div>
-                <hr>                
-                <small class="text-muted">Alamat </small>
-                <p>Lumajang Kec.Labruk Lor</p>
-                <small class="text-muted">Email address: </small>
-                <p>Catur454@gmail.com</p>
-                <small class="text-muted">Mobile: </small>
-                <p>+ 62 856-0895-1053</p>
-                <small class="text-muted">Birth Date: </small>
-                <p class="m-b-0">22 Agustus, 1999</p>                
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Tutup</button>
-            </div>
-        </div>
-    </div>
-</div>
+<!-- Javascript -->
+<script src="<?php echo base_url(); ?>light/assets/bundles/libscripts.bundle.js"></script>    
+<script src="<?php echo base_url(); ?>light/assets/bundles/vendorscripts.bundle.js"></script>
 
+<script src="<?php echo base_url(); ?>assets/vendor/sweetalert/sweetalert.min.js"></script><!-- SweetAlert Plugin Js --> 
 
+<script src="<?php echo base_url(); ?>light/assets/bundles/mainscripts.bundle.js"></script>
+<script src="<?php echo base_url(); ?>light/assets/js/pages/ui/dialogs.js"></script>
+<script>
+    $('.toggle-email-nav').on('click', function() {
+		$('.mail-left').toggleClass('open');
+	});
+</script>
 </body>
 </html>
