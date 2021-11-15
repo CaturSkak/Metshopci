@@ -116,6 +116,12 @@
                                         <label for="">Kirim Foto Hewanmu disini :</label>
                                         <input type="file" class="form-control" >
                                     </div>
+                                    <div class="form-group">
+                                        <input type="file" class="form-control" >
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="file" class="form-control" >
+                                    </div>
                                 </div>
                                 <!-- Select Country Name End -->
                                 <!-- Select Country Name End -->

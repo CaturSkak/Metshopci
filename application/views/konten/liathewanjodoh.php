@@ -148,7 +148,7 @@
                         <div class="cart-btn action-btn mb-6">
                             <div class="action-cart-btn-wrapper d-flex">
                                 <div class="add-to_cart">
-                                    <a class="btn btn-primary btn-hover-dark rounded-0" href="<?php echo base_url();?>keranjangjodoh.php">Tambah ke  Perjodohan</a>
+                                    <a class="btn btn-primary btn-hover-dark rounded-0" href="<?php echo base_url();?>keranjangjodoh">Tambah ke  Perjodohan</a>
                                 </div>
                                 <a href="<?php echo base_url();?>wishlistjodoh.php" title="Wishlist" class="action"><i class="ti-heart"></i></a>
                             </div>

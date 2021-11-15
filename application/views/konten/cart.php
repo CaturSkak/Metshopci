@@ -92,7 +92,7 @@
 
                         <!-- Cart Button left Side Start -->
                         <div class="cart-btn-lef-side mb-4">
-                            <a href="#" class="btn btn btn-gray-deep btn-hover-primary">Belanja Lagi</a>
+                            <a href="<?php echo base_url();?>hewanumum" class="btn btn btn-gray-deep btn-hover-primary">Belanja Lagi</a>
                             <a href="#" class="btn btn btn-gray-deep btn-hover-primary">Perbarui daftar Keranjang</a>
                         </div>
                         <!-- Cart Button left Side End -->
