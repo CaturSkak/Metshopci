@@ -2,42 +2,42 @@
 <html lang="en">
 
 <head>
-<title>MetShop Pets -Selamat Datang di MetShop Pets</title>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>MetShop Pets -Selamat Datang di MetShop Pets</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
-<link rel="icon" href="<?php echo base_url(); ?>light/ass<meta name="description" content="HexaBit Bootstrap 4x Admin Template">
-<meta name="author" content="WrapTheme, www.thememakker.com">
-<link rel="icon" href="<?php echo base_url(); ?>light/assets/logo.png" type="image/logo">
-<!-- VENDOR CSS -->
-<link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/fullcalendar/fullcalendar.min.css">
+    <link rel="icon" href="<?php echo base_url(); ?>light/ass<meta name=" description" content="HexaBit Bootstrap 4x Admin Template">
+    <meta name="author" content="WrapTheme, www.thememakker.com">
+    <link rel="icon" href="<?php echo base_url(); ?>light/assets/logo.png" type="image/logo">
+    <!-- VENDOR CSS -->
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/fullcalendar/fullcalendar.min.css">
 
-<link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/bootstrap/css/bootstrap.min.css">
-
-
-
-<link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/font-awesome/css/font-awesome.min.css">
-<link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/sweetalert/sweetalert.css"/>
-
-<link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/nestable/jquery-nestable.css"/>
-<link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker3.min.css">
-
-<link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/summernote/dist/summernote.css"/>
-<link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/dropify/css/dropify.min.css">
-
-<link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/charts-c3/plugin.css"/>
-<link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css">
-<link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/chartist/css/chartist.min.css">
-<link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/chartist-plugin-tooltip/chartist-plugin-tooltip.css">
-<link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/toastr/toastr.min.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/bootstrap/css/bootstrap.min.css">
 
 
-<!-- MAIN CSS -->
-<link rel="stylesheet" href="<?php echo base_url(); ?>light/assets/css/main.css">
-<link rel="stylesheet" href="<?php echo base_url(); ?>light/assets/css/inbox.css">
-<link rel="stylesheet" href="<?php echo base_url(); ?>light/assets/css/blog.css">
-<link rel="stylesheet" href="<?php echo base_url(); ?>light/assets/css/color_skins.css">
+
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/sweetalert/sweetalert.css" />
+
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/nestable/jquery-nestable.css" />
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker3.min.css">
+
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/summernote/dist/summernote.css" />
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/dropify/css/dropify.min.css">
+
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/charts-c3/plugin.css" />
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/chartist/css/chartist.min.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/chartist-plugin-tooltip/chartist-plugin-tooltip.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/toastr/toastr.min.css">
+
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="<?php echo base_url(); ?>light/assets/css/main.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>light/assets/css/inbox.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>light/assets/css/blog.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>light/assets/css/color_skins.css">
 
 
 
@@ -47,7 +47,7 @@
 <div class="page-loader-wrapper">
     <div class="loader">
         <div class="m-t-30"><img src="<?php echo base_url(); ?>assets/images/kucing1.gif" width="150" height="125" alt="Neko"></div>
-        <p>Sedang Memuat...</p>        
+        <p>Sedang Memuat...</p>
     </div>
 </div>
 <!-- Overlay For Sidebars -->
@@ -55,7 +55,7 @@
 
 <div id="wrapper">
 
-<nav class="navbar navbar-fixed-top">
+    <nav class="navbar navbar-fixed-top">
         <div class="container-fluid">
 
             <div class="navbar-left">
@@ -94,16 +94,16 @@
                             </li>
                         </ul>
                     </li>
-                    
-                    <li><a href="<?php echo base_url(); ?>apppesan" class="icon-menu d-none d-sm-block"><i class="icon-bubbles"></i></a></li>                    
+
+                    <li><a href="<?php echo base_url(); ?>apppesan" class="icon-menu d-none d-sm-block"><i class="icon-bubbles"></i></a></li>
                 </ul>
             </div>
-            
+
             <div class="navbar-right">
                 <form id="navbar-search" class="navbar-form search-form">
                     <input value="" class="form-control" placeholder="Cari Disini..." type="text">
                     <button type="button" class="btn btn-default"><i class="icon-magnifier"></i></button>
-                </form>                
+                </form>
 
                 <div id="navbar-menu">
                     <ul class="nav navbar-nav">
@@ -184,7 +184,7 @@
                                         </div>
                                     </a>
                                 </li>
-                         <li>
+                                <li>
                                     <a href="javascript:void(0);">
                                         <div class="feeds-left"><i class="fa fa-question-circle text-warning"></i></div>
                                         <div class="feeds-body">
@@ -224,7 +224,7 @@
     <div id="rightbar" class="rightbar">
         <ul class="nav nav-tabs-new">
             <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#setting">Settings</a></li>
-            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#chat">Chat</a></li>            
+            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#chat">Chat</a></li>
         </ul>
         <div class="tab-content">
             <div class="tab-pane active" id="setting">
@@ -232,12 +232,24 @@
                     <div class="card">
                         <h6>Choose Theme</h6>
                         <ul class="choose-skin list-unstyled mb-0">
-                            <li data-theme="purple"><div class="purple"></div></li>
-                            <li data-theme="green"><div class="green"></div></li>
-                            <li data-theme="orange" class="active"><div class="orange"></div></li>
-                            <li data-theme="blue"><div class="blue"></div></li>
-                            <li data-theme="blush"><div class="blush"></div></li>
-                            <li data-theme="cyan"><div class="cyan"></div></li>
+                            <li data-theme="purple">
+                                <div class="purple"></div>
+                            </li>
+                            <li data-theme="green">
+                                <div class="green"></div>
+                            </li>
+                            <li data-theme="orange" class="active">
+                                <div class="orange"></div>
+                            </li>
+                            <li data-theme="blue">
+                                <div class="blue"></div>
+                            </li>
+                            <li data-theme="blush">
+                                <div class="blush"></div>
+                            </li>
+                            <li data-theme="cyan">
+                                <div class="cyan"></div>
+                            </li>
                         </ul>
                     </div>
                     <div class="card">
@@ -259,7 +271,7 @@
                                 <label class="fancy-checkbox">
                                     <input type="checkbox" name="checkbox" checked>
                                     <span>Notifications</span>
-                                </label>                      
+                                </label>
                             </li>
                             <li>
                                 <label class="fancy-checkbox">
@@ -288,12 +300,12 @@
                                 <label class="fancy-checkbox">
                                     <input type="checkbox" name="checkbox" checked>
                                     <span>Notifications</span>
-                                </label>                      
+                                </label>
                             </li>
                         </ul>
-                    </div>                    
-                </div>                
-            </div>       
+                    </div>
+                </div>
+            </div>
             <div class="tab-pane right_chat" id="chat">
                 <div class="slim_scroll">
                     <form>
@@ -305,7 +317,7 @@
                         </div>
                     </form>
                     <div class="card">
-                        <h6>Recent</h6>                        
+                        <h6>Recent</h6>
                         <ul class="right_chat list-unstyled mb-0">
                             <li class="online">
                                 <a href="javascript:void(0);">
@@ -317,7 +329,7 @@
                                             <span class="badge badge-outline status"></span>
                                         </div>
                                     </div>
-                                </a>                            
+                                </a>
                             </li>
                             <li class="online">
                                 <a href="javascript:void(0);">
@@ -329,7 +341,7 @@
                                             <span class="badge badge-outline status"></span>
                                         </div>
                                     </div>
-                                </a>                            
+                                </a>
                             </li>
                             <li class="offline">
                                 <a href="javascript:void(0);">
@@ -341,7 +353,7 @@
                                             <span class="badge badge-outline status"></span>
                                         </div>
                                     </div>
-                                </a>                            
+                                </a>
                             </li>
                             <li class="offline">
                                 <a href="javascript:void(0);">
@@ -353,7 +365,7 @@
                                             <span class="badge badge-outline status"></span>
                                         </div>
                                     </div>
-                                </a>                            
+                                </a>
                             </li>
                             <li class="online">
                                 <a href="javascript:void(0);">
@@ -365,10 +377,10 @@
                                             <span class="badge badge-outline status"></span>
                                         </div>
                                     </div>
-                                </a>                            
-                            </li>                        
+                                </a>
+                            </li>
                         </ul>
-                    </div>                    
+                    </div>
                 </div>
             </div>
         </div>
@@ -382,24 +394,32 @@
         <div class="sidebar-scroll">
             <div class="user-account">
                 <div class="user_div">
-                    <img src="<?php echo base_url(); ?>assets/images/admin.jpg" class="user-photo" alt="User Profile Picture">
+                    <img src="<?= base_url('assets/images/profil/') . $user['foto_pengguna']; ?>" class="user-photo" alt="User Profile Picture">
                 </div>
                 <div class="dropdown">
                     <span>Selamat Datang,</span>
-                    <a href="javascript:void(0);" class="dropdown-toggle user-name" data-toggle="dropdown"><strong>Mimin</strong></a>
+                    <a href="javascript:void(0);" class="dropdown-toggle user-name" data-toggle="dropdown"><strong>
+                            <?= $user['nama']; ?>
+
+                            <!-- <?php if ($user) {
+                                        echo  $user['nama'];
+                                    } else {
+                                        redirect('auth');
+                                    }; ?> -->
+                        </strong></a>
                     <ul class="dropdown-menu dropdown-menu-right account">
                         <li><a href="<?php echo base_url(); ?>pageprofile"><i class="icon-user"></i>Profil Saya</a></li>
                         <li><a href="<?php echo base_url(); ?>apppesan"><i class="icon-envelope-open"></i>Pesan</a></li>
-                       
+
                         <li class="divider"></li>
-                        <li><a href="<?php echo base_url(); ?>pagelogin"><i class="icon-power"></i>Keluar</a></li>
+                        <li><a href="<?= base_url('auth/logout') ?>"><i class="icon-power"></i>Keluar</a></li>
                     </ul>
                 </div>
-            </div>  
+            </div>
             <nav id="left-sidebar-nav" class="sidebar-nav">
-                <ul  id="main-menu" class="metismenu">
+                <ul id="main-menu" class="metismenu">
                     <li><a href="<?php echo base_url(); ?>BerandaAdmin"><i class="icon-home"></i><span>Beranda</span></a></li>
-                   
+
                     <li><a href="<?php echo base_url(); ?>apppesan"><i class="icon-bubbles"></i><span>Pesan</span></a></li>
                     <li>
                         <a href="#Tables" class="has-arrow"><i class="icon-basket"></i><span>Transaksi</span></a>
@@ -408,12 +428,12 @@
                             <li><a href="<?php echo base_url(); ?>tablenormal">Perjodohan</a></li>
                         </ul>
                     </li>
-                    <li >
+                    <li>
                         <a href="#forms" class="has-arrow"><i class="fa fa-github-alt"></i><span>Hewan</span></a>
                         <ul>
-                            <li ><a href="<?php echo base_url(); ?>formsbasic">Tambah Hewan</a></li>
-                            <li ><a href="<?php echo base_url(); ?>formsadvanced">Daftar Hewan</a></li>
-                            <li ><a href="<?php echo base_url(); ?>formsvalidation">Daftar Perjodohan</a></li>
+                            <li><a href="<?php echo base_url(); ?>formsbasic">Tambah Hewan</a></li>
+                            <li><a href="<?php echo base_url(); ?>formsadvanced">Daftar Hewan</a></li>
+                            <li><a href="<?php echo base_url(); ?>formsvalidation">Daftar Perjodohan</a></li>
                         </ul>
                     </li>
                     <li>
@@ -423,24 +443,25 @@
                             <li><a href="<?php echo base_url(); ?>blogpost">Buat Artikel Baru</a></li>
                         </ul>
                     </li>
-                    <li><a href="<?php echo base_url(); ?>apptaskboard"><i class="icon-list"></i><span>Papan tugas</span></a></li>                    
-   
-                    <li><a href="<?php echo base_url(); ?>appcontact"><i class="icon-book-open"></i><span>Kontak</span></a></li>              
+                    <li><a href="<?php echo base_url(); ?>apptaskboard"><i class="icon-list"></i><span>Papan tugas</span></a></li>
+
+                    <li><a href="<?php echo base_url(); ?>appcontact"><i class="icon-book-open"></i><span>Kontak</span></a></li>
                     <li>
                         <a href="#Authentication" class="has-arrow"><i class="icon-lock"></i><span>Auntentifikasi</span></a>
-                        <ul>                                    
+                        <ul>
                             <li><a href="<?php echo base_url(); ?>pagelogin">Masuk</a></li>
                             <li><a href="<?php echo base_url(); ?>pageregister">Daftar</a></li>
                             <li><a href="<?php echo base_url(); ?>pagelockscreen">Kunci Layar</a></li>
                             <li><a href="<?php echo base_url(); ?>pageforgotpassword">Lupa Kata Sandi</a></li>
                         </ul>
                     </li>
-                    
+
                 </ul>
-            </nav>     
+            </nav>
         </div>
     </div>
 </div>
 
 </body>
-    </html>
+
+</html>

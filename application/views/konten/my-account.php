@@ -1,3 +1,7 @@
+<?php
+$getUser = $this->session->userdata('session_user');
+$getpassword = $this->session->userdata('session_password');
+?>
     <!-- Breadcrumb Area Start -->
     <div class="section breadcrumb-area bg-bright">
         <div class="container">
@@ -37,7 +41,7 @@
                                     <a href="#payment-method" data-bs-toggle="tab"><i class="fa fa-credit-card"></i> Metode Pembayaran</a>
                                     <a href="#address-edit" data-bs-toggle="tab"><i class="fa fa-map-marker"></i> Alamat</a>
                                     <a href="#account-info" data-bs-toggle="tab"><i class="fa fa-user"></i>Detail Akun</a>
-                                    <a href="login"><i class="fa fa-sign-out"></i> Logout</a>
+                                    <a href="<?php echo base_url('Login/logout');?>"><i class="fa fa-sign-out"></i> Logout</a>
                                 </div>
                             </div>
                             <!-- My Account Tab Menu End -->

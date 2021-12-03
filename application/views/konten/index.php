@@ -1,4 +1,7 @@
-
+<?php
+$getUser = $this->session->userdata('session_user');
+$getpassword = $this->session->userdata('session_password');
+?>
 
     <div class="section">
         <div class="hero-slider swiper-container">

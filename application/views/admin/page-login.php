@@ -2,21 +2,26 @@
 <html lang="en">
 
 <head>
-<title>Metshop Pets -Selamat Datang Di MetShop Pets</title>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<meta name="description" content="HexaBit Bootstrap 4x Admin Template">
-<meta name="author" content="WrapTheme, www.thememakker.com">
+    <title>
+        <?= $title; ?>
+    </title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="description" content="HexaBit Bootstrap 4x Admin Template">
+    <meta name="author" content="WrapTheme, www.thememakker.com">
 
-<link rel="icon" href="<?php echo base_url(); ?>logo.png" type="image/logo">
-<!-- VENDOR CSS -->
-<link rel="stylesheet" href="<?php echo base_url(); ?>/assets/vendor/bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet" href="<?php echo base_url(); ?>/assets/vendor/font-awesome/css/font-awesome.min.css">
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="<?php echo base_url(); ?>assets/images/logo.png">
 
-<!-- MAIN CSS -->
-<link rel="stylesheet" href="<?php echo base_url(); ?>light/assets/css/main.css">
-<link rel="stylesheet" href="<?php echo base_url(); ?>light/assets/css/color_skins.css">
+    <link rel="icon" href="<?php echo base_url(); ?>logo.png" type="image/logo">
+    <!-- VENDOR CSS -->
+    <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/vendor/font-awesome/css/font-awesome.min.css">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="<?php echo base_url(); ?>light/assets/css/main.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>light/assets/css/color_skins.css">
 </head>
 
 <body class="theme-orange">
@@ -29,9 +34,9 @@
                         <a class="navbar-brand" href="<?php echo base_url(); ?>Logooo.png"><img src="<?php echo base_url(); ?>/assets/images/image-gallery/logo.png" width="30" height="30" class="d-inline-block align-top mr-2" alt="">MetShopPet's</a>
                         <ul class="navbar-nav">
                             <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>BerandaAdmin">Beranda MetShopPet's</a></li>
-                            <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>pageregister">Daftar</a></li>
+                            <li class="nav-item"><a class="nav-link" href="<?php echo base_url('auth/registrasi'); ?>">Daftar</a></li>
                         </ul>
-                    </nav>                    
+                    </nav>
                 </div>
                 <div class="col-lg-8">
                     <div class="auth_detail">
@@ -55,43 +60,55 @@
                     </div>
                 </div>
                 <div class="col-lg-4">
+                    <?= $this->session->flashdata('message'); ?>
                     <div class="card">
                         <div class="header">
                             <p class="lead">Masuk Ke Akun</p>
                         </div>
                         <div class="body">
-                            <form class="form-auth-small" action="BerandaAdmin">
+
+                            <form class="form-auth-small" action="<?php echo base_url('Auth'); ?>" method="post">
+
                                 <div class="form-group">
                                     <label for="signin-email" class="control-label sr-only">Email</label>
-                                    <input type="email" class="form-control" id="signin-email" value="Metshoppets@domain.com" placeholder="Email">
+                                    <input name="email" class="form-control" placeholder="Email" value="<?= set_value('email'); ?>">
+                                    <?= form_error('email', ' <small class="text-danger pl-3">', '</small>'); ?>
                                 </div>
                                 <div class="form-group">
                                     <label for="signin-password" class="control-label sr-only">Kata Sandi</label>
-                                    <input type="password" class="form-control" id="signin-password" value="inikatasandi" placeholder="Kata Sandi">
+                                    <input name="password" type="password" class="form-control" id="signin-password" placeholder="Kata Sandi">
+                                    <?= form_error('password', ' <small class="text-danger pl-3">', '</small>'); ?>
                                 </div>
                                 <div class="form-group clearfix">
                                     <label class="fancy-checkbox element-left">
                                         <input type="checkbox">
                                         <span>Ingat Saya</span>
-                                    </label>								
+                                    </label>
                                 </div>
-                                <button type="submit" class="btn btn-primary btn-lg btn-block">MASUK</button>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block" value="login" name="login">MASUK</button>
                                 <div class="bottom">
                                     <span class="helper-text m-b-10"><i class="fa fa-lock"></i><a href="<?php echo base_url(); ?>pageforgotpassword"> Lupa Kata Sandi ?</a></span>
-                                    <span>Tidak Punya Akun? <a href="<?php echo base_url(); ?>pageregister">Daftar</a></span>
+                                    <span>Tidak Punya Akun? <a href="<?php echo base_url('auth/registrasi'); ?>">Daftar</a></span>
                                 </div>
+
                             </form>
+
+
                         </div>
+
                     </div>
+
                 </div>
             </div>
         </div>
+
     </div>
     <!-- END WRAPPER -->
-  
-<script src="<?php echo base_url(); ?>light/assets/bundles/libscripts.bundle.js"></script>    
-<script src="<?php echo base_url(); ?>light/assets/bundles/vendorscripts.bundle.js"></script>
 
-<script src="<?php echo base_url(); ?>light/assets/bundles/mainscripts.bundle.js"></script>
+    <script src="<?php echo base_url(); ?>light/assets/bundles/libscripts.bundle.js"></script>
+    <script src="<?php echo base_url(); ?>light/assets/bundles/vendorscripts.bundle.js"></script>
+
+    <script src="<?php echo base_url(); ?>light/assets/bundles/mainscripts.bundle.js"></script>
 </body>
+
 </html>

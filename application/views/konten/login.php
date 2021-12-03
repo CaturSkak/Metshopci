@@ -37,19 +37,19 @@
                         <!-- Login Title & Content End -->
 
                         <!-- Form Action Start -->
-                        <form action="#" method="post">
+                        <form action="<?php echo base_url('login/cek_log');?>" method="post">
 
                             <!-- Input Email Start -->
                             <div class="single-input-item mb-2">
                                 <label><strong>Username</label><span class="required"></strong></span></label>
-                                <input type="email" placeholder="Email atau Username">
+                                <input name="username"  placeholder="Email atau Username">
                             </div>
                             <!-- Input Email End -->
 
                             <!-- Input Password Start -->
                             <div class="single-input-item mb-2">
                                 <label><strong>Password Anda</label><span class="required"></strong></span></label>
-                                <input type="password" placeholder="Masukkan Password Anda">
+                                <input name="password" type="password" placeholder="Masukkan Password Anda">
                             </div>
                             <!-- Input Password End -->
 
@@ -57,16 +57,17 @@
                             <div class="single-input-item mb-3">
                                 <div class="login-reg-form-meta mb-n3">
 
-                                    <button class="btn btn btn-gray-deep btn-hover-primary mb-3"><a href="<?php echo base_url();?>Beranda" >Masuk</a></button>
-                                    <a href="<?php echo base_url();?>#" class="forget-pwd mb-3"><strong>Lupa Password?</strong></a>
+                                <input type="submit" name="btn_log" value="login" class="btn btn-primary "><br>
+                                  
 
                                 </div>
+                                <a href="<?php echo base_url();?>#" class="forget-pwd mb-3"><strong>Lupa Password?</strong></a>
                             </div>
                             <!-- Button/Forget Password End -->
 
                             <!-- Lost Password & Creat New Account Start -->
                             <div class="lost-password">
-                                <a href="<?php echo base_url();?>register.php"><strong>Daftar Sekarang</strong></a>
+                                <a href="<?php echo base_url();?>register"><strong>Daftar Sekarang</strong></a>
                             </div>
                             <!-- Lost Password & Creat New Account End -->
 

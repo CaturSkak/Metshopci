@@ -10,17 +10,17 @@
                 <div class="row clearfix">
                     <div class="col-md-6 col-sm-12">
                         <h2>Buat Artikel Baru</h2>
-                    </div>            
+                    </div>
                     <div class="col-md-6 col-sm-12 text-right">
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="<?php echo base_url();?>index"><i class="iconhome"></i></a></li>
-                            <li class="breadcrumb-item active"><a href="<?php echo base_url();?>bloglist">Artikel</li></a>
+                            <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>index"><i class="iconhome"></i></a></li>
+                            <li class="breadcrumb-item active"><a href="<?php echo base_url(); ?>bloglist">Artikel</li></a>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="container-fluid">
-               
+
                 <div class="row clearfix">
                     <div class="col-lg-12">
                         <div class="card">
@@ -28,7 +28,7 @@
                                 <div class="form-group">
                                     <input type="text" class="form-control" placeholder="Tulis Judul Artikel" />
                                 </div>
-                                
+
                                 <div class="form-group">
                                     <select class="form-control show-tick">
                                         <option>Pilih Kategori Artikel</option>
@@ -39,42 +39,43 @@
                                         <option>Vaksinasi Hewan</option>
                                     </select>
                                 </div>
-    
-                    <div class="card">
-                            <div class="header">
-                                <h2>Masukan Gambar <small>yang berhubungan dengan artikel</small></h2>
-                            </div>
-                            <div class="body">
-                                <input type="file" id="dropify-event" >
-                            </div>
-                    </div>   
+
+                                <div class="card">
+                                    <div class="header">
+                                        <h2>Masukan Gambar <small>yang berhubungan dengan artikel</small></h2>
+                                    </div>
+                                    <div class="body">
+                                        <input type="file" id="dropify-event">
+                                    </div>
+                                </div>
 
                                 <div class="summernote">
-                              
+
                                     <h3 class="m-b-0">Halo dengan Admin,</h3>
                                     <h4 class="m-t-0">Hewan Peliharaan itu.</h4>
                                     <p></p>
                                 </div>
-                                <a href="<?php echo base_url();?>bloglist" button type="button" class="btn btn-block btn-primary m-t-20">Posting</a></button>
+                                <a href="<?php echo base_url(); ?>bloglist" button type="button" class="btn btn-block btn-primary m-t-20">Posting</a></button>
                             </div>
                         </div>
-                    </div>   
+                    </div>
                 </div>
             </div>
         </div>
-   </div>
+    </div>
 
-<!-- Javascript -->
-<script src="<?php echo base_url();?>light/assets/bundles/libscripts.bundle.js"></script>    
-<script src="<?php echo base_url();?>light/assets/bundles/vendorscripts.bundle.js"></script>
+    <!-- Javascript
+    <script src="<?php echo base_url(); ?>light/assets/bundles/libscripts.bundle.js"></script>
+    <script src="<?php echo base_url(); ?>light/assets/bundles/vendorscripts.bundle.js"></script>
 
 
-<script src="<?php echo base_url();?>light/assets/vendor/dropify/js/dropify.min.js"></script>
+    <script src="<?php echo base_url(); ?>light/assets/vendor/dropify/js/dropify.min.js"></script>
 
-<script src="<?php echo base_url();?>light/assets/bundles/mainscripts.bundle.js"></script>
-<script src="<?php echo base_url();?>light/assets/js/pages/forms/dropify.js"></script>
+    <script src="<?php echo base_url(); ?>light/assets/bundles/mainscripts.bundle.js"></script>
+    <script src="<?php echo base_url(); ?>light/assets/js/pages/forms/dropify.js"></script>
 
-<script src="<?php echo base_url();?>light/assets/vendor/summernote/dist/summernote.js"></script>
+    <script src="<?php echo base_url(); ?>light/assets/vendor/summernote/dist/summernote.js"></script> -->
 
 </body>
+
 </html>
