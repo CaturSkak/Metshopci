@@ -94,7 +94,7 @@ class auth extends CI_Controller
                     PASSWORD_DEFAULT
                 ),
                 'aktif' => 1,
-                'foto' => 'default.png',
+                'foto_pengguna' => 'default.png',
                 'tipepengguna_id' => 1,
                 'tanggal_dibuat' => date("Y-m-d H:i:s")
 
