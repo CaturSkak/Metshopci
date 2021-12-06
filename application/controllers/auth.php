@@ -93,10 +93,11 @@ class auth extends CI_Controller
                     $this->input->post('password'),
                     PASSWORD_DEFAULT
                 ),
-                'tb_tipe_pengguna_id' => 1,
                 'aktif' => 1,
-                'date_created' => date("Y-m-d H:i:s"),
-                'foto_pengguna' => 'default.png'
+                'foto' => 'default.png',
+                'tipepengguna_id' => 1,
+                'tanggal_dibuat' => date("Y-m-d H:i:s")
+
             ];
 
             $this->db->insert('tb_pengguna', $data);
