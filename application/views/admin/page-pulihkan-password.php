@@ -2,26 +2,28 @@
 <html lang="en">
 
 <head>
-<title>Metshop Pets -Selamat Datang Di MetShop Pets</title>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<meta name="description" content="HexaBit Bootstrap 4x Admin Template">
-<meta name="author" content="WrapTheme, www.thememakker.com">
+    <title><?= $title; ?>
+    </title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="description" content="HexaBit Bootstrap 4x Admin Template">
+    <meta name="author" content="WrapTheme, www.thememakker.com">
 
-<link rel="icon" href="<?php echo base_url(); ?>logo.png" type="image/logo">
-<!-- VENDOR CSS -->
-<link rel="stylesheet" href="<?php echo base_url(); ?>/assets/vendor/bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet" href="<?php echo base_url(); ?>/assets/vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="<?php echo base_url(); ?>assets/images/logo.png">
+    <link rel="icon" href="<?php echo base_url(); ?>logo.png" type="image/logo">
+    <!-- VENDOR CSS -->
+    <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/vendor/font-awesome/css/font-awesome.min.css">
 
-<!-- MAIN CSS -->
-<link rel="stylesheet" href="<?php echo base_url(); ?>light/assets/css/main.css">
-<link rel="stylesheet" href="<?php echo base_url(); ?>light/assets/css/color_skins.css">
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="<?php echo base_url(); ?>light/assets/css/main.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>light/assets/css/color_skins.css">
 </head>
 
 <body class="theme-orange">
     <!-- WRAPPER -->
-	<div id="wrapper" class="auth-main">
+    <div id="wrapper" class="auth-main">
         <div class="container">
             <div class="row clearfix">
                 <div class="col-12">
@@ -31,7 +33,7 @@
                             <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>BerandaAdmin">Beranda MetShopPet's</a></li>
                             <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>pageregister">Daftar</a></li>
                         </ul>
-                    </nav>                    
+                    </nav>
                 </div>
                 <div class="col-lg-8">
                     <div class="auth_detail">
@@ -55,33 +57,38 @@
                     </div>
                 </div>
                 <div class="col-lg-4">
+                    <?= $this->session->flashdata('message'); ?>
                     <div class="card">
-                        <div class="header">
-                            <p class="lead">Pulihkan Kata Sandi</p>
-                        </div>
-                        <div class="body">
-                            <p>Silakan masukkan Kata Sandi Baru Anda untuk Masuk.</p>
-                            <form class="form-auth-small" action="BerandaAdmin">
-                                <div class="form-group">                                    
-                                    <input type="password" class="form-control" id="signup-password" placeholder="Kata Sandi Baru">
+                        <p class="header lead">Ganti Kata Sandi</p>
+                        <div class="body ">
+
+                            <p>untuk <?= $this->session->userdata('reset_email'); ?><br>Silakan masukkan kata sandi baru untuk akun anda.</p>
+
+                            <form class="form-auth-small" action="<?= base_url('auth/gantikatasandi'); ?>" method="POST">
+                                <div class="form-group">
+                                    <input type="password" name="password1" class="form-control" id="password1" placeholder="Masukan Kata Sandi Baru">
+                                    <?= form_error('password1', ' <small class="text-danger pl-3">', '</small>'); ?>
                                 </div>
-                                <a href="<?php echo base_url();?>pagelogin" button type="submit" class="btn btn-primary btn-lg btn-block">Atur Ulang Kata Sandi</a></button>
-                                <div class="bottom">
-                                    
+                                <div class="form-group">
+                                    <input type="password" name="password2" class="form-control" id="password2" placeholder="Ulangi Kata Sandi Baru">
+                                    <?= form_error('password2', ' <small class="text-danger pl-3">', '</small>'); ?>
                                 </div>
+
+                                <button type="submit" class="btn btn-primary btn-lg btn-block">Reset Kata Sandi</button>
+
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-	</div>
+    </div>
     <!-- END WRAPPER -->
-    
-<script src="<?php echo base_url(); ?>light/assets/bundles/libscripts.bundle.js"></script>    
-<script src="<?php echo base_url(); ?>light/assets/bundles/vendorscripts.bundle.js"></script>
 
-<script src="<?php echo base_url(); ?>light/assets/bundles/mainscripts.bundle.js"></script>
+    <script src="<?php echo base_url(); ?>light/assets/bundles/libscripts.bundle.js"></script>
+    <script src="<?php echo base_url(); ?>light/assets/bundles/vendorscripts.bundle.js"></script>
+
+    <script src="<?php echo base_url(); ?>light/assets/bundles/mainscripts.bundle.js"></script>
 </body>
-</html>
 
+</html>

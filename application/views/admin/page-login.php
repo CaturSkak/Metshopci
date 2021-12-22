@@ -87,7 +87,7 @@
                                 </div>
                                 <button type="submit" class="btn btn-primary btn-lg btn-block" value="login" name="login">MASUK</button>
                                 <div class="bottom">
-                                    <span class="helper-text m-b-10"><i class="fa fa-lock"></i><a href="<?php echo base_url(); ?>pageforgotpassword"> Lupa Kata Sandi ?</a></span>
+                                    <span class="helper-text m-b-10"><i class="fa fa-lock"></i><a href="<?php echo base_url('auth/lupasandi'); ?>"> Lupa Kata Sandi ?</a></span>
                                     <span>Tidak Punya Akun? <a href="<?php echo base_url('auth/registrasi'); ?>">Daftar</a></span>
                                 </div>
 

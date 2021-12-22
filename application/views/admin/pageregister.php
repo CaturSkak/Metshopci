@@ -82,7 +82,6 @@
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                         <label class="control-label sr-only">Password</label>
-
                                         <input type="password" name="password" class="form-control" id="signup-password" placeholder="Kata Sandi">
                                         <?= form_error('password', ' <small class="text-danger pl-3">', '</small>'); ?>
 
