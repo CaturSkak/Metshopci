@@ -35,32 +35,43 @@
 
                     <!-- Contact Form Wrapper Start -->
                     <div class="contact-form-wrapper contact-form">
-                        <form action="assets/php/amber.php" id="contact-form" method="post">
+                        <form action="contact/contact_proses" method="post">
                             <div class="row">
                                 <div class="col-12">
                                     <div class="row">
-
                                         <div class="col-md-6">
                                             <div class="input-area mb-4">
-                                                <input class="input-item" type="text" placeholder="Nama *" name="name">
+                                                <input class="input-item" type="text" placeholder="Nama *" name="nama">
                                             </div>
                                         </div>
 
                                         <div class="col-md-6">
                                             <div class="input-area mb-4">
-                                                <input class="input-item" type="email" placeholder="Email *" name="email">
+                                                <input class="input-item" type="email" placeholder="Isi Email Admin*" name="email">
                                             </div>
                                         </div>
 
                                         <div class="col-12">
                                             <div class="input-area mb-4">
-                                                <input class="input-item" type="text" placeholder="Keterangan *" name="subject">
+                                                <input class="input-item" type="email" placeholder="Alamat Email Anda*" name="email_pribadi">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <div class="input-area mb-4">
+                                                <input class="input-item" type="text" placeholder="No Invoice *" name="no_invoice">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-12">
+                                            <div class="input-area mb-4">
+                                                <input class="input-item" type="text" placeholder="Keterangan *" name="keterangan">
                                             </div>
                                         </div>
 
                                         <div class="col-12">
                                             <div class="input-area mb-8">
-                                                <textarea cols="30" rows="5" class="textarea-item" name="message" placeholder="Pesan"></textarea>
+                                                <textarea cols="30" rows="5" class="textarea-item" name="pesan" placeholder="Pesan"></textarea>
                                             </div>
                                         </div>
 
@@ -90,7 +101,7 @@
                             <ul>
                                 <li><i class="fa fa-fax"></i> Perum Permata Regency 1 Blok 10/28, Perun Gpa, Ngijo, Kec. Karang Ploso, Malang, Jawa Timur 65152</li>
                                 <li><i class="fa fa-phone"></i> <a href="<?php echo base_url();?>tel:123-123-456-789">082229434533</a></li>
-                                <li><i class="fa fa-envelope-o"></i> <a href="<?php echo base_url();?>mailto:demo@example.com">metshopcare@gmail.com </a></li>
+                                <li><i class="fa fa-envelope-o"></i> <a href="<?php echo base_url();?>mailto:demo@example.com">Alamat Email Admin : metshopcare@gmail.com </a></li>
                             </ul>
                         </address>
 

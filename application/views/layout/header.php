@@ -196,8 +196,11 @@
                                     </div>
                                     <!-- Search Form and Button Start -->
                                     <form class="header-search-form" action="#">
+                                        <?php echo ('search')?>
                                         <input type="text" class="header-search-input" placeholder="Cari">
                                         <button class="header-search-button"><i class="icon-magnifier icons"></i></button>
+
+                            
                                     </form>
                                     <!-- Search Form and Button End -->
 
