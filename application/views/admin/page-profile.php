@@ -68,7 +68,7 @@
                                 <div>
                                     <h4 class="mb-0"><strong><?= $user['nama_lengkap']; ?>
                                         </strong></h4>
-                                    <span>Malang,Jawa Timur</span>
+                                    <span><?php if (!empty($userr['province_name'])) : ?><?= $userr['city_name']; ?>,<?= $userr['province_name']; ?><?php endif; ?></span>
                                 </div>
                             </div>
                         </div>
@@ -91,7 +91,7 @@
                             </div>
                             <div class="body">
                                 <small class="text-muted">Alamat: </small>
-                                <p><?= $user['alamat']; ?></p>
+                                <p><?php if (!empty($userr['province_name'])) : ?><?= $user['alamat']; ?>,Kecamatan <?= $userr['subdistrict_name']; ?>, <?= $userr['city_name']; ?>,<?= $userr['province_name']; ?><?php endif; ?></p>
 
                                 <hr>
                                 <small class="text-muted">Email: </small>
@@ -174,6 +174,8 @@
                                     <ul class="nav nav-tabs-new2">
                                         <li class="nav-item"><a class="nav-link active show" data-toggle="tab" href="#Profile">Profil</a></li>
                                         <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#EditProfile">Edit</a></li>
+                                        <!-- <li class="nav-item"><a class="nav-link " data-toggle="tab" href="#Profile1">Profil1</a></li>
+										<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#EditProfile1">Edit1</a></li> -->
 
                                     </ul>
                                     <ul class="header-dropdown dropdown dropdown-animated scale-left">
@@ -194,6 +196,7 @@
                                                 <div class="row clearfix">
                                                     <div class="col-lg- col-md-12">
                                                         <input type="hidden" name="pengguna_id" value="<?= $user['pengguna_id']; ?>">
+                                                        <input type="hidden" name="email" value="<?= $user['email']; ?>">
                                                         <div class="form-group">
                                                             <label>Nama</label>
                                                             <input type="text" readonly class="form-control " id="nama" name="nama" value="<?= $user['nama_lengkap']; ?>  ">
@@ -227,34 +230,17 @@
 
                                                             </div>
                                                         </div>
+
                                                         <div class="form-group">
-                                                            <label>Provinsi</label>
-                                                            <input readonly type="text" class="form-control" value="<?php foreach ($pro as $prov) {
-                                                                                                                        echo  $prov->nama;
-                                                                                                                    } ?>">
+                                                            <label>Daerah Pengiriman</label>
+
+                                                            <input readonly type="text" class="form-control" value="<?php if (!empty($userr['province_name'])) : ?><?= $userr['province_name']; ?>, <?= $userr['city_name']; ?>,Kecamatan <?= $userr['subdistrict_name']; ?><?php endif; ?>">
+
 
                                                         </div>
                                                         <div class="form-group">
-                                                            <label>Kota / Kabupaten</label>
-                                                            <input readonly type="text" class="form-control" value="<?php foreach ($kab as $kabb) {
-                                                                                                                        echo  $kabb->nama;
-                                                                                                                    } ?>">
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label>Kecamatan</label>
-                                                            <input readonly type="text" class="form-control" value="<?php foreach ($kec as $kecc) {
-                                                                                                                        echo  $kecc->nama;
-                                                                                                                    } ?>">
-                                                        </div>
-                                                        <!-- <div class="form-group">
-                                                            <label>Desa</label>
-                                                            <input readonly type="text" class="form-control" value="<?php foreach ($des as $dess) {
-                                                                                                                        echo  $dess->nama;
-                                                                                                                    } ?>">
-                                                        </div> -->
-                                                        <div class="form-group">
                                                             <label>Alamat</label>
-                                                            <textarea readonly rows="4" type="text" class="form-control" value="<?= $user['alamat']; ?>"><?= $user['alamat']; ?></textarea>
+                                                            <textarea readonly rows="4" type="text" class="form-control" value="<?= $userr['alamat']; ?>"><?= $userr['alamat']; ?></textarea>
                                                         </div>
 
 
@@ -264,6 +250,7 @@
 
 
                                             </form>
+
                                         </div>
                                         <div class="tab-pane" id="EditProfile">
                                             <form class="row pl-5 pr-md-5 d-flex w-100 mx-auto" action="<?= base_url('pageprofile/perbarui'); ?>" method="POST" id="contactForm">
@@ -296,8 +283,8 @@
                                                         <div class="col-8 w-100 d-flex">
                                                             <select class="form-control rounded" name="gender" id="gender">
                                                                 <option value="" disabled hidden selected>Jenis Kelamin</option>
-                                                                <option value="Perempuan" <?php echo ('Perempuan' == $user['jenis_kelamin']) ? 'selected="selected"' : ''; ?>>Perempuan</option>
-                                                                <option value="Laki-Laki" <?php echo ('Laki-Laki' == $user['jenis_kelamin']) ? 'selected="selected"' : ''; ?>>Laki-Laki</option>
+                                                                <option value="Laki-Laki" <?php if ($user['jenis_kelamin'] == 'Laki-Laki') echo 'selected'; ?>>Laki-Laki</option>
+                                                                <option value="Perempuan" <?php if ($user['jenis_kelamin'] == 'Perempuan') echo 'selected'; ?>>Perempuan</option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -330,15 +317,19 @@
                                                             <label for="province_id" class="font-weight-bolder mr-4 text-dark" style="font-size: 17px;">Provinsi</label>
                                                         </div>
                                                         <div class="col-8 w-100 d-flex">
-                                                            <select name="prov" class="form-control" id="provinsi">
+                                                            <select name="prov" class="form-control" id="province_id">
+                                                                <!-- <option value="" selected disabled hidden>Pilih Provinsi</option>
+																<?php foreach ($provinsi as $row) : ?>
+																	<option value="<?= $row->province_id; ?>" <?php echo ($row->province_id == $userr->province_id) ? 'selected="selected"' : ''; ?>><?= $row->province_name; ?></option>
+																<?php endforeach ?> -->
+                                                                <!-- <option value="" selected disabled hidden>Pilih Provinsi</option>
+																<?php foreach ($provinsi as $row) : ?>
+																	<option value="<?= $row['province_id']; ?>" <?php echo ($row['province_id'] == isset($userr['province_id'])) ? 'selected="selected"' : ''; ?>><?= $row['province_name']; ?></option>
+																<?php endforeach ?> -->
                                                                 <option>- Select Provinsi -</option>
                                                                 <?php foreach ($provinsi as $prov) {
-                                                                    echo '<option value="' . $prov->id . '">' . $prov->nama . '</option>';
+                                                                    echo '<option value="' . $prov['province_id'] . '">' . $prov['province_name'] . '</option>';
                                                                 } ?>
-                                                                <option value="" selected disabled hidden>Pilih Provinsi</option>
-                                                                <!-- <?php foreach ($provinsi as $prov) : ?>
-                                                                    <option value="<?= $prov->id; ?>" <?php echo ($prov->id == $wilayah->province_id) ? 'selected="selected"' : ''; ?>><?= $prov->nama; ?></option>
-                                                                <?php endforeach ?> -->
                                                             </select>
                                                         </div>
                                                     </div>
@@ -349,7 +340,11 @@
                                                             <label for="city_id" class="font-weight-bolder mr-4 text-dark" style="font-size: 17px;">Kota/Kab</label>
                                                         </div>
                                                         <div class="col-8 w-100 d-flex">
-                                                            <select name="kab" class="form-control" id="kabupaten">
+                                                            <select name="kab" class="form-control" id="city_id">
+                                                                <!-- <option value="" selected disabled hidden>Pilih Kota/Kabupaten</option>
+																<?php foreach ($kota as $row) : ?>
+																	<option value="<?= $row->city_id; ?>" <?php echo ($row->city_id == $user->city_id) ? 'selected="selected"' : ''; ?>><?= $row->city_name; ?></option>
+																<?php endforeach ?> -->
                                                                 <option value=''>Select Kabupaten</option>
                                                             </select>
                                                         </div>
@@ -361,24 +356,17 @@
                                                             <label for="subdistrict_id" class="font-weight-bolder mr-4 text-dark" style="font-size: 17px;">Kecamatan</label>
                                                         </div>
                                                         <div class="col-8">
-                                                            <select name="kec" class="form-control" id="kecamatan">
+                                                            <select name="kec" class="form-control" id="subdistrict_id">
+                                                                <!-- <option value="" selected disabled hidden>Pilih Kecamatan</option>
+																<?php foreach ($kecamatan as $row) : ?>
+																	<option value="<?= $row->subdistrict_id; ?>" <?php echo ($row->subdistrict_id == $user->subdistrict_id) ? 'selected="selected"' : ''; ?>><?= $row->subdistrict_name; ?></option>
+																<?php endforeach ?> -->
                                                                 <option>Select Kecamatan</option>
                                                             </select>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-12 form-group form-check-inline w-100 d-flex">
-                                                    <div class="row w-100 d-flex">
-                                                        <div class="col-4 w-100 d-flex">
-                                                            <label for="desa" class="font-weight-bolder mr-4 text-dark" style="font-size: 17px;">Desa</label>
-                                                        </div>
-                                                        <div class="col-8">
-                                                            <select name="des" class="form-control" id="desa">
-                                                                <option>Select Desa</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
+
                                                 <div class="col-md-12 form-group form-check-inline w-100 d-flex">
                                                     <div class="row w-100 d-flex">
                                                         <div class="col-4 w-100 d-flex">
@@ -393,69 +381,72 @@
                                             </form>
                                         </div>
 
+
                                     </div>
+
                                 </div>
                             </div>
-
                         </div>
 
-                        <div class="card">
-                            <div class="header bline">
-                                <h2>Ubah Kata Sandi</h2>
-                                <ul class="header-dropdown dropdown dropdown-animated scale-left">
-                                    <li> <a href="javascript:void(0);" data-toggle="cardloading" data-loading-effect="pulse"><i class="icon-refresh"></i></a></li>
-                                    <li><a href="javascript:void(0);" class="full-screen"><i class="icon-size-fullscreen"></i></a></li>
-                                    <li class="dropdown">
-                                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="javascript:void(0);">Tindakan</a></li>
-                                            <li><a href="javascript:void(0);">Tindakan Lainnya</a></li>
-                                            <li><a href="javascript:void(0);">Lain-nya</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="body">
-                                <div class="row clearfix">
-                                    <div class="col-lg-12 col-md-12">
-                                        <?= $this->session->flashdata('messagge'); ?>
-                                        <form action="<?= base_url('pageprofile/editpassword'); ?>" enctype="multipart/form-data" method="POST">
-                                            <!-- <div class="form-group">
+                    </div>
+
+                    <div class="card">
+                        <div class="header bline">
+                            <h2>Ubah Kata Sandi</h2>
+                            <ul class="header-dropdown dropdown dropdown-animated scale-left">
+                                <li> <a href="javascript:void(0);" data-toggle="cardloading" data-loading-effect="pulse"><i class="icon-refresh"></i></a></li>
+                                <li><a href="javascript:void(0);" class="full-screen"><i class="icon-size-fullscreen"></i></a></li>
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="javascript:void(0);">Tindakan</a></li>
+                                        <li><a href="javascript:void(0);">Tindakan Lainnya</a></li>
+                                        <li><a href="javascript:void(0);">Lain-nya</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="body">
+                            <div class="row clearfix">
+                                <div class="col-lg-12 col-md-12">
+                                    <?= $this->session->flashdata('messagge'); ?>
+                                    <form action="<?= base_url('pageprofile/editpassword'); ?>" enctype="multipart/form-data" method="POST">
+                                        <!-- <div class="form-group">
                                                     <label for="password_lama">Kata Sandi Lama</label>
                                                     <input type="password" nama="password_lama" id="password_lama" class="form-control" placeholder="Kata Sandi Lama">
                                                     <?= form_error('password_lama', ' <small class="text-danger pl-3">', '</small>'); ?>
 
                                                 </div> -->
-                                            <div class="form-group">
-                                                <label for="password0">Kata Sandi Lama</label>
-                                                <input type="password" name="password0" class="form-control" id="signup-password0" placeholder="Kata Sandi Lama">
-                                                <?= form_error('password0', ' <small class="text-danger pl-3">', '</small>'); ?>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="password">Kata Sandi Baru</label>
-                                                <input type="password" name="password" class="form-control" id="signup-password" placeholder="Kata Sandi">
-                                                <?= form_error('password', ' <small class="text-danger pl-3">', '</small>'); ?>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="password2">Ulangi Kata Sandi Baru</label>
-                                                <input type="password" name="password2" class="form-control" id="signup-password2" placeholder="Konfirmasi Password">
-                                                <?= form_error('password2', ' <small class="text-danger pl-3">', '</small>'); ?>
-                                            </div>
-                                            <div class="form-grup">
-                                                <button type="submit" class="btn btn-primary" value="editpassword" name="editpassword">Perbarui Kata Sandi</button>
-                                            </div>
-                                        </form>
+                                        <div class="form-group">
+                                            <label for="password0">Kata Sandi Lama</label>
+                                            <input type="password" name="password0" class="form-control" id="signup-password0" placeholder="Kata Sandi Lama">
+                                            <?= form_error('password0', ' <small class="text-danger pl-3">', '</small>'); ?>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="password">Kata Sandi Baru</label>
+                                            <input type="password" name="password" class="form-control" id="signup-password" placeholder="Kata Sandi">
+                                            <?= form_error('password', ' <small class="text-danger pl-3">', '</small>'); ?>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="password2">Ulangi Kata Sandi Baru</label>
+                                            <input type="password" name="password2" class="form-control" id="signup-password2" placeholder="Konfirmasi Password">
+                                            <?= form_error('password2', ' <small class="text-danger pl-3">', '</small>'); ?>
+                                        </div>
+                                        <div class="form-grup">
+                                            <button type="submit" class="btn btn-primary" value="editpassword" name="editpassword">Perbarui Kata Sandi</button>
+                                        </div>
+                                    </form>
 
-                                    </div>
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
+
+
                 </div>
             </div>
         </div>
+    </div>
     </div>
     </div>
     </div>
@@ -480,27 +471,55 @@
         });
     </script>
 
-    ////
+
     <script src="<?php echo $path; ?>/jquery.min.js"></script>
+    <script src="<?= base_url() ?>assets/js/script.js"></script>
+
+    <!-- <script>
+		$(document).ready(function() {
+
+			$('#province_id').change(function() {
+				var provinsi = $('#province_id').val();
+				$.ajax({
+					type: 'GET',
+					url: '<?= base_url('Wilayah/cekKota'); ?>',
+					data: 'province_id=' + provinsi,
+					success: function(data) {
+						$("#city_id").html(data);
+						$("#subdistrict_id").val('');
+					}
+				});
+			});
+
+			$('#city_id').change(function() {
+				var kota = $('#city_id').val();
+				$.ajax({
+					type: 'GET',
+					url: '<?= base_url('Wilayah/cekKecamatan'); ?>',
+					data: 'city_id=' + kota,
+					success: function(data) {
+						$("#subdistrict_id").html(data);
+					}
+				});
+			});
+		});
+	</script> -->
+
     <script>
         $(document).ready(function() {
-            $("#provinsi").change(function() {
-                var url = "<?php echo site_url('wilayah/add_ajax_kab'); ?>/" + $(this).val();
-                $('#kabupaten').load(url);
+            $("#province_id").change(function() {
+                var url = "<?php echo site_url('pageprofile/add_ajax_kab'); ?>/" + $(this).val();
+                $('#city_id').load(url);
                 return false;
             })
 
-            $("#kabupaten").change(function() {
-                var url = "<?php echo site_url('wilayah/add_ajax_kec'); ?>/" + $(this).val();
-                $('#kecamatan').load(url);
+            $("#city_id").change(function() {
+                var url = "<?php echo site_url('pageprofile/add_ajax_kec'); ?>/" + $(this).val();
+                $('#subdistrict_id').load(url);
                 return false;
             })
 
-            $("#kecamatan").change(function() {
-                var url = "<?php echo site_url('wilayah/add_ajax_des'); ?>/" + $(this).val();
-                $('#desa').load(url);
-                return false;
-            })
+
         });
     </script>
 

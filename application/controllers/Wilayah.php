@@ -10,17 +10,38 @@ class Wilayah extends CI_Controller
 
 		$this->load->helper(array('url', 'html'));
 		$this->load->model('m_wilayah');
+		$this->load->model('m_user');
 		$this->load->database();
 	}
 
-	function index()
+	function index($var = null)
 	{
 		$data['user'] =
 			$this->db->get_where('tb_pengguna', ['email' =>
 			$this->session->userdata('email')])->row_array();
-		$data['provinsi'] = $this->m_wilayah->get_all_provinsi();
+
 
 		$data['path'] = base_url('assets');
+		$userID = $this->session->userdata('email');
+
+		$data['userr'] = $this->m_user->getDataByID($userID)->row_array();
+		$data['provinsi'] = $this->m_wilayah->getProvinsi()->result_array();
+
+		$row = $this->m_user->getUserProvinsi($userID)->row();
+		// var_dump($data);
+		// die;
+
+		if (!empty($row->province_id)) {
+
+			$data['kota'] = $this->m_user->getKota($row->province_id)->result();
+
+			$row2 = $this->m_user->getUserKota($userID)->row();
+
+			if (!empty($row->province_id)) {
+
+				$data['kecamatan'] = $this->m_user->getKecamatan($row2->city_id)->result();
+			}
+		}
 
 		$this->load->view('admin/header', $data);
 		$this->load->view('wilayah', $data);
@@ -29,33 +50,47 @@ class Wilayah extends CI_Controller
 
 	function add_ajax_kab($id_prov)
 	{
-		$query = $this->db->get_where('wilayah_kabupaten', array('provinsi_id' => $id_prov));
+		$query = $this->db->get_where('tb_cities', array('province_id' => $id_prov));
 		$data = "<option value=''>- Select Kabupaten -</option>";
 		foreach ($query->result() as $value) {
-			$data .= "<option value='" . $value->id . "'>" . $value->nama . "</option>";
+			$data .= "<option value='" . $value->city_id . "'>" . $value->city_name . "</option>";
 		}
 		echo $data;
 	}
 
 	function add_ajax_kec($id_kab)
 	{
-		$query = $this->db->get_where('wilayah_kecamatan', array('kabupaten_id' => $id_kab));
+		$query = $this->db->get_where('tb_subdistricts', array('city_id' => $id_kab));
 		$data = "<option value=''> - Pilih Kecamatan - </option>";
 		foreach ($query->result() as $value) {
-			$data .= "<option value='" . $value->id . "'>" . $value->nama . "</option>";
+			$data .= "<option value='" . $value->subdistrict_id . "'>" . $value->subdistrict_name . "</option>";
 		}
 		echo $data;
 	}
 
-	function add_ajax_des($id_kec)
+	public function cekKota()
 	{
-		$query = $this->db->get_where('wilayah_desa', array('kecamatan_id' => $id_kec));
-		$data = "<option value=''> - Pilih Desa - </option>";
-		foreach ($query->result() as $value) {
-			$data .= "<option value='" . $value->id . "'>" . $value->nama . "</option>";
+		$id = $this->input->get('province_id', TRUE);
+		$kota = $this->m_user->getKota($id)->result();
+
+		foreach ($kota as $row) {
+			echo "<option value='" . $row->city_id . "'>" . $row->city_name . "</option>";
 		}
-		echo $data;
 	}
+
+	public function cekKecamatan()
+	{
+		$id = $this->input->get('city_id', TRUE);
+		$kecamatan = $this->m_user->getKecamatan($id)->result();
+
+		foreach ($kecamatan as $row) {
+			echo "<option value='" . $row->subdistrict_id . "'>" . $row->subdistrict_name . "</option>";
+		}
+	}
+
+
+
+
 
 	public function edit()
 	{
@@ -107,6 +142,53 @@ class Wilayah extends CI_Controller
           </div> ');
 				redirect('pageprofile');
 			}
+		}
+	}
+
+	public function perbarui()
+	{
+		$data['user'] = $this->db->get_where('tb_pengguna', ['email' =>
+		$this->session->userdata('email')])->row_array();
+
+		$this->form_validation->set_rules('pengguna_id', 'Pengguna Id', 'required|trim');
+
+		if ($this->form_validation->run() == false) {
+			$this->load->view('admin/header', $data);
+			$this->load->view('admin/page-profile');
+			$this->load->view('admin/footer');
+		} else {
+			$id = $this->input->post('pengguna_id', TRUE);
+			$customer_name = $this->input->post('customer_name', TRUE);
+			$email = $this->input->post('email', TRUE);
+			$gender = $this->input->post('gender', TRUE);
+			$tanggal_lahir = $this->input->post('tanggal_lahir', TRUE);
+			$phone_number = $this->input->post('phone_number', TRUE);
+			$province_id = $this->input->post('prov', TRUE);
+			$city_id = $this->input->post('kab', TRUE);
+			$subdistrict_id = $this->input->post('kec', TRUE);
+
+			$address = $this->input->post('address', true);
+
+			$data = array(
+				'nama_lengkap' => $customer_name,
+				'jenis_kelamin' => $gender,
+				'tanggal_lahir' => $tanggal_lahir,
+				'nomor_telepon' => $phone_number,
+				'province_id' => $province_id,
+				'city_id' => $city_id,
+				'subdistrict_id' => $subdistrict_id,
+
+				'alamat' => $address
+			);
+
+			$result = $this->M_User->editData($id, $data);
+			// $this->db->set('nama', $nama);
+			// $this->db->where('pengguna_id', $pengguna_id);
+			// $this->db->update('tb_pengguna');
+			$this->session->set_flashdata('messagee', '<div class="alert alert-success" role="alert">
+            Data Profil anda telah diperbarui!
+          </div> ');
+			redirect('wilayah');
 		}
 	}
 	public function editpassword()

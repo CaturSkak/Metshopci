@@ -4,37 +4,28 @@ class pageprofile extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('M_User');
-        $this->load->model('M_wilayah');
-        $this->load->model('provinsi');
         $this->load->helper(array('url', 'html'));
+        $this->load->model('m_wilayah');
+        $this->load->model('m_user');
         $this->load->database();
     }
-    public function index()
+    function index($var = null)
     {
-
-        // $data['cob'] = $this->provinsi->getData($id)->row();
-        // var_dump($data);
-        // die;
-
         $data['user'] =
             $this->db->get_where('tb_pengguna', ['email' =>
             $this->session->userdata('email')])->row_array();
 
-        $data['des'] = $this->provinsi->des()->result();
-
-        $data['pro'] = $this->provinsi->wilayah()->result();
-        $data['kab'] = $this->provinsi->kab()->result();
-        $data['kec'] = $this->provinsi->kec()->result();
-
-
-        $data['provinsi'] = $this->M_wilayah->get_all_provinsi();
-
-        $id = $this->input->post('pengguna_id', TRUE);
-        $data['wilayah'] = $this->M_wilayah->getData($id);
-        $data['prop'] = $this->M_wilayah->getAll($id);
 
         $data['path'] = base_url('assets');
+        $userID = $this->session->userdata('email');
+
+        $data['userr'] = $this->m_user->getDataByID($userID)->row_array();
+        // var_dump($data);
+        // die;
+        $data['provinsi'] = $this->m_wilayah->getProvinsi()->result_array();
+
+
+
 
 
         $this->load->view('admin/header', $data);
@@ -42,32 +33,23 @@ class pageprofile extends CI_Controller
         $this->load->view('admin/footer');
     }
 
+
     function add_ajax_kab($id_prov)
     {
-        $query = $this->db->get_where('wilayah_kabupaten', array('provinsi_id' => $id_prov));
+        $query = $this->db->get_where('tb_cities', array('province_id' => $id_prov));
         $data = "<option value=''>- Select Kabupaten -</option>";
         foreach ($query->result() as $value) {
-            $data .= "<option value='" . $value->id . "'>" . $value->nama . "</option>";
+            $data .= "<option value='" . $value->city_id . "'>" . $value->city_name . "</option>";
         }
         echo $data;
     }
 
     function add_ajax_kec($id_kab)
     {
-        $query = $this->db->get_where('wilayah_kecamatan', array('kabupaten_id' => $id_kab));
+        $query = $this->db->get_where('tb_subdistricts', array('city_id' => $id_kab));
         $data = "<option value=''> - Pilih Kecamatan - </option>";
         foreach ($query->result() as $value) {
-            $data .= "<option value='" . $value->id . "'>" . $value->nama . "</option>";
-        }
-        echo $data;
-    }
-
-    function add_ajax_des($id_kec)
-    {
-        $query = $this->db->get_where('wilayah_desa', array('kecamatan_id' => $id_kec));
-        $data = "<option value=''> - Pilih Desa - </option>";
-        foreach ($query->result() as $value) {
-            $data .= "<option value='" . $value->id . "'>" . $value->nama . "</option>";
+            $data .= "<option value='" . $value->subdistrict_id . "'>" . $value->subdistrict_name . "</option>";
         }
         echo $data;
     }
@@ -193,7 +175,7 @@ class pageprofile extends CI_Controller
             $province_id = $this->input->post('prov', TRUE);
             $city_id = $this->input->post('kab', TRUE);
             $subdistrict_id = $this->input->post('kec', TRUE);
-            $des = $this->input->post('des', TRUE);
+
             $address = $this->input->post('address', true);
 
             $data = array(
@@ -204,7 +186,7 @@ class pageprofile extends CI_Controller
                 'province_id' => $province_id,
                 'city_id' => $city_id,
                 'subdistrict_id' => $subdistrict_id,
-                'desa' => $des,
+
                 'alamat' => $address
             );
 

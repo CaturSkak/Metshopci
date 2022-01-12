@@ -44,7 +44,8 @@ class auth extends CI_Controller
                 if (password_verify($password, $user['password'])) {
                     $data = [
                         'email' => $user['email'],
-                        'tb_tipe_pengguna_id' => $user['tb_tipe_pengguna_id']
+                        'tb_tipe_pengguna_id' => $user['tb_tipe_pengguna_id'],
+                        'pengguna_id' => $user['pengguna_id']
                     ];
                     $this->session->set_userdata($data);
                     redirect('BerandaAdmin');
@@ -218,6 +219,7 @@ class auth extends CI_Controller
     public function logout()
     {
         $this->session->unset_userdata('email');
+        $this->session->unset_userdata('pengguna_id');
         $this->session->unset_userdata('tb_tipe_pengguna_id');
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
         akun anda telah keluar!
