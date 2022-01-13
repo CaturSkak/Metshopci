@@ -64,7 +64,7 @@
         </div>
     </div>
 
-    <!-- Javascript
+    Javascript
     <script src="<?php echo base_url(); ?>light/assets/bundles/libscripts.bundle.js"></script>
     <script src="<?php echo base_url(); ?>light/assets/bundles/vendorscripts.bundle.js"></script>
 
@@ -74,7 +74,7 @@
     <script src="<?php echo base_url(); ?>light/assets/bundles/mainscripts.bundle.js"></script>
     <script src="<?php echo base_url(); ?>light/assets/js/pages/forms/dropify.js"></script>
 
-    <script src="<?php echo base_url(); ?>light/assets/vendor/summernote/dist/summernote.js"></script> -->
+    <script src="<?php echo base_url(); ?>light/assets/vendor/summernote/dist/summernote.js"></script>
 
 </body>
 

@@ -1,5 +1,5 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
-class auth extends CI_Controller
+class authcustomer extends CI_Controller
 {
     public function __construct()
     {
@@ -9,7 +9,7 @@ class auth extends CI_Controller
     public function index()
     {
         if ($this->session->userdata('email')) {
-            redirect('BerandaAdmin');
+            redirect('Beranda');
         }
 
         $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
@@ -18,8 +18,9 @@ class auth extends CI_Controller
 
 
             $data['title'] = 'MetShop Pets - Login';
-            $this->load->view('admin/page-login', $data);
-            $this->load->view('admin/footer');
+            $this->load->view('layout/header');
+            $this->load->view('konten/login');
+            $this->load->view('layout/footer');
         } else {
             //validasi succes
             $this->_login();
@@ -29,7 +30,7 @@ class auth extends CI_Controller
     private function _login()
     {
         if ($this->session->userdata('email')) {
-            redirect('BerandaAdmin');
+            redirect('Beranda');
         }
 
         $email = $this->input->post('email');
@@ -44,35 +45,34 @@ class auth extends CI_Controller
                 if (password_verify($password, $user['password'])) {
                     $data = [
                         'email' => $user['email'],
-                        'tb_tipe_pengguna_id' => $user['tb_tipe_pengguna_id'],
-                        'pengguna_id' => $user['pengguna_id']
+                        'tb_tipe_pengguna_id' => $user['tb_tipe_pengguna_id']
                     ];
                     $this->session->set_userdata($data);
-                    redirect('BerandaAdmin');
+                    redirect('Beranda');
                 } else {
                     $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
                     Kata sandi salah!
                   </div> ');
-                    redirect('auth');
+                    redirect('authcustomer');
                 }
             } else {
                 $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
                 Email belum diaktivasi, Silakan aktivasi email!
               </div> ');
-                redirect('auth');
+                redirect('authcustomer');
             }
         } else {
             $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
             Email tidak terdaftar, Silakan Daftar!
           </div> ');
-            redirect('auth');
+            redirect('authcustomer');
         }
     }
 
     public function registrasi()
     {
         if ($this->session->userdata('email')) {
-            redirect('BerandaAdmin');
+            redirect('Beranda');
         }
 
         $this->form_validation->set_rules('nama', 'Nama', 'required|trim');
@@ -96,8 +96,9 @@ class auth extends CI_Controller
         $this->form_validation->set_rules('password2', 'Password', 'required|trim|matches[password]');
         if ($this->form_validation->run() == false) {
             $data['title'] = 'MetShop Pets - Daftar';
-            $this->load->view('admin/pageregister', $data);
-            $this->load->view('admin/footer');
+            $this->load->view('layout/header');
+            $this->load->view('konten/register');
+            $this->load->view('layout/footer');
         } else {
             $email = $this->input->post('email', 'true');
             $data = [
@@ -109,7 +110,7 @@ class auth extends CI_Controller
                 ),
                 'aktif' => 0,
                 'foto_pengguna' => 'default.png',
-                'tipepengguna_id' => 1,
+                'tipepengguna_id' => 2,
                 'tanggal_dibuat' => time()
 
             ];
@@ -131,7 +132,7 @@ class auth extends CI_Controller
             $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
             Selamat akun anda telah dibuat, Silakan Aktivasi Akun di Gmail!
           </div> ');
-            redirect('auth');
+            redirect('authcustomer');
         }
     }
 
@@ -156,12 +157,12 @@ class auth extends CI_Controller
 
             $this->email->subject('Verifikasi Akun');
             $this->email->message('Klik link ini untuk verifikasi akun :
-                <a href="' . base_url() . 'auth/verify?email=' . $this->input->post('email') . '&token=' . urlencode($token) . '" >Aktifkan</a>');
+                <a href="' . base_url() . 'authcustomer/verify?email=' . $this->input->post('email') . '&token=' . urlencode($token) . '" >Aktifkan</a>');
         } else if ($type == 'forgot') {
 
             $this->email->subject('Reset Password');
             $this->email->message('Klik link ini untuk reset password :
-                <a href="' . base_url() . 'auth/resetkatasandi?email=' . $this->input->post('email') . '&token=' . urlencode($token) . '" >Reset Kata Sandi</a>');
+                <a href="' . base_url() . 'authcustomer/resetkatasandi?email=' . $this->input->post('email') . '&token=' . urlencode($token) . '" >Reset Kata Sandi</a>');
         }
 
         if ($this->email->send()) {
@@ -192,7 +193,7 @@ class auth extends CI_Controller
                     $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
                     ' . 'Akun ' . $email . ' Telah aktif, Silakan login!.
                   </div> ');
-                    redirect('auth');
+                    redirect('authcustomer');
                 } else {
                     $this->db->delete('tb_pengguna', ['email' => $email]);
                     $this->db->delete('tb_token', ['email' => $email]);
@@ -200,31 +201,30 @@ class auth extends CI_Controller
                     $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
                     Aktivasi akun gagal karena token kadaluarsa!
                   </div> ');
-                    redirect('auth');
+                    redirect('authcustomer');
                 }
             } else {
                 $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
                 Aktivasi akun gagal karena token salah!
               </div> ');
-                redirect('auth');
+                redirect('authcustomer');
             }
         } else {
             $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
             Aktivasi akun gagal karena email salah!
           </div> ');
-            redirect('auth');
+            redirect('authcustomer');
         }
     }
 
     public function logout()
     {
         $this->session->unset_userdata('email');
-        $this->session->unset_userdata('pengguna_id');
         $this->session->unset_userdata('tb_tipe_pengguna_id');
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
         akun anda telah keluar!
       </div> ');
-        redirect('auth');
+        redirect('authcustomer');
     }
 
     public function lupasandi()
@@ -253,12 +253,12 @@ class auth extends CI_Controller
                 $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
         Silahkan cek email untuk mereset password! 
       </div> ');
-                redirect('auth/lupasandi');
+                redirect('authcustomer/lupasandi');
             } else {
                 $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
         Email belum terdaftar atau belum aktif!
       </div> ');
-                redirect('auth/lupasandi');
+                redirect('authcustomer/lupasandi');
             }
         }
     }
@@ -279,7 +279,7 @@ class auth extends CI_Controller
                 $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
                Reset password gagal! Token Salah!
               </div> ');
-                redirect('auth');
+                redirect('authcustomer');
             }
         } else {
         }
@@ -288,7 +288,7 @@ class auth extends CI_Controller
     public function gantikatasandi()
     {
         if (!$this->session->userdata('reset_email')) {
-            redirect('auth');
+            redirect('authcustomer');
         }
 
         $this->form_validation->set_rules(
@@ -327,7 +327,7 @@ class auth extends CI_Controller
             $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
                Ganti Kata Sandi telah berhasil, Silahkan Login!
               </div> ');
-            redirect('auth');
+            redirect('authcustomer');
         }
     }
 }
