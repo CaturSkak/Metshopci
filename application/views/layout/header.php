@@ -21,7 +21,7 @@
     <!-- Plugins CSS (All Plugins Files) -->
 
 
-
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/plugins/swiper-bundle.min.css" />
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/plugins/animate.min.css" />
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/plugins/lightgallery.min.css" />
@@ -33,7 +33,7 @@
 
 <link rel="stylesheet" href="<?php echo base_url();?> <?php echo base_url(); ?>assets/css/main.css" />
 
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src=" <?php echo base_url(); ?>assets/bundles/libscripts.bundle.js"></script>    
 <script src=" <?php echo base_url(); ?>assets/bundles/vendorscripts.bundle.js"></script>
 
@@ -206,6 +206,12 @@
 
                                 </div>
                                 <!-- Header Action Search Button End -->
+
+                                <!-- Header My Account Button Start -->
+                                <a href="<?php echo base_url(); ?>Profile" class="header-action-btn header-action-btn-wishlist">
+                                    <i class="icon-envelope icons"></i>
+                                </a>
+                                <!-- Header My Account Button End -->
 
                                 <!-- Header My Account Button Start -->
                                 <a href="<?php echo base_url(); ?>Profile" class="header-action-btn header-action-btn-wishlist">

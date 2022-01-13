@@ -132,149 +132,27 @@ $getpassword = $this->session->userdata('session_password');
                             <div class="chat-header clearfix">
                                 <div class="row clearfix">
                                     <div class="col-lg-6">
-                                        <a href="javascript:void(0);" data-toggle="modal" data-target="#view_info">
-                               
-                                               <img width="50px" style="border-radius: 100px; -moz-border-radius: 100px;" src="<?php echo base_url();?>assets/images/logo.png" alt="avatar" />
-                                               <h6 class="m-b-0 chat-about">Admin </h6> <br>                                   
-                                               <small  > &nbsp; Terlihat : 2 Menit  lalu</small>
-                                            </a>
-                                       
-                                          
-                                            
-                                        
+                                        <?php foreach($chat as $list){
+                                            echo "<p>
+                                            <span><b>$list->name</b></span> -
+                                            <span>$list->pesan</span>
+                                            </p>";
+                                        }
+                                        ?>
+                                    <div id="pesan"></div>
+                                    <div class="form-group">
+                                        <input type="text" name="name" id="name" class="form-control" placeholder="Nama kamu...">
                                     </div>
-                                    <div class="col-lg-6 hidden-sm text-left" >
-                                        <a class="float-right" href="javascript:void(0);" class="btn btn-secondary"><i class="icon-camera "></i></a>
-                                       
+                                    <div class="form-group">
+                                        <input type="text" row="4" name="pesan" id="pesan" class="form-control" placeholder="Pesan kamu...">
                                     </div>
-                                </div>
-                            </div>
-                            <div class="chat-history">
-                                <ul class="m-b-0">
-                                    
-                                    <li class="clearfix">
-                                        <div class="message-data text-right">
-                                            <span class="message-data-time float-right">10:12 WIB, Hari Ini</span>
-                                        </div><br>
-                                        <div class="message other-message float-right">Halo Apakah Kucing Ini Sehat ?</div>                                    
-                                    </li>                               
-                                    <li class="clearfix ">
-                                        <div class="message-data">
-                                            <img width="50px" style="border-radius: 100px; -moz-border-radius: 100px;" src="<?php echo base_url();?>assets/images/logo.png" alt="avatar">
-                                            <span class="message-data-time ">10:15 WIB, Hari Ini</span>
-                                        </div>
-                                        <div class="message my-message">Iya, Batul Kucing ini sangat sehat !</div>
-                                    </li>
-                                    <li class="clearfix">
-                                        <div class="message-data text-right">
-                                            <span class="message-data-time float-right">10:17 WIB, Hari Ini</span>
-                                        </div><br>
-                                        <div class="message other-message float-right">Saya Ingin Membeli kucing ini apakah ready ?. </div>                                    
-                                    </li> 
-                                    <li class="clearfix">
-                                        <div class="message-data">
-                                            <img width="50px" style="border-radius: 100px; -moz-border-radius: 100px;" src="<?php echo base_url();?>assets/images/logo.png" alt="avatar">
-                                            <span class="message-data-time" >10:10 WIB, Hari Ini</span>
-                                        </div>
-                                        <div class="message my-message"> Oh, ya kak ready silahkan kakak ke menu beli untuk memesan nya.</div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="chat-message clearfix">
-                                <div class="input-group mb-0">
-                                    
-                                    <textarea type="text" row="4" class="form-control" placeholder="Tulis Pesan anda Disini..."></textarea>
-                                    <div class="input-group-prepend">
-                                        <span class="btn btn input-group-text"><i class="icon-paper-plane"></i></span>
+                                    <br>
+                                    <div class="form-group">
+                                        <input type="button" value="submit" class="btn btn-primary btn-block" onclick="store();">
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div id="plist" class="people-list">
-                           
-                            <ul class="right_chat list-unstyled mb-0">
-                                <li class="online">
-                                    <a href="javascript:void(0);">
-                                        <div class="media">
-                                        <div class="widget-list">
-                                <h3 class="widget-title mb-6">Produk Terkini</h3>
-                                <div class="sidebar-body product-list-wrapper mb-n6">
-
-                                    <!-- Single Product List Start -->
-                                    <div class="single-product-list mb-6">
-
-                                        <!-- Product List Thumb Start -->
-                                        <div class="product">
-                                            <div class="thumb">
-                                                <a href="liathewanjodoh" class="image">
-                                                    <img class="fit-image first-image" src="<?php echo base_url();?>assets/images/products/medium-product/kucing.png" alt="Product Image">
-                                                </a>
-                                            </div>
-                                        </div>
-
-                                        <!-- Product List Content Start -->
-                                        <div class="product-list-content">
-                                            <h6 class="product-name">
-                                                <a href="liathewanjodoh">Kucing Anggora Asli</a>
-                                            </h6>
-                                            <span class="price">
-                                                    <span class="new" >Rp.350.000</span>
-                                            </span>
-                                        </div>
-                                        <!-- Product List Content End -->
-
-                                    </div>
-                                    <!-- Single Product List End -->
-
-                                    <!-- Single Product List Start -->
-                                    <div class="single-product-list mb-6">
-
-                                        <!-- Product List Thumb Start -->
-                                        <div class="product">
-                                            <div class="thumb">
-                                                <a href="liathewanjodoh" class="image">
-                                                    <img class="fit-image first-image" src="<?php echo base_url();?>assets/images/products/medium-product/shiba inu.png" alt="Product Image">
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <!-- Product List Thumb End -->
-
-                                        <!-- Product List Content Start -->
-                                        <div class="product-list-content">
-                                            <h6 class="product-name">
-                                                <a href="liathewanjodoh">Anjing Shiba Inu</a>
-                                            </h6>
-                                            <span class="price">
-                                                    <span class="new">Rp.6.150.000</span>
-                                            </span>
-                                        </div>
-                                        <!-- Product List Content End -->
-
-                                    </div>
-                                    <!-- Single Product List End -->
-
-                                    <!-- Single Product List Start -->
-                                    <div class="single-product-list mb-6">
-
-                                        <!-- Product List Thumb Start -->
-                                        <div class="product">
-                                            <div class="thumb">
-                                                <a href="liathewanjodoh" class="image">
-                                                    <img class="fit-image first-image" src="<?php echo base_url();?>assets/images/products/medium-product/koren.png" alt="Product Image">
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <!-- Product List Thumb End -->
-<!-- Product List Content Start -->
-<div class="product-list-content">
-                                            <h6 class="product-name">
-                                                <a href="liathewanjodoh">Kucing Mainecoon</a>
-                                            </h6>
-                                            <span class="price">
-                                                    <span class="new">Rp.550.000</span>
-                                            
-                                            </span>
-                                        </div>
                                         <!-- Product List Content End -->
 
                                         </div>
@@ -725,4 +603,18 @@ $getpassword = $this->session->userdata('session_password');
         <!-- Mobile Menu Inner End -->
     </div>
     <!-- Mobile Menu End -->
+    <script>
+                            function store(){
+                                var value = {
+                                    name: $('#name').val(),
+                                    pesan;$('#pesan').val()
+                                }
 
+                                $.ajax({
+                                    url: '<?=site_url();?>/Profile/store',
+                                    type: 'POST',
+                                    data: value,
+                                    dataType: 'JSON'
+                                });
+                            }
+                        </script>
