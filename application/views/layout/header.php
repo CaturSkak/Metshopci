@@ -25,7 +25,7 @@
     <!-- Plugins CSS (All Plugins Files) -->
 
 
-
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/plugins/swiper-bundle.min.css" />
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/plugins/animate.min.css" />
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/plugins/lightgallery.min.css" />
@@ -38,8 +38,10 @@
     <link rel="stylesheet" href="<?php echo base_url(); ?> <?php echo base_url(); ?>assets/css/main.css" />
 
 
-    <script src=" <?php echo base_url(); ?>assets/bundles/libscripts.bundle.js"></script>
-    <script src=" <?php echo base_url(); ?>assets/bundles/vendorscripts.bundle.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src=" <?php echo base_url(); ?>assets/bundles/libscripts.bundle.js"></script>    
+<script src=" <?php echo base_url(); ?>assets/bundles/vendorscripts.bundle.js"></script>
+
 
     <script src=" <?php echo base_url(); ?>assets/bundles/easypiechart.bundle.js"></script><!-- easypiechart Plugin Js -->
     <script src=" <?php echo base_url(); ?>assets/vendor/sweetalert/sweetalert.min.js"></script><!-- SweetAlert Plugin Js -->
@@ -208,20 +210,17 @@
                                 </form>
                                 <!-- Search Form and Button End -->
 
-                            </div>
-                            <!-- Header Action Search Button End -->
 
-                            <!-- Header My Account Button Start -->
-                            <a href="<?php echo base_url(); ?>Profile" class="header-action-btn header-action-btn-wishlist">
-                                <i class="icon-user icons"></i>
-                            </a>
-                            <!-- Header My Account Button End -->
+                                <!-- Header My Account Button Start -->
+                                <a href="<?php echo base_url(); ?>Profile" class="header-action-btn header-action-btn-wishlist">
+                                    <i class="icon-envelope icons"></i>
+                                </a>
+                                <!-- Header My Account Button End -->
 
-                            <!-- Header Action Button Start -->
-                            <div class="header-action-btn header-action-btn-cart d-none d-sm-flex">
-                                <a class="cart-visible" href="javascript:void(0)">
-                                    <i class="icon-handbag icons"></i>
-                                    <span class="header-action-num">2</span>
+                                <!-- Header My Account Button Start -->
+                                <a href="<?php echo base_url(); ?>Profile" class="header-action-btn header-action-btn-wishlist">
+                                    <i class="icon-user icons"></i>
+
                                 </a>
 
                                 <!-- Header Action Button Start -->
