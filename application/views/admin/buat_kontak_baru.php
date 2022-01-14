@@ -10,7 +10,7 @@
         <div class="block-header">
             <div class="row clearfix">
                 <div class="col-md-6 col-sm-12">
-                    <h2>Buat Artikel Baru</h2>
+                    <h2>Buat Kontak Baru</h2>
                 </div>            
                 <div class="col-md-6 col-sm-12 text-right">
                     <ul class="breadcrumb">
@@ -21,40 +21,45 @@
             </div>
         </div>
         <div class="container-fluid">
-           
-            <div class="row clearfix">
-                <div class="col-lg-12">
-                    <div class="card">
-                        <div class="body">
-                            <div class="input-daterange input-group">
 
-                                <input type="text" class="form-control" placeholder="First Name" />
-                                <span class="input-group-addon"></span>
-                                <input type="text" class="form-control" placeholder="Last Name" />
-                            </div>
-                        <div class="body">
-                            <div class="form-group">
-                            <p><input type="text" class="form-control" placeholder="Email" /></p>
-                            <p><input type="text" class="form-control" placeholder="Nomer Hp/TLP " /></p>
-                            <p><input type="text" class="form-control" placeholder="Alamat Rumah" /></p>
-                            </div>
-                        </div>
-    
-                    <div class="card">
-                        <div class="header">
-                            <h2>Gambar Sebelumnya <small>Bisa diganti gambar lainnya</small></h2>
-                        </div>
-                        <div class="body">
-                            <input type="file" id="dropify-event" data-default-file="">
-                        </div>
-                        <a href="<?php echo base_url();?>appcontact" button type="button" class="btn btn-block btn-primary m-t-20">Tambah</a></button>
-                    </div>   
+<div class="row clearfix">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="body">
+            <?php echo form_open_multipart('blogpost/add');?>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="judul_artikel" name="judul_artikel" 
+                    placeholder="Nama Panjang">
+                    <p></p>
+                    <input type="text" class="form-control" id="judul_artikel" name="judul_artikel" 
+                    placeholder="Email">
+                    <p></p>
+                    <input type="text" class="form-control" id="judul_artikel" name="judul_artikel" 
+                    placeholder="Nomer Hp/Tlp">
+                    <p></p>
+                    <input type="text" class="form-control" id="judul_artikel" name="judul_artikel" 
+                    placeholder="Alamat Rumah">
                 </div>
-            </div>
+
+
+                <div class="card">
+                <div class="form-group">
+                    <h5>Upload Foto</h5>
+                    <p></p>
+                    <h6><small>Masukkan Foto Anda Disini!</small></h6>
+                    <p></p>
+                    <input type="file" name="foto" id="foto" class="form-control"/>
+                </div>
+                </div>
+                <button button type="submit" class="btn btn-primary btn-lg btn-block">Tambah</button>
+                </div>
         </div>
+        <?php echo form_close();?>
     </div>
 </div>
-        </div>
+</div>
+</div>
+</div>
 
 <!-- Javascript -->
 <script src="<?php echo base_url();?>assets/bundles/libscripts.bundle.js"></script>    

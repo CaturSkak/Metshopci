@@ -1,14 +1,10 @@
 <!doctype html>
 <html lang="en">
-
+<head>
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+</head>
 <body class="theme-orange">
-
-
-
 <div id="wrapper">
-
-    
-
     <div id="main-content">
         <div class="block-header">
             <div class="row clearfix">
@@ -26,160 +22,93 @@
             </div>
         </div>
         <div class="container-fluid">
-           
             <div class="row clearfix">
-                <div class="col-lg-6 col-md-12">
+            <div class="col-lg-12">
                     <div class="card">
-                        <div class="header">
-                            <h2> Tambah Hewan / Produk</h2>
-                        </div>
                         <div class="body">
-                            <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <label class="input-group-text" for="inputGroupSelect01">Ketegori</label>
-                                    </div>
-                                    <select class="custom-select" id="inputGroupSelect01">
-                                        <option selected>Pilih Kategori</option>
-                                        <option value="1">Hewan Peliharaan</option>
-                                        <option value="2">Reptil</option>
-                                        <option value="3">Ikan</option>
-                                        <option value="4">Burung</option>
-                                        <option value="5">Lain-Lain</option>
+                        <?php echo form_open_multipart('formsbasic/add');?>
+                        <div class="form-group">
+                                    <select name="jenis_hewan" id="jenis_hewan" class="form-control show-tick">
+                                        <option>Pilih Kategori Hewan / Perjodohan</option>
+                                        <option>Hewan Peliharaan</option>
+                                        <option>Reptil</option>
+                                        <option>Ikan</option>
+                                        <option>Burung</option>
                                     </select>
+                        </div>
+                        <div class="form-group">
+                                    <input type="text" class="form-control" id="jenis" name="jenis" 
+                                    placeholder="Tulis Jenis Hewan">
                                 </div>
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                    </div>
-                                    <input type="text" class="form-control" placeholder="Nama Produk" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                        <div class="form-group">
+                                    <select name="jenis_kelamin" id="jenis_kelamin" class="form-control show-tick">
+                                        <option>Pilih Kategori Jenis Kelamin</option>
+                                        <option>Jantan</option>
+                                        <option>Betina</option>
+                                    </select>
+                        </div>
+                        <div class="form-group">
+                                    <select name="rincian" id="rincian" class="form-control show-tick">
+                                        <option>Tipe Pembelian</option>
+                                        <option>Pembelian</option>
+                                        <option>Perjodohan</option>
+                                    </select>
+                        </div>
+                        <div class="form-group">
+                        <div class="input-group mb-3">
+                        <span class="input-group-text">Rp.</span>
+                            <input type="text" class="form-control" id="harga" name="harga" 
+                            placeholder="Harga">
+                        <div class="input-group-append">
+                        <span class="input-group-text">.00</span>
+                        </div>
+                        </div>
+                        </div>
+
+                                <div class="card">
+                                <div class="form-group">
+                                    <h5>Upload Foto</h5>
+                                    <p></p>
+                                    <h6><small>Masukkan Foto Untuk Hewan Anda Disini!</small></h6>
+                                    <p></p>
+                                    <input type="file" name="foto_hewan" id="foto_hewan" class="form-control"/>
                                 </div>
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text">Rp.</span>
-                                    </div>
-                                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-                                    <div class="input-group-append">
-                                        <span class="input-group-text">.00</span>
-                                    </div>
                                 </div>
                                 
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                    </div>
-                                    <textarea class="form-control" placeholder="Deskripsi Produk / Hewan" aria-label="With textarea"></textarea>
-                                </div>
-                              
-                                <p>
-                                <div class="card">
-                                <div class="header">
-                                    <h2>Masukan Gambar <small>Sesuai Produk / Hewan</small></h2>
-                                </div>
-                                <div class="body">
-                                    <input type="file" id="dropify-event" >
-                                </div>
-                                </div>
-                            </p>
-                                    <div class="mail-left">
-                                    <div class="mail-compose m-b-20">
-                                            <a href="<?php echo base_url();?>formsadvanced" class="btn btn-danger btn-block"> Tambah</a>
-                                    </div>		
+                                <textarea class="summernote" name="deskripsi" cols="137" rows="5"></textarea>
+                                <p></p>
+                                <button button type="submit" class="btn btn-danger btn-lg btn-block">Tambah</button>
                                 </div>
                             </div>
+                            <?php echo form_close();?>
+                            </div>
+                        </div>
                     </div>
-                    
-                    
-
-                    
-                   
-                </div>
-
-                
-                <div class="col-lg-6 col-md-12">
-                    <div class="card">
-                        <div class="header">
-                            <h2>Tambah Hewan Perjodohan</h2>
-                        </div>
-                        <div class="body">
-                            <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <label class="input-group-text" for="inputGroupSelect01">Ketegori</label>
-                                    </div>
-                                    <select class="custom-select" id="inputGroupSelect01">
-                                        <option selected>Pilih Kategori</option>
-                                        <option value="1">Hewan Peliharaan</option>
-                                        <option value="2">Reptil</option>
-                                        <option value="3">Ikan</option>
-                                        <option value="4">Burung</option>
-                                    </select>
-                                </div>
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                    </div>
-                                    <input type="text" class="form-control" placeholder="Nama Hewan" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
-                                </div>
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                    </div>
-                                    <input type="text" class="form-control" placeholder="Jenis Hewan" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
-                                </div>
-                                    <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <label class="input-group-text" for="inputGroupSelect01">Jenis Kelamin</label>
-                                    </div>
-                                    <select class="custom-select" id="inputGroupSelect01">
-                                        <option value="1">Jantan</option>
-                                        <option value="2">Betina</option>
-                                    </select>
-                                    </div>
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text">Rp.</span>
-                                    </div>
-                                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-                                    <div class="input-group-append">
-                                        <span class="input-group-text">.00</span>
-                                    </div>
-                                </div>
-                                
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                    </div>
-                                    <textarea class="form-control" placeholder="Deskripsi Hewan" aria-label="With textarea"></textarea>
-                                </div>
-                                <p>
-                                
-                                <div class="card">
-                                    <div class="header">
-                                        <h2>Masukan Gambar <small>Sesuai Hewan Perjodohan</small></h2>
-                                    </div>
-                                    <div class="body">
-                                        <input type="file" class="dropify" >
-                                    </div>
-                                </div>
-                                
-                            </div>
-                                </p>
-                                    <div class="mail-left">
-                                    <div class="mail-compose m-b-20">
-                                            <a href="<?php echo base_url();?>formsvalidation" class="btn btn-danger btn-block"> Tambah</a>
-                                            </right>
-                                    </div>		
-                                </div>
-                            </div>
-                        
-                        
-                        </div>
-                    
-</div>
-
                 </div>
             </div>
-            
         </div>
     </div>
-    
 </div>
-                    
 
+<script src="<?php echo base_url(); ?>light/assets/vendor/summernote/dist/summernote.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+    <script>
+      $('.summernote').summernote({
+        placeholder: 'Hello stand alone ui',
+        tabsize: 2,
+        height: 120,
+        toolbar: [
+          ['style', ['style']],
+          ['font', ['bold', 'underline', 'clear']],
+          ['color', ['color']],
+          ['para', ['ul', 'ol', 'paragraph']],
+          ['table', ['table']],
+          ['insert', ['link', 'picture', 'video']],
+          ['view', ['fullscreen', 'codeview', 'help']]
+        ]
+      });
+    </script>
 </body>
 </html>
 

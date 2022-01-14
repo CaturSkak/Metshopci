@@ -58,6 +58,7 @@ $getpassword = $this->session->userdata('session_password');
                                             <p>Halo, <strong><?= $user['nama_lengkap']; ?>
                                                 </strong></p>
                                         </div>
+
                                         <p class="mb-0">Dari Akun dashboard anda. Anda dapat dengan mudah memeriksa & melihat pesanan terbaru Anda, mengelola alamat pengiriman dan penagihan Anda, serta mengedit kata sandi dan detail akun Anda.</p>
                                     </div>
                                 </div>
@@ -320,6 +321,7 @@ $getpassword = $this->session->userdata('session_password');
                                             <label class="fit-image ms-1">
 
                                                 <a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a><img src="<?php echo base_url(); ?>assets/images/payment/oppo.png" class="bank-icon rounded-circle"><strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ovo</strong> </label>
+
 
                                         </div>
 
@@ -1006,4 +1008,5 @@ $getpassword = $this->session->userdata('session_password');
         </div>
         <!-- Mobile Menu Inner End -->
     </div>
-    <!-- Mobile Menu End -->
+
+   

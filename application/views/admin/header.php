@@ -42,8 +42,6 @@
 
 
 
-
-
 </head>
 
 <!-- Page Loader -->
@@ -63,7 +61,7 @@
 
             <div class="navbar-left">
                 <div class="navbar-btn">
-                    <a href="<?php echo base_url(); ?>BerandaAdmin"><img style="width: 30px; height: 30px;" src="<?php echo base_url(); ?>light/logo.png" alt="HexaBit Logo" class="img-fluid logo"></a>
+                <a href="<?php echo base_url(); ?>BerandaAdmin"><img style="width: 30px; height: 30px;" src="<?php echo base_url(); ?>light/logo.png" alt="HexaBit Logo" class="img-fluid logo"></a>
                     <button type="button" class="btn-toggle-offcanvas"><i class="lnr lnr-menu fa fa-bars"></i></button>
                 </div>
                 <a href="javascript:void(0);" class="icon-menu btn-toggle-fullwidth"><i class="fa fa-arrow-left"></i></a>
@@ -397,12 +395,12 @@
         <div class="sidebar-scroll">
             <div class="user-account">
                 <div class="user_div">
-                    <img style="width: 140px; height: 140px; object-fit: cover;" src="<?= base_url('assets/images/profil/') . $user['foto_pengguna']; ?>" class="user-photo" alt="User Profile Picture">
+                <img style="width: 140px; height: 140px; object-fit: cover;" src="<?= base_url('assets/images/profil/') . $user['foto_pengguna']; ?>" class="user-photo" alt="User Profile Picture">
                 </div>
                 <div class="dropdown">
                     <span>Selamat Datang,</span>
                     <a href="javascript:void(0);" class="dropdown-toggle user-name" data-toggle="dropdown"><strong>
-                            <?= $user['nama_lengkap']; ?>
+                    <?= $user['nama_lengkap']; ?>
 
                             <!-- <?php if ($user) {
                                         echo  $user['nama_lengkap'];
@@ -434,9 +432,8 @@
                     <li>
                         <a href="#forms" class="has-arrow"><i class="fa fa-github-alt"></i><span>Hewan</span></a>
                         <ul>
-                            <li><a href="<?php echo base_url(); ?>formsbasic">Tambah Hewan</a></li>
-                            <li><a href="<?php echo base_url(); ?>formsadvanced">Daftar Hewan</a></li>
-                            <li><a href="<?php echo base_url(); ?>formsvalidation">Daftar Perjodohan</a></li>
+                            <li><a href="<?php echo base_url(); ?>formsadvanced">Daftar Hewan & Perjodohan Hewan</a></li>
+                            <li><a href="<?php echo base_url(); ?>formsbasic">Tambah Hewan & Perjodohan </a></li>
                         </ul>
                     </li>
                     <li>
@@ -446,19 +443,7 @@
                             <li><a href="<?php echo base_url(); ?>blogpost">Buat Artikel Baru</a></li>
                         </ul>
                     </li>
-                    <li><a href="<?php echo base_url(); ?>apptaskboard"><i class="icon-list"></i><span>Papan tugas</span></a></li>
-
                     <li><a href="<?php echo base_url(); ?>appcontact"><i class="icon-book-open"></i><span>Kontak</span></a></li>
-                    <li>
-                        <a href="#Authentication" class="has-arrow"><i class="icon-lock"></i><span>Auntentifikasi</span></a>
-                        <ul>
-                            <li><a href="<?php echo base_url(); ?>pagelogin">Masuk</a></li>
-                            <li><a href="<?php echo base_url(); ?>pageregister">Daftar</a></li>
-                            <li><a href="<?php echo base_url(); ?>pagelockscreen">Kunci Layar</a></li>
-                            <li><a href="<?php echo base_url(); ?>pageforgotpassword">Lupa Kata Sandi</a></li>
-                        </ul>
-                    </li>
-
                 </ul>
             </nav>
         </div>

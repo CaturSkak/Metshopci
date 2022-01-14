@@ -1,6 +1,25 @@
 <!doctype html>
 <html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+	<link href='<?php echo base_url(); ?>https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="<?php echo base_url(); ?>https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="<?php echo base_url(); ?>css/style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+</head>
 <body class="theme-orange">
 
     <div id="wrapper">
@@ -19,105 +38,60 @@
                     </div>
                 </div>
             </div>
-            <div class="container-fluid">
-                <div class="row clearfix">
-                    <div class="col-lg-20 col-15">
-                        <div class="row row-cols-lg-2 row-cols-sm-2 row-cols-5 mb-n5">
-                            <div class="col mb-8">
-                                <div class="single-blog-wrapper">
-                                    <div class="blog-thumb thumb-effect">
-                                        <img class="fit-image" width="300px" src="<?php echo base_url(); ?>assets/images/121.jpg" alt="img">
-                                    </div>
-                                    <div class="blog-content">
-                                        <div class="content">
-                                            <h4 class="title">Cara Menjaga Kesehatan Hewan Peliharaan</h4>
-                                            <p class="date">
-                                                <small>15, Juli, 2021</small>
-                                            </p>
-                                            <p class="text">Wabah COVID-19 tak hanya menginfeksi manusia, tetapi juga hewan-hewan. Beberapa penemuan kasus hewan positif covid ditemukan di dunia, Di antaranya...</p>
-                                            <a class="btn btn-primary" href="<?php echo base_url(); ?>blogpost2">Edit</a>
-                                            <a class="btn btn-primary" href="<?php echo base_url(); ?>">Hapus</a>
-                                            <a class="btn btn-primary" href="<?php echo base_url(); ?>">Tidak Ditampilkan</a>
-                                            <i class="btn fa fa-eye" aria-hidden="true" href="<?php echo base_url(); ?>"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col mb-8 col-17 col-md-6">
-                                <div class="single-blog-wrapper">
-                                    <img class="fit-image" width="300px" src="<?php echo base_url(); ?>assets/images/111.jpg" alt="img">
-                                    <div class="blog-content">
-                                        <div class="content">
-                                            <h4 class="title">Tips Pemberian Pakan Ikan Hias</h4>
-                                            <p class="date">
-                                                <small>07, September, 2013</small>
-                                            </p>
-                                            <p class="text">Pemakaian pakan buatan untuk ikan hias mesti dikerjakan dengan benar serta hati-hati agar pertumbuhannya bisa berjalan maksimal. Karena diinginkan tak lagi...</p>
-                                            <a class="btn btn-primary" href="<?php echo base_url(); ?>blogpost2">Edit</a>
-                                            <a class="btn btn-primary" href="<?php echo base_url(); ?>">Hapus</a>
-                                            <a class="btn btn-primary" href="<?php echo base_url(); ?>">Tidak Ditampilkan</a>
-                                            <i class="btn fa fa-eye" aria-hidden="true" href="<?php echo base_url(); ?>"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+    <section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-10 text-center mb-15">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="table-responsive">
+						<table class="table table-striped custom-table">
+                            <thead class="thead-dark">
+                            <?php $no = 1; ?>
+                                <tr>
+                                    <th scope="col">No</th>
+                                    <th scope="col">Judul</th>
+                                    <th scope="col">Kategori</th>
+                                    <th scope="col">Foto</th>
+                                    <th scope="col">Deskripsi</th>
+                                    <th colspan="3">Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
 
-                            <div class="col mb-8">
-                                <div class="single-blog-wrapper">
-                                    <img class="fit-image" width="300px" src="<?php echo base_url(); ?>assets/images/131.jpg" alt="img">
-                                    <div class="body">
-                                        <div class="content">
-                                            <h4 class="title">15 Cara Merawat Burung</h4>
-                                            <p class="date">
-                                                <small>17, Februari, 2018</small>
-                                            </p>
-                                            <p class="text">Memiliki burung yang rajin berkicau tentunya sangat diinginkan setiap pemilik burung. Sebenarnya ada 3 faktor yang bisa meningkatkan burung rajin berkicau yakni karakter atau trah, pola perawatan dan lingkungan dan juga pakan serta minuman...</p>
-                                            <a class="btn btn-primary" href="<?php echo base_url(); ?>blogpost2">Edit</a>
-                                            <a class="btn btn-primary" href="<?php echo base_url(); ?>">Hapus</a>
-                                            <a class="btn btn-primary" href="<?php echo base_url(); ?>javascript:void(0)">Perlihatkan</a>
-                                            <i class="btn fa fa-eye-slash" href="<?php echo base_url(); ?>"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col mb-8">
-                                <div class="single-blog-wrapper">
-                                    <img class="fit-image" width="300px" src="<?php echo base_url(); ?>assets/images/212.jpg" alt="img">
-                                    <div class="body">
-                                        <div class="content">
-                                            <h4 class="title">Mengenal Vaksin Penting untuk Hewan Peliharaan</h4>
-                                            <p class="date">
-                                                <small>08, Februari, 2021</small>
-                                            </p>
-                                            <p class="text">Sebagai pemilik kucing, fenomena kucing mengalami kejang pasti mengerikan. Kamu harus mengenali apa saja penyebab kucing kejang agar bisa mengatasinya dengan mudah. Walaupun begitu, tidak selalu kejang yang terjadi pada..</p>
-                                            <a class="btn btn-primary" href="<?php echo base_url(); ?>blogpost2">Edit</a>
-                                            <a class="btn btn-primary" href="<?php echo base_url(); ?>">Hapus</a>
-                                            <a class="btn btn-primary" href="<?php echo base_url(); ?>">Tidak Ditampilkan</a>
-                                            <i class="btn fa fa-eye" aria-hidden="true" href="<?php echo base_url(); ?>"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <ul class="pagination pagination-primary">
-                                <li class="page-item"><a class="page-link" href="<?php echo base_url(); ?>javascript:void(0);">Previous</a></li>
-                                <li class="page-item active"><a class="page-link" href="<?php echo base_url(); ?>javascript:void(0);">1</a></li>
-                                <li class="page-item"><a class="page-link" href="<?php echo base_url(); ?>javascript:void(0);">2</a></li>
-                                <li class="page-item"><a class="page-link" href="<?php echo base_url(); ?>javascript:void(0);">3</a></li>
-                                <li class="page-item"><a class="page-link" href="<?php echo base_url(); ?>javascript:void(0);">Next</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                            </tbody>
+                    <?php foreach ($lihatartikel as $artikel){ ?>
+                        <tr>
+                            <th scope="row"><?= $no++; ?></th>
+                            <td><?php echo $artikel->judul_artikel;?></td>
+                            <td><?php echo $artikel->kategori;?></td>
+                            <td><img src="<?php echo base_url();?>assets/images/<?php echo $artikel->foto;?>" width="120" height="110"></td>
+                            <td><?php echo $artikel->deskripsi_artikel;?></td>
+                            <td><a href="<?php echo base_url();?>bloglist/lihat/<?php echo $artikel->artikel_id?>" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view" title="Quickview" class="btn btn-primary"><button class="btn btn-primary " ><i class="icon icon-info"></i></button></a>
+                            </td>
+                            <td><a href="<?php echo base_url();?>bloglist/update/<?php echo $artikel->artikel_id?>" class="btn btn-warning" type="hidden" title="Edit"><i class="fa fa-edit"></i></a></td>
+                            <td><a href="<?php echo site_url('/bloglist/delete');?>/<?php echo $artikel->artikel_id?>" class="btn btn-sm btn-danger" title="Hapus"><i class="fa fa-trash-o"></i></a></td>
+                        </tr>
+                    <?php } ?>
+                </table>
             </div>
         </div>
-        <!-- 
-Javascript
+	</div>
+</div>
+		</div>
+</section>
+<!-- Javascript -->
 <script src="<?php echo base_url(); ?>light/assets/bundles/libscripts.bundle.js"></script>    
 <script src="<?php echo base_url(); ?>light/assets/bundles/vendorscripts.bundle.js"></script>
 
-<script src="<?php echo base_url(); ?>light/assets/bundles/mainscripts.bundle.js"></script> -->
+<script src="<?php echo base_url(); ?>light/assets/bundles/mainscripts.bundle.js"></script>
+
+<script src="<?php echo base_url(); ?>js/jquery.min.js"></script>
+<script src="<?php echo base_url(); ?>js/popper.js"></script>
+<script src="<?php echo base_url(); ?>js/bootstrap.min.js"></script>
+<script src="<?php echo base_url(); ?>js/main.js"></script>
 </body>
 
 </html>
