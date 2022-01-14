@@ -388,59 +388,61 @@
                             </div>
                         </div>
 
-                    </div>
-
-                    <div class="card">
-                        <div class="header bline">
-                            <h2>Ubah Kata Sandi</h2>
-                            <ul class="header-dropdown dropdown dropdown-animated scale-left">
-                                <li> <a href="javascript:void(0);" data-toggle="cardloading" data-loading-effect="pulse"><i class="icon-refresh"></i></a></li>
-                                <li><a href="javascript:void(0);" class="full-screen"><i class="icon-size-fullscreen"></i></a></li>
-                                <li class="dropdown">
-                                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="javascript:void(0);">Tindakan</a></li>
-                                        <li><a href="javascript:void(0);">Tindakan Lainnya</a></li>
-                                        <li><a href="javascript:void(0);">Lain-nya</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="body">
-                            <div class="row clearfix">
-                                <div class="col-lg-12 col-md-12">
-                                    <?= $this->session->flashdata('messagge'); ?>
-                                    <form action="<?= base_url('pageprofile/editpassword'); ?>" enctype="multipart/form-data" method="POST">
-                                        <!-- <div class="form-group">
+                        <div class="card">
+                            <div class="header bline">
+                                <h2>Ubah Kata Sandi</h2>
+                                <ul class="header-dropdown dropdown dropdown-animated scale-left">
+                                    <li> <a href="javascript:void(0);" data-toggle="cardloading" data-loading-effect="pulse"><i class="icon-refresh"></i></a></li>
+                                    <li><a href="javascript:void(0);" class="full-screen"><i class="icon-size-fullscreen"></i></a></li>
+                                    <li class="dropdown">
+                                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="javascript:void(0);">Tindakan</a></li>
+                                            <li><a href="javascript:void(0);">Tindakan Lainnya</a></li>
+                                            <li><a href="javascript:void(0);">Lain-nya</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="body">
+                                <div class="row clearfix">
+                                    <div class="col-lg-12 col-md-12">
+                                        <?= $this->session->flashdata('messagge'); ?>
+                                        <form action="<?= base_url('pageprofile/editpassword'); ?>" enctype="multipart/form-data" method="POST">
+                                            <!-- <div class="form-group">
                                                     <label for="password_lama">Kata Sandi Lama</label>
                                                     <input type="password" nama="password_lama" id="password_lama" class="form-control" placeholder="Kata Sandi Lama">
                                                     <?= form_error('password_lama', ' <small class="text-danger pl-3">', '</small>'); ?>
 
                                                 </div> -->
-                                        <div class="form-group">
-                                            <label for="password0">Kata Sandi Lama</label>
-                                            <input type="password" name="password0" class="form-control" id="signup-password0" placeholder="Kata Sandi Lama">
-                                            <?= form_error('password0', ' <small class="text-danger pl-3">', '</small>'); ?>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="password">Kata Sandi Baru</label>
-                                            <input type="password" name="password" class="form-control" id="signup-password" placeholder="Kata Sandi">
-                                            <?= form_error('password', ' <small class="text-danger pl-3">', '</small>'); ?>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="password2">Ulangi Kata Sandi Baru</label>
-                                            <input type="password" name="password2" class="form-control" id="signup-password2" placeholder="Konfirmasi Password">
-                                            <?= form_error('password2', ' <small class="text-danger pl-3">', '</small>'); ?>
-                                        </div>
-                                        <div class="form-grup">
-                                            <button type="submit" class="btn btn-primary" value="editpassword" name="editpassword">Perbarui Kata Sandi</button>
-                                        </div>
-                                    </form>
+                                            <div class="form-group">
+                                                <label for="password0">Kata Sandi Lama</label>
+                                                <input type="password" name="password0" class="form-control" id="signup-password0" placeholder="Kata Sandi Lama">
+                                                <?= form_error('password0', ' <small class="text-danger pl-3">', '</small>'); ?>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="password">Kata Sandi Baru</label>
+                                                <input type="password" name="password" class="form-control" id="signup-password" placeholder="Kata Sandi">
+                                                <?= form_error('password', ' <small class="text-danger pl-3">', '</small>'); ?>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="password2">Ulangi Kata Sandi Baru</label>
+                                                <input type="password" name="password2" class="form-control" id="signup-password2" placeholder="Konfirmasi Password">
+                                                <?= form_error('password2', ' <small class="text-danger pl-3">', '</small>'); ?>
+                                            </div>
+                                            <div class="form-grup">
+                                                <button type="submit" class="btn btn-primary" value="editpassword" name="editpassword">Perbarui Kata Sandi</button>
+                                            </div>
+                                        </form>
 
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
                     </div>
+
+
 
 
                 </div>

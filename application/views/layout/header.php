@@ -200,11 +200,8 @@
                                 </div>
                                 <!-- Search Form and Button Start -->
                                 <form class="header-search-form" action="#">
-                                    <?php echo ('search') ?>
-                                    <input type="text" class="header-search-input" placeholder="Cari">
+                                    <input type="text" class="header-search-input" placeholder="Search Our Store">
                                     <button class="header-search-button"><i class="icon-magnifier icons"></i></button>
-
-
                                 </form>
                                 <!-- Search Form and Button End -->
 
@@ -221,10 +218,8 @@
                             <div class="header-action-btn header-action-btn-cart d-none d-sm-flex">
                                 <a class="cart-visible" href="javascript:void(0)">
                                     <i class="icon-handbag icons"></i>
-                                    <span class="header-action-num">2</span>
+                                    <span class="header-action-num">3</span>
                                 </a>
-
-                                <!-- Header Action Button Start -->
 
                                 <!-- Header Cart Content Start -->
                                 <div class="header-cart-content">
@@ -300,8 +295,6 @@
                                     </div>
                                     <!-- Cart Product Total End -->
 
-
-
                                     <!-- Payment Accordion Order Button Start -->
                                     <div class="payment-accordion-order-button">
                                         <div class="payment-accordion">
@@ -349,26 +342,31 @@
                                     <!-- Header Cart Content End -->
 
                                 </div>
-                                <div class="header-action-btn header-action-btn-cart d-flex d-sm-none">
-                                    <a href="<?php echo base_url(); ?>cart">
-                                        <i class="icon-handbag icons"></i>
-                                        <span class="header-action-num">3</span>
-                                    </a>
-                                </div>
-                                <!-- Header Action Button End -->
-
-                                <!-- Mobile Menu Hambarger Action Button Start -->
-                                <a href="javascript:void(0)" class="header-action-btn header-action-btn-menu d-lg-none d-md-flex">
-                                    <i class="icon-menu"></i>
-                                </a>
-                                <!-- Mobile Menu Hambarger Action Button End -->
+                                <!-- Header Cart Content End -->
 
                             </div>
-                        </div>
-                        <!-- Header Action End -->
+                            <div class="header-action-btn header-action-btn-cart d-flex d-sm-none">
+                                <a href="cart.html">
+                                    <i class="icon-handbag icons"></i>
+                                    <span class="header-action-num">3</span>
+                                </a>
+                            </div>
+                            <!-- Header Action Button End -->
 
+                            <!-- Mobile Menu Hambarger Action Button Start -->
+                            <a href="javascript:void(0)" class="header-action-btn header-action-btn-menu d-lg-none d-md-flex">
+                                <i class="icon-menu"></i>
+                            </a>
+                            <!-- Mobile Menu Hambarger Action Button End -->
+
+                        </div>
                     </div>
+                    <!-- Header Action End -->
+
                 </div>
             </div>
         </div>
-        <!-- Header Bottom End -->
+    </div>
+    <!-- Header Bottom End -->
+    </div>
+    <!-- Header Section End -->
