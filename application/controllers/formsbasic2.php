@@ -1,11 +1,9 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
-class blogpost2 extends CI_Controller
+class formsbasic2 extends CI_Controller
 {
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('artikel_model');
-        $this->load->library('form_validation');
     }
     public function index()
     {
@@ -13,7 +11,7 @@ class blogpost2 extends CI_Controller
         $this->session->userdata('email')])->row_array();
 
         $this->load->view('admin/header', $data);
-        $this->load->view('admin/blog-post2');
+        $this->load->view('admin/forms-basic2');
         $this->load->view('admin/footer');
     }
 }
