@@ -14,15 +14,16 @@
         <div class="block-header">
             <div class="row clearfix">
                 <div class="col-md-6 col-sm-12">
-                    <h2>Data Akun Admin</h2>
+                    <h2>Kontak</h2>
                 </div>            
                 <div class="col-md-6 col-sm-12 text-right">
                     <ul class="breadcrumb">
                         <li class="breadcrumb-item"><a href="<?php echo base_url();?>index.php"><i class="icon-home"></i></a></li>
-                        <li class="breadcrumb-item active">Data Akun Admin</li>
+                        <li class="breadcrumb-item active">Kontak</li>
                     </ul>
                     <a href="<?php echo base_url();?>appcontact" class="btn btn-sm btn-success" title=""><i class="fa fa-list"></i></a>
-                    <a href="<?php echo base_url();?>appcontactgrid" class="btn btn-sm btn-outline-success" title=""><i class="fa fa-th-large"></i></a>
+                    <a href="<?php echo base_url();?>appcontactgrid" class="btn btn-sm btn-outline-success" title=""><i class="fa fa-th-large"></i></a>                    
+                    <a href="<?php echo base_url();?>buatkontakbaru" class="btn btn-sm btn-primary">Buat Baru</a>
                 </div>
             </div>
         </div>

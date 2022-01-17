@@ -46,17 +46,26 @@
 			</div>
 			<div class="row">
 				<div class="col-md-12">
-					<div class="table-responsive">
+					<div class="table-responsive check-all-parent">
 						<table class="table table-striped custom-table">
                             <thead class="thead-dark">
                             <?php $no = 1; ?>
+                                <a href="<?php echo base_url(); ?>apppesan" class="btn btn-warning btn-round btn-sm hidden-sm"><i class="icon icon-refresh"></i></a>
+                                <a href="<?php echo site_url('');?>" class="btn btn-danger btn-round btn-sm hidden-sm" title="Hapus"><i class="las la-trash" style="size: 5px;"></i></a>
+                                <p></p>
                                 <tr>
+                                    <th width="140px">
+                                    <label class="fancy-checkbox">
+                                            <input class="check-all" type="checkbox" name="checkbox">
+                                            <span></span>
+                                    </label>
+                                    </th>
                                     <th scope="col">No</th>
                                     <th scope="col">Judul</th>
                                     <th scope="col">Kategori</th>
                                     <th scope="col">Foto</th>
                                     <th scope="col">Deskripsi</th>
-                                    <th colspan="3">Aksi</th>
+                                    <th colspan="2">Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -64,15 +73,22 @@
                             </tbody>
                     <?php foreach ($lihatartikel as $artikel){ ?>
                         <tr>
+                            <td style="width: 50px;">
+                                <label class="fancy-checkbox">
+                                    <input class="checkbox-tick" type="checkbox" name="checkbox">
+                                <span></span>
+                                </label>
+                            </td>
                             <th scope="row"><?= $no++; ?></th>
                             <td><?php echo $artikel->judul_artikel;?></td>
                             <td><?php echo $artikel->kategori;?></td>
                             <td><img src="<?php echo base_url();?>assets/images/<?php echo $artikel->foto;?>" width="120" height="110"></td>
-                            <td><?php echo $artikel->deskripsi_artikel;?></td>
-                            <td><a href="<?php echo base_url();?>bloglist/lihat/<?php echo $artikel->artikel_id?>" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view" title="Quickview" class="btn btn-primary"><button class="btn btn-primary " ><i class="icon icon-info"></i></button></a>
+                            <td><a href="<?php echo base_url();?>bloglist/lihat/<?php echo $artikel->artikel_id?>" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view" title="Lihat" class="btn btn-primary"><button class="btn btn-light btn-round" ><i class="las la-eye" style="font-size: 20px;"></i></button></a>
                             </td>
-                            <td><a href="<?php echo base_url();?>bloglist/update/<?php echo $artikel->artikel_id?>" class="btn btn-warning" type="hidden" title="Edit"><i class="fa fa-edit"></i></a></td>
-                            <td><a href="<?php echo site_url('/bloglist/delete');?>/<?php echo $artikel->artikel_id?>" class="btn btn-sm btn-danger" title="Hapus"><i class="fa fa-trash-o"></i></a></td>
+                            <td>
+                                <a href="<?php echo base_url();?>bloglist/update/<?php echo $artikel->artikel_id?>" class="btn btn-warning btn-round" type="hidden" title="Edit"><i class="fa fa-edit"></i></a>
+                                <a href="<?php echo site_url('/bloglist/delete');?>/<?php echo $artikel->artikel_id?>" class="btn btn-danger btn-round" title="Hapus"><i class="las la-trash" style="font-size: 17px;"></i></a>
+                            </td>
                         </tr>
                     <?php } ?>
                 </table>

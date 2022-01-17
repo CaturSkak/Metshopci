@@ -22,7 +22,8 @@
                         <li class="breadcrumb-item active">Data Akun Admin</li>
                     </ul>
                     <a href="<?php echo base_url();?>appcontact" class="btn btn-sm btn-success" title=""><i class="fa fa-list"></i></a>
-                    <a href="<?php echo base_url();?>appcontactgrid" class="btn btn-sm btn-outline-success" title=""><i class="fa fa-th-large"></i></a>
+                    <a href="<?php echo base_url();?>appcontactgrid" class="btn btn-sm btn-outline-success" title=""><i class="fa fa-th-large"></i></a>                    
+                    <a href="<?php echo base_url();?>buatkontakbaru" class="btn btn-sm btn-primary">Buat Baru</a>
                 </div>
             </div>
         </div>

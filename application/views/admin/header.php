@@ -25,6 +25,7 @@
 
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/summernote/dist/summernote.css" />
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/dropify/css/dropify.min.css">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
 
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/charts-c3/plugin.css" />
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css">
@@ -101,10 +102,6 @@
             </div>
 
             <div class="navbar-right">
-                <form id="navbar-search" class="navbar-form search-form">
-                    <input value="" class="form-control" placeholder="Cari Disini..." type="text">
-                    <button type="button" class="btn btn-default"><i class="icon-magnifier"></i></button>
-                </form>
 
                 <div id="navbar-menu">
                     <ul class="nav navbar-nav">
@@ -214,7 +211,6 @@
                                 </li>
                             </ul>
                         </li>
-                        <li><a href="javascript:void(0);" class="right_toggle icon-menu" title="Right Menu"><i class="icon-settings"></i></a></li>
                         <li><a href="<?php echo base_url(); ?>pagelogin" class="icon-menu"><i class="icon-power"></i></a></li>
                     </ul>
                 </div>
@@ -419,31 +415,45 @@
             </div>
             <nav id="left-sidebar-nav" class="sidebar-nav">
                 <ul id="main-menu" class="metismenu">
-                    <li><a href="<?php echo base_url(); ?>BerandaAdmin"><i class="icon-home"></i><span>Beranda</span></a></li>
+                    <li><a href="<?php echo base_url(); ?>BerandaAdmin"><i class="las la-home" style="font-size: 20px;"></i><span>Beranda</span></a></li>
 
-                    <li><a href="<?php echo base_url(); ?>apppesan"><i class="icon-bubbles"></i><span>Pesan</span></a></li>
+                    <li><a href="<?php echo base_url(); ?>apppesan"><i class="icon-bubbles" style="font-size: 15px;"></i><span>Pesan</span></a></li>
                     <li>
-                        <a href="#Tables" class="has-arrow"><i class="icon-basket"></i><span>Transaksi</span></a>
+                        <a href="#Tables" class="has-arrow"><i class="las la-shopping-cart" style="font-size: 20px;"></i><span>Transaksi</span></a>
                         <ul>
                             <li><a href="<?php echo base_url(); ?>tablebasic">Pembelian</a></li>
                             <li><a href="<?php echo base_url(); ?>tablenormal">Perjodohan</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#forms" class="has-arrow"><i class="fa fa-github-alt"></i><span>Hewan</span></a>
+                        <a href="#forms" class="has-arrow"><i class="las la-paw" style="font-size: 20px;"></i><span>Hewan</span></a>
                         <ul>
                             <li><a href="<?php echo base_url(); ?>formsadvanced">Daftar Hewan & Perjodohan Hewan</a></li>
                             <li><a href="<?php echo base_url(); ?>formsbasic">Tambah Hewan & Perjodohan </a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#Blog" class="has-arrow"><i class="icon-globe"></i><span>Halaman</span></a>
+                        <a href="#forms" class="has-arrow"><i class="las la-shopping-basket" style="font-size: 20px;"></i><span>Produk</span></a>
+                        <ul>
+                            <li><a href="<?php echo base_url(); ?>formsadvanced2">Daftar Produk</a></li>
+                            <li><a href="<?php echo base_url(); ?>formsadvanced3">Daftar Agen</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#Blog" class="has-arrow"><i class="las la-poll-h" style="font-size: 20px;"></i><span>Artikel</span></a>
                         <ul>
                             <li><a href="<?php echo base_url(); ?>bloglist">Artikel</a></li>
                             <li><a href="<?php echo base_url(); ?>blogpost">Buat Artikel Baru</a></li>
                         </ul>
                     </li>
-                    <li><a href="<?php echo base_url(); ?>appcontact"><i class="icon-book-open"></i><span>Kontak</span></a></li>
+                    <li>
+                        <a href=""><i class="las la-user-alt" style="font-size: 20px;"></i><span>Data Akun</span></a>
+                        <ul>
+                            <li><a href="<?php echo base_url(); ?>appcontact">Daftar Akun Admin</a></li>
+                            <li><a href="<?php echo base_url(); ?>appcontact2">Daftar Akun Customer</a></li>
+                            <li><a href="<?php echo base_url(); ?>appcontact3">Daftar Akun Karyawan</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
         </div>
