@@ -65,7 +65,7 @@
 
             <div class="navbar-left">
                 <div class="navbar-btn">
-                <a href="<?php echo base_url(); ?>BerandaAdmin"><img style="width: 30px; height: 30px;" src="<?php echo base_url(); ?>light/logo.png" alt="HexaBit Logo" class="img-fluid logo"></a>
+                    <a href="<?php echo base_url(); ?>BerandaAdmin"><img style="width: 30px; height: 30px;" src="<?php echo base_url(); ?>light/logo.png" alt="HexaBit Logo" class="img-fluid logo"></a>
                     <button type="button" class="btn-toggle-offcanvas"><i class="lnr lnr-menu fa fa-bars"></i></button>
                 </div>
                 <a href="javascript:void(0);" class="icon-menu btn-toggle-fullwidth"><i class="fa fa-arrow-left"></i></a>
@@ -394,12 +394,12 @@
         <div class="sidebar-scroll">
             <div class="user-account">
                 <div class="user_div">
-                <img style="width: 140px; height: 140px; object-fit: cover;" src="<?= base_url('assets/images/profil/') . $user['foto_pengguna']; ?>" class="user-photo" alt="User Profile Picture">
+                    <img style="width: 140px; height: 140px; object-fit: cover;" src="<?= base_url('assets/images/profil/') . $user['foto_pengguna']; ?>" class="user-photo" alt="User Profile Picture">
                 </div>
                 <div class="dropdown">
                     <span>Selamat Datang,</span>
                     <a href="javascript:void(0);" class="dropdown-toggle user-name" data-toggle="dropdown"><strong>
-                    <?= $user['nama_lengkap']; ?>
+                            <?= $user['nama_lengkap']; ?>
 
                             <!-- <?php if ($user) {
                                         echo  $user['nama_lengkap'];

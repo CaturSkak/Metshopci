@@ -30,6 +30,7 @@ $getpassword = $this->session->userdata('session_password');
                 <!-- My Account Page Start -->
                 <div class="myaccount-page-wrapper">
                     <div class="row">
+                        <?= $this->session->flashdata('messagee'); ?>
 
                         <!-- My Account Tab Menu Start -->
                         <div class="col-lg-3 col-md-4">
@@ -52,14 +53,64 @@ $getpassword = $this->session->userdata('session_password');
 
                                 <!-- Single Tab Content Start -->
                                 <div class="tab-pane fade show active" id="dashboad" role="tabpanel">
+
                                     <div class="myaccount-content">
                                         <h3 class="title">Dashboard</h3>
-                                        <div class="welcome">
-                                            <p>Halo, <strong><?= $user['nama_lengkap']; ?>
-                                                </strong></p>
+                                        <div class="card profile-header">
+
+                                            <div class="body text-center">
+
+                                                <?= $this->session->flashdata('message'); ?>
+
+                                                <form action="<?= base_url('Profile/edit'); ?>" enctype="multipart/form-data" method="POST">
+                                                    <div class="avatar-upload mt-1 pt-1">
+                                                        <div class="avatar-edit">
+                                                            <input type="hidden" name="pengguna_id" value="<?= $user['pengguna_id']; ?>">
+                                                            <input type="hidden" name="foto_pengguna" value="<?= $user['foto_pengguna']; ?>">
+                                                            <input required id="file" name="file" type="file" accept=".png, .jpg, .jpeg" oninput="javascript: submit()" />
+                                                            <label for="file"></label>
+                                                        </div>
+                                                        <div class="avatar-preview ">
+                                                            <?php
+                                                            if (!empty($user['foto_pengguna'])) {
+                                                                $url = base_url('assets/images/profil/') . $user['foto_pengguna'];
+                                                                if (@getimagesize($url)) {
+                                                                    $urlImg = base_url('assets/images/profil/') . $user['foto_pengguna'];
+                                                                } else {
+                                                                    $urlImg = base_url('assets/images/profil/') . $user['foto_pengguna'];
+                                                                }
+                                                            } else {
+                                                                $urlImg = base_url('assets/images/profil/') . $user['foto_pengguna'];
+                                                            }
+                                                            ?>
+                                                            <div id="imagePreview"><img style="width: 190px; height: 190px; object-fit: cover;" width="140px" src="<?= $urlImg; ?>" class="rounded-circle" alt="">
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <label for="file" class="btn btn-sm btn-outline rounded-pill form-control  font-weight-bold">Upload Foto</label>
+                                                </form>
+                                                <!-- <div class="profile-image mb-3"><img width="140px" src="<?= base_url('assets/images/profil/') . $user['foto_pengguna']; ?>" class="rounded-circle" alt=""></div> -->
+                                                <!-- <div>
+                                                    <h4 class="mb-0"><strong><?= $user['nama_lengkap']; ?>
+                                                        </strong></h4>
+                                                    <span><?php if (!empty($userr['province_name'])) : ?><?= $userr['city_name']; ?>,<?= $userr['province_name']; ?><?php endif; ?></span>
+                                                </div> -->
+                                                <div class="welcome">
+                                                    <p>Halo, <strong>
+                                                            <?php if ($user) {
+                                                                echo  $user['nama_lengkap'];
+                                                            } else {
+                                                                redirect('authcustomer');
+                                                            }; ?>
+                                                        </strong></p>
+                                                </div>
+
+                                                <p class="mb-0">Dari Akun dashboard anda. Anda dapat dengan mudah memeriksa & melihat pesanan terbaru Anda, mengelola alamat pengiriman dan penagihan Anda, serta mengedit kata sandi dan detail akun Anda.</p>
+                                            </div>
                                         </div>
 
-                                        <p class="mb-0">Dari Akun dashboard anda. Anda dapat dengan mudah memeriksa & melihat pesanan terbaru Anda, mengelola alamat pengiriman dan penagihan Anda, serta mengedit kata sandi dan detail akun Anda.</p>
+
                                     </div>
                                 </div>
                                 <!-- Single Tab Content End -->
@@ -349,12 +400,115 @@ $getpassword = $this->session->userdata('session_password');
                                 <div class="tab-pane fade" id="address-edit" role="tabpanel">
                                     <div class="myaccount-content">
                                         <h3 class="title">Alamat</h3>
-                                        <address>
-                                            <p><strong>Alex Aya</strong></p>
-                                            <p>Perum Permata Regency 1 Blok 10/28, Perun Gpa, Ngijo, Kec. Karang Ploso, Malang, Jawa Timur 65152</p>
-                                            <p>Telepon: 082229434533</p>
-                                        </address>
-                                        <a href="#" class="btn btn btn-dark btn-hover-primary rounded-0"><i class="fa fa-edit me-2"></i>Edit Alamat</a>
+                                        <ul class="nav nav-tabs-new2">
+                                            <li class="nav-item"><a class="nav-link active show" data-toggle="tab" href="#Alamat">Alamat</a></li>
+                                            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#Edit">Edit</a></li>
+
+
+                                        </ul>
+                                        <div class="tab-content">
+                                            <div class="tab-pane show active" id="Alamat">
+                                                <div>
+                                                    <form class="row pl-5 pr-md-5 d-flex w-100 mx-auto" action="<?= base_url('Profile/perbarui'); ?>" method="POST" id="contactForm">
+                                                        <div class="row clearfix">
+                                                            <address>
+                                                                <p><strong><?= $user['nama_lengkap']; ?>
+                                                                    </strong></p>
+                                                                <p><?php if (!empty($userr['province_name'])) : ?><?= $userr['alamat']; ?>, Kecamatan <?= $userr['subdistrict_name']; ?>, <?= $userr['city_name']; ?>, Provinsi <?= $userr['province_name']; ?><?php endif; ?></p>
+                                                                <p>Telepon: <?= $user['nomor_telepon']; ?>
+                                                                </p>
+                                                            </address>
+                                                        </div>
+                                                    </form>
+
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" id="Edit">
+                                                <form class="row pl-5 pr-md-5 d-flex w-100 mx-auto" action="<?= base_url('Profile/updatealamat'); ?>" method="POST" id="contactForm">
+                                                    <input type="hidden" name="pengguna_id" value="<?= $user['pengguna_id']; ?>">
+
+                                                    <div class="col-md-12 form-group form-check-inline w-100 d-flex">
+                                                        <div class="row w-100 d-flex">
+                                                            <div class="col-4 w-100 d-flex">
+                                                                <label for="phone_number" class="font-weight-bolder mr-4 text-dark" style="font-size: 17px;">Nomor Hp</label>
+                                                            </div>
+                                                            <div class="col-8 w-100 d-flex">
+                                                                <input required type="number" class="form-control text-dark" value="<?= $user['nomor_telepon']; ?>" id="phone_number" name="phone_number" placeholder="Nomor Telephone" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nomor Telephone'">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 form-group form-check-inline w-100 d-flex">
+                                                        <div class="row w-100 d-flex">
+                                                            <div class="col-4 w-100 d-flex">
+                                                                <label for="province_id" class="font-weight-bolder mr-4 text-dark" style="font-size: 17px;">Provinsi</label>
+                                                            </div>
+                                                            <div class="col-8 w-100 d-flex">
+                                                                <select name="prov" class="form-control" id="province_id">
+                                                                    <!-- <option value="" selected disabled hidden>Pilih Provinsi</option>
+																<?php foreach ($provinsi as $row) : ?>
+																	<option value="<?= $row->province_id; ?>" <?php echo ($row->province_id == $userr->province_id) ? 'selected="selected"' : ''; ?>><?= $row->province_name; ?></option>
+																<?php endforeach ?> -->
+                                                                    <!-- <option value="" selected disabled hidden>Pilih Provinsi</option>
+																<?php foreach ($provinsi as $row) : ?>
+																	<option value="<?= $row['province_id']; ?>" <?php echo ($row['province_id'] == isset($userr['province_id'])) ? 'selected="selected"' : ''; ?>><?= $row['province_name']; ?></option>
+																<?php endforeach ?> -->
+                                                                    <option>- Select Provinsi -</option>
+                                                                    <?php foreach ($provinsi as $prov) {
+                                                                        echo '<option value="' . $prov['province_id'] . '">' . $prov['province_name'] . '</option>';
+                                                                    } ?>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 form-group form-check-inline w-100 d-flex">
+                                                        <div class="row w-100 d-flex">
+                                                            <div class="col-4 w-100 d-flex">
+                                                                <label for="city_id" class="font-weight-bolder mr-4 text-dark" style="font-size: 17px;">Kota/Kab</label>
+                                                            </div>
+                                                            <div class="col-8 w-100 d-flex">
+                                                                <select name="kab" class="form-control" id="city_id">
+                                                                    <!-- <option value="" selected disabled hidden>Pilih Kota/Kabupaten</option>
+																<?php foreach ($kota as $row) : ?>
+																	<option value="<?= $row->city_id; ?>" <?php echo ($row->city_id == $user->city_id) ? 'selected="selected"' : ''; ?>><?= $row->city_name; ?></option>
+																<?php endforeach ?> -->
+                                                                    <option value=''>Select Kabupaten</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 form-group form-check-inline w-100 d-flex">
+                                                        <div class="row w-100 d-flex">
+                                                            <div class="col-4 w-100 d-flex">
+                                                                <label for="subdistrict_id" class="font-weight-bolder mr-4 text-dark" style="font-size: 17px;">Kecamatan</label>
+                                                            </div>
+                                                            <div class="col-8">
+                                                                <select name="kec" class="form-control" id="subdistrict_id">
+                                                                    <!-- <option value="" selected disabled hidden>Pilih Kecamatan</option>
+																<?php foreach ($kecamatan as $row) : ?>
+																	<option value="<?= $row->subdistrict_id; ?>" <?php echo ($row->subdistrict_id == $user->subdistrict_id) ? 'selected="selected"' : ''; ?>><?= $row->subdistrict_name; ?></option>
+																<?php endforeach ?> -->
+                                                                    <option>Select Kecamatan</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-12 form-group form-check-inline w-100 d-flex">
+                                                        <div class="row w-100 d-flex">
+                                                            <div class="col-4 w-100 d-flex">
+                                                                <label for="address" class="font-weight-bolder mr-4 text-dark" style="font-size: 17px;">Alamat</label>
+                                                            </div>
+                                                            <div class="col-8 w-100 d-flex">
+                                                                <textarea name="address" id="address" class="form-control text-dark" cols="10" rows="5"><?= $user['alamat']; ?></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <button type="submit" value="submit" class="btn btn-primary  rounded-pill mt-3 mr-5 mr-md-0">Update Data</button>
+                                                </form>
+                                            </div>
+
+                                        </div>
+
                                     </div>
                                 </div>
                                 <!-- Single Tab Content End -->
@@ -365,7 +519,7 @@ $getpassword = $this->session->userdata('session_password');
                                         <div class="card">
                                             <div class="header bline">
                                                 <h2>Detail Akun</h2>
-                                                <ul class="header-dropdown dropdown dropdown-animated scale-left">
+                                                <!-- <ul class="header-dropdown dropdown dropdown-animated scale-left">
                                                     <li> <a href="javascript:void(0);" data-toggle="cardloading" data-loading-effect="pulse"><i class="icon-refresh"></i></a></li>
                                                     <li><a href="javascript:void(0);" class="full-screen"><i class="icon-size-fullscreen"></i></a></li>
                                                     <li class="dropdown">
@@ -376,69 +530,21 @@ $getpassword = $this->session->userdata('session_password');
                                                             <li><a href="javascript:void(0);">Lain-nya</a></li>
                                                         </ul>
                                                     </li>
-                                                </ul>
+                                                </ul> -->
                                             </div>
                                             <ul class="nav nav-tabs-new2">
                                                 <li class="nav-item"><a class="nav-link active show" data-toggle="tab" href="#Profile">Profil</a></li>
                                                 <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#EditProfile">Edit</a></li>
+                                                <!-- <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#Coba">Coba</a></li>
+                                                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#Coba2">Coba2</a></li> -->
 
                                             </ul>
-                                            <!-- <h3 class="title">Detail akun</h3> -->
-                                            <!-- <div class="account-details-form">
-                                            <form action="#">
-                                                <div class="row">
-                                                    <div class="col-lg-6">
-                                                        <div class="single-input-item mb-3">
-                                                            <label for="first-name" class="required mb-2">Nama Depan</label>
-                                                            <input type="text" id="first-name" placeholder="Syamsul" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-6">
-                                                        <div class="single-input-item mb-3">
-                                                            <label for="last-name" class="required mb-2">Nama Belakang</label>
-                                                            <input type="text" id="last-name" placeholder="Arifin" />
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="single-input-item mb-3">
-                                                    <label for="display-name" class="required mb-2">Nama Tampilan</label>
-                                                    <input type="text" id="display-name" placeholder="Syamsul" />
-                                                </div>
-                                                <div class="single-input-item mb-3">
-                                                    <label for="email" class="required mb-1">Email Addres</label>
-                                                    <input type="email" id="email" placeholder="syamsularifin@gmail.com" />
-                                                </div>
-                                                <fieldset>
-                                                    <legend>Ubah Password</legend>
-                                                    <div class="single-input-item mb-3">
-                                                        <label for="current-pwd" class="required mb-2">Password Lama</label>
-                                                        <input type="password" id="current-pwd" placeholder="asadsdadasdad" readonly />
-                                                    </div>
-                                                    <div class="row mb-n3">
-                                                        <div class="col-lg-6">
-                                                            <div class="single-input-item mb-3">
-                                                                <label for="new-pwd" class="required mb-2">Password Baru</label>
-                                                                <input type="password" id="new-pwd" placeholder="password baru" />
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-6">
-                                                            <div class="single-input-item mb-3">
-                                                                <label for="confirm-pwd" class="required mb-2">Confirm Password</label>
-                                                                <input type="password" id="confirm-pwd" placeholder="Confirm Password" />
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </fieldset>
-                                                <div class="single-input-item single-item-button mt-6">
-                                                    <button class="btn btn btn-primary btn-hover-dark rounded-0">Simpan</button>
-                                                </div>
-                                            </form>
-                                        </div> -->
+
 
                                             <div class="tab-content">
                                                 <div class="tab-pane show active" id="Profile">
                                                     <div>
-                                                        <form class="row pl-5 pr-md-5 d-flex w-100 mx-auto" action="<?= base_url('pageprofile/perbarui'); ?>" method="POST" id="contactForm">
+                                                        <form class="row pl-5 pr-md-5 d-flex w-100 mx-auto" action="<?= base_url('Profile/perbarui'); ?>" method="POST" id="contactForm">
                                                             <div class="row clearfix">
                                                                 <div class="col-lg- col-md-12">
                                                                     <input type="hidden" name="pengguna_id" value="<?= $user['pengguna_id']; ?>">
@@ -473,47 +579,29 @@ $getpassword = $this->session->userdata('session_password');
 
                                                                         </div>
                                                                     </div>
-                                                                    <!-- <div class="form-group">
-                                                                <label>Provinsi</label>
-                                                                <input readonly type="text" class="form-control" value="<?php foreach ($pro as $prov) {
-                                                                                                                            echo  $prov->nama;
-                                                                                                                        } ?>">
+                                                                    <div class="form-group">
+                                                                        <label>Daerah Pengiriman</label>
 
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label>Kota / Kabupaten</label>
-                                                                <input readonly type="text" class="form-control" value="<?php foreach ($kab as $kabb) {
-                                                                                                                            echo  $kabb->nama;
-                                                                                                                        } ?>">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label>Kecamatan</label>
-                                                                <input readonly type="text" class="form-control" value="<?php foreach ($kec as $kecc) {
-                                                                                                                            echo  $kecc->nama;
-                                                                                                                        } ?>">
-                                                            </div> -->
-                                                                    <!-- <div class="form-group">
-                                                            <label>Desa</label>
-                                                            <input readonly type="text" class="form-control" value="<?php foreach ($des as $dess) {
-                                                                                                                        echo  $dess->nama;
-                                                                                                                    } ?>">
-                                                        </div> -->
+                                                                        <input readonly type="text" class="form-control" value="<?php if (!empty($userr['province_name'])) : ?><?= $userr['province_name']; ?>, <?= $userr['city_name']; ?>,Kecamatan <?= $userr['subdistrict_name']; ?><?php endif; ?>">
+
+
+                                                                    </div>
                                                                     <div class="form-group">
                                                                         <label>Alamat</label>
-                                                                        <textarea readonly rows="4" type="text" class="form-control" value="<?= $user['alamat']; ?>"><?= $user['alamat']; ?></textarea>
+                                                                        <textarea readonly rows="4" type="text" class="form-control" value="<?= $user['alamat']; ?>"><?= $user['alamat']; ?></textarea><br>
                                                                     </div>
 
 
                                                                 </div>
                                                             </div>
 
-
+                                                            <br>
 
                                                         </form>
                                                     </div>
                                                 </div>
                                                 <div class="tab-pane" id="EditProfile">
-                                                    <form class="row pl-5 pr-md-5 d-flex w-100 mx-auto" action="<?= base_url('pageprofile/perbarui'); ?>" method="POST" id="contactForm">
+                                                    <form class="row pl-5 pr-md-5 d-flex w-100 mx-auto" action="<?= base_url('Profile/perbarui'); ?>" method="POST" id="contactForm">
                                                         <input type="hidden" name="pengguna_id" value="<?= $user['pengguna_id']; ?>">
                                                         <div class="col-md-12 form-group form-check-inline w-100 d-flex">
                                                             <div class="row w-100 d-flex">
@@ -543,8 +631,74 @@ $getpassword = $this->session->userdata('session_password');
                                                                 <div class="col-8 w-100 d-flex">
                                                                     <select class="form-control rounded" name="gender" id="gender">
                                                                         <option value="" disabled hidden selected>Jenis Kelamin</option>
-                                                                        <option value="Perempuan" <?php echo ('Perempuan' == $user['jenis_kelamin']) ? 'selected="selected"' : ''; ?>>Perempuan</option>
-                                                                        <option value="Laki-Laki" <?php echo ('Laki-Laki' == $user['jenis_kelamin']) ? 'selected="selected"' : ''; ?>>Laki-Laki</option>
+                                                                        <option value="Laki-laki" <?php if ($user['jenis_kelamin'] == 'Laki-laki') echo 'selected'; ?>>Laki-Laki</option>
+                                                                        <option value="Perempuan" <?php if ($user['jenis_kelamin'] == 'Perempuan') echo 'selected'; ?>>Perempuan</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12 form-group form-check-inline w-100 d-flex">
+                                                            <div class="row w-100 d-flex">
+                                                                <div class="col-4 w-100 d-flex">
+                                                                    <label for="gender" class="font-weight-bolder mr-4 text-dark" style="font-size: 17px;">Tanggal Lahir</label>
+                                                                </div>
+                                                                <div class="col-8 w-100 d-flex">
+                                                                    <input required type="date" value="<?= $user["tanggal_lahir"]; ?>" class="form-control text-dark" name="tanggal_lahir">
+
+                                                                    <!-- <input required type="date" class="form-control text-dark" value="<?= date('d-m-Y', strtotime($user["tanggal_lahir"])); ?>" id="tanggal_lahir" name="tanggal_lahir" placeholder="Tanggal Lahir" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Tanggal Lahir'"> -->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12 form-group form-check-inline w-100 d-flex">
+                                                            <div class="row w-100 d-flex">
+                                                                <div class="col-4 w-100 d-flex">
+                                                                    <label for="phone_number" class="font-weight-bolder mr-4 text-dark" style="font-size: 17px;">Nomor Hp</label>
+                                                                </div>
+                                                                <div class="col-8 w-100 d-flex">
+                                                                    <input required type="number" class="form-control text-dark" value="<?= $user['nomor_telepon']; ?>" id="phone_number" name="phone_number" placeholder="Nomor Telephone" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nomor Telephone'">
+                                                                </div>
+                                                            </div>
+                                                        </div> <br>
+                                                        <div class="form-grup">
+                                                            <button type="submit" value="submit" class="btn btn-primary  mt-3 md-3 " value="editpassword">Perbarui</button>
+                                                            <br>
+                                                        </div>
+                                                        <br>
+                                                    </form> <br>
+                                                </div>
+                                                <div class="tab-pane" id="Coba">
+                                                    <form class="row pl-5 pr-md-5 d-flex w-100 mx-auto" action="<?= base_url('Profile/perbarui'); ?>" method="POST" id="contactForm">
+                                                        <input type="hidden" name="pengguna_id" value="<?= $user['pengguna_id']; ?>">
+                                                        <div class="col-md-12 form-group form-check-inline w-100 d-flex">
+                                                            <div class="row w-100 d-flex">
+                                                                <div class="col-4 w-100 d-flex">
+                                                                    <label for="nama" class="font-weight-bolder mr-4 text-dark" style="font-size: 17px;">Nama</label>
+                                                                </div>
+                                                                <div class="col-8 w-100 d-flex">
+                                                                    <input required maxlength="50" type="text" class="form-control text-dark" value="<?= $user['nama_lengkap']; ?>" id="customer_name" name="customer_name" placeholder="Nama Lengkap" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nama Lengkap'">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12 form-group form-check-inline w-100 d-flex">
+                                                            <div class="row w-100 d-flex">
+                                                                <div class="col-4 w-100 d-flex">
+                                                                    <label for="email" class="font-weight-bolder mr-4 text-dark" style="font-size: 17px;">Email</label>
+                                                                </div>
+                                                                <div class="col-8 w-100 d-flex">
+                                                                    <input readonly required maxlength="50" type="text" class="form-control text-dark" value="<?= $user['email']; ?>" id="email" name="email" placeholder="Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12 form-group form-check-inline w-100 d-flex">
+                                                            <div class="row w-100 d-flex">
+                                                                <div class="col-4 w-100 d-flex">
+                                                                    <label for="gender" class="font-weight-bolder mr-4 text-dark" style="font-size: 17px;">Jenis Kelamin</label>
+                                                                </div>
+                                                                <div class="col-8 w-100 d-flex">
+                                                                    <select class="form-control rounded" name="gender" id="gender">
+                                                                        <option value="" disabled hidden selected>Jenis Kelamin</option>
+                                                                        <option value="Laki-Laki" <?php if ($user['jenis_kelamin'] == 'Laki-Laki') echo 'selected'; ?>>Laki-Laki</option>
+                                                                        <option value="Perempuan" <?php if ($user['jenis_kelamin'] == 'Perempuan') echo 'selected'; ?>>Perempuan</option>
                                                                     </select>
                                                                 </div>
                                                             </div>
@@ -577,15 +731,11 @@ $getpassword = $this->session->userdata('session_password');
                                                                     <label for="province_id" class="font-weight-bolder mr-4 text-dark" style="font-size: 17px;">Provinsi</label>
                                                                 </div>
                                                                 <div class="col-8 w-100 d-flex">
-                                                                    <select name="prov" class="form-control" id="provinsi">
-                                                                        <option>- Select Provinsi -</option>
-                                                                        <!-- <?php foreach ($provinsi as $prov) {
-                                                                                    echo '<option value="' . $prov->id . '">' . $prov->nama . '</option>';
-                                                                                } ?> -->
+                                                                    <select class="form-control rounded" name="province_id" id="province_id">
                                                                         <option value="" selected disabled hidden>Pilih Provinsi</option>
-                                                                        <!-- <?php foreach ($provinsi as $prov) : ?>
-                                                                    <option value="<?= $prov->id; ?>" <?php echo ($prov->id == $wilayah->province_id) ? 'selected="selected"' : ''; ?>><?= $prov->nama; ?></option>
-                                                                <?php endforeach ?> -->
+                                                                        <?php foreach ($provinsi as $row) : ?>
+                                                                            <option value="<?= $row['province_id']; ?>" <?php echo ($row['province_id'] ==  $userr['province_id']) ? 'selected="selected"' : ''; ?>><?= $row['province_name']; ?></option>
+                                                                        <?php endforeach ?>
                                                                     </select>
                                                                 </div>
                                                             </div>
@@ -596,8 +746,11 @@ $getpassword = $this->session->userdata('session_password');
                                                                     <label for="city_id" class="font-weight-bolder mr-4 text-dark" style="font-size: 17px;">Kota/Kab</label>
                                                                 </div>
                                                                 <div class="col-8 w-100 d-flex">
-                                                                    <select name="kab" class="form-control" id="kabupaten">
-                                                                        <option value=''>Select Kabupaten</option>
+                                                                    <select class="form-control rounded" name="city_id" id="city_id">
+                                                                        <option value="" selected disabled hidden>Pilih Kota/Kabupaten</option>
+                                                                        <?php foreach ($kot as $row) : ?>
+                                                                            <option value="<?= $row['city_id']; ?>" <?php echo ($row['city_id'] == $userr['city_id']) ? 'selected="selected"' : ''; ?>><?= $row['city_name']; ?></option>
+                                                                        <?php endforeach ?>
                                                                     </select>
                                                                 </div>
                                                             </div>
@@ -608,24 +761,16 @@ $getpassword = $this->session->userdata('session_password');
                                                                     <label for="subdistrict_id" class="font-weight-bolder mr-4 text-dark" style="font-size: 17px;">Kecamatan</label>
                                                                 </div>
                                                                 <div class="col-8">
-                                                                    <select name="kec" class="form-control" id="kecamatan">
-                                                                        <option>Select Kecamatan</option>
+                                                                    <select class="form-control rounded" name="subdistrict_id" id="subdistrict_id">
+                                                                        <option value="" selected disabled hidden>Pilih Kecamatan</option>
+                                                                        <?php foreach ($kec as $row) : ?>
+                                                                            <option value="<?= $row['subdistrict_id']; ?>" <?php echo ($row['subdistrict_id'] == $user['subdistrict_id']) ? 'selected="selected"' : ''; ?>><?= $row['subdistrict_name']; ?></option>
+                                                                        <?php endforeach ?>
                                                                     </select>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-12 form-group form-check-inline w-100 d-flex">
-                                                            <div class="row w-100 d-flex">
-                                                                <div class="col-4 w-100 d-flex">
-                                                                    <label for="desa" class="font-weight-bolder mr-4 text-dark" style="font-size: 17px;">Desa</label>
-                                                                </div>
-                                                                <div class="col-8">
-                                                                    <select name="des" class="form-control" id="desa">
-                                                                        <option>Select Desa</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                        </div>
+
                                                         <div class="col-md-12 form-group form-check-inline w-100 d-flex">
                                                             <div class="row w-100 d-flex">
                                                                 <div class="col-4 w-100 d-flex">
@@ -636,10 +781,11 @@ $getpassword = $this->session->userdata('session_password');
                                                                 </div>
                                                             </div>
                                                         </div>
-
                                                         <button type="submit" value="submit" class="btn btn-primary  rounded-pill mt-3 mr-5 mr-md-0">Update Data</button>
                                                     </form>
                                                 </div>
+
+
                                             </div>
                                         </div>
 
@@ -663,7 +809,7 @@ $getpassword = $this->session->userdata('session_password');
                                                 <div class="row clearfix">
                                                     <div class="col-lg-12 col-md-12">
                                                         <?= $this->session->flashdata('messagge'); ?>
-                                                        <form action="<?= base_url('pageprofile/editpassword'); ?>" enctype="multipart/form-data" method="POST">
+                                                        <form action="<?= base_url('Profile/editpassword'); ?>" enctype="multipart/form-data" method="POST">
                                                             <!-- <div class="form-group">
                                                     <label for="password_lama">Kata Sandi Lama</label>
                                                     <input type="password" nama="password_lama" id="password_lama" class="form-control" placeholder="Kata Sandi Lama">
@@ -1009,4 +1155,50 @@ $getpassword = $this->session->userdata('session_password');
         <!-- Mobile Menu Inner End -->
     </div>
 
-   
+    <script>
+        $(document).ready(function() {
+            $("#province_id").change(function() {
+                var url = "<?php echo site_url('Profile/add_ajax_kab'); ?>/" + $(this).val();
+                $('#city_id').load(url);
+                return false;
+            })
+
+            $("#city_id").change(function() {
+                var url = "<?php echo site_url('Profile/add_ajax_kec'); ?>/" + $(this).val();
+                $('#subdistrict_id').load(url);
+                return false;
+            })
+
+
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+
+            $('#province_id').change(function() {
+                var provinsi = $('#province_id').val();
+                $.ajax({
+                    type: 'GET',
+                    url: '<?= base_url('profile/cekKota'); ?>',
+                    data: 'province_id=' + provinsi,
+                    success: function(data) {
+                        $("#city_id").html(data);
+                        $("#subdistrict_id").val('');
+                    }
+                });
+            });
+
+            $('#city_id').change(function() {
+                var kota = $('#city_id').val();
+                $.ajax({
+                    type: 'GET',
+                    url: '<?= base_url('profile/cekKecamatan'); ?>',
+                    data: 'city_id=' + kota,
+                    success: function(data) {
+                        $("#subdistrict_id").html(data);
+                    }
+                });
+            });
+        });
+    </script>
