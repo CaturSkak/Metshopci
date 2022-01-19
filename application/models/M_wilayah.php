@@ -29,12 +29,26 @@ class M_wilayah extends CI_Model
 		$query = $this->db->get();
 		return $query;
 	}
+	public function getkot()
+	{
+		$this->db->select('*');
+		$this->db->from('tb_cities');
+		$query = $this->db->get();
+		return $query;
+	}
+	public function getkec()
+	{
+		$this->db->select('*');
+		$this->db->from('tb_subdistricts');
+		$query = $this->db->get();
+		return $query;
+	}
 
 	public function getUserProvinsi($id)
 	{
 		$this->db->select('province_id');
 		$this->db->from('tb_pengguna');
-		$this->db->where("pengguna_id = $id");
+		$this->db->where("email = $id");
 		$query = $this->db->get();
 		return $query;
 	}
@@ -43,7 +57,7 @@ class M_wilayah extends CI_Model
 	{
 		$this->db->select('city_id');
 		$this->db->from('tb_pengguna');
-		$this->db->where("pengguna_id = $id");
+		$this->db->where("email = $id");
 		$query = $this->db->get();
 		return $query;
 	}

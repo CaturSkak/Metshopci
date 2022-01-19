@@ -9,6 +9,7 @@
 
     <!-- Favicons -->
     <link rel="shortcut icon" href="<?php echo base_url(); ?>assets/images/logo.png">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>light/assets/css/foto.css">
 
     <!-- Vendor CSS (Icon Font) -->
 
@@ -38,9 +39,9 @@
     <link rel="stylesheet" href="<?php echo base_url(); ?> <?php echo base_url(); ?>assets/css/main.css" />
 
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<script src=" <?php echo base_url(); ?>assets/bundles/libscripts.bundle.js"></script>    
-<script src=" <?php echo base_url(); ?>assets/bundles/vendorscripts.bundle.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src=" <?php echo base_url(); ?>assets/bundles/libscripts.bundle.js"></script>
+    <script src=" <?php echo base_url(); ?>assets/bundles/vendorscripts.bundle.js"></script>
 
 
     <script src=" <?php echo base_url(); ?>assets/bundles/easypiechart.bundle.js"></script><!-- easypiechart Plugin Js -->
@@ -211,9 +212,19 @@
                             <!-- Header Action Search Button End -->
 
                             <!-- Header My Account Button Start -->
-                            <a href="<?php echo base_url(); ?>Profile" class="header-action-btn header-action-btn-wishlist">
+                            <!-- <a href="<?php echo base_url(); ?>Profile" class="header-action-btn header-action-btn-wishlist">
                                 <i class="icon-user icons"></i>
-                            </a>
+                            </a> -->
+                            <?php if ($this->session->userdata('email') == null) : ?>
+
+                                <a class="header-action-btn header-action-btn-wishlist" href="<?php echo base_url(); ?>authcustomer" data-effect="mfp-move-from-top" class="popup-text">Login</a>
+
+                                <a class="header-action-btn header-action-btn-wishlist" href="<?php echo base_url(); ?>authcustomer/registrasi" data-effect="mfp-move-from-top" class="popup-text">Daftar</a>
+
+                            <?php else : ?>
+                                <a class="header-action-btn header-action-btn-wishlist" href="<?= base_url('Profile') ?>"><i class="icon-user icons"></i> <?= $this->session->userdata('session_username') ?>
+                                </a>
+                            <?php endif; ?>
                             <!-- Header My Account Button End -->
 
                             <!-- Header Action Button Start -->
