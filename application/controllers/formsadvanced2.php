@@ -29,25 +29,47 @@ class formsadvanced2 extends CI_Controller
 	}
 
     function updateproduk(){
-        
+        $data['lihatproduk'] = $this->produk_model->tampil_data()->result();
         $produk_id = $this->input->post('produk_id');
         $nama_produk = $this->input->post('nama_produk');
         $kategori = $this->input->post('kategori');
         $jumlah_barang = $this->input->post('jumlah_barang');
         $harga = $this->input->post('harga');
-        $fotoo = $this->input->post('old_image');
-        
         $deskripsi = $this->input->post('deskripsi');
-        // $foto_produk = $_FILES['foto_produk'];
+        // $fotoo = $this->input->post('old_image');
+
+        $deskripsi = $this->input->post('deskripsi');
+
+        // $foto_hewan = $_FILES['foto_hewan'];
         $foto_produk = NULL;
 
+
+
         if (!empty($_FILES["foto_produk"])) {
-          $foto_produk = $this->_uploadImage();
-        } else {
-          $foto_produk = $this->input->post('old_image');
+            $img = $this->input->post('foto_produk', TRUE);
+
+            $upload_image = $_FILES[$img];
+
+            $config['upload_path']          = './assets/images/daftar_produk/';
+            $config['allowed_types']        = 'jpeg|jpg|gif|png';
+            $config['max_size']             = 100000;
+            $config['encrypt_name']         = TRUE;
+
+            $this->load->library('upload', $config);
+
+            if (!$this->upload->do_upload('foto_produk')) {
+                $foto_produk = $this->input->post('old_image');
+            } else {
+                $old_image = $this->input->post('old_image');;
+                if ($old_image != 'default.png') {
+                    unlink(FCPATH . 'assets/images/daftar_produk/' . $old_image);
+                }
+                $foto_produk = $this->upload->data('file_name');
+            }
         };
-       
-        $foto = $foto_produk;
+        // var_dump($old_image);
+        // die;
+        $foto_produk = $foto_produk;
 
         $data = array(
             'produk_id' => $produk_id,
@@ -55,35 +77,33 @@ class formsadvanced2 extends CI_Controller
             'kategori' => $kategori,
             'jumlah_barang' => $jumlah_barang,
             'harga' => $harga,
-            'foto_produk' => $foto,
+            'foto_produk' => $foto_produk,
             'deskripsi' => $deskripsi
         );
-
-    $produk_id = $this->input->post('produk_id');
-    $this->db->set($data);
-	$this->db->where('produk_id', $produk_id);
-        $this->db->update('tb_produk',$data);
+        $produk_id = $this->input->post('produk_id');
+        $this->db->set($data);
+        $this->db->where('produk_id', $produk_id);
+        $this->db->update('tb_produk', $data);
         redirect('formsadvanced2');
-	}
-
-    function _uploadImage()
-    {
-        $config['upload_path'] = './assets/images/daftar_produk';
-        $config['allowed_types'] = 'gif|jpg|png';
-        //$config['remove_space'] = TRUE;
-        $config['max_size']      = '1024';
-        $config['max_width']     = '6000';
-        $config['max_height']    = '6000';
-        $config['overwrite']            = true;
-    
-        $this->load->library('upload', $config);
-    
-        if ($this->upload->do_upload('foto_produk')) {
-            return $this->upload->data("file_name");
-        }
-        
-       return $this->input->post('old_image',true);
     }
+function _uploadImage()
+{
+    $config['upload_path'] = './assets/images/daftar_produk';
+    $config['allowed_types'] = 'jpeg|jpg|gif|png';
+    //$config['remove_space'] = TRUE;
+    $config['max_size']      = '10240';
+    $config['max_width']     = '10000';
+    $config['max_height']    = '10000';
+    $config['overwrite']     = true;
+
+    $this->load->library('upload', $config);
+
+    if ($this->upload->do_upload('foto_produk')) {
+        return $this->upload->data("file_name");
+    }
+    
+   return $this->input->post('old_image',true);
+}
     function delete($produk_id){
         $this->produk_model->delete($produk_id);
         redirect('formsadvanced2');
