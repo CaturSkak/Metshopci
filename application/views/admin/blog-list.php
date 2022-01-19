@@ -50,7 +50,7 @@
 						<table class="table table-striped custom-table">
                             <thead class="thead-dark">
                             <?php $no = 1; ?>
-                                <a href="<?php echo base_url(); ?>apppesan" class="btn btn-warning btn-round btn-sm hidden-sm"><i class="icon icon-refresh"></i></a>
+                                <a href="<?php echo base_url(); ?>bloglist" class="btn btn-dark btn-round btn-sm hidden-sm"><i class="icon icon-refresh"></i></a>
                                 <a href="<?php echo site_url('');?>" class="btn btn-danger btn-round btn-sm hidden-sm" title="Hapus"><i class="las la-trash" style="size: 5px;"></i></a>
                                 <p></p>
                                 <tr>
@@ -82,7 +82,7 @@
                             <th scope="row"><?= $no++; ?></th>
                             <td><?php echo $artikel->judul_artikel;?></td>
                             <td><?php echo $artikel->kategori;?></td>
-                            <td><img src="<?php echo base_url();?>assets/images/<?php echo $artikel->foto;?>" width="120" height="110"></td>
+                            <td><img src="<?php echo base_url();?>assets/images/artikel_gambar/<?php echo $artikel->foto;?>" width="120" height="110"></td>
                             <td><a href="<?php echo base_url();?>bloglist/lihat/<?php echo $artikel->artikel_id?>" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view" title="Lihat" class="btn btn-primary"><button class="btn btn-light btn-round" ><i class="las la-eye" style="font-size: 20px;"></i></button></a>
                             </td>
                             <td>

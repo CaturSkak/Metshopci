@@ -15,14 +15,14 @@
             <div class="block-header">
                 <div class="row clearfix">
                     <div class="col-md-6 col-sm-12">
-                        <h2>Daftar Hewan & Perjodohan Hewan</h2>
+                        <h2>Daftar Agen</h2>
                     </div>
                     <div class="col-md-6 col-sm-12 text-right">
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>index"><i class="icon-home"></i></a></li>
-                            <li class="breadcrumb-item active">Daftar Hewan & Perjodohan Hewan</li>
+                            <li class="breadcrumb-item active">Daftar Agen</li>
                         </ul>
-                        <a href="<?php echo base_url(); ?>formsbasic" class="btn btn-sm btn-primary" title="">Tambah Hewan Baru</a>
+                        <a href="<?php echo base_url(); ?>formsbasic5" class="btn btn-sm btn-primary" title="">Tambah Agen Baru</a>
                     </div>
                 </div>
             </div>
@@ -34,23 +34,49 @@
 			</div>
 			<div class="row">
 				<div class="col-md-12">
-					<div class="table-responsive">
+					<div class="table-responsive check-all-parent">
 						<table class="table table-striped custom-table">
                             <thead class="thead-dark">
                                     <?php $no = 1; ?>
+                                    <a href="<?php echo base_url(); ?>formsadvanced" class="btn btn-dark btn-round btn-sm hidden-sm"><i class="icon icon-refresh"></i></a>
+                                    <a href="<?php echo site_url('');?>" class="btn btn-danger btn-round btn-sm hidden-sm" title="Hapus"><i class="las la-trash" style="size: 5px;"></i></a>
+                                    <p></p>
                                     <tr>
+                                            <th width="140px">
+                                            <label class="fancy-checkbox">
+                                                    <input class="check-all" type="checkbox" name="checkbox">
+                                                    <span></span>
+                                            </label>
+                                            </th>
                                             <th scope="col">No</th>
                                             <th scope="col">Nama Agen</th>
                                             <th scope="col">Alamat</th>
                                             <th scope="col">Nomer Hp/Tlp</th>
                                             <th scope="col">Deskripsi</th>
-                                            <th colspan="2">Tindakan</th>
+                                            <th colspan="2">Aksi</th>
                                         </tr>
                             </thead>
-                    <tbody>                    
+                    <tbody>                   
                     
                     </tbody>
-
+                    <?php foreach ($lihatagen as $agen){ ?>
+                    <td style="width: 50px;">
+                                <label class="fancy-checkbox">
+                                    <input class="checkbox-tick" type="checkbox" name="checkbox">
+                                <span></span>
+                                </label>
+                            </td>
+                            <th scope="row"><?= $no++; ?></th>
+                            <td><?php echo $agen->nama_agen;?></td>
+                            <td><?php echo $agen->alamat;?></td>
+                            <td>(+62) <?php echo $agen->nomer_telepon;?></td>
+                            <td><?php echo $agen->deskripsi;?></td>
+                            <td>
+                                <a href="<?php echo base_url();?>formsadvanced3/update/<?php echo $agen->agen_id?>" class="btn btn-warning btn-round" type="hidden" title="Edit"><i class="fa fa-edit"></i></a>
+                                <a href="<?php echo site_url('/formsadvanced3/delete');?>/<?php echo $agen->agen_id?>" class="btn btn-danger btn-round" title="Hapus"><i class="las la-trash" style="font-size: 17px;"></i></a>
+                            </td>
+                        </tr>
+                    <?php } ?>
                     </table>
                 </div>
             </div>

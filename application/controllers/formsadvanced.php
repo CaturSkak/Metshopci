@@ -8,10 +8,9 @@ class formsadvanced extends CI_Controller
         $this->load->library('form_validation');
         $this->load->library('session');
     }
-    public function index($hewan_id)
+    public function index()
     {
         $data['lihathewan'] = $this->hewan_model->tampil_data()->result();
-        $data['ambil']=$this->hewan_model->get_hewan_id($hewan_id);
         $data['user'] = $this->db->get_where('tb_pengguna', ['email' =>
         $this->session->userdata('email')])->row_array();
         $data['hewan'] = $this->db->get_where('tb_hewan')->row_array();
@@ -29,7 +28,7 @@ class formsadvanced extends CI_Controller
         $this->load->view('admin/footer');
 	}
 
-    function UpdateMobil(){
+    function updatehewan(){
         
         $hewan_id = $this->input->post('hewan_id');
         $jenis_hewan = $this->input->post('jenis_hewan');
