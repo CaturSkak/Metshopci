@@ -34,11 +34,20 @@
 			</div>
 			<div class="row">
 				<div class="col-md-12">
-					<div class="table-responsive">
+					<div class="table-responsive check-all-parent">
 						<table class="table table-striped custom-table">
                             <thead class="thead-dark">
                                     <?php $no = 1; ?>
+                                    <a href="<?php echo base_url(); ?>formsadvanced" class="btn btn-dark btn-round btn-sm hidden-sm"><i class="icon icon-refresh"></i></a>
+                                    <a href="<?php echo site_url('');?>" class="btn btn-danger btn-round btn-sm hidden-sm" title="Hapus"><i class="las la-trash" style="size: 5px;"></i></a>
+                                    <p></p>
                                     <tr>
+                                            <th width="140px">
+                                            <label class="fancy-checkbox">
+                                                    <input class="check-all" type="checkbox" name="checkbox">
+                                                    <span></span>
+                                            </label>
+                                            </th>
                                             <th scope="col">No</th>
                                             <th scope="col">Kategori Hewan </th>
                                             <th scope="col">Jenis Hewan </th>
@@ -55,6 +64,12 @@
                     </tbody>
                         <?php foreach ($lihathewan as $hewan){ ?>
                         <tr>
+                            <td style="width: 50px;">
+                                <label class="fancy-checkbox">
+                                    <input class="checkbox-tick" type="checkbox" name="checkbox">
+                                <span></span>
+                                </label>
+                            </td>
                             <th scope="row"><?= $no++; ?></th>
                             <td><?php echo $hewan->jenis_hewan;?></td>
                             <td><?php echo $hewan->jenis;?></td>

@@ -40,6 +40,7 @@
                     </div>
                 </div>
             </div>
+\
             <section class="ftco-section">
                 <div class="container">
                     <div class="row justify-content-center">
@@ -98,6 +99,7 @@
                         </div>
                     </div>
                 </div>
+
         </div>
         </section>
         <!-- Javascript -->

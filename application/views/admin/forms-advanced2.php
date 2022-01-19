@@ -22,7 +22,7 @@
                             <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>index"><i class="icon-home"></i></a></li>
                             <li class="breadcrumb-item active">Daftar Produk</li>
                         </ul>
-                        <a href="<?php echo base_url(); ?>formsbasic" class="btn btn-sm btn-primary" title="">Tambah Produk Baru</a>
+                        <a href="<?php echo base_url(); ?>formsbasic3" class="btn btn-sm btn-primary" title="">Tambah Produk Baru</a>
                     </div>
                 </div>
             </div>
@@ -34,11 +34,20 @@
 			</div>
 			<div class="row">
 				<div class="col-md-12">
-					<div class="table-responsive">
+					<div class="table-responsive check-all-parent">
 						<table class="table table-striped custom-table">
                             <thead class="thead-dark">
                                     <?php $no = 1; ?>
+                                    <a href="<?php echo base_url(); ?>formsadvanced2" class="btn btn-dark btn-round btn-sm hidden-sm"><i class="icon icon-refresh"></i></a>
+                                    <a href="<?php echo site_url('');?>" class="btn btn-danger btn-round btn-sm hidden-sm" title="Hapus"><i class="las la-trash" style="size: 5px;"></i></a>
+                                    <p></p>
                                     <tr>
+                                            <th width="140px">
+                                            <label class="fancy-checkbox">
+                                                    <input class="check-all" type="checkbox" name="checkbox">
+                                                    <span></span>
+                                            </label>
+                                            </th>
                                             <th scope="col">No</th>
                                             <th scope="col">Nama Produk</th>
                                             <th scope="col">Kategori</th>
@@ -52,6 +61,27 @@
                     <tbody>                    
                     
                     </tbody>
+                    <?php foreach ($lihatproduk as $produk){ ?>
+                    <td style="width: 50px;">
+                                <label class="fancy-checkbox">
+                                    <input class="checkbox-tick" type="checkbox" name="checkbox">
+                                <span></span>
+                                </label>
+                            </td>
+                            <th scope="row"><?= $no++; ?></th>
+                            <td><?php echo $produk->nama_produk;?></td>
+                            <td><?php echo $produk->kategori;?></td>
+                            <td><?php echo $produk->jumlah_barang;?></td>
+                            <td><?php echo $produk->harga;?></td>
+                            <td><img src="<?php echo base_url();?>assets/images/daftar_produk/<?php echo $produk->foto_produk;?>" width="120" height="110"></td>
+                            <td><a href="<?php echo base_url();?>formsadvanced2/lihat/<?php echo $produk->produk_id?>" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view" title="Lihat" class="btn btn-primary"><button class="btn btn-info btn-round " ><i class="las la-eye" style="font-size: 20px;"></i></button></a>
+                            </td>
+                            <td>
+                                <a href="<?php echo base_url();?>formsadvanced2/update/<?php echo $produk->produk_id?>" class="btn btn-warning btn-round" type="hidden" title="Edit"><i class="fa fa-edit"></i></a>
+                                <a href="<?php echo site_url('/formsadvanced2/delete');?>/<?php echo $produk->produk_id?>" class="btn btn-danger btn-round" title="Hapus"><i class="las la-trash" style="font-size: 17px;"></i></a>
+                            </td>
+                        </tr>
+                    <?php } ?>
 
                     </table>
                 </div>

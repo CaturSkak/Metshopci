@@ -30,8 +30,9 @@ class formsadvanced extends CI_Controller
         $this->load->view('admin/footer');
     }
 
-    function UpdateMobil()
-    {
+
+    function updatehewan(){
+        
 
         $hewan_id = $this->input->post('hewan_id');
         $jenis_hewan = $this->input->post('jenis_hewan');
