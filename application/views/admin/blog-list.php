@@ -40,7 +40,7 @@
                     </div>
                 </div>
             </div>
-\
+            \
             <section class="ftco-section">
                 <div class="container">
                     <div class="row justify-content-center">
@@ -68,13 +68,14 @@
                                             <th scope="col">Kategori</th>
                                             <th scope="col">Foto</th>
                                             <th scope="col">Deskripsi</th>
-                                            <th colspan="2">Aksi</th>
+                                            <th colspan="3">Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
 
                                     </tbody>
                                     <?php foreach ($lihatartikel as $artikel) { ?>
+
                                         <tr>
                                             <td style="width: 50px;">
                                                 <label class="fancy-checkbox">
@@ -85,12 +86,22 @@
                                             <th scope="row"><?= $no++; ?></th>
                                             <td><?php echo $artikel->judul_artikel; ?></td>
                                             <td><?php echo $artikel->kategori; ?></td>
-                                            <td><img src="<?php echo base_url(); ?>assets/images/artikel_gambar/<?php echo $artikel->foto; ?>" width="120" height="110" class="avatar-preview "></td>
+
+                                            <td><input type="hidden" name="foto" value="<?php echo $artikel->foto; ?>"><img src="<?php echo base_url(); ?>assets/images/artikel_gambar/<?php echo $artikel->foto; ?>" width="120" height="110" class="avatar-preview "></td>
                                             <td><a href="<?php echo base_url(); ?>bloglist/lihat/<?php echo $artikel->artikel_id ?>" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view" title="Lihat" class="btn btn-primary"><button class="btn btn-light btn-round"><i class="las la-eye" style="font-size: 20px;"></i></button></a>
                                             </td>
                                             <td>
-                                                <a href="<?php echo base_url(); ?>bloglist/update/<?php echo $artikel->artikel_id ?>" class="btn btn-warning btn-round" type="hidden" title="Edit"><i class="fa fa-edit"></i></a>
-                                                <a href="<?php echo site_url('/bloglist/delete'); ?>/<?php echo $artikel->artikel_id ?>" class="btn btn-danger btn-round" title="Hapus"><i class="las la-trash" style="font-size: 17px;"></i></a>
+
+                                                <a>
+                                                    <form action=" <?= base_url('bloglist/delete'); ?>/<?php echo $artikel->artikel_id ?>" method="POST">
+                                                        <input type="hidden" value="<?= $artikel->artikel_id; ?>" name="artikel_id" id="artikel_id">
+                                                        <input type="hidden" value="<?= $artikel->foto; ?>" name="foto" id="foto">
+                                                        <a href="<?php echo base_url(); ?>bloglist/update/<?php echo $artikel->artikel_id ?>" class="btn btn-warning btn-round" type="hidden" title="Edit"><i class="fa fa-edit"></i></a>
+                                                        <button type='submit' id='hapus' name='hapus' class="btn btn-danger btn-round" title="Hapus"><i class="las la-trash" style="font-size: 17px;"></i></button>
+                                                    </form>
+                                                </a>
+
+
                                             </td>
                                         </tr>
                                     <?php } ?>

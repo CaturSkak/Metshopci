@@ -17,7 +17,7 @@ class bloglist extends CI_Controller
             ['email' => $this->session->userdata('email')]
         )->row_array();
         $this->load->view('admin/header', $data);
-        $this->load->view('admin/blog-list');
+        $this->load->view('admin/blog-list',  $data);
         $this->load->view('admin/footer');
     }
     function lihat($artikel_id)
@@ -45,6 +45,7 @@ class bloglist extends CI_Controller
 
     function updateartikel()
     {
+
         $data['lihatartikel'] = $this->artikel_model->tampil_data()->result();
 
         $artikel_id = $this->input->post('artikel_id');
@@ -118,6 +119,13 @@ class bloglist extends CI_Controller
     }
     function delete($artikel_id)
     {
+
+
+        $artikel_id = $this->input->post('artikel_id');;
+        $old_image = $this->input->post('foto');;
+        if (!empty($old_image)) unlink(FCPATH . 'assets/images/artikel_gambar/' . $old_image);
+        // var_dump($old_image);
+        // die;
         $this->artikel_model->delete($artikel_id);
         redirect('bloglist');
     }
