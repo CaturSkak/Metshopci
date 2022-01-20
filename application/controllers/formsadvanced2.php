@@ -33,6 +33,7 @@ class formsadvanced2 extends CI_Controller
         $produk_id = $this->input->post('produk_id');
         $nama_produk = $this->input->post('nama_produk');
         $kategori = $this->input->post('kategori');
+        $berat = $this->input->post('berat');
         $jumlah_barang = $this->input->post('jumlah_barang');
         $harga = $this->input->post('harga');
         $deskripsi = $this->input->post('deskripsi');
@@ -75,6 +76,7 @@ class formsadvanced2 extends CI_Controller
             'produk_id' => $produk_id,
             'nama_produk' => $nama_produk,
             'kategori' => $kategori,
+            'berat' => $berat,
             'jumlah_barang' => $jumlah_barang,
             'harga' => $harga,
             'foto_produk' => $foto_produk,
@@ -105,6 +107,11 @@ function _uploadImage()
    return $this->input->post('old_image',true);
 }
     function delete($produk_id){
+        $produk_id = $this->input->post('produk_id');;
+        $old_image = $this->input->post('foto_produk');;
+        if (!empty($old_image)) unlink(FCPATH . 'assets/images/daftar_produk/' . $old_image);
+        // var_dump($old_image);
+        // die;
         $this->produk_model->delete($produk_id);
         redirect('formsadvanced2');
     }

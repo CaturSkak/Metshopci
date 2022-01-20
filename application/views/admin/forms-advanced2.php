@@ -51,11 +51,12 @@
                                             <th scope="col">No</th>
                                             <th scope="col">Nama Produk</th>
                                             <th scope="col">Kategori</th>
+                                            <th scope="col">Berat Produk</th>
                                             <th scope="col">Jumlah Produk</th>
                                             <th scope="col">Harga</th>
                                             <th scope="col">Foto</th>
                                             <th scope="col">Deskripsi</th>
-                                            <th colspan="2">Tindakan</th>
+                                            <th colspan="3">Tindakan</th>
                                         </tr>
                             </thead>
                     <tbody>                    
@@ -71,14 +72,21 @@
                             <th scope="row"><?= $no++; ?></th>
                             <td><?php echo $produk->nama_produk;?></td>
                             <td><?php echo $produk->kategori;?></td>
+                            <td><?php echo $produk->berat;?></td>
                             <td><?php echo $produk->jumlah_barang;?></td>
                             <td><?php echo $produk->harga;?></td>
-                            <td><img src="<?php echo base_url();?>assets/images/daftar_produk/<?php echo $produk->foto_produk;?>" width="120" height="110"></td>
+                            <td><img src="<?php echo base_url();?>assets/images/daftar_produk/<?php echo $produk->foto_produk;?>" width="200" height="150"></td>
                             <td><a href="<?php echo base_url();?>formsadvanced2/lihat/<?php echo $produk->produk_id?>" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view" title="Lihat" class="btn btn-primary"><button class="btn btn-info btn-round " ><i class="las la-eye" style="font-size: 20px;"></i></button></a>
                             </td>
                             <td>
-                                <a href="<?php echo base_url();?>formsadvanced2/update/<?php echo $produk->produk_id?>" class="btn btn-warning btn-round" type="hidden" title="Edit"><i class="fa fa-edit"></i></a>
-                                <a href="<?php echo site_url('/formsadvanced2/delete');?>/<?php echo $produk->produk_id?>" class="btn btn-danger btn-round" title="Hapus"><i class="las la-trash" style="font-size: 17px;"></i></a>
+                                <a>
+                                    <form action=" <?= base_url('/formsadvanced2/delete'); ?>/<?php echo $produk->produk_id?>" method="POST">
+                                        <input type="hidden" value="<?= $produk->produk_id; ?>" name="produk_id" id="produk_id">
+                                        <input type="hidden" value="<?= $produk->foto_produk; ?>" name="foto_produk" id="foto_produk">
+                                        <a href="<?php echo base_url(); ?>formsadvanced2/update/<?php echo $produk->produk_id ?>" class="btn btn-warning btn-round" type="hidden" title="Edit"><i class="fa fa-edit"></i></a>
+                                        <button type='submit' id='hapus' name='hapus' class="btn btn-danger btn-round" title="Hapus"><i class="las la-trash" style="font-size: 17px;"></i></button>
+                                    </form>
+                                </a>
                             </td>
                         </tr>
                     <?php } ?>

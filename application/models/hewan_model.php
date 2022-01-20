@@ -18,13 +18,16 @@ function tampil_data(){
     function input_data($data,$table){
         $this->db->insert($table,$data);
     }
-    function add_data($jenis_hewan,$jenis,$jenis_kelamin,$rincian,$harga,$foto_hewan,$deskripsi){
+    function add_data($jenis_hewan,$jenis,$umur,$jenis_kelamin,$berat,$rincian,$harga,$jumlah,$foto_hewan,$deskripsi){
         $data = array(
             'jenis_hewan' => $jenis_hewan,
             'jenis' => $jenis,
+            'umur' => $umur,
             'jenis_kelamin' => $jenis_kelamin,
+            'berat' => $berat,
             'rincian' => $rincian,
             'harga' => $harga,
+            'jumlah' => $jumlah,
             'foto_hewan' => $foto_hewan,
             'deskripsi' => $deskripsi
         );

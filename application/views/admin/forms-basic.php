@@ -39,13 +39,31 @@
                         <div class="form-group">
                                     <input type="text" class="form-control" id="jenis" name="jenis" 
                                     placeholder="Tulis Jenis Hewan">
-                                </div>
+                        </div>
+                        <div class="form-group">
+                        <div class="input-group mb-3">
+                                    <input type="text" class="form-control" id="umur" name="umur" 
+                                    placeholder="Umur Hewan">
+                                    <div class="input-group-append">
+                                    <span class="input-group-text">Tahun/Bulan</span>
+                        </div>
+                        </div>
+                        </div>
                         <div class="form-group">
                                     <select name="jenis_kelamin" id="jenis_kelamin" class="form-control show-tick">
                                         <option>Pilih Kategori Jenis Kelamin</option>
                                         <option>Jantan</option>
                                         <option>Betina</option>
                                     </select>
+                        </div>
+                        <div class="form-group">
+                        <div class="input-group mb-3">
+                                    <input type="text" class="form-control" id="berat" name="berat" 
+                                    placeholder="Berat Hewan">
+                                    <div class="input-group-append">
+                                    <span class="input-group-text">kg/g</span>
+                        </div>
+                        </div>
                         </div>
                         <div class="form-group">
                                     <select name="rincian" id="rincian" class="form-control show-tick">
@@ -59,10 +77,10 @@
                         <span class="input-group-text">Rp.</span>
                             <input type="text" class="form-control" id="harga" name="harga" 
                             placeholder="Harga">
-                        <div class="input-group-append">
-                        <span class="input-group-text">.00</span>
                         </div>
-                        </div>
+                        <div class="form-group">
+							<input type="number" name="jumlah" class="form-control" id="jumlah" placeholder="Jumlah Hewan">
+						</div>
                         </div>
 
                                 <div class="card">
@@ -71,7 +89,7 @@
                                     <p></p>
                                     <h6><small>Masukkan Foto Untuk Hewan Anda Disini!</small></h6>
                                     <p></p>
-                                    <input type="file" name="foto_hewan" id="foto_hewan" class="form-control"/>
+                                    <input type="file" name="foto_hewan" id="foto_hewan" class="dropify">
                                 </div>
                                 </div>
                                 

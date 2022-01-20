@@ -18,10 +18,11 @@ function tampil_data(){
     function input_data($data,$table){
         $this->db->insert($table,$data);
     }
-    function add_data($nama_produk,$kategori,$jumlah_barang,$harga,$foto_produk,$deskripsi){
+    function add_data($nama_produk,$kategori,$berat,$jumlah_barang,$harga,$foto_produk,$deskripsi){
         $data = array(
             'nama_produk' => $nama_produk,
             'kategori' => $kategori,
+            'berat' => $berat,
             'jumlah_barang' => $jumlah_barang,
             'harga' => $harga,
             'foto_produk' => $foto_produk,

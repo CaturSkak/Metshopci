@@ -33,9 +33,12 @@ class formsadvanced extends CI_Controller
             $hewan_id = $this->input->post('hewan_id');
             $jenis_hewan = $this->input->post('jenis_hewan');
             $jenis = $this->input->post('jenis');
+            $umur = $this->input->post('umur');
             $jenis_kelamin = $this->input->post('jenis_kelamin');
+            $berat = $this->input->post('berat');
             $rincian = $this->input->post('rincian');
             $harga = $this->input->post('harga');
+            $jumlah = $this->input->post('jumlah');
             // $fotoo = $this->input->post('old_image');
 
             $deskripsi = $this->input->post('deskripsi');
@@ -75,9 +78,12 @@ class formsadvanced extends CI_Controller
                 'hewan_id' => $hewan_id,
                 'jenis_hewan' => $jenis_hewan,
                 'jenis' => $jenis,
+                'umur' => $umur,
                 'jenis_kelamin' => $jenis_kelamin,
+                'berat' => $berat,
                 'rincian' => $rincian,
                 'harga' => $harga,
+                'jumlah' => $jumlah,
                 'foto_hewan' => $foto_hewan,
                 'deskripsi' => $deskripsi
             );
@@ -106,9 +112,12 @@ class formsadvanced extends CI_Controller
        return $this->input->post('old_image',true);
     }
     function delete($hewan_id){
-        $old_image = $this->input->post('old_image');
+        $hewan_id = $this->input->post('hewan_id');;
+        $old_image = $this->input->post('foto_hewan');;
+        if (!empty($old_image)) unlink(FCPATH . 'assets/images/daftar_hewan/' . $old_image);
+        // var_dump($old_image);
+        // die;
         $this->hewan_model->delete($hewan_id);
-        unlink(FCPATH . 'assets/images/daftar_hewan/' . $old_image);
         redirect('formsadvanced');
     }
 }
