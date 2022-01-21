@@ -1,223 +1,135 @@
 <!doctype html>
 <html lang="en">
 
+<head>
+    <title>MetShop Pets -Selamat Datang di MetShop Pets</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <link rel="icon" href="<?php echo base_url(); ?>light/ass<meta name=" description" content="HexaBit Bootstrap 4x Admin Template">
+    <meta name="author" content="WrapTheme, www.thememakker.com">
+    <link rel="icon" href="<?php echo base_url(); ?>light/assets/logo.png" type="image/logo">
+    <!-- VENDOR CSS -->
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/fullcalendar/fullcalendar.min.css">
+
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/bootstrap/css/bootstrap.min.css">
+
+
+
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/sweetalert/sweetalert.css" />
+
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/nestable/jquery-nestable.css" />
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker3.min.css">
+
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/summernote/dist/summernote.css" />
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/dropify/css/dropify.min.css">
+
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/charts-c3/plugin.css" />
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/chartist/css/chartist.min.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/chartist-plugin-tooltip/chartist-plugin-tooltip.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/toastr/toastr.min.css">
+
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="<?php echo base_url(); ?>light/assets/css/main.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>light/assets/css/inbox.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>light/assets/css/blog.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>light/assets/css/color_skins.css">
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+</head>
 
 <body class="theme-orange">
+    <!-- Overlay For Sidebars -->
+    <div class="overlay"></div>
 
-
-<div id="wrapper">
-
-
-    <div id="main-content">
-        <div class="block-header">
-            <div class="row clearfix">
-                <div class="col-md-6 col-sm-12">
-                    <h2>Kontak</h2>
-                </div>            
-                <div class="col-md-6 col-sm-12 text-right">
-                    <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="<?php echo base_url();?>index.php"><i class="icon-home"></i></a></li>
-                        <li class="breadcrumb-item active">Kontak</li>
-                    </ul>
-                    <a href="<?php echo base_url();?>appcontact" class="btn btn-sm btn-outline-success" title=""><i class="fa fa-list"></i></a>
-                    <a href="<?php echo base_url();?>appcontactgrid" class="btn btn-sm btn-success" title=""><i class="fa fa-th-large"></i></a>                    
-                    <a href="<?php echo base_url();?>buatkontakbaru" class="btn btn-sm btn-primary">Buat Baru</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="container-fluid">            
-            <div class="row clearfix">
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <div class="card">
-                        <div class="body text-center">
-                            <div class="chart easy-pie-chart-1" data-percent="75"><span><img src="<?php echo base_url();?>assets/images/Budi.jpg" alt="user" class="rounded-circle"/></span></div>
-                            <h6>(Karyawan) Budi Budiman</h6>
-                            <ul class="social-links list-unstyled">
-                                <li><a title="facebook"href="<?php echo base_url();?>javascript:void(0);"><i class="fa fa-facebook"></i></a></li>
-                                <li><a title="twitter"href="<?php echo base_url();?>javascript:void(0);"><i class="fa fa-twitter"></i></a></li>
-                                <li><a title="instagram"href="<?php echo base_url();?>javascript:void(0);"><i class="fa fa-instagram"></i></a></li>
-                            </ul>
-                            <small>Jl.Imam Bonjol XII, No.12 ,Tulungagung </small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <div class="card">
-                        <div class="body text-center">
-                            <div class="chart easy-pie-chart-1" data-percent="67"><span><img src="<?php echo base_url();?>assets/images/anastashia.jpg" alt="user" class="rounded-circle"/></span></div>
-                            <h6>(Pemasok) Anatashia Wina</h6>
-                            <ul class="social-links list-unstyled">
-                                <li><a title="google-plus"href="<?php echo base_url();?>javascript:void(0);"><i class="fa fa-google-plus-box"></i></a></li>
-                                <li><a title="twitter"href="<?php echo base_url();?>javascript:void(0);"><i class="fa fa-twitter"></i></a></li>
-                                <li><a title="linkedin"href="<?php echo base_url();?>javascript:void(0);"><i class="fa fa-linkedin-box"></i></a></li>
-                            </ul>
-                            <small>Jl.Pattimura 20, No.32, Kediri</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <div class="card">
-                        <div class="body text-center">
-                            <div class="chart easy-pie-chart-1" data-percent="23"><span><img src="<?php echo base_url();?>assets/images/Eri.jpg" alt="user" class="rounded-circle"/></span></div>
-                            <h6>(Karyawan) Eri Budiono</h6>
-                            <ul class="social-links list-unstyled">
-                                <li><a title="facebook"href="<?php echo base_url();?>javascript:void(0);"><i class="fa fa-facebook"></i></a></li>
-                                <li><a title="twitter"href="<?php echo base_url();?>javascript:void(0);"><i class="fa fa-twitter"></i></a></li>
-                                <li><a title="instagram"href="<?php echo base_url();?>javascript:void(0);"><i class="fa fa-instagram"></i></a></li>
-                            </ul>
-                            <small>Jl.Sunan Ampel XII, No.25,Jember</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <div class="card">
-                        <div class="body text-center">
-                            <div class="chart easy-pie-chart-1" data-percent="49"><span><img src="<?php echo base_url();?>assets/images/okta.jpg" alt="user" class="rounded-circle"/></span></div>
-                            <h6>(Sponsorship) Okta Wina</h6>
-                            <ul class="social-links list-unstyled">
-                                <li><a title="linkedin"href="<?php echo base_url();?>javascript:void(0);"><i class="fa fa-linkedin-box"></i></a></li>
-                                <li><a title="twitter"href="<?php echo base_url();?>javascript:void(0);"><i class="fa fa-twitter"></i></a></li>
-                                <li><a title="instagram"href="<?php echo base_url();?>javascript:void(0);"><i class="fa fa-instagram"></i></a></li>
-                            </ul>
-                            <small>Jl.Sunan Ampel 1, No.212 , Probolinggo</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <div class="card">
-                        <div class="body text-center">
-                            <div class="chart easy-pie-chart-1" data-percent="75"><span><img src="<?php echo base_url();?>assets/images/Ani.jpg" alt="user" class="rounded-circle"/></span></div>
-                            <h6>(Sponsorship) Ani Sabrina</h6>
-                            <ul class="social-links list-unstyled">
-                                <li><a title="facebook"href="<?php echo base_url();?>javascript:void(0);"><i class="fa fa-facebook"></i></a></li>
-                                <li><a title="twitter"href="<?php echo base_url();?>javascript:void(0);"><i class="fa fa-twitter"></i></a></li>
-                                <li><a title="instagram"href="<?php echo base_url();?>javascript:void(0);"><i class="fa fa-instagram"></i></a></li>
-                            </ul>
-                            <small>Jl.Teguharjo 2, No.1 , Malang</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <div class="card">
-                        <div class="body text-center">
-                            <div class="chart easy-pie-chart-1" data-percent="88"><span><img src="<?php echo base_url();?>assets/images/abdul.jpeg" alt="user" class="rounded-circle"/></span></div>
-                            <h6>(Karyawan) Abdul Sinaga</h6>
-                            <ul class="social-links list-unstyled">
-                                <li><a title="google-plus"href="<?php echo base_url();?>javascript:void(0);"><i class="fa fa-google-plus-box"></i></a></li>
-                                <li><a title="twitter"href="<?php echo base_url();?>javascript:void(0);"><i class="fa fa-twitter"></i></a></li>
-                                <li><a title="linkedin"href="<?php echo base_url();?>javascript:void(0);"><i class="fa fa-linkedin-box"></i></a></li>
-                            </ul>
-                            <small>Jl.Riau , No.24.Jember</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <div class="card">
-                        <div class="body text-center">
-                            <div class="chart easy-pie-chart-1" data-percent="37"><span><img src="<?php echo base_url();?>assets/images/beri.jpg" alt="user" class="rounded-circle"/></span></div>
-                            <h6>(Sponsorship) Beri Budi</h6>
-                            <ul class="social-links list-unstyled">
-                                <li><a title="facebook"href="<?php echo base_url();?>javascript:void(0);"><i class="fa fa-facebook"></i></a></li>
-                                <li><a title="twitter"href="<?php echo base_url();?>javascript:void(0);"><i class="fa fa-twitter"></i></a></li>
-                                <li><a title="instagram"href="<?php echo base_url();?>javascript:void(0);"><i class="fa fa-instagram"></i></a></li>
-                            </ul>
-                            <small>Jl.Teuku Umar 3, No.21, Batu</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <div class="card">
-                        <div class="body text-center">
-                            <div class="chart easy-pie-chart-1" data-percent="88"><span><img src="<?php echo base_url();?>assets/images/susi.jpg" alt="user" class="rounded-circle"/></span></div>
-                            <h6>(Pemasok) Susi Susanti</h6>
-                            <ul class="social-links list-unstyled">
-                                <li><a title="google-plus"href="<?php echo base_url();?>javascript:void(0);"><i class="fa fa-google-plus-box"></i></a></li>
-                                <li><a title="twitter"href="<?php echo base_url();?>javascript:void(0);"><i class="fa fa-twitter"></i></a></li>
-                                <li><a title="linkedin"href="<?php echo base_url();?>javascript:void(0);"><i class="fa fa-linkedin-box"></i></a></li>
-                            </ul>
-                            <small>Jl.Sumatera, No.12,Jember</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-</div>
-
-<!-- Default Size -->
-<div class="modal fade" id="addcontact" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h6 class="title" id="defaultModalLabel">Add Contact</h6>
-            </div>
-            <div class="modal-body">
+    <div id="wrapper">
+        <div id="main-content">
+            <div class="block-header">
                 <div class="row clearfix">
-                    <div class="col-6">
-                        <div class="form-group">                                    
-                            <input type="text" class="form-control" placeholder="First Name">
-                        </div>
+                    <div class="col-md-6 col-sm-12">
+                        <h2>Update Akun Agen</h2>
                     </div>
-                    <div class="col-6">
-                        <div class="form-group">                                   
-                            <input type="text" class="form-control" placeholder="Last Name">
-                        </div>
+                    <div class="col-md-6 col-sm-12 text-right">
+                        <ul class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>index"><i class="icon-home"></i></a></li>
+                            <li class="breadcrumb-item active"><a href="<?php echo base_url(); ?>appcontact3">Daftar Akun Agen</li></a>
+                        </ul>
                     </div>
-                    <div class="col-12">
-                        <div class="form-group">                                    
-                            <input type="number" class="form-control" placeholder="Phone Number">
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="form-group">                                    
-                            <input type="text" class="form-control" placeholder="Enter Address">
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="form-group">                                            
-                            <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
-                            <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
-                        </div>
-                        <hr>
-                    </div>
-                    <div class="col-6">
-                        <div class="form-group">                                    
-                            <input type="text" class="form-control" placeholder="Facebook">
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="form-group">                                   
-                            <input type="text" class="form-control" placeholder="Twitter">
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="form-group">                                    
-                            <input type="text" class="form-control" placeholder="Linkedin">
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="form-group">                                    
-                            <input type="text" class="form-control" placeholder="instagram">
+                </div>
+            </div>
+            <div class="container-fluid">
+
+                <div class="row clearfix">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="body">
+                                <?php echo form_open_multipart('appcontact3/updatekaryawan'); ?>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="nama_lengkap" id="nama_lengkap"  value="<?php echo $ambil->nama_lengkap; ?>" placeholder="Tulis Judul" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="nomor_telepon" id="nomor_telepon" value="<?php echo $ambil->nomor_telepon; ?>" placeholder="Nomer Telepon" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="alamat" id="alamat" value="<?php echo $ambil->alamat; ?>" placeholder="Alamat" />
+                                </div>
+                                <div class="form-group">
+                                    <select class="form-control show-tick" name="aktif" id="aktif">
+                                        <option value="<?php echo $ambil->aktif; ?>">
+                                        <?php if ($ambil->aktif == 0) {
+                                                        echo  "Tidak Aktif";
+                                                    } else {
+                                                        echo  "Aktif";
+                                                    }; ?></small></td></option>
+                                        <option value="0">Tidak Aktif</option>
+                                        <option value="3">Aktif</option>
+                                    </select>
+                                </div>
+                                <input type="hidden" name="pengguna_id" value="<?php echo $ambil->pengguna_id; ?>">
+                                <p></p>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block">Update</button>
+                            </div>
+                            <?php echo form_close(); ?>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary">Add</button>
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button>
-            </div>
         </div>
     </div>
-</div>
 
-<!-- Javascript -->
-<script src="<?php echo base_url();?>assets/bundles/libscripts.bundle.js"></script>    
-<script src="<?php echo base_url();?>assets/bundles/vendorscripts.bundle.js"></script>
+    <!-- Javascript -->
+    <script src="<?php echo base_url(); ?>assets/bundles/libscripts.bundle.js"></script>
+    <script src="<?php echo base_url(); ?>assets/bundles/vendorscripts.bundle.js"></script>
 
-<script src="<?php echo base_url();?>assets/bundles/easypiechart.bundle.js"></script><!-- easypiechart Plugin Js -->
 
-<script src="<?php echo base_url();?>assets/bundles/mainscripts.bundle.js"></script>
+    <script src="<?php echo base_url(); ?>assets/vendor/dropify/js/dropify.min.js"></script>
+
+    <script src="<?php echo base_url(); ?>assets/bundles/mainscripts.bundle.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/pages/forms/dropify.js"></script>
+
+    <script src="<?php echo base_url(); ?>assets/vendor/summernote/dist/summernote.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+    <script>
+        $('.summernote').summernote({
+            placeholder: 'Hello stand alone ui',
+            tabsize: 2,
+            height: 120,
+            toolbar: [
+                ['style', ['style']],
+                ['font', ['bold', 'underline', 'clear']],
+                ['color', ['color']],
+                ['para', ['ul', 'ol', 'paragraph']],
+                ['table', ['table']],
+                ['insert', ['link', 'picture', 'video']],
+                ['view', ['fullscreen', 'codeview', 'help']]
+            ]
+        });
+    </script>
+
 </body>
+
 </html>

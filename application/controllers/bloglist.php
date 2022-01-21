@@ -51,7 +51,7 @@ class bloglist extends CI_Controller
         $artikel_id = $this->input->post('artikel_id');
         $judul_artikel = $this->input->post('judul_artikel');
         $kategori = $this->input->post('kategori');
-        // $fotoo = $this->input->post('old_image');
+        $fotoo = $this->input->post('old_image');
 
         $deskripsi_artikel = $this->input->post('deskripsi_artikel');
         // $foto_hewan = $_FILES['foto_hewan'];
@@ -81,9 +81,9 @@ class bloglist extends CI_Controller
                 $foto = $this->upload->data('file_name');
             }
         };
+        // var_dump($old_image);
+        // die;
         $foto = $foto;
-        var_dump($foto);
-        die;
 
         $data = array(
             'artikel_id' => $artikel_id,
@@ -119,8 +119,6 @@ class bloglist extends CI_Controller
     }
     function delete($artikel_id)
     {
-
-
         $artikel_id = $this->input->post('artikel_id');;
         $old_image = $this->input->post('foto');;
         if (!empty($old_image)) unlink(FCPATH . 'assets/images/artikel_gambar/' . $old_image);

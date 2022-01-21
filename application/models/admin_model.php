@@ -57,8 +57,24 @@ class admin_model extends CI_Model{
         $this->db->where('tipepengguna_id', '1');
         return $this->db->get('tb_pengguna');
     }
+    function input_data($data,$table){
+        $this->db->insert($table,$data);
+    }
+    function add_data($nama_lengkap,$nomor_telepon,$alamat,$aktif){
+        $data = array(
+            'nama_lengkap' => $nama_lengkap,
+            'nomor_telepon' => $nomor_telepon,
+            'alamat' => $alamat,
+            'aktif' => $aktif
+        );
+        $this->db->insert('tb_pengguna',$data);
+        }
     function get_admin_id($pengguna_id){
         $query = $this->db->get_where('tb_pengguna', array('pengguna_id' => $pengguna_id));
         return $query->row();
+    }
+    function delete($pengguna_id){
+        $this->db->where('pengguna_id', $pengguna_id);
+        $this->db->delete('tb_pengguna');
     }
 }

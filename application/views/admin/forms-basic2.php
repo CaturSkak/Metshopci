@@ -9,13 +9,13 @@
         <div class="block-header">
             <div class="row clearfix">
                 <div class="col-md-6 col-sm-12">
-                    <h2>Update Hewan / Perjodohan</h2>
+                    <h2>Update Hewan & Perjodohan</h2>
                 </div>            
                 <div class="col-md-6 col-sm-12 text-right">
                     <ul class="breadcrumb">
                         <li class="breadcrumb-item"><a href="<?php echo base_url();?>index.html"><i class="icon-home"></i></a></li>
  
-                        <li class="breadcrumb-item active">Update Hewan / Perjodohan</li>
+                        <li class="breadcrumb-item active"><a href="<?php echo base_url(); ?>formsadvanced">Daftar Hewan & Perjodohan</li></a>
                     </ul>
                    
                 </div>
@@ -30,7 +30,6 @@
                         <div class="form-group">
                                     <select class="form-control show-tick" name="jenis_hewan" id="jenis_hewan" require>
                                         <option value="<?php echo $ambil->jenis_hewan;?>"><?php echo $ambil->jenis_hewan;?></option>
-                                        <option holder>Pilih Kategori Hewan / Perjodohan</option>
                                         <option value="Hewan Peliharaan">Hewan Peliharaan</option>
                                         <option value="Reptil">Reptil</option>
                                         <option value="Ikan">Ikan</option>
@@ -53,7 +52,6 @@
                         <div class="form-group">
                                     <select class="form-control show-tick" name="jenis_kelamin" id="jenis_kelamin">
                                         <option value="<?php echo $ambil->jenis_kelamin;?>"><?php echo $ambil->jenis_kelamin;?></option>
-                                        <option holder>Pilih Kategori Jenis Kelamin</option>
                                         <option value="Jantan">Jantan</option>
                                         <option value="Betina">Betina</option>
                                     </select>
@@ -70,7 +68,6 @@
                         <div class="form-group">
                                     <select class="form-control show-tick" name="rincian" id="rincian" >
                                         <option value="<?php echo $ambil->rincian;?>"><?php echo $ambil->rincian;?></option>
-                                        <option holder>Tipe Pembelian</option>
                                         <option value="Pembelian">Pembelian</option>
                                         <option value="Perjodohan">Perjodohan</option>
                                     </select>

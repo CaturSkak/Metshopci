@@ -44,5 +44,13 @@ class customer_model extends CI_Model
 		$query = $this->db->get();
 		return $query;
 	}
+	function get_customer_id($pengguna_id){
+        $query = $this->db->get_where('tb_pengguna', array('pengguna_id' => $pengguna_id));
+        return $query->row();
+    }
+	function delete($pengguna_id){
+        $this->db->where('pengguna_id', $pengguna_id);
+        $this->db->delete('tb_pengguna');
+    }
 }
 ?>

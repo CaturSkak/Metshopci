@@ -9,13 +9,13 @@
         <div class="block-header">
             <div class="row clearfix">
                 <div class="col-md-6 col-sm-12">
-                    <h2>Hewan dan Produk</h2>
+                    <h2>Tambah Agen</h2>
                 </div>            
                 <div class="col-md-6 col-sm-12 text-right">
                     <ul class="breadcrumb">
                         <li class="breadcrumb-item"><a href="<?php echo base_url();?>index.html"><i class="icon-home"></i></a></li>
  
-                        <li class="breadcrumb-item active">Hewan dan Produk</li>
+                        <li class="breadcrumb-item active"><a href="<?php echo base_url(); ?>formsadvanced3">Daftar Agen</li></a>
                     </ul>
                    
                 </div>

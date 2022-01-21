@@ -14,12 +14,12 @@
         <div class="block-header">
             <div class="row clearfix">
                 <div class="col-md-6 col-sm-12">
-                    <h2>Data Akun Customer</h2>
+                    <h2>Data Akun Agen</h2>
                 </div>            
                 <div class="col-md-6 col-sm-12 text-right">
                     <ul class="breadcrumb">
                         <li class="breadcrumb-item"><a href="<?php echo base_url();?>index.php"><i class="icon-home"></i></a></li>
-                        <li class="breadcrumb-item active">Data Akun Customer</li>
+                        <li class="breadcrumb-item active">Data Akun Agen</li>
                     </ul>
                 </div>
             </div>
@@ -75,8 +75,8 @@
                                                     }; ?></small></td>
                                             <td>        
                                             <td>                                            
-                                                <button type="button" class="btn btn-default btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
-                                                <button type="button" class="btn btn-danger btn-sm js-sweetalert" data-type="confirm" title="Delete"><i class="fa fa-trash-o"></i></button>
+                                            <a href="<?php echo base_url(); ?>appcontact3/update/<?php echo $karyawan->pengguna_id ?>" type="hidden" title="Edit"><button type="button" class="btn btn-default btn-sm" title="Edit"><i class="fa fa-edit"></i></button></a>
+                                            <a href="<?php echo site_url('/appcontact3/delete');?>/<?php echo $karyawan->pengguna_id?>" class="btn btn-danger btn-sm js-sweetalert" title="Hapus"><i class="las la-trash" style="font-size: 17px;"></i></a>
                                             </td>
                                         </tr>
                                         <?php } ?>
