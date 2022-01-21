@@ -426,6 +426,7 @@
                         <ul>
                             <li><a href="<?php echo base_url(); ?>tablebasic">Pembelian</a></li>
                             <li><a href="<?php echo base_url(); ?>tablenormal">Perjodohan</a></li>
+                            <li><a href="<?php echo base_url(); ?>Admin_Pembayaran">Metode Pembayaran</a></li>
                         </ul>
                     </li>
                     <li>

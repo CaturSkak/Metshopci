@@ -17,7 +17,11 @@ class M_User extends CI_Model
         $query = $this->db->get();
         return $query;
     }
-
+    function show_barang()
+    {
+        $hasil = $this->db->query("SELECT * FROM tb_payment_method");
+        return $hasil;
+    }
     public function getProvinsi()
     {
         $this->db->select('*');
