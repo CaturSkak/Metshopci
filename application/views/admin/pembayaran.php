@@ -1,16 +1,16 @@
-<!doctype html>
-<html lang="en">
-<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css">
-<link href="<?php echo base_url() . 'assets/css/jquery.dataTables.min.css' ?>" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <title>Data Barang</title>
+    <!-- <link href="<?php echo base_url() . 'assets/css/bootstrap.css' ?>" rel="stylesheet"> -->
+    <!-- <link href="<?php echo base_url() . 'assets/css/jquery.dataTables.min.css' ?>" rel="stylesheet"> -->
+</head>
 
 <body class="theme-orange">
 
-
-
     <div id="wrapper">
-
-
-
         <div id="main-content">
             <div class="block-header">
                 <div class="row clearfix">
@@ -24,7 +24,8 @@
 
                         </ul>
 
-                        <a href="" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view" title="Tambah" class="btn btn-primary"><button class="btn  btn-primary "><i class="fa fa-plus-square"> Tambah Metode Pembayaran</i></button> </a>
+                        <a href="" class="action quickview" data-bs-toggle="modal" data-bs-target="#modal_add_new" title="Tambah" class="btn btn-primary"><button class="btn  btn-primary "><i class="fa fa-plus-square"> Tambah Metode Pembayaran</i></button> </a>
+
                     </div>
                 </div>
             </div>
@@ -55,44 +56,48 @@
                                         <thead class="table-dark">
                                             <tr>
                                             <tr>
-                                                <th style="max-width: 100px;">ID</th>
-                                                <th>Nama Metode</th>
-                                                <th>Kode Transfer</th>
-                                                <th style="min-width: 250px;">Detail</th>
-                                                <th style="max-width: 250px;">Logo Instansi</th>
-                                                <th style="width: 120px;">Aksi</th>
+                                                <td>ID</td>
+                                                <td>Nama Metode</td>
+                                                <td>Kode Transfer</td>
+                                                <td>Detail</td>
+                                                <td>Logo Instansi</td>
+                                                <td>Aksi</td>
                                             </tr>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <?php foreach ($pembayaran as $row) : ?>
-
-                                                <?php if (!empty($row->payment_method_image)) {
-                                                    $image = "<img  src=" . base_url('assets/img/pembayaran/') . $row->payment_method_image . "  style='width: 140px; height: 140px; object-fit: cover;'>";
+                                            <?php
+                                            foreach ($pembayaran->result_array() as $i) :
+                                                $barang_id = $i['payment_method_id'];
+                                                $barang_nama = $i['payment_method_name'];
+                                                $barang_satuan = $i['payment_method_transfer_code'];
+                                                $barang_harga = $i['payment_method_details'];
+                                            ?>
+                                                <?php if (!empty($i['payment_method_image'])) {
+                                                    $image = "<img  src=" . base_url('assets/img/pembayaran/') . $i['payment_method_image'] . "  style='width: 140px; height: 140px; object-fit: cover;'>";
                                                 } else {
                                                     $image = '';
                                                 }
                                                 ?>
-                                                <tr class="text-dark">
-                                                    <td><?= $row->payment_method_id; ?></td>
-                                                    <td><?= $row->payment_method_name; ?></td>
-                                                    <td><?= $row->payment_method_transfer_code; ?></td>
-                                                    <td><?= $row->payment_method_details; ?></td>
-                                                    <td><?= $image; ?></td>
+                                                <tr>
+                                                    <td><?php echo $barang_id; ?></td>
+                                                    <td><?php echo $barang_nama; ?></td>
+                                                    <td><?php echo $barang_satuan; ?></td>
+                                                    <td><?php echo $barang_harga; ?></td>
+                                                    <td><?php echo $image; ?></td>
                                                     <td>
                                                         <div class="d-inline-flex">
-
-                                                            <button title="Edit Metode Pembayaran '<?= $row->payment_method_name; ?>'" onclick="location.href='<?= base_url('Admin_Pembayaran/'); ?><?= $row->payment_method_id; ?>';" class='btn btn-outline-success shadow-sm btn-block btn-circle mr-3' type='submit' id='edit' name='edit' class="action quickview" data-bs-toggle="modal" data-bs-target="#edit" title="edit"><i class='fa fa-edit'></i></button>
+                                                            <a class="btn  btn-outline-warning mr-3  " data-bs-toggle="modal" data-bs-target="#modal_edit<?php echo $barang_id; ?>"><i class='fa fa-edit btn-outline-warning'></i></a>
                                                             <form action="<?= base_url('Admin_Pembayaran/delete'); ?>" method="POST">
-                                                                <input type="hidden" value="<?= $row->payment_method_id; ?>" name="payment_method_id" id="payment_method_id">
-                                                                <input type="hidden" value="<?= $row->payment_method_image; ?>" name="payment_method_image" id="payment_method_image">
-                                                                <button title="Hapus Metode Pembayaran '<?= $row->payment_method_name; ?>'" class='btn btn-outline-danger ' type='submit' id='hapus' name='hapus' onclick='javascript:confirmationDelete($(this));return false;'><i class='fa fa-trash'></i></button>
+                                                                <input type="hidden" value="<?= $i['payment_method_id']; ?>" name="payment_method_id" id="payment_method_id">
+                                                                <input type="hidden" value="<?= $i['payment_method_image']; ?>" name="payment_method_image" id="payment_method_image">
+                                                                <button title="Hapus Metode Pembayaran '<?= $i['payment_method_name']; ?>'" class='btn btn-outline-danger ' type='submit' id='hapus' name='hapus' onclick='javascript:confirmationDelete($(this));return false;'><i class='fa fa-trash'></i></button>
                                                             </form>
                                                         </div>
                                                     </td>
+
                                                 </tr>
                                             <?php endforeach; ?>
-
                                         </tbody>
                                     </table>
                                 </div>
@@ -101,14 +106,19 @@
                     </div>
                 </div>
             </div>
+
+
+
         </div>
+
     </div>
 
 
-    <!-- Modal Tambah -->
-    <div class=" modal fade" id="quick-view" tabindex="-1" role="dialog">
-        <div class="modal-dialog modal-dialog-centered">
+    <!-- ============ MODAL ADD BARANG =============== -->
+    <div class="modal fade" id="modal_add_new" tabindex="-1" role="dialog" aria-labelledby="largeModal" aria-hidden="true">
+        <div class="modal-dialog">
             <div class="modal-content">
+
                 <form action="<?= base_url('Admin_Pembayaran/add'); ?>" enctype='multipart/form-data' method="POST">
                     <div class="modal-header">
                         <h5 class="modal-title text-brown" id="exampleModalLongTitle">Tambah Data Metode Pembayaran</h5>
@@ -144,110 +154,111 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Batal</button>
-                        <button type="submit" class="btn btn-brown" id='tambah' name='tambah'>Simpan</button>
+                        <button type="submit" class="btn btn-primary" id='tambah' name='tambah'>Simpan</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
+    <!--END MODAL ADD BARANG-->
 
-
-
-
-    <?php if (!empty($edit)) : ?>
-        <!-- Edit Modal -->
-        <div class=" modal fade" id="edit" tabindex="-1" aria-labelledby="quick-view" role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
+    <!-- ============ MODAL EDIT BARANG =============== -->
+    <?php
+    foreach ($pembayaran->result_array() as $i) :
+        $barang_id = $i['payment_method_id'];
+        $barang_nama = $i['payment_method_name'];
+        $barang_satuan = $i['payment_method_transfer_code'];
+        $barang_harga = $i['payment_method_details'];
+        $img = $i['payment_method_image'];
+    ?>
+        <?php if (!empty($row->payment_method_image)) {
+            $image = "<img  src=" . base_url('assets/img/pembayaran/') . $row->payment_method_image . "  style='width: 140px; height: 140px; object-fit: cover;'>";
+        } else {
+            $image = '';
+        }
+        ?>
+        <div class="modal fade" id="modal_edit<?php echo $barang_id; ?>" tabindex="-1" role="dialog" aria-labelledby="largeModal" aria-hidden="true">
+            <div class="modal-dialog">
                 <div class="modal-content">
-                    <form action="<?= base_url('Admin_Pembayaran/edit'); ?>" enctype='multipart/form-data' method="POST">
-                        <div class="modal-header">
-                            <h5 class="modal-title text-brown" id="exampleModalLongTitle">Edit Data Metode Pembayaran</h5>
-                            <a href="<?= base_url('Admin_Pembayaran'); ?>" class="close" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </a>
-                        </div>
-                        <div class="modal-body">
-                            <div class="row align-items-center">
-                                <input type="hidden" value="<?= $edit[0]->payment_method_id; ?>" name="payment_method_id" id="payment_method_id">
-                                <input type="hidden" value="<?= $edit[0]->payment_method_image; ?>" name="img" id="img">
-                                <div class="col-4 mb-3">
-                                    <label for="payment_method_name" class="text-dark">Nama Metode</label>
-                                </div>
-                                <div class="col-8 mb-3">
-                                    <input required maxlength="50" type="text" class="form-control text-dark" id="payment_method_name" name="payment_method_name" value="<?= $edit[0]->payment_method_name; ?>">
-                                </div>
-                                <div class="col-4 mb-3">
-                                    <label for="payment_method_transfer_code" class="text-dark">Kode Transfer</label>
-                                </div>
-                                <div class="col-8 mb-3">
-                                    <input required maxlength="100" type="text" class="form-control text-dark" id="payment_method_transfer_code" name="payment_method_transfer_code" value="<?= $edit[0]->payment_method_transfer_code; ?>">
-                                </div>
-                                <div class="col-4 mb-3">
-                                    <label for="payment_method_details" class="text-dark">Deskripsi</label>
-                                </div>
-                                <div class="col-8 mb-3">
-                                    <textarea type="text" maxlength="500" rows="5" cols="1" class="form-control text-dark" id="payment_method_details" name="payment_method_details"><?= $edit[0]->payment_method_details; ?></textarea>
-                                </div>
-                                <div class="col-4 mb-3">
-                                    <label for="payment_method_image" class="text-dark">Logo Instansi</label>
-                                </div>
-                                <div class="col-8 mb-3">
-                                    <input type="file" class="form-control-file text-dark" id="payment_method_image" name="payment_method_image" accept=".png, .jpg, .jpeg">
-                                </div>
+
+                    <?php echo form_open_multipart('Admin_pembayaran/Update'); ?>
+                    <div class="modal-header">
+                        <h5 class="modal-title text-brown" id="exampleModalLongTitle">Ubah Data Metode Pembayaran</h5>
+
+                    </div>
+                    <div class="modal-body">
+
+                        <input type="hidden" name="payment_method_id" value="<?php echo $barang_id; ?>" class="form-control" type="text" placeholder="Kode Barang..." readonly>
+
+                        <div class="form-group">
+                            <label class="control-label col-xs-3">Nama Metode</label>
+                            <div class="col-xs-8">
+                                <input name="payment_method_name" value="<?php echo $barang_nama; ?>" class="form-control" type="text" placeholder="Nama Barang..." required>
                             </div>
                         </div>
-                        <div class="modal-footer">
-                            <a href="<?= base_url('Admin_Pembayaran'); ?>" class="btn btn-outline-secondary">Batal</a>
-                            <button type="submit" class="btn btn-brown" id='tambah' name='tambah'>Simpan</button>
+
+                        <div class="form-group">
+                            <label class="control-label col-xs-3">Kode Transfer</label>
+                            <div class="col-xs-8">
+                                <input name="payment_method_transfer_code" value="<?php echo $barang_satuan; ?>" class="form-control" type="text" placeholder="Nama Barang..." required>
+                            </div>
                         </div>
-                    </form>
+
+                        <div class="form-group">
+                            <label class="control-label col-xs-3">Detail</label>
+                            <div class="col-xs-8">
+                                <input name="payment_method_details" value="<?php echo $barang_harga; ?>" class="form-control" type="text" placeholder="Harga..." required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-xs-3">Logo Instansi</label>
+                            <div class="col-xs-8">
+                                <img src="<?php echo base_url(); ?>assets/img/pembayaran/<?php echo $img; ?>" style="width: 100px; height: 100px; object-fit: cover;">
+                                <input readonly name="img" value="<?php echo $img; ?>" class="form-control" type="text">
+                                <input name="payment_method_image" class="form-control" type="file" id="foto" accept=".png, .jpg, .jpeg">
+                                <!-- <input type="hidden" class="form-control-file text-dark" id="old_image" hidden="lama" value=" <?php echo $img; ?>"> -->
+                                <!-- <input type="file" class="form-control-file text-dark" id="payment_method_image" name="foto" accept=".png, .jpg, .jpeg"> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button class="btn" data-bs-dismiss="modal" aria-hidden="true">Tutup</button>
+                        <button type="submit" class="btn btn-info">Update</button>
+                    </div>
+                    <?php echo form_close(); ?>
                 </div>
             </div>
         </div>
-    <?php endif ?>
 
-
-
+    <?php endforeach; ?>
+    <!--END MODAL ADD BARANG-->
 
     <!-- Javascript -->
+    <script src="<?php echo base_url(); ?>assets/bundles/libscripts.bundle.js"></script>
+    <script src="<?php echo base_url(); ?>assets/bundles/vendorscripts.bundle.js"></script>
+
+    <script src="<?php echo base_url(); ?>assets/vendor/sweetalert/sweetalert.min.js"></script><!-- SweetAlert Plugin Js -->
+
+    <!-- Plugins JS -->
+    <script src="<?php echo base_url(); ?>assets/js/plugins/swiper-bundle.min.js"></script>
+
+    <!-- Vendor JS -->
+
+    <script src="<?php echo base_url(); ?>assets/bootstrap.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/vendor/bootstrap.min.js"></script>
+    <!--Main JS-->
+    <script src="<?php echo base_url(); ?>assets/js/main.js"></script>
+
+    <script src="<?php echo base_url(); ?>assets/bundles/mainscripts.bundle.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/pages/forms/advanced-form-elements.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/pages/ui/dialogs.js"></script>
     <script>
         $(document).ready(function() {
             $('#mydata').DataTable();
         });
     </script>
-    <script>
-        $('.sparkbar').sparkline('php', {
-            type: 'bar'
-        });
-    </script>
 </body>
-
-<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
-<script src="//cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
-<script>
-    $(document).ready(function() {
-        $('.datatab').DataTable();
-    });
-</script>
-
-<!-- Javascript -->
-<script src="<?php echo base_url(); ?>assets/bundles/libscripts.bundle.js"></script>
-<script src="<?php echo base_url(); ?>assets/bundles/vendorscripts.bundle.js"></script>
-
-<script src="<?php echo base_url(); ?>assets/vendor/sweetalert/sweetalert.min.js"></script><!-- SweetAlert Plugin Js -->
-
-<!-- Plugins JS -->
-<script src="<?php echo base_url(); ?>assets/js/plugins/swiper-bundle.min.js"></script>
-
-<!-- Vendor JS -->
-
-<script src="<?php echo base_url(); ?>assets/bootstrap.min.js"></script>
-<script src="<?php echo base_url(); ?>assets/js/vendor/bootstrap.min.js"></script>
-<!--Main JS-->
-<script src="<?php echo base_url(); ?>assets/js/main.js"></script>
-
-<script src="<?php echo base_url(); ?>assets/bundles/mainscripts.bundle.js"></script>
-<script src="<?php echo base_url(); ?>assets/js/pages/forms/advanced-form-elements.js"></script>
-<script src="<?php echo base_url(); ?>assets/js/pages/ui/dialogs.js"></script>
 
 </html>

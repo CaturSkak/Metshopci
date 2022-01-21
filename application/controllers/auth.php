@@ -115,7 +115,7 @@ class auth extends CI_Controller
             ];
 
             // siapkan token
-            $token = base64_encode(random_bytes(32));
+            $token = base64_encode(openssl_random_pseudo_bytes(32));
             $user_token = [
                 'email' => $email,
                 'token' => $token,

@@ -215,7 +215,7 @@
                                 <label class="control-label col-xs-3">Logo Instansi</label>
                                 <div class="col-xs-8">
                                     <img src="<?php echo base_url(); ?>assets/img/pembayaran/<?php echo $img; ?>" style="width: 100px; height: 100px; object-fit: cover;">
-                                    <input name="img" value="<?php echo $img; ?>" class="form-control" type="text">
+                                    <input readonly name="img" value="<?php echo $img; ?>" class="form-control" type="text">
                                     <input name="payment_method_image" class="form-control" type="file">
                                     <!-- <input type="hidden" class="form-control-file text-dark" id="old_image" hidden="lama" value=" <?php echo $img; ?>"> -->
                                     <!-- <input type="file" class="form-control-file text-dark" id="payment_method_image" name="foto" accept=".png, .jpg, .jpeg"> -->

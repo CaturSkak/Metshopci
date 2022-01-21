@@ -7,15 +7,17 @@ class Admin_Pembayaran extends CI_Controller
 	function __construct()
 	{
 		parent::__construct();
-
+		$this->load->database();
+		$this->load->helper(array('url', 'html'));
 		$this->load->library('form_validation');
 		$this->load->model('m_pembayaran');
+		$this->load->model('m_user');
 		$this->load->library('session');
 	}
 
 	public function index($var = null)
 	{
-		$data['pembayaran'] = $this->m_pembayaran->getData()->result();
+		$data['pembayaran'] = $this->m_user->show_barang();
 
 		$data['tittle'] = 'MetShop Pets -Selamat Datang di MetShop Pets';
 		$data['user'] = $this->db->get_where('tb_pengguna', ['email' =>
@@ -140,10 +142,12 @@ class Admin_Pembayaran extends CI_Controller
 		$payment_method_details = $this->input->post('payment_method_details', TRUE);
 
 		$foto = Null;
+
+
 		if (!empty($_FILES['payment_method_image'])) {
-			$lama = $this->input->post('img', TRUE);
-			$baru = $this->input->post('payment_method_image', TRUE);
-			$upload_image = $_FILES['payment_method_image'];
+
+			$img = $this->input->post('payment_method_image', TRUE);
+			// $upload_image = $_FILES[$img];
 
 			$config['upload_path']          = './assets/img/pembayaran/';
 			$config['allowed_types']        = 'jpeg|jpg|png';
@@ -152,10 +156,10 @@ class Admin_Pembayaran extends CI_Controller
 
 			$this->load->library('upload', $config);
 
-			if (!$this->upload->do_upload('foto')) {
-				$foto = $lama;
+			if (!$this->upload->do_upload('payment_method_image')) {
+				$foto = $this->input->post('img');
 			} else {
-				$old_image = $lama;
+				$old_image = $this->input->post('img');
 				if ($old_image != 'default.png') {
 					unlink(FCPATH . 'assets/img/pembayaran/' . $old_image);
 				}
@@ -163,8 +167,8 @@ class Admin_Pembayaran extends CI_Controller
 			}
 		};
 		$foto = $foto;
-		var_dump($old_image);
-		die;
+		// var_dump($foto);
+		// die;
 
 		$data = array(
 			'payment_method_name' => $payment_method_name,
