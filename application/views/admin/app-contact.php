@@ -75,7 +75,7 @@
                                                     }; ?></small></td>
                                             <td>                                            
                                             <a href="<?php echo base_url(); ?>appcontact/update/<?php echo $admin->pengguna_id ?>" type="hidden" title="Edit"><button type="button" class="btn btn-default btn-sm" title="Edit"><i class="fa fa-edit"></i></button></a>
-                                                <button type="button" class="btn btn-danger btn-sm js-sweetalert" data-type="confirm" title="Delete"><i class="fa fa-trash-o"></i></button>
+                                            <a href="<?php echo site_url('/appcontact/delete');?>/<?php echo $admin->pengguna_id?>" class="btn btn-danger btn-sm js-sweetalert" title="Hapus"><i class="las la-trash" style="font-size: 17px;"></i></a>
                                             </td>
                                         </tr>
                                         <?php } ?>

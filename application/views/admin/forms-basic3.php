@@ -18,7 +18,7 @@
                     <ul class="breadcrumb">
                         <li class="breadcrumb-item"><a href="<?php echo base_url();?>index.html"><i class="icon-home"></i></a></li>
  
-                        <li class="breadcrumb-item active">Tambah Produk</li>
+                        <li class="breadcrumb-item active"><a href="<?php echo base_url(); ?>formsadvanced2">Daftar Produk</li></a>
                     </ul>
                    
                 </div>

@@ -50,12 +50,12 @@
             <div class="block-header">
                 <div class="row clearfix">
                     <div class="col-md-6 col-sm-12">
-                        <h2>Update Artikel</h2>
+                        <h2>Update Akun Admin</h2>
                     </div>
                     <div class="col-md-6 col-sm-12 text-right">
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>index"><i class="icon-home"></i></a></li>
-                            <li class="breadcrumb-item active"><a href="<?php echo base_url(); ?>bloglist">Artikel</li></a>
+                            <li class="breadcrumb-item active"><a href="<?php echo base_url(); ?>appcontact">Daftar Akun Admin</li></a>
                         </ul>
                     </div>
                 </div>
@@ -68,23 +68,27 @@
                             <div class="body">
                                 <?php echo form_open_multipart('appcontact/updateadmin'); ?>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="nama_lengkap"  value="<?php echo $ambil->nama_lengkap; ?>" placeholder="Tulis Judul" />
+                                    <input type="text" class="form-control" name="nama_lengkap" id="nama_lengkap"  value="<?php echo $ambil->nama_lengkap; ?>" placeholder="Tulis Judul" />
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="nomer_telepon" value="<?php echo $ambil->nomor_telepon; ?>" placeholder="Nomer Telepon" />
+                                    <input type="text" class="form-control" name="nomor_telepon" id="nomor_telepon" value="<?php echo $ambil->nomor_telepon; ?>" placeholder="Nomer Telepon" />
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="alamat" value="<?php echo $ambil->alamat; ?>" placeholder="Alamat" />
+                                    <input type="text" class="form-control" name="alamat" id="alamat" value="<?php echo $ambil->alamat; ?>" placeholder="Alamat" />
                                 </div>
                                 <div class="form-group">
-                                    <select class="form-control show-tick" name="aktif">
-                                        <option value="<?php echo $ambil->aktif; ?>"><?php echo $ambil->aktif; ?></option>
-                                        <option holder>Role Pengguna</option>
-                                        <option value="Hewan Peliharaan">0</option>
-                                        <option value="Burung">1</option>
+                                    <select class="form-control show-tick" name="aktif" id="aktif">
+                                        <option value="<?php echo $ambil->aktif; ?>">
+                                        <?php if ($ambil->aktif == 0) {
+                                                        echo  "Tidak Aktif";
+                                                    } else {
+                                                        echo  "Aktif";
+                                                    }; ?></small></td></option>
+                                        <option value="0">Tidak Aktif</option>
+                                        <option value="1">Aktif</option>
                                     </select>
                                 </div>
-                                <input type="hidden" name="pengguna_id" >
+                                <input type="hidden" name="pengguna_id" value="<?php echo $ambil->pengguna_id; ?>">
                                 <p></p>
                                 <button type="submit" class="btn btn-primary btn-lg btn-block">Update</button>
                             </div>

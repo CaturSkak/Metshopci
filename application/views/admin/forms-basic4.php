@@ -12,13 +12,13 @@
         <div class="block-header">
             <div class="row clearfix">
                 <div class="col-md-6 col-sm-12">
-                    <h2>Tambah Produk</h2>
+                    <h2>Update Produk</h2>
                 </div>            
                 <div class="col-md-6 col-sm-12 text-right">
                     <ul class="breadcrumb">
                         <li class="breadcrumb-item"><a href="<?php echo base_url();?>index.html"><i class="icon-home"></i></a></li>
  
-                        <li class="breadcrumb-item active">Tambah Produk</li>
+                        <li class="breadcrumb-item active"><a href="<?php echo base_url(); ?>formsadvanced2">Daftar Produk</li></a>
                     </ul>
                    
                 </div>
@@ -37,7 +37,6 @@
                         <div class="form-group">
                                     <select name="kategori" id="kategori" class="form-control show-tick">
                                         <option value="<?php echo $ambil->kategori;?>"><?php echo $ambil->kategori;?></option>
-                                        <option holder>Pilih Kategori Barang</option>
                                         <option value="Makanan">Makanan</option>
                                         <option value="Barang">Barang</option>
                                         <option value="Peralatan">Peralatan</option>
