@@ -20,6 +20,7 @@ class formsbasic3 extends CI_Controller
         $produk_id = $this->input->post('produk_id');
         $nama_produk = $this->input->post('nama_produk');
         $kategori = $this->input->post('kategori');
+        $berat = $this->input->post('berat');
         $jumlah_barang = $this->input->post('jumlah_barang');
         $harga = $this->input->post('harga');
         $foto_produk = $_FILES['foto_produk'];
@@ -41,6 +42,7 @@ class formsbasic3 extends CI_Controller
             'produk_id' => $produk_id,
             'nama_produk' => $nama_produk,
             'kategori' => $kategori,
+            'berat' => $berat,
             'jumlah_barang' => $jumlah_barang,
             'harga' => $harga,
             'foto_produk' => $foto_produk,

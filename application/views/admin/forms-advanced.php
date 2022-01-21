@@ -51,9 +51,12 @@
                                             <th scope="col">No</th>
                                             <th scope="col">Kategori Hewan </th>
                                             <th scope="col">Jenis Hewan </th>
+                                            <th scope="col">Umur Hewan</th>
                                             <th scope="col">Jenis Kelamin</th>
+                                            <th scope="col">Berat Hewan</th>
                                             <th scope="col">Rincian</th>
                                             <th scope="col">Harga</th>
+                                            <th scope="col">Jumlah Hewan</th>
                                             <th scope="col">Gambar</th>
                                             <th scope="col">Deskripsi</th>
                                             <th colspan="3">Aksi</th>
@@ -73,14 +76,23 @@
                             <th scope="row"><?= $no++; ?></th>
                             <td><?php echo $hewan->jenis_hewan;?></td>
                             <td><?php echo $hewan->jenis;?></td>
+                            <td><?php echo $hewan->umur;?></td>
                             <td><?php echo $hewan->jenis_kelamin;?></td>
+                            <td><?php echo $hewan->berat;?></td>
                             <td><?php echo $hewan->rincian;?></td>
                             <td>Rp. <?php echo $hewan->harga;?></td>
+                            <td><?php echo $hewan->jumlah;?></td>
                             <td><img src="<?php echo base_url();?>assets/images/daftar_hewan/<?php echo $hewan->foto_hewan;?>" width="150" height="110"></td>
                             <td><a href="" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view" title="Quickview" class="btn btn-primary"><button class="btn btn-info btn-round " ><i class="fa fa-info-circle"></i></button></a></td>
                             <td>
-                                <a href="<?php echo base_url();?>formsadvanced/update/<?php echo $hewan->hewan_id?>" class="btn btn-warning btn-round" type="hidden" title="Edit"><i class="las la-edit" style="font-size: 17px;"></i></a>
-                                <a href="<?php echo site_url('/formsadvanced/delete');?>/<?php echo $hewan->hewan_id?>" class="btn btn-danger btn-round" title="Hapus"><i class="las la-trash" style="font-size: 17px;"></i></a>
+                                <a>
+                                    <form action=" <?= base_url('/formsadvanced/delete'); ?>/<?php echo $hewan->hewan_id?>" method="POST">
+                                        <input type="hidden" value="<?= $hewan->hewan_id; ?>" name="hewan_id" id="hewan_id">
+                                        <input type="hidden" value="<?= $hewan->foto_hewan; ?>" name="foto_hewan" id="foto_hewan">
+                                        <a href="<?php echo base_url(); ?>formsadvanced/update/<?php echo $hewan->hewan_id ?>" class="btn btn-warning btn-round" type="hidden" title="Edit"><i class="fa fa-edit"></i></a>
+                                        <button type='submit' id='hapus' name='hapus' class="btn btn-danger btn-round" title="Hapus"><i class="las la-trash" style="font-size: 17px;"></i></button>
+                                    </form>
+                                </a>
                             </td>
                         </tr>
                         <?php } ?>

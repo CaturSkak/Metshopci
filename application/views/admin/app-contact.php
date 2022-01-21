@@ -21,8 +21,6 @@
                         <li class="breadcrumb-item"><a href="<?php echo base_url();?>index.php"><i class="icon-home"></i></a></li>
                         <li class="breadcrumb-item active">Data Akun Admin</li>
                     </ul>
-                    <a href="<?php echo base_url();?>appcontact" class="btn btn-sm btn-success" title=""><i class="fa fa-list"></i></a>
-                    <a href="<?php echo base_url();?>appcontactgrid" class="btn btn-sm btn-outline-success" title=""><i class="fa fa-th-large"></i></a>
                 </div>
             </div>
         </div>
@@ -42,14 +40,16 @@
                                                     <span></span>
                                                 </label>
                                             </th>
-                                            <th>Nama</th>
-                                            <th>Email</th>
-                                            <th>Nomer HP</th>                                    
-                                            <th>Alamat</th>
-                                            <th>Action</th>
+                                            <th scope="col">Nama</th>
+                                            <th scope="col">Email</th>
+                                            <th scope="col">Nomer HP</th>                                    
+                                            <th scope="col">Alamat</th>
+                                            <th scope="col">Aktif</th>
+                                            <th colspan="2">Aksi</th>
                                         </tr>
                                     </thead>
                                         <tbody>
+                                        <?php foreach ($lihatadmin as $admin) { ?>
                                         <tr>
                                             <td style="width: 50px;">
                                             <label class="fancy-checkbox">
@@ -58,182 +58,27 @@
                                                 </label>
                                             </td>
                                             <td>
-                                                <img src="<?php echo base_url();?>assets/images/budi.jpg" class="rounded-circle avatar" alt="">
-                                                <p class="c_name">(Karyawan) Budi Budiman</p>
+                                                <img src="<?php echo base_url();?>assets/images/profil/<?php echo $admin->foto_pengguna;?>" class="rounded-circle avatar" alt="">
+                                                <p class="c_name"><?= $admin->nama_lengkap; ?></p>
                                             </td>
-                                            <td>bubud890@gmail.com</td>
+                                            <td><?= $admin->email; ?></td>
                                             <td>
-                                                <span class="phone"><i class="fa fa-phone m-r-10"></i>+62-814-6225-2583</span>
+                                                <span class="phone"><i class="fa fa-phone m-r-10">    <?= $admin->nomor_telepon; ?></i></span>
                                             </td>                                   
                                             <td>
-                                                <address><i class="fa fa-map-marker"></i>Jl.Imam Bonjol XII, No.12 ,Tulungagung </address>
+                                                <address><i class="fa fa-map-marker"></i><?= $admin->alamat; ?></address>
                                             </td>
+                                            <td><?php if ($admin->aktif == 0) {
+                                                        echo  "Tidak Aktif";
+                                                    } else {
+                                                        echo  "Aktif";
+                                                    }; ?></small></td>
                                             <td>                                            
-                                                <button type="button" class="btn btn-default btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
+                                            <a href="<?php echo base_url(); ?>appcontact/update/<?php echo $admin->pengguna_id ?>" type="hidden" title="Edit"><button type="button" class="btn btn-default btn-sm" title="Edit"><i class="fa fa-edit"></i></button></a>
                                                 <button type="button" class="btn btn-danger btn-sm js-sweetalert" data-type="confirm" title="Delete"><i class="fa fa-trash-o"></i></button>
                                             </td>
                                         </tr>
-                                        <tr>
-                                            <td>
-                                                <label class="fancy-checkbox">
-                                                    <input class="checkbox-tick" type="checkbox" name="checkbox">
-                                                    <span></span>
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <img src="<?php echo base_url();?>assets/images/anastashia.jpg" class="rounded-circle avatar" alt="">
-                                                <p class="c_name">(Pemasok) Anatashia Wina </p>
-                                            </td>
-                                            <td>anastashiawina2104@gmail.com</td>
-                                            <td>
-                                                <span class="phone"><i class="fa fa-phone m-r-10"></i>+62-8264-625-5689</span>
-                                            </td>                                    
-                                            <td>
-                                                <address><i class="fa fa-map-marker"></i>Jl.Pattimura 20, No.32, Kediri</address>
-                                            </td>
-                                            <td>
-                                                <button type="button" class="btn btn-default btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
-                                                <button type="button" class="btn btn-danger btn-sm js-sweetalert" data-type="confirm" title="Delete"><i class="fa fa-trash-o"></i></button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <label class="fancy-checkbox">
-                                                    <input class="checkbox-tick" type="checkbox" name="checkbox">
-                                                    <span></span>
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <img src="<?php echo base_url();?>assets/images/okta.jpg" class="rounded-circle avatar" alt="">
-                                                <p class="c_name">(Sponsorship) Okta Wina</p>
-                                            </td>
-                                            <td>oktawina11@gmail.com</td>
-                                            <td>
-                                                <span class="phone"><i class="fa fa-phone m-r-10"></i>(067)-62595</span>
-                                            </td>
-                                            <td>
-                                                <address><i class="fa fa-map-marker"></i>Jl.Sunan Ampel 1, No.212 , Probolinggo</address>
-                                            </td>
-                                            <td>
-                                                <button type="button" class="btn btn-default btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
-                                                <button type="button" class="btn btn-danger btn-sm js-sweetalert" data-type="confirm" title="Delete"><i class="fa fa-trash-o"></i></button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <label class="fancy-checkbox">
-                                                    <input class="checkbox-tick" type="checkbox" name="checkbox">
-                                                    <span></span>
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <img src="<?php echo base_url();?>assets/images/abdul.jpeg" class="rounded-circle avatar" alt="">
-                                                <p class="c_name">(Karyawan) Abdul Sinaga</p>
-                                            </td>
-                                            <td>abdulsinaga@gmail.com</td>
-                                            <td>
-                                                <span class="phone"><i class="fa fa-phone m-r-10"></i>+62-8264-625-1212</span>
-                                            </td>
-                                            <td>
-                                                <address><i class="fa fa-map-marker"></i>Jl.Riau , No.24.Jember</address>
-                                            </td>
-                                            <td>
-                                                <button type="button" class="btn btn-default btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
-                                                <button type="button" class="btn btn-danger btn-sm js-sweetalert" data-type="confirm" title="Delete"><i class="fa fa-trash-o"></i></button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <label class="fancy-checkbox">
-                                                    <input class="checkbox-tick" type="checkbox" name="checkbox">
-                                                    <span></span>
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <img src="<?php echo base_url();?>assets/images/susi.jpg" class="rounded-circle avatar" alt="">
-                                                <p class="c_name">(Pemasok) Susi Susanti</p>
-                                            </td>
-                                            <td>susisu@gmail.com</td>
-                                            <td>
-                                                <span class="phone"><i class="fa fa-phone m-r-10"></i>+62-8264-625-2323</span>
-                                            </td>
-                                            <td>
-                                                <address><i class="fa fa-map-marker"></i>Jl.Sumatera, No.12,Jember</address>
-                                            </td>
-                                            <td>
-                                                <button type="button" class="btn btn-default btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
-                                                <button type="button" class="btn btn-danger btn-sm js-sweetalert" data-type="confirm" title="Delete"><i class="fa fa-trash-o"></i></button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <label class="fancy-checkbox">
-                                                    <input class="checkbox-tick" type="checkbox" name="checkbox">
-                                                    <span></span>
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <img src="<?php echo base_url();?>assets/images/Eri.jpg" class="rounded-circle avatar" alt="">
-                                                <p class="c_name">(Karyawan) Eri Budiono</p>
-                                            </td>
-                                            <td>eribudi@gmail.com</td>
-                                            <td>
-                                                <span class="phone"><i class="fa fa-phone m-r-10"></i>+62-8264-625-1005</span>
-                                            </td>
-                                            <td>
-                                                <address><i class="fa fa-map-marker"></i>Jl.Sunan Ampel XII, No.25,Jember</address>
-                                            </td>
-                                            <td>
-                                                <button type="button" class="btn btn-default btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
-                                                <button type="button" class="btn btn-danger btn-sm js-sweetalert" data-type="confirm" title="Delete"><i class="fa fa-trash-o"></i></button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <label class="fancy-checkbox">
-                                                    <input class="checkbox-tick" type="checkbox" name="checkbox">
-                                                    <span></span>
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <img src="<?php echo base_url();?>assets/images/Ani.jpg" class="rounded-circle avatar" alt="">
-                                                <p class="c_name">(Sponsorship) Ani Sabrina</p>
-                                            </td>
-                                            <td>anisabi@gmail.com</td>
-                                            <td>
-                                                <span class="phone"><i class="fa fa-phone m-r-10"></i>(061)-462599</span>
-                                            </td>
-                                            <td>
-                                                <address><i class="fa fa-map-marker"></i>Jl.Teguharjo 2, No.1 , Malang</address>
-                                            </td>
-                                            <td>
-                                                <button type="button" class="btn btn-default btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
-                                                <button type="button" class="btn btn-danger btn-sm js-sweetalert" data-type="confirm" title="Delete"><i class="fa fa-trash-o"></i></button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <label class="fancy-checkbox">
-                                                    <input class="checkbox-tick" type="checkbox" name="checkbox">
-                                                    <span></span>
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <img src="<?php echo base_url();?>assets/images/beri.jpg" class="rounded-circle avatar" alt="">
-                                                <p class="c_name">(Sponsorship) Beri Budi</p>
-                                            </td>
-                                            <td>beribudi@gmail.com</td>
-                                            <td>
-                                                <span class="phone"><i class="fa fa-phone m-r-10"></i>(032)-264625</span>
-                                            </td>
-                                            <td>
-                                                <address><i class="fa fa-map-marker"></i>Jl.Teuku Umar 3, No.21, Batu</address>
-                                            </td>
-                                            <td>
-                                                <button type="button" class="btn btn-default btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
-                                                <button type="button" class="btn btn-danger btn-sm js-sweetalert" data-type="confirm" title="Delete"><i class="fa fa-trash-o"></i></button>
-                                            </td>
-                                        </tr>
+                                        <?php } ?>
                                     </tbody>
                                 </table>
                             </div>

@@ -43,6 +43,13 @@
                                         <option>Obat</option>
                                     </select>
                         </div>
+                        <div class="input-group mb-3">
+                                    <input type="text" class="form-control" id="berat" name="berat" 
+                                    placeholder="Berat Produk">
+                                    <div class="input-group-append">
+                                    <span class="input-group-text">kg/g</span>
+                        </div>
+                        </div>
                         <div class="form-group">
 							<input type="number" name="jumlah_barang" class="form-control" id="jumlah_barang" placeholder="Jumlah Barang">
 						</div>

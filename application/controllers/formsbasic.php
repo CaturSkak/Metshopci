@@ -20,9 +20,12 @@ class formsbasic extends CI_Controller
         $hewan_id = $this->input->post('hewan_id');
         $jenis_hewan = $this->input->post('jenis_hewan');
         $jenis = $this->input->post('jenis');
+        $umur = $this->input->post('umur');
         $jenis_kelamin = $this->input->post('jenis_kelamin');
+        $berat = $this->input->post('berat');
         $rincian = $this->input->post('rincian');
         $harga = $this->input->post('harga');
+        $jumlah = $this->input->post('jumlah');
         $foto_hewan = $_FILES['foto_hewan'];
         if($foto_hewan=''){}else{
             $config['upload_path'] = './assets/images/daftar_hewan';
@@ -42,9 +45,12 @@ class formsbasic extends CI_Controller
             'hewan_id' => $hewan_id,
             'jenis_hewan' => $jenis_hewan,
             'jenis' => $jenis,
+            'umur' => $umur,
             'jenis_kelamin' => $jenis_kelamin,
+            'berat' => $berat,
             'rincian' => $rincian,
             'harga' => $harga,
+            'jumlah' => $jumlah,
             'foto_hewan' => $foto_hewan,
             'deskripsi' => $deskripsi
         );

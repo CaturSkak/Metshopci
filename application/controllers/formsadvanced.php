@@ -51,7 +51,9 @@ class formsadvanced extends CI_Controller
         if (!empty($_FILES["foto_hewan"])) {
             $img = $this->input->post('foto_hewan', TRUE);
 
+
             $upload_image = $_FILES[$img];
+
 
             $config['upload_path']          = './assets/images/daftar_hewan/';
             $config['allowed_types']        = 'jpeg|jpg|png';
@@ -67,52 +69,44 @@ class formsadvanced extends CI_Controller
                 if ($old_image != 'default.png') {
                     unlink(FCPATH . 'assets/images/daftar_hewan/' . $old_image);
                 }
+
                 $foto_hewan = $this->upload->data('file_name');
             }
-        };
-        // var_dump($old_image);
-        // die;
-        $foto_hewan = $foto_hewan;
-
-        $data = array(
-            'hewan_id' => $hewan_id,
-            'jenis_hewan' => $jenis_hewan,
-            'jenis' => $jenis,
-            'jenis_kelamin' => $jenis_kelamin,
-            'rincian' => $rincian,
-            'harga' => $harga,
-            'foto_hewan' => $foto_hewan,
-            'deskripsi' => $deskripsi
-        );
-        $hewan_id = $this->input->post('hewan_id');
-        $this->db->set($data);
-        $this->db->where('hewan_id', $hewan_id);
-        $this->db->update('tb_hewan', $data);
-        redirect('formsadvanced');
-    }
-    function _uploadImage()
-    {
-        $config['upload_path'] = './assets/images/daftar_hewan';
-        $config['allowed_types'] = 'gif|jpg|png';
-        //$config['remove_space'] = TRUE;
-        $config['max_size']      = '10240';
-        $config['max_width']     = '10000';
-        $config['max_height']    = '10000';
-        $config['overwrite']            = true;
-
-        $this->load->library('upload', $config);
-
-        if ($this->upload->do_upload('foto_hewan')) {
-            return $this->upload->data("file_name");
+        
+            };
+            // var_dump($old_image);
+            // die;
+            $foto_hewan = $foto_hewan;
+    
+            $data = array(
+                'hewan_id' => $hewan_id,
+                'jenis_hewan' => $jenis_hewan,
+                'jenis' => $jenis,
+                'umur' => $umur,
+                'jenis_kelamin' => $jenis_kelamin,
+                'berat' => $berat,
+                'rincian' => $rincian,
+                'harga' => $harga,
+                'jumlah' => $jumlah,
+                'foto_hewan' => $foto_hewan,
+                'deskripsi' => $deskripsi
+            );
+            $hewan_id = $this->input->post('hewan_id');
+            $this->db->set($data);
+            $this->db->where('hewan_id', $hewan_id);
+            $this->db->update('tb_hewan', $data);
+            redirect('formsadvanced');
         }
 
-        return $this->input->post('old_image', true);
-    }
-    function delete($hewan_id)
-    {
-        $old_image = $this->input->post('old_image');
+
+    function delete($hewan_id){
+        $hewan_id = $this->input->post('hewan_id');;
+        $old_image = $this->input->post('foto_hewan');;
+        if (!empty($old_image)) unlink(FCPATH . 'assets/images/daftar_hewan/' . $old_image);
+        // var_dump($old_image);
+        // die;
+
         $this->hewan_model->delete($hewan_id);
-        unlink(FCPATH . 'assets/images/daftar_hewan/' . $old_image);
         redirect('formsadvanced');
     }
 }

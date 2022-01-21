@@ -17,6 +17,10 @@ class customer_model extends CI_Model
 		$this->db->insert($table,$data);
 		//untuk proses insert data ke database
 	}
+	function tampil_data(){
+        $this->db->where('tipepengguna_id', '2');
+        return $this->db->get('tb_pengguna');
+    }
 
 	function edit_data($where,$table) {
 		return $this->db->get_where($table, $where);

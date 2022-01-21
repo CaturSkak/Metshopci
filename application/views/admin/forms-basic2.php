@@ -26,7 +26,7 @@
             <div class="col-lg-12">
                     <div class="card">
                         <div class="body">
-                        <?php echo form_open_multipart('formsadvanced/UpdateMobil');?>
+                        <?php echo form_open_multipart('formsadvanced/updatehewan');?>
                         <div class="form-group">
                                     <select class="form-control show-tick" name="jenis_hewan" id="jenis_hewan" require>
                                         <option value="<?php echo $ambil->jenis_hewan;?>"><?php echo $ambil->jenis_hewan;?></option>
@@ -42,12 +42,30 @@
                                 placeholder="Tulis Jenis Hewan">
                         </div>
                         <div class="form-group">
+                        <div class="input-group mb-3">
+                                    <input type="text" class="form-control" id="umur" name="umur" value="<?php echo $ambil->umur;?>"
+                                    placeholder="Umur Hewan">
+                                    <div class="input-group-append">
+                                    <span class="input-group-text">Tahun/Bulan</span>
+                        </div>
+                        </div>
+                        </div>
+                        <div class="form-group">
                                     <select class="form-control show-tick" name="jenis_kelamin" id="jenis_kelamin">
                                         <option value="<?php echo $ambil->jenis_kelamin;?>"><?php echo $ambil->jenis_kelamin;?></option>
                                         <option holder>Pilih Kategori Jenis Kelamin</option>
                                         <option value="Jantan">Jantan</option>
                                         <option value="Betina">Betina</option>
                                     </select>
+                        </div>
+                        <div class="form-group">
+                        <div class="input-group mb-3">
+                                    <input type="text" class="form-control" id="berat" name="berat" value="<?php echo $ambil->berat;?>"
+                                    placeholder="Berat Hewan">
+                                    <div class="input-group-append">
+                                    <span class="input-group-text">kg/g</span>
+                        </div>
+                        </div>
                         </div>
                         <div class="form-group">
                                     <select class="form-control show-tick" name="rincian" id="rincian" >
@@ -65,6 +83,9 @@
                         <span class="input-group-text">.00</span>
                         </div>
                         </div>
+                        <div class="form-group">
+							<input type="number" name="jumlah" class="form-control" id="jumlah" value="<?php echo $ambil->jumlah;?>" placeholder="Jumlah Hewan">
+						</div>
                         </div>
 
                                 <div class="card">
