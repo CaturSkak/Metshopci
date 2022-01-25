@@ -22,6 +22,18 @@ class M_wilayah extends CI_Model
 		return $query;
 	}
 
+	public function data($id)
+	{
+
+		$this->db->select('*');
+		$this->db->from('tb_pengguna');
+		$this->db->join('tb_provinces', 'tb_provinces.province_id = tb_pengguna.province_id', 'left');
+		$this->db->join('tb_cities', 'tb_cities.city_id = tb_pengguna.city_id', 'left');
+		$this->db->join('tb_subdistricts', 'tb_subdistricts.subdistrict_id = tb_pengguna.subdistrict_id', 'left');
+		$this->db->where("pengguna_id = $id");
+		$query = $this->db->get();
+		return $query;
+	}
 	public function getProvinsi()
 	{
 		$this->db->select('*');

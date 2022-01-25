@@ -72,13 +72,14 @@
                         <div class="col-lg-4 col-md-4 col-sm-6 product">
                             <div class="product-inner">
                                 <div class="thumb">
-                                    <a href="<?php echo base_url(); ?>singleproduct" class="image">
+                                    <a href="<?php echo base_url(); ?>hewanumum/lihat/<?php echo $hewan->hewan_id ?>" class=" image">
                                         <img class="fit-image" style="width: 270px; height: 270px; object-fit: cover;" src="<?php echo base_url(); ?>assets/images/daftar_hewan/<?php echo $hewan->foto_hewan; ?>" alt="Product" / </a>
                                         <span class="badges">
                                             <!-- <span class="sale">-18%</span> -->
                                         </span>
                                         <div class="action-wrapper">
-                                            <a href="<?php echo base_url(); ?>#/" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view" title="Quickview"><i class="ti-plus"></i></a>
+
+                                            <a href="" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view<?php echo $hewan->hewan_id; ?>" title="Quickview"><i class="ti-plus"></i></a>
                                             <a href="<?php echo base_url(); ?>wishlist.php" class="action wishlist" title="Wishlist"><i class="ti-heart"></i></a>
                                             <a href="<?php echo base_url(); ?>cart.php" class="action cart" title="Cart"><i class="ti-shopping-cart"></i></a>
                                         </div>
@@ -93,18 +94,18 @@
                                         <i class="fa fa-star"></i>
                                     </span> -->
                                     <span class="price">
-                                        <span class="new">Rp. <?php echo $hewan->harga; ?></span>
+                                        <span class="new">Rp. <?php echo number_format($hewan->harga); ?></span>
                                         <!-- <span class="old">Rp.7.000.000</span> -->
                                     </span>
-                                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</p>
+                                    <?= $hewan->deskripsi; ?>
                                     <!-- Cart Button Start -->
                                     <div class="cart-btn action-btn">
                                         <div class="action-cart-btn-wrapper d-flex">
                                             <div class="add-to_cart">
-                                                <a class="btn btn-primary btn-hover-dark rounded-0" href="<?php echo base_url(); ?>cart.php">Add to cart</a>
+                                                <a class="btn btn-primary btn-hover-dark rounded-0" href="<?php echo base_url(); ?>cart.php">Keranjang</a>
                                             </div>
                                             <a href="<?php echo base_url(); ?>wishlist.html" title="Wishlist" class="action"><i class="ti-heart"></i></a>
-                                            <a href="<?php echo base_url(); ?>#/" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view" title="Quickview"><i class="ti-plus"></i></a>
+                                            <a class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view<?php echo $hewan->hewan_id; ?>" title="Quickview"><i class="ti-plus"></i></a>
                                         </div>
                                     </div>
                                     <!-- Cart Button End -->
@@ -313,151 +314,188 @@
     </div>
 </div>
 <!-- Shop Section End -->
+<?php
+foreach ($lihathewan1 as $i) :
+    $hewan_id = $i['hewan_id'];
 
-<!-- Modal Start  -->
-<div class="modalquickview modal fade" id="quick-view" tabindex="-1" aria-labelledby="quick-view" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <button class="btn close" data-bs-dismiss="modal">×</button>
-            <div class="row">
-                <div class="col-md-6 col-12">
 
-                    <!-- Product Details Image Start -->
-                    <div class="modal-product-carousel">
+?>
+    <!-- Modal Start  -->
+    <div class="modalquickview modal fade" id="quick-view<?php echo $hewan_id; ?>" tabindex="-1" aria-labelledby="quick-view" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <button class="btn close" data-bs-dismiss="modal">×</button>
+                <div class="row">
+                    <div class="col-md-6 col-12">
 
-                        <!-- Single Product Image Start -->
-                        <div class="swiper-container">
-                            <div class="swiper-wrapper">
-                                <a class="swiper-slide" href="<?php echo base_url(); ?>#">
-                                    <img class="w-100" src="<?php echo base_url(); ?>assets/images/products/large-product/1.png" alt="Product">
-                                </a>
-                                <a class="swiper-slide" href="<?php echo base_url(); ?>#">
-                                    <img class="w-100" src="<?php echo base_url(); ?>assets/images/products/large-product/2.png" alt="Product">
-                                </a>
-                                <a class="swiper-slide" href="<?php echo base_url(); ?>#">
-                                    <img class="w-100" src="<?php echo base_url(); ?>assets/images/products/large-product/3.png" alt="Product">
-                                </a>
-                                <a class="swiper-slide" href="<?php echo base_url(); ?>#">
-                                    <img class="w-100" src="<?php echo base_url(); ?>assets/images/products/large-product/4.png" alt="Product">
-                                </a>
-                                <a class="swiper-slide" href="<?php echo base_url(); ?>#">
-                                    <img class="w-100" src="<?php echo base_url(); ?>assets/images/products/large-product/5.png" alt="Product">
-                                </a>
-                            </div>
+                        <!-- Product Details Image Start -->
+                        <div class="modal-product-carousel">
 
-                            <!-- Swiper Pagination Start -->
-                            <!-- <div class="swiper-pagination d-md-none"></div> -->
-                            <!-- Swiper Pagination End -->
-
-                            <!-- Next Previous Button Start -->
-                            <div class="swiper-product-button-next swiper-button-next"><i class="ti-arrow-right"></i></div>
-                            <div class="swiper-product-button-prev swiper-button-prev"><i class="ti-arrow-left"></i></div>
-                            <!-- Next Previous Button End -->
-                        </div>
-                        <!-- Single Product Image End -->
-
-                    </div>
-                    <!-- Product Details Image End -->
-
-                </div>
-                <div class="col-md-6 col-12 overflow-hidden position-relative">
-
-                    <!-- Product Summery Start -->
-                    <div class="product-summery position-relative">
-
-                        <!-- Product Head Start -->
-                        <div class="product-head mb-3">
-                            <h2 class="product-title">Single Product Slider</h2>
-                        </div>
-                        <!-- Product Head End -->
-
-                        <!-- Rating Start -->
-                        <span class="rating justify-content-start mb-2">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star-half-o"></i>
-                            <i class="fa fa-star-o"></i>
-                        </span>
-                        <!-- Rating End -->
-
-                        <!-- Price Box Start -->
-                        <div class="price-box mb-2">
-                            <span class="regular-price">$70.00</span>
-                            <span class="old-price"><del>$85.00</del></span>
-                        </div>
-                        <!-- Price Box End -->
-
-                        <!-- SKU Start -->
-                        <div class="sku mb-3">
-                            <span>SKU: 12345</span>
-                        </div>
-                        <!-- SKU End -->
-
-                        <!-- Product Inventory Start -->
-                        <div class="product-inventroy mb-3">
-                            <span class="inventroy-title"> <strong>Availability:</strong></span>
-                            <span class="inventory-varient">12 Left in Stock</span>
-                        </div>
-                        <!-- Product Inventory End -->
-
-                        <!-- Description Start -->
-                        <p class="desc-content mb-5">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-                        <!-- Description End -->
-
-                        <!-- Quantity Start -->
-                        <div class="quantity d-flex align-items-center justify-content-start mb-5">
-                            <span class="me-2"><strong>Qty: </strong></span>
-                            <div class="cart-plus-minus">
-                                <input class="cart-plus-minus-box" value="1" type="text">
-                                <div class="dec qtybutton"></div>
-                                <div class="inc qtybutton"></div>
-                            </div>
-                        </div>
-                        <!-- Quantity End -->
-
-                        <!-- Cart Button Start -->
-                        <div class="cart-btn action-btn mb-6">
-                            <div class="action-cart-btn-wrapper d-flex justify-content-start">
-                                <div class="add-to_cart">
-                                    <a class="btn btn-primary btn-hover-dark rounded-0" href="<?php echo base_url(); ?>cart.html">Add to cart</a>
+                            <!-- Single Product Image Start -->
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <a class="swiper-slide" href="<?php echo base_url(); ?>#">
+                                        <img class="w-100" src="<?php echo base_url(); ?>assets/images/daftar_hewan/<?php echo $i['foto_hewan']; ?>" alt="Product" style="width: 550px; height: 550px; object-fit: cover;">
+                                    </a>
+                                    <!-- <a class="swiper-slide" href="<?php echo base_url(); ?>#">
+                                        <img class="w-100" src="<?php echo base_url(); ?>assets/images/products/large-product/2.png" alt="Product">
+                                    </a>
+                                    <a class="swiper-slide" href="<?php echo base_url(); ?>#">
+                                        <img class="w-100" src="<?php echo base_url(); ?>assets/images/products/large-product/3.png" alt="Product">
+                                    </a>
+                                    <a class="swiper-slide" href="<?php echo base_url(); ?>#">
+                                        <img class="w-100" src="<?php echo base_url(); ?>assets/images/products/large-product/4.png" alt="Product">
+                                    </a>
+                                    <a class="swiper-slide" href="<?php echo base_url(); ?>#">
+                                        <img class="w-100" src="<?php echo base_url(); ?>assets/images/products/large-product/5.png" alt="Product">
+                                    </a> -->
                                 </div>
-                                <a href="<?php echo base_url(); ?>wishlist.html" title="Wishlist" class="action"><i class="ti-heart"></i></a>
-                            </div>
-                        </div>
-                        <!-- Cart Button End -->
 
-                        <!-- Social Shear Start -->
-                        <div class="social-share">
-                            <div class="widget-social justify-content-center mb-6">
-                                <a title="Twitter" href="<?php echo base_url(); ?>#/"><i class="icon-social-twitter"></i></a>
-                                <a title="Instagram" href="<?php echo base_url(); ?>#/"><i class="icon-social-instagram"></i></a>
-                                <a title="Linkedin" href="<?php echo base_url(); ?>#/"><i class="icon-social-linkedin"></i></a>
-                                <a title="Skype" href="<?php echo base_url(); ?>#/"><i class="icon-social-skype"></i></a>
-                                <a title="Dribble" href="<?php echo base_url(); ?>#/"><i class="icon-social-dribbble"></i></a>
-                            </div>
-                        </div>
-                        <!-- Social Shear End -->
+                                <!-- Swiper Pagination Start -->
+                                <!-- <div class="swiper-pagination d-md-none"></div> -->
+                                <!-- Swiper Pagination End -->
 
-                        <!-- Payment Option Start -->
-                        <div class="payment-option mt-4 d-flex justify-content-start">
-                            <span><strong>Payment: </strong></span>
-                            <a href="<?php echo base_url(); ?>#">
-                                <img class="fit-image ms-1" src="<?php echo base_url(); ?>assets/images/payment/payment_large.png" alt="Payment Option Image">
-                            </a>
+                                <!-- Next Previous Button Start -->
+                                <div class="swiper-product-button-next swiper-button-next"><i class="ti-arrow-right"></i></div>
+                                <div class="swiper-product-button-prev swiper-button-prev"><i class="ti-arrow-left"></i></div>
+                                <!-- Next Previous Button End -->
+                            </div>
+                            <!-- Single Product Image End -->
+
                         </div>
-                        <!-- Payment Option End -->
+                        <!-- Product Details Image End -->
 
                     </div>
-                    <!-- Product Summery End -->
+                    <div class="col-md-6 col-12 overflow-hidden position-relative">
 
+                        <!-- Product Summery Start -->
+                        <div class="product-summery position-relative">
+
+                            <!-- Product Head Start -->
+                            <div class="product-head mb-3">
+                                <h2 class="product-title"><?= $i['jenis']; ?></h2>
+                            </div>
+                            <!-- Product Head End -->
+
+                            <!-- Rating Start -->
+                            <span class="rating justify-content-start mb-2">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-o"></i>
+                                <i class="fa fa-star-o"></i>
+                            </span>
+                            <!-- Rating End -->
+
+                            <!-- Price Box Start -->
+                            <div class="price-box mb-2">
+                                <span class="regular-price"> Rp. <?= number_format($i['harga']); ?></span>
+                                <!-- <span class="old-price"><del>$85.00</del></span> -->
+                            </div>
+                            <!-- Price Box End -->
+
+                            <!-- SKU Start -->
+                            <div class="sku mb-3">
+                                <span>Kategori</span>
+                                <span> <?= $i['jenis_hewan']; ?></span>
+                            </div>
+                            <div class="sku mb-3">
+                                <span>Tipe</span>
+                                <span> <?= $i['rincian']; ?></span>
+                            </div>
+                            <!-- SKU End -->
+                            <!-- Product Inventory Start -->
+                            <div class="product-inventroy mb-3">
+                                <span class="inventroy-title"> <strong>Info :</strong></span>
+                                <span class="inventory-varient">Tersedia</span>
+                            </div>
+                            <!-- Product Inventory End -->
+                            <!-- Product Inventory Start -->
+                            <div class="product-inventroy mb-3">
+                                <span class="inventroy-title"> <strong>Jumlah:</strong></span>
+                                <span class="inventory-varient">12 Ekor</span>
+                            </div>
+                            <!-- Product Inventory End -->
+
+                            <div class="sku mb-3">
+                                <span>Jenis Kelamin</span>
+                                <span> <?= $i['jenis_kelamin']; ?></span>
+                            </div>
+                            <!-- Description Start -->
+                            <div class="product-inventroy mb-3">
+                                <?= $i['deskripsi']; ?>
+                            </div>
+                            <!-- <p class="desc-content mb-5">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p> -->
+                            <!-- Description End -->
+
+                            <!-- Quantity Start -->
+                            <div class="quantity d-flex align-items-center justify-content-start mb-5">
+                                <span class="me-2"><strong>Jumlah: </strong></span>
+                                <div class="cart-plus-minus">
+                                    <input class="cart-plus-minus-box" value="1" type="text">
+                                    <div class="dec qtybutton"></div>
+                                    <div class="inc qtybutton"></div>
+                                </div>
+                            </div>
+                            <!-- Quantity End -->
+
+                            <!-- Cart Button Start -->
+                            <div class="cart-btn action-btn mb-6">
+                                <div class="action-cart-btn-wrapper d-flex justify-content-start">
+                                    <div class="add-to_cart">
+                                        <a class="btn btn-primary btn-hover-dark rounded-0" href="<?php echo base_url(); ?>cart.html">Masukan Keranjang</a>
+                                    </div>
+                                    <a href="<?php echo base_url(); ?>wishlist.html" title="Wishlist" class="action"><i class="ti-heart"></i></a>
+                                </div>
+                            </div>
+                            <!-- Cart Button End -->
+
+                            <!-- Social Shear Start -->
+                            <!-- <div class="social-share">
+                                <div class="widget-social justify-content-center mb-6">
+                                    <a title="Twitter" href="<?php echo base_url(); ?>#/"><i class="icon-social-twitter"></i></a>
+                                    <a title="Instagram" href="<?php echo base_url(); ?>#/"><i class="icon-social-instagram"></i></a>
+                                    <a title="Linkedin" href="<?php echo base_url(); ?>#/"><i class="icon-social-linkedin"></i></a>
+                                    <a title="Skype" href="<?php echo base_url(); ?>#/"><i class="icon-social-skype"></i></a>
+                                    <a title="Dribble" href="<?php echo base_url(); ?>#/"><i class="icon-social-dribbble"></i></a>
+                                </div>
+                            </div> -->
+                            <!-- Social Shear End -->
+
+                            <!-- Payment Option Start -->
+                            <div class="payment-option mt-4 d-flex justify-content-start">
+                                <span><strong>Pembayaran: </strong></span>
+                                <br>
+
+                            </div>
+                            <div class="mb-3">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <?php foreach ($pembayaran->result_array() as $a) { ?>
+                                                <th>
+
+                                                    <img src="<?php echo base_url(); ?>assets/img/pembayaran/<?php echo $a['payment_method_image']; ?>" alt="Product" style="width: 80px; height: 80px; object-fit: cover;">
+
+                                                </th>
+                                            <?php } ?>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+
+                            <!-- Payment Option End -->
+
+                        </div>
+                        <!-- Product Summery End -->
+
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- Modal End  -->
-
+    <!-- Modal End  -->
+<?php endforeach; ?>
 <!-- Scroll Top Start -->
 <a href="<?php echo base_url(); ?>#" class="scroll-top show" id="scroll-top">
     <i class="arrow-top ti-angle-double-up"></i>

@@ -8,7 +8,7 @@ class authcustomer extends CI_Controller
     }
     public function index()
     {
-        if ($this->session->userdata('email')) {
+        if ($this->session->userdata('customer_id')) {
             redirect('Beranda');
         }
 
@@ -29,14 +29,14 @@ class authcustomer extends CI_Controller
 
     private function _login()
     {
-        if ($this->session->userdata('email')) {
+        if ($this->session->userdata('customer_id')) {
             redirect('Beranda');
         }
 
         $email = $this->input->post('email');
         $password = $this->input->post('password');
 
-        $user = $this->db->get_where('tb_pengguna', ['email' => $email])->row_array();
+        $user = $this->db->get_where('tb_customer', ['email' => $email])->row_array();
 
         if ($user) {
             //user ada
@@ -44,8 +44,9 @@ class authcustomer extends CI_Controller
                 //cek pasword
                 if (password_verify($password, $user['password'])) {
                     $data = [
-                        'email' => $user['email'],
-                        'tb_tipe_pengguna_id' => $user['tb_tipe_pengguna_id']
+                        'emailcustomer' => $user['email'],
+                        'tipepengguna_id' => $user['tipepengguna_id'],
+                        'customer_id' => $user['pengguna_id']
                     ];
                     $this->session->set_userdata($data);
                     redirect('Beranda');
@@ -71,7 +72,7 @@ class authcustomer extends CI_Controller
 
     public function registrasi()
     {
-        if ($this->session->userdata('email')) {
+        if ($this->session->userdata('customer_id')) {
             redirect('Beranda');
         }
 
@@ -79,7 +80,7 @@ class authcustomer extends CI_Controller
         $this->form_validation->set_rules(
             'email',
             'Email',
-            'required|trim|valid_email|is_unique[tb_pengguna.email]',
+            'required|trim|valid_email|is_unique[tb_customer.email]',
             [
                 'is_unique' => 'Email sudah didaftarkan!'
             ]
@@ -124,7 +125,7 @@ class authcustomer extends CI_Controller
             ];
 
 
-            $this->db->insert('tb_pengguna', $data);
+            $this->db->insert('tb_customer', $data);
             $this->db->insert('tb_token', $user_token);
 
             $this->_sendEmail($token, 'verify');
@@ -141,8 +142,8 @@ class authcustomer extends CI_Controller
         $config = [
             'protocol' => 'smtp',
             'smtp_host' => 'ssl://smtp.googlemail.com',
-            'smtp_user' => 'e31191894@student.polije.ac.id',
-            'smtp_pass' => 'Ajanesu12345',
+            'smtp_user' => 'dedikurniawan.real@gmail.com',
+            'smtp_pass' => 'dedi085746190641',
             'smtp_port' => 465,
             'mailtype' => 'html',
             'charset' => 'utf-8',
@@ -178,7 +179,7 @@ class authcustomer extends CI_Controller
         $email = $this->input->get('email');
         $token = $this->input->get('token');
 
-        $user = $this->db->get_where('tb_pengguna', ['email' => $email])->row_array();
+        $user = $this->db->get_where('tb_customer', ['email' => $email])->row_array();
 
         if ($user) {
             $user_token = $this->db->get_where('tb_token', ['token' => $token])->row_array();
@@ -186,7 +187,7 @@ class authcustomer extends CI_Controller
                 if (time() - $user_token['date_created']  < (60 * 60 * 24)) {
                     $this->db->set('aktif', 1);
                     $this->db->where('email', $email);
-                    $this->db->update('tb_pengguna');
+                    $this->db->update('tb_customer');
 
                     $this->db->delete('tb_token', ['token' => $token]);
 
@@ -195,7 +196,7 @@ class authcustomer extends CI_Controller
                   </div> ');
                     redirect('authcustomer');
                 } else {
-                    $this->db->delete('tb_pengguna', ['email' => $email]);
+                    $this->db->delete('tb_customer', ['email' => $email]);
                     $this->db->delete('tb_token', ['email' => $email]);
 
                     $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
@@ -219,8 +220,9 @@ class authcustomer extends CI_Controller
 
     public function logout()
     {
-        $this->session->unset_userdata('email');
-        $this->session->unset_userdata('tb_tipe_pengguna_id');
+        $this->session->unset_userdata('emailcustomer');
+        $this->session->unset_userdata('tipepengguna_id');
+        $this->session->unset_userdata('customer_id');
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
         akun anda telah keluar!
       </div> ');
@@ -237,7 +239,7 @@ class authcustomer extends CI_Controller
             $this->load->view('admin/footer');
         } else {
             $email = $this->input->post('email');
-            $user = $this->db->get_where('tb_pengguna', ['email' => $email, 'aktif' => 1])->row_array();
+            $user = $this->db->get_where('tb_customer', ['email' => $email, 'aktif' => 1])->row_array();
 
             if ($user) {
                 $token = base64_encode(random_bytes(32));
@@ -268,7 +270,7 @@ class authcustomer extends CI_Controller
         $email = $this->input->get('email');
         $token = $this->input->get('token');
 
-        $user = $this->db->get_where('tb_pengguna', ['email' => $email])->row_array();
+        $user = $this->db->get_where('tb_customer', ['email' => $email])->row_array();
 
         if ($user) {
             $user_token = $this->db->get_where('tb_token', ['token' => $token])->row_array();
@@ -320,7 +322,7 @@ class authcustomer extends CI_Controller
 
             $this->db->set('password', $password);
             $this->db->where('email', $email);
-            $this->db->update('tb_pengguna');
+            $this->db->update('tb_customer');
 
             $this->session->unset_userdata('reset_email');
 

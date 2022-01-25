@@ -6,41 +6,26 @@ class Profile extends CI_Controller
         parent::__construct();
         $this->load->helper(array('url', 'html'));
         $this->load->model('m_wilayah');
-        $this->load->model('m_user');
+        $this->load->model('m_customer');
         $this->load->database();
     }
     public function index()
     {
 
         $data['user'] =
-            $this->db->get_where('tb_pengguna', ['email' =>
-            $this->session->userdata('email')])->row_array();
-        $data['path'] = base_url('assets');
-        $userID = $this->session->userdata('email');
-        $id = $this->session->userdata('pengguna_id');
-
-        $data['userr'] = $this->m_user->getDataByID($userID)->row_array();
-        $data['provinsi'] = $this->m_wilayah->getProvinsi()->result_array();
-        $data['kot'] = $this->m_wilayah->getkot()->result_array();
-        $data['kec'] = $this->m_wilayah->getkec()->result_array();
-
+            $this->db->get_where('tb_customer', ['email' =>
+            $this->session->userdata('emailcustomer')])->row_array();
         // var_dump($data);
         // die;
-        $row = $this->m_wilayah->getUserProvinsi($id)->row_array();
-        $province_id = $this->input->post('prov', TRUE);
-        $data['kota'] = $this->m_wilayah->getKota($province_id)->result();
+        $data['path'] = base_url('assets');
+        $userID = $this->session->userdata('emailcustomer');
+        $id = $this->session->userdata('customer_id');
 
-        if (!empty($row['province_id'])) {
+        $data['userr'] = $this->m_customer->getDataByID($userID)->row_array();
+        $data['provinsi'] = $this->m_customer->getProvinsi()->result_array();
+        $data['kot'] = $this->m_customer->getkot()->result_array();
+        $data['kec'] = $this->m_customer->getkec()->result_array();
 
-            $data['kota'] = $this->m_wilayah->getKota($row['province_id'])->result();
-
-            $row2 = $this->m_user->getUserKota($userID)->row();
-
-            if (!empty($row->province_id)) {
-
-                $data['kecamatan'] = $this->m_user->getKecamatan($row2->city_id)->result();
-            }
-        }
 
 
         $this->load->view('layout/header', $data);
@@ -50,7 +35,7 @@ class Profile extends CI_Controller
     public function cekKota()
     {
         $id = $this->input->get('province_id', TRUE);
-        $kota = $this->m_user->getKota($id)->result();
+        $kota = $this->m_customer->getKota($id)->result();
 
         foreach ($kota as $row) {
             echo "<option value='" . $row->city_id . "'>" . $row->city_name . "</option>";
@@ -60,7 +45,7 @@ class Profile extends CI_Controller
     public function cekKecamatan()
     {
         $id = $this->input->get('city_id', TRUE);
-        $kecamatan = $this->m_user->getKecamatan($id)->result();
+        $kecamatan = $this->m_customer->getKecamatan($id)->result();
 
         foreach ($kecamatan as $row) {
             echo "<option value='" . $row->subdistrict_id . "'>" . $row->subdistrict_name . "</option>";
@@ -88,7 +73,7 @@ class Profile extends CI_Controller
     }
     public function edit()
     {
-        $data['user'] = $this->db->get_where('tb_pengguna', ['email' =>
+        $data['user'] = $this->db->get_where('tb_customer', ['email' =>
         $this->session->userdata('email')])->row_array();
 
         $this->form_validation->set_rules('pengguna_id', 'Pengguna Id', 'required|trim');
@@ -129,7 +114,7 @@ class Profile extends CI_Controller
 
                 // $this->db->set('foto_pengguna', $upload_image);
                 $this->db->where('pengguna_id', $customer_id);
-                $this->db->update('tb_pengguna');
+                $this->db->update('tb_customer');
 
                 $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
             Foto Profil telah di ubah!
@@ -141,7 +126,7 @@ class Profile extends CI_Controller
 
     public function perbarui()
     {
-        $data['user'] = $this->db->get_where('tb_pengguna', ['email' =>
+        $data['user'] = $this->db->get_where('tb_customer', ['email' =>
         $this->session->userdata('email')])->row_array();
 
         $this->form_validation->set_rules('pengguna_id', 'Pengguna Id', 'required|trim');
@@ -166,10 +151,10 @@ class Profile extends CI_Controller
 
             );
 
-            $result = $this->m_user->editData($id, $data);
+            $result = $this->m_customer->editData($id, $data);
             // $this->db->set('nama', $nama);
             // $this->db->where('pengguna_id', $pengguna_id);
-            // $this->db->update('tb_pengguna');
+            // $this->db->update('tb_customer');
             $this->session->set_flashdata('messagee', '<div class="alert alert-success" role="alert">
             Data Profil anda telah diperbarui!
           </div> ');
@@ -178,7 +163,7 @@ class Profile extends CI_Controller
     }
     public function updatealamat()
     {
-        $data['user'] = $this->db->get_where('tb_pengguna', ['email' =>
+        $data['user'] = $this->db->get_where('tb_customer', ['email' =>
         $this->session->userdata('email')])->row_array();
 
         $this->form_validation->set_rules('pengguna_id', 'Pengguna Id', 'required|trim');
@@ -207,7 +192,7 @@ class Profile extends CI_Controller
                 'alamat' => $address
             );
 
-            $result = $this->m_user->editData($id, $data);
+            $result = $this->m_customer->editData($id, $data);
 
             $this->session->set_flashdata('messagee', '<div class="alert alert-success" role="alert">
             Data Profil anda telah diperbarui!
@@ -219,7 +204,7 @@ class Profile extends CI_Controller
 
     public function editpassword()
     {
-        $data['user'] = $this->db->get_where('tb_pengguna', ['email' =>
+        $data['user'] = $this->db->get_where('tb_customer', ['email' =>
         $this->session->userdata('email')])->row_array();
 
         $this->form_validation->set_rules('password0', 'Password Lama', 'required|trim');
@@ -264,7 +249,7 @@ class Profile extends CI_Controller
                     $password_hash = password_hash($password_baru, PASSWORD_DEFAULT);
                     $this->db->set('password', $password_hash);
                     $this->db->where('email', $this->session->userdata('email'));
-                    $this->db->update('tb_pengguna');
+                    $this->db->update('tb_customer');
 
                     $this->session->set_flashdata('messagge', '<div class="alert alert-success" role="alert">
                         Kata Sandi telah diperbarui!

@@ -215,7 +215,7 @@
                             <!-- <a href="<?php echo base_url(); ?>Profile" class="header-action-btn header-action-btn-wishlist">
                                 <i class="icon-user icons"></i>
                             </a> -->
-                            <?php if ($this->session->userdata('email') == null) : ?>
+                            <?php if ($this->session->userdata('customer_id') == null) : ?>
 
                                 <a class="header-action-btn header-action-btn-wishlist" href="<?php echo base_url(); ?>authcustomer" data-effect="mfp-move-from-top" class="popup-text">Login</a>
 
