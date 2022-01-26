@@ -172,6 +172,26 @@ class Profile extends CI_Controller
             $this->load->view('layout/header', $data);
             $this->load->view('konten/profile');
             $this->load->view('layout/footer');
+        } else if ($province_id = $this->input->post('prov', TRUE) == 0) {
+            $id = $this->input->post('pengguna_id', TRUE);
+
+            $phone_number = $this->input->post('phone_number', TRUE);
+
+            $address = $this->input->post('address', true);
+
+            $data = array(
+
+                'nomor_telepon' => $phone_number,
+
+                'alamat' => $address
+            );
+
+            $result = $this->m_customer->editData($id, $data);
+
+            $this->session->set_flashdata('messagee', '<div class="alert alert-success" role="alert">
+            Data Profil anda telah diperbarui!
+          </div> ');
+            redirect('Profile');
         } else {
             $id = $this->input->post('pengguna_id', TRUE);
 

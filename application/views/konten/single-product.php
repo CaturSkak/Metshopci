@@ -20,11 +20,15 @@
 </div>
 <!-- Breadcrumb Area End -->
 
+
+
 <!-- Single Product Section Start -->
 <div class="section section-margin">
     <div class="container">
         <div class="row">
-
+            <?= $this->session->flashdata('warning_flashData'); ?>
+            <?= $this->session->flashdata('error_flashData'); ?>
+            <?= $this->session->flashdata('success_flashData'); ?>
             <div class="col-lg-5 offset-lg-0 col-md-8 offset-md-2">
 
                 <!-- Product Details Image Start -->
@@ -160,26 +164,50 @@
                     <!-- Description End -->
 
                     <!-- Quantity Start -->
-                    <div class="quantity d-flex align-items-center mb-5">
+                    <!-- <div class="quantity d-flex align-items-center mb-5">
                         <span class="me-2"><strong>Jumlah : </strong></span>
                         <div class="cart-plus-minus">
                             <input class="cart-plus-minus-box" value="1" type="text">
                             <div class="dec qtybutton"></div>
                             <div class="inc qtybutton"></div>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- Quantity End -->
 
                     <!-- Cart Button Start -->
                     <div class="cart-btn action-btn mb-6">
-                        <div class="action-cart-btn-wrapper d-flex">
-                            <div class="add-to_cart">
-                                <a class="btn btn-primary btn-hover-dark rounded-0" href="<?php echo base_url(); ?>cart">Masukkan Keranjang</a>
-                            </div>
-                            <a href="<?php echo base_url(); ?>wishlist" title="Wishlist" class="action"><i class="ti-heart"></i></a>
-                        </div>
+
+
+
+                        <form class="d-flex w-100" method="POST" action="<?= base_url("hewanumum/addcart") ?>" autocomplete="off">
+                            <input type="hidden" name="customer_id" value="<?= $this->session->userdata('customer_id'); ?>">
+                            <label class="my-auto" for="qty">Jumlah:</label>
+                            <a class="btn btn-sm btn-outline-secondary" id="bt1" onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) && sst > 1 ) result.value--;return false;"><i class="fa fa-angle-left"></i></a>
+                            <input type="text" name="qty" id="sst" size="2" min="1" max="<?= $ambil->jumlah; ?>" maxlength="2" value="1" title="Quantity:" class="input-text qty">
+                            <a class="btn btn-sm" id="bt2" onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) && sst < <?= $ambil->jumlah; ?>) result.value++;return false;"><i class="fa fa-angle-right"></i></a>
+                            <button <?php if ($ambil->jumlah == 0) echo 'disabled title="Barang Habis" style="cursor: not-allowed;"' ?> type="submit" name="product_id" value="<?= $ambil->hewan_id; ?>" class="btn btn-sm btn-primary ml-auto ml-3"><i class="fa fa-shopping-cart"></i> <i class="fa fa-plus" style="font-size: smaller;"></i> <span class="d-inline-block d-md-none">Add Cart</span><span class="d-none d-md-inline-block">Tambahkan Ke Keranjang</span></button>
+                        </form>
+
+
+
                     </div>
                     <!-- Cart Button End -->
+                    <div class="row mt-auto">
+
+                        <div class="col-3">
+                            <form action="<?= base_url("hewanumum/beli") ?>" method="POST">
+                                <input type="hidden" name="customer_id" value="<?= $this->session->userdata('customer_id'); ?>">
+                                <input hidden="hidden" type="text" min="1" name="qty" id="sst2" size="2" maxlength="2" value="1" title="Quantity:" class="input-text qty">
+                                <button <?php if ($ambil->jumlah == 0) echo 'disabled title="Barang Habis" style="cursor: not-allowed;"' ?> type="submit" name="product_id" value="<?= $ambil->hewan_id; ?>" class="btn btn-block btn-lg btn-primary d-flex rounded mt-3 align-items-center"><i class="fa fa-shopping-cart ml-auto mr-3" style="font-size: smaller;">&nbsp;&nbsp; </i><span class="mr-auto">Beli</span></button>
+                            </form>
+                        </div>
+                        <div class="col-5">
+                            <a class="w-100" target="_blank" rel="noopener noreferrer" href="https://api.whatsapp.com/send?phone=6285608951053&text=Saya%20berminat%20memesan%20produk%20*<?= $ambil->jenis; ?>*,%20sejumlah%20*1*%20barang,%20Apakah%20produk%20tersedia?">
+                                <button class="btn btn-block btn-lg btn-gray-deep btn-hover-primary d-flex rounded mt-3 align-items-center" title="WhatsApp Penjual"><i class="fa fa-whatsapp ml-auto mr-3">&nbsp; &nbsp; </i><span class="mr-auto"> Chat <span class="d-none d-md-inline-block">Penjual</span></span></button>
+                            </a>
+                        </div>
+
+                    </div>
 
                     <!-- Social Shear Start -->
                     <!-- <div class="social-share">
@@ -932,6 +960,9 @@
         <!-- Vendor JS -->
 
 
+        <script src="<?php echo base_url(); ?>assets/Chart.js"></script>
+        <script src="<?php echo base_url(); ?>assets/Chart.min.js"></script>
+        <script src="<?php echo base_url(); ?>assets/js/script.js"></script>
         <script src="<?php echo base_url(); ?>assets/js/vendor/popper.min.js"></script>
         <script src="<?php echo base_url(); ?>assets/js/vendor/bootstrap.min.js"></script>
         <script src="<?php echo base_url(); ?>assets/js/vendor/jquery-3.6.0.min.js"></script>

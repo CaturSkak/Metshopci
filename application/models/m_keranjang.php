@@ -4,24 +4,24 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class m_keranjang extends CI_Model
 {
-    public function getDataCustomer($customer_id)
+    public function getDataCustomer($pengguna_id)
     {
         $this->db->select('*');
         $this->db->from('tb_customer');
         $this->db->join('tb_provinces', 'tb_provinces.province_id = tb_customer.province_id', 'left');
         $this->db->join('tb_cities', 'tb_cities.city_id = tb_customer.city_id', 'left');
         $this->db->join('tb_subdistricts', 'tb_subdistricts.subdistrict_id = tb_customer.subdistrict_id', 'left');
-        $this->db->where("customer_id = $customer_id");
+        $this->db->where("pengguna_id = $pengguna_id");
         return $this->db->get();
     }
 
-    public function getDataKeranjang($customer_id)
+    public function getDataKeranjang($pengguna_id)
     {
-        $this->db->select('tb_keranjang.*, tb_produk.product_name, tb_produk.product_price, tb_produk.product_image, tb_produk.product_stock, tb_produk.product_id');
+        $this->db->select('tb_keranjang.*, tb_hewan.jenis, tb_hewan.harga, tb_hewan.foto_hewan, tb_hewan.jumlah, tb_hewan.hewan_id, tb_hewan.rincian');
         $this->db->from('tb_keranjang');
-        $this->db->join('tb_customer', 'tb_customer.customer_id = tb_keranjang.customer_id', 'left');
-        $this->db->join('tb_produk', 'tb_produk.product_id = tb_keranjang.product_id', 'left');
-        $this->db->where("tb_customer.customer_id = $customer_id");
+        $this->db->join('tb_customer', 'tb_customer.pengguna_id = tb_keranjang.pengguna_id', 'left');
+        $this->db->join('tb_hewan', 'tb_hewan.hewan_id = tb_keranjang.hewan_id', 'left');
+        $this->db->where("tb_customer.pengguna_id = $pengguna_id");
         return $this->db->get();
     }
 
@@ -35,11 +35,11 @@ class m_keranjang extends CI_Model
     public function getDataBerat($id)
     {
         $stok = 0;
-        $this->db->select('SUM(tb_produk.product_weight * tb_keranjang.cart_amount_item) AS berat');
+        $this->db->select('SUM(tb_hewan.product_weight * tb_keranjang.jumlah_keranjang) AS berat');
         $this->db->from('tb_keranjang');
-        $this->db->join('tb_produk', 'tb_produk.product_id = tb_keranjang.product_id', 'left');
-        $this->db->where("tb_keranjang.customer_id = $id");
-        $this->db->where("tb_produk.product_stock > $stok");
+        $this->db->join('tb_hewan', 'tb_hewan.hewan_id = tb_keranjang.hewan_id', 'left');
+        $this->db->where("tb_keranjang.pengguna_id = $id");
+        $this->db->where("tb_hewan.jumlah > $stok");
         return $this->db->get();
     }
 
@@ -71,26 +71,26 @@ class m_keranjang extends CI_Model
         }
     }
 
-    public function deleteData($customer_id, $product_id)
+    public function deleteData($pengguna_id, $hewan_id)
     {
-        $this->db->where('customer_id', $customer_id);
-        $this->db->where('product_id', $product_id);
+        $this->db->where('pengguna_id', $pengguna_id);
+        $this->db->where('hewan_id', $hewan_id);
         return $this->db->delete('tb_keranjang');
     }
 
     public function cekKeranjang($customer, $product)
     {
         $this->db->from('tb_keranjang');
-        $this->db->where("customer_id = $customer");
-        $this->db->where("product_id = $product");
+        $this->db->where("pengguna_id = $customer");
+        $this->db->where("hewan_id = $product");
         return $this->db->count_all_results();
     }
 
-    public function getItemStock($product_id)
+    public function getItemStock($hewan_id)
     {
-        $this->db->select('product_stock');
-        $this->db->from('tb_produk');
-        $this->db->where("product_id = $product_id");
+        $this->db->select('jumlah');
+        $this->db->from('tb_hewan');
+        $this->db->where("hewan_id = $hewan_id");
         $query = $this->db->get();
         return $query;
     }
@@ -98,8 +98,8 @@ class m_keranjang extends CI_Model
     public function editKeranjang($customer, $product, $var)
     {
         $this->db->set($var);
-        $this->db->where("customer_id = $customer");
-        $this->db->where("product_id = $product");
+        $this->db->where("pengguna_id = $customer");
+        $this->db->where("hewan_id = $product");
         return $this->db->update('tb_keranjang');
     }
 
@@ -116,11 +116,11 @@ class m_keranjang extends CI_Model
     public function getDataKeranjangCheckout($id)
     {
         $stok = 0;
-        $this->db->select('tb_keranjang.*, tb_produk.*');
+        $this->db->select('tb_keranjang.*, tb_hewan.*');
         $this->db->from('tb_keranjang');
-        $this->db->join('tb_produk', 'tb_produk.product_id = tb_keranjang.product_id');
-        $this->db->where("tb_keranjang.customer_id = $id");
-        $this->db->where("tb_produk.product_stock > $stok");
+        $this->db->join('tb_hewan', 'tb_hewan.hewan_id = tb_keranjang.hewan_id');
+        $this->db->where("tb_keranjang.pengguna_id = $id");
+        $this->db->where("tb_hewan.jumlah > $stok");
         $query = $this->db->get();
         return $query;
     }
@@ -143,7 +143,7 @@ class m_keranjang extends CI_Model
     public function updateStock($id, $data)
     {
         $this->db->set($data);
-        $this->db->where('product_id', $id);
-        return $this->db->update('tb_produk');
+        $this->db->where('hewan_id', $id);
+        return $this->db->update('tb_hewan');
     }
 }

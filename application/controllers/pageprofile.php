@@ -165,6 +165,35 @@ class pageprofile extends CI_Controller
             $this->load->view('admin/header', $data);
             $this->load->view('admin/page-profile');
             $this->load->view('admin/footer');
+        } else if ($province_id = $this->input->post('prov', TRUE) == 0) {
+            $id = $this->input->post('pengguna_id', TRUE);
+            $customer_name = $this->input->post('customer_name', TRUE);
+            $email = $this->input->post('email', TRUE);
+            $gender = $this->input->post('gender', TRUE);
+            $tanggal_lahir = $this->input->post('tanggal_lahir', TRUE);
+            $phone_number = $this->input->post('phone_number', TRUE);
+
+
+            $address = $this->input->post('address', true);
+
+            $data = array(
+                'nama_lengkap' => $customer_name,
+                'jenis_kelamin' => $gender,
+                'tanggal_lahir' => $tanggal_lahir,
+                'nomor_telepon' => $phone_number,
+
+
+                'alamat' => $address
+            );
+
+            $result = $this->m_user->editData($id, $data);
+            // $this->db->set('nama', $nama);
+            // $this->db->where('pengguna_id', $pengguna_id);
+            // $this->db->update('tb_pengguna');
+            $this->session->set_flashdata('messagee', '<div class="alert alert-success" role="alert">
+            Data Profil anda telah diperbarui!
+          </div> ');
+            redirect('pageprofile');
         } else {
             $id = $this->input->post('pengguna_id', TRUE);
             $customer_name = $this->input->post('customer_name', TRUE);
@@ -190,7 +219,7 @@ class pageprofile extends CI_Controller
                 'alamat' => $address
             );
 
-            $result = $this->M_User->editData($id, $data);
+            $result = $this->m_user->editData($id, $data);
             // $this->db->set('nama', $nama);
             // $this->db->where('pengguna_id', $pengguna_id);
             // $this->db->update('tb_pengguna');

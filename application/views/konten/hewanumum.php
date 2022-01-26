@@ -25,6 +25,9 @@
 <!-- Shop Section Start -->
 <div class="section section-margin">
     <div class="container">
+        <?= $this->session->flashdata('warning_flashData'); ?>
+        <?= $this->session->flashdata('error_flashData'); ?>
+        <?= $this->session->flashdata('success_flashData'); ?>
         <div class="row flex-row-reverse">
             <div class="col-lg-9 col-12">
 
@@ -76,12 +79,28 @@
                                         <img class="fit-image" style="width: 270px; height: 270px; object-fit: cover;" src="<?php echo base_url(); ?>assets/images/daftar_hewan/<?php echo $hewan->foto_hewan; ?>" alt="Product" / </a>
                                         <span class="badges">
                                             <!-- <span class="sale">-18%</span> -->
-                                        </span>
+                                        </span>hewan
                                         <div class="action-wrapper">
 
                                             <a href="" class="action quickview" data-bs-toggle="modal" data-bs-target="#quick-view<?php echo $hewan->hewan_id; ?>" title="Quickview"><i class="ti-plus"></i></a>
                                             <a href="<?php echo base_url(); ?>wishlist.php" class="action wishlist" title="Wishlist"><i class="ti-heart"></i></a>
-                                            <a href="<?php echo base_url(); ?>cart.php" class="action cart" title="Cart"><i class="ti-shopping-cart"></i></a>
+                                            <!-- <a href="<?php echo base_url(); ?>cart.php" class="action cart" title="Cart"><i class="ti-shopping-cart"></i></a> -->
+                                            &nbsp;&nbsp;&nbsp; <form action="<?= base_url('hewanumum/add') ?>" id="formLogin" method="POST" class="d-none"></form>
+                                            <?php if (empty($hewan->jumlah) || $hewan->jumlah <= 0) : ?>
+                                                <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Stok Habis" style="cursor: not-allowed;">
+                                                    <a style="font-size: 23px;" class="rounded ti-shopping-cart disabled" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom" value="Stok Habis">
+
+                                                    </a>
+                                                </span>
+                                            <?php else : ?>
+                                                <!-- <button onclick="tambahKeranjang(<?= $hewan->hewan_id; ?>, '<?= base_url('hewanumum/add') ?>', <?= $this->session->userdata('customer_id'); ?>)" type="submit" value="<?= $hewan->hewan_id; ?>" class=" btn btn-primary   rounded tambah" title="Tambahkan ke Keranjang" name="addBtn" id="addBtn<?= $hewan->hewan_id; ?>">
+                                        <i id="addIcn" name="addIcn"></i> Masukan Keranjang
+                                    </button> -->
+                                                <button onclick="tambahKeranjang(<?= $hewan->hewan_id; ?>, '<?= base_url('hewanumum/add') ?>', <?= $this->session->userdata('customer_id'); ?>)" type="submit" value="<?= $hewan->hewan_id; ?>" class="rounded tambah" title="Tambahkan ke Keranjang" name="addBtn" id="addBtn<?= $hewan->hewan_id; ?>">
+                                                    <i style="font-size: 23px;" class="ti-shopping-cart" id="addIcn" name="addIcn"></i>
+                                                </button>
+
+                                            <?php endif ?>
                                         </div>
                                 </div>
                                 <div class="content">
@@ -652,6 +671,9 @@ foreach ($lihathewan1 as $i) :
 <!-- Global Vendor, plugins JS -->
 
 <!-- Vendor JS -->
+<script src="<?php echo base_url(); ?>assets/Chart.js"></script>
+<script src="<?php echo base_url(); ?>assets/Chart.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/script.js"></script>
 
 
 <script src="<?php echo base_url(); ?>assets/js/vendor/popper.min.js"></script>

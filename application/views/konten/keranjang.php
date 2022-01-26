@@ -22,8 +22,11 @@
 <!-- Checkout Section Start -->
 <div class="section section-margin">
     <div class="container">
-
+        <?= $this->session->flashdata('warning_flashData'); ?>
+        <?= $this->session->flashdata('error_flashData'); ?>
+        <?= $this->session->flashdata('success_flashData'); ?>
         <div class="row mb-n4">
+
             <div class="col-xl-8 col-lg-12 col-12 px-0 px-lg-4 mb-5">
                 <div class="card rounded shadow mb-5">
                     <div class="card-header">
@@ -103,10 +106,10 @@
                         <h4 class="text-center" id="produk">Sesuaikan Produk</h4>
                     </div>
                     <div class="card-body">
-                        <section class="cart_area">
-                            <div class="cart_inner">
-                                <div class="table d-flex">
-                                    <table class="table-responsive">
+                        <section class="cart-area">
+                            <div class="cart-inner">
+                                <div class="">
+                                    <table class=" table-responsive">
                                         <?php
                                         $subjumlah = 0;
                                         $jmlBarang = 0;
@@ -121,80 +124,78 @@
                                                 <?php foreach ($barang as $row) : ?>
                                                     <tr>
                                                         <td class="w-100">
-                                                            <div class="row">
-                                                                <?php if (!empty($row->product_stock) && $row->product_stock >= 1 && $row->product_stock >= $row->cart_amount_item) : ?>
+                                                            <div class="card-body shadow-sm rounded d-flex mb-3">
+                                                                <?php if (!empty($row->jumlah) && $row->jumlah >= 1 && $row->jumlah >= $row->jumlah_keranjang) : ?>
                                                                     <?php
-                                                                    $subjumlah = $subjumlah + ($row->product_price * $row->cart_amount_item);
+                                                                    $subjumlah = $subjumlah + ($row->harga * $row->jumlah_keranjang);
                                                                     $jmlBarang++;
                                                                     ?>
                                                                     <div class="col-3">
                                                                         <div class="d-flex align-items-center">
                                                                             <?php
-                                                                            if (!empty($row->product_image)) {
-                                                                                $url = base_url("assets/img/produk/thumb/") . "$row->product_image";
+                                                                            if (!empty($row->foto_hewan)) {
+                                                                                $url = base_url("assets/images/daftar_hewan/") . "$row->foto_hewan";
                                                                                 if (@getimagesize($url)) {
-                                                                                    $urlImg = base_url("assets/img/produk/thumb/$row->product_image");
+                                                                                    $urlImg = base_url("assets/images/daftar_hewan/$row->foto_hewan");
                                                                                 } else {
-                                                                                    $urlImg = base_url("assets/img/produk/$row->product_image");
+                                                                                    $urlImg = base_url("assets/images/daftar_hewan/$row->foto_hewan");
                                                                                 }
                                                                             } else {
-                                                                                $urlImg = base_url('assets/img/produk/') . 'no-img.png';
+                                                                                $urlImg = base_url('assets/images/daftar_hewan/') . 'no-img.png';
                                                                             }
                                                                             ?>
-                                                                            <label for="<?= $row->product_id; ?>"><img class="shadow rounded" src="<?= $urlImg; ?>" style="width: 90px; height: 90px;"></label>
+                                                                            <label for="<?= $row->hewan_id; ?>"><img class="shadow rounded" src="<?= $urlImg; ?>" style="width: 90px; height: 90px;"></label>
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-9 my-auto">
                                                                         <div class="row ml-3 ml-sm-0">
                                                                             <div class="col-12 my-2 d-flex w-100">
-                                                                                <div class="media d-flex w-100">
-                                                                                    <div class="media-body d-flex w-100">
-                                                                                        <p class="text-dark font-weight-bolder d-block w-100 mr-auto"><?= $row->product_name; ?></p>
-                                                                                    </div>
-                                                                                </div>
+
+                                                                                <p class="text-dark font-weight-bolder d-block w-100 mr-auto"><?= $row->jenis; ?> (<?= $row->rincian; ?>)</p>
+
                                                                             </div>
                                                                             <div class="col-12 mt-1">
                                                                                 <div class="row d-flex">
                                                                                     <div class="col-6 d-inline-flex">
-                                                                                        <h4 class="text-primary font-weight-bold mt-1"><span class="d-block" style="min-width: 200px;">Rp <?= number_format($row->product_price, 0, ",", ".") ?></span></h4>
+                                                                                        <h4 class="text-primary font-weight-bold mt-1"><span class="d-block" style="min-width: 200px;">Rp <?= number_format($row->harga, 0, ",", ".") ?></span></h4>
                                                                                     </div>
                                                                                     <div class="col-6 d-inline-flex w-100">
-                                                                                        <div class="product_count d-inline-flex ml-auto">
-                                                                                            <form id="updateForm" action="<?= base_url('shop/keranjang/tambah'); ?>" method="POST">
+                                                                                        <div class="product_count d-inline-flex ml-auto col-9">
+                                                                                            <form id="updateForm" action="<?= base_url('keranjang/tambah'); ?>" method="POST">
                                                                                                 <div class="form-group">
-                                                                                                    <input type="hidden" name="product_id" value="<?= $row->product_id; ?>">
-                                                                                                    <input type="number" onchange="this.form.submit()" min="1" max="<?= $row->product_stock; ?>" style="min-width: 40px;" class="form-control-sm text-center rounded w-100" name="cart_amount_item" id="cart_amount_item" value="<?= $row->cart_amount_item; ?>" title="Quantity :">
+                                                                                                    <input type="hidden" name="product_id" value="<?= $row->hewan_id; ?>">
+                                                                                                    <input type="number" onchange="this.form.submit()" min="1" max="<?= $row->jumlah; ?>" style="min-width: 40px;" class="form-control-sm text-center rounded w-100" name="cart_amount_item" id="cart_amount_item" value="<?= $row->jumlah_keranjang; ?>" title="Quantity :">
                                                                                                 </div>
                                                                                             </form>
                                                                                         </div>
-                                                                                        <form class="ml-3" method="POST" action="<?= base_url('shop/keranjang/hapus'); ?>">
-                                                                                            <button name="product_id" type="submit" value="<?= $row->product_id; ?>" class="btn border-0 btn-outline-danger rounded-circle"><i class="fa fa-trash"></i></button>
+                                                                                        <form class="ml-3" method="POST" action="<?= base_url('keranjang/hapus'); ?>">
+                                                                                            <button name="product_id" type="submit" value="<?= $row->hewan_id; ?>" class="btn  btn-outline-danger"><i class="fa fa-trash"></i></button>
                                                                                         </form>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                <?php elseif ($row->product_stock < $row->cart_amount_item && $row->product_stock != 0) : ?>
+                                                                <?php elseif ($row->jumlah < $row->jumlah_keranjang && $row->jumlah != 0) : ?>
                                                                     <?php
-                                                                    $subjumlah = $subjumlah + ($row->product_price * $row->product_stock);
+                                                                    $subjumlah = $subjumlah + ($row->harga * $row->jumlah);
                                                                     $jmlBarang++;
                                                                     ?>
                                                                     <div class="col-3">
                                                                         <div class="d-flex align-items-center">
                                                                             <?php
-                                                                            if (!empty($row->product_image)) {
-                                                                                $url = base_url("assets/img/produk/thumb/") . "$row->product_image";
+                                                                            if (!empty($row->foto_hewan)) {
+                                                                                $url = base_url("assets/images/daftar_hewan/") . "$row->foto_hewan";
                                                                                 if (@getimagesize($url)) {
-                                                                                    $urlImg = base_url("assets/img/produk/thumb/$row->product_image");
+                                                                                    $urlImg = base_url("assets/images/daftar_hewan/$row->foto_hewan");
                                                                                 } else {
-                                                                                    $urlImg = base_url("assets/img/produk/$row->product_image");
+                                                                                    $urlImg = base_url("assets/images/daftar_hewan/$row->foto_hewan");
                                                                                 }
                                                                             } else {
-                                                                                $urlImg = base_url('assets/img/produk/') . 'no-img.png';
+                                                                                $urlImg = base_url('assets/images/daftar_hewan/') . 'no-img.png';
                                                                             }
                                                                             ?>
-                                                                            <label for="<?= $row->product_id; ?>"><img class="shadow rounded" src="<?= $urlImg; ?>" style="width: 90px; height: 90px;"></label>
+                                                                            <label for="<?= $row->hewan_id; ?>"><img class="shadow rounded" src="<?= $urlImg; ?>" style="width: 90px; height: 90px;"></label>
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-9 my-auto">
@@ -202,26 +203,26 @@
                                                                             <div class="col-12 my-2 d-flex w-100">
                                                                                 <div class="media d-flex w-100">
                                                                                     <div class="media-body d-flex w-100">
-                                                                                        <p class="text-dark font-weight-bolder d-block w-100 mr-auto"><?= $row->product_name; ?> <i class="fa fa-exclamation-circle text-warning" style="cursor: help;" title="Stok barang hanya tersisa <?= $row->product_stock; ?> (Barang dikeranjang <?= $row->cart_amount_item; ?>)"></i></p>
+                                                                                        <p class="text-dark font-weight-bolder d-block w-100 mr-auto"><?= $row->jenis; ?> <i class="fa fa-exclamation-circle text-warning" style="cursor: help;" title="Stok barang hanya tersisa <?= $row->jumlah; ?> (Barang dikeranjang <?= $row->jumlah_keranjang; ?>)"></i></p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col-12 mt-1">
                                                                                 <div class="row d-flex">
                                                                                     <div class="col-6 d-inline-flex">
-                                                                                        <h4 class="text-primary font-weight-bold mt-1"><span class="d-block" style="min-width: 200px;">Rp <?= number_format($row->product_price, 0, ",", ".") ?></span></h4>
+                                                                                        <h4 class="text-primary font-weight-bold mt-1"><span class="d-block" style="min-width: 200px;">Rp <?= number_format($row->harga, 0, ",", ".") ?></span></h4>
                                                                                     </div>
                                                                                     <div class="col-6 d-inline-flex w-100">
                                                                                         <div class="product_count d-inline-flex ml-auto">
-                                                                                            <form id="updateForm" action="<?= base_url('shop/keranjang/tambah'); ?>" method="POST">
+                                                                                            <form id="updateForm" action="<?= base_url('keranjang/tambah'); ?>" method="POST">
                                                                                                 <div class="form-group">
-                                                                                                    <input type="hidden" name="product_id" value="<?= $row->product_id; ?>">
-                                                                                                    <input type="number" onchange="this.form.submit()" min="1" max="<?= $row->product_stock; ?>" style="min-width: 40px;" class="form-control-sm text-center rounded w-100" name="cart_amount_item" id="cart_amount_item" value="<?= $row->product_stock; ?>" title="Quantity : *stok barang hanya tersisa <?= $row->product_stock; ?>">
+                                                                                                    <input type="hidden" name="product_id" value="<?= $row->hewan_id; ?>">
+                                                                                                    <input type="number" onchange="this.form.submit()" min="1" max="<?= $row->jumlah; ?>" style="min-width: 40px;" class="form-control-sm text-center rounded w-100" name="cart_amount_item" id="cart_amount_item" value="<?= $row->jumlah; ?>" title="Quantity : *stok barang hanya tersisa <?= $row->jumlah; ?>">
                                                                                                 </div>
                                                                                             </form>
                                                                                         </div>
-                                                                                        <form class="ml-3" method="POST" action="<?= base_url('shop/keranjang/hapus'); ?>">
-                                                                                            <button name="product_id" type="submit" value="<?= $row->product_id; ?>" class="btn border-0 btn-outline-danger rounded-circle"><i class="fa fa-trash"></i></button>
+                                                                                        <form class="ml-3" method="POST" action="<?= base_url('keranjang/hapus'); ?>">
+                                                                                            <button name="product_id" type="submit" value="<?= $row->hewan_id; ?>" class="btn border-0 btn-outline-danger rounded-circle"><i class="fa fa-trash"></i></button>
                                                                                         </form>
                                                                                     </div>
                                                                                 </div>
@@ -232,18 +233,18 @@
                                                                     <div class="col-3">
                                                                         <div class="d-flex align-items-center">
                                                                             <?php
-                                                                            if (!empty($row->product_image)) {
-                                                                                $url = base_url("assets/img/produk/thumb/") . "$row->product_image";
+                                                                            if (!empty($row->foto_hewan)) {
+                                                                                $url = base_url("assets/images/daftar_hewan/") . "$row->foto_hewan";
                                                                                 if (@getimagesize($url)) {
-                                                                                    $urlImg = base_url("assets/img/produk/thumb/$row->product_image");
+                                                                                    $urlImg = base_url("assets/images/daftar_hewan/$row->foto_hewan");
                                                                                 } else {
-                                                                                    $urlImg = base_url("assets/img/produk/$row->product_image");
+                                                                                    $urlImg = base_url("assets/images/daftar_hewan/$row->foto_hewan");
                                                                                 }
                                                                             } else {
-                                                                                $urlImg = base_url('assets/img/produk/') . 'no-img.png';
+                                                                                $urlImg = base_url('assets/images/daftar_hewan/') . 'no-img.png';
                                                                             }
                                                                             ?>
-                                                                            <label for="<?= $row->product_id; ?>"><img class="shadow rounded" src="<?= $urlImg; ?>" style="width: 90px; height: 90px;"></label>
+                                                                            <label for="<?= $row->hewan_id; ?>"><img class="shadow rounded" src="<?= $urlImg; ?>" style="width: 90px; height: 90px;"></label>
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-9 my-auto">
@@ -251,21 +252,23 @@
                                                                             <div class="col-12 my-2 d-flex w-100">
                                                                                 <div class="media d-flex w-100">
                                                                                     <div class="media-body d-flex w-100">
-                                                                                        <p class="text-muted font-weight-bolder d-block w-100 mr-auto"><?= $row->product_name; ?></p>
+                                                                                        <p class="text-muted font-weight-bolder d-block w-100 mr-auto"><?= $row->jenis; ?> </p>
+
                                                                                     </div>
+
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col-12 my-2">
                                                                                 <div class="row d-flex">
                                                                                     <div class="col-6 d-inline-flex">
-                                                                                        <h4 class="text-muted font-weight-bold mt-1"><span class="d-block" style="min-width: 200px;">Rp <?= number_format($row->product_price, 0, ",", ".") ?></span></h4>
+                                                                                        <h4 class="text-muted font-weight-bold mt-1"><span class="d-block" style="min-width: 200px;">Rp <?= number_format($row->harga, 0, ",", ".") ?></span></h4>
                                                                                     </div>
                                                                                     <div class="col-6 d-inline-flex w-100">
                                                                                         <div class="product_count d-inline-flex ml-auto">
                                                                                             <input class="text-danger font-weight-bolder" disabled type="text" value="HABIS" style="max-width: 65px;" title="Maaf stok habis, Barang ini tidak akan dicheckout">
                                                                                         </div>
-                                                                                        <form class="ml-3" method="POST" action="<?= base_url('shop/keranjang/hapus'); ?>">
-                                                                                            <button name="product_id" type="submit" value="<?= $row->product_id; ?>" class="btn border-0 btn-outline-danger rounded-circle"><i class="fa fa-trash"></i></button>
+                                                                                        <form class="ml-3" method="POST" action="<?= base_url('keranjang/hapus'); ?>">
+                                                                                            <button name="product_id" type="submit" value="<?= $row->hewan_id; ?>" class="btn border-0 btn-outline-danger rounded-circle"><i class="fa fa-trash"></i></button>
                                                                                         </form>
                                                                                     </div>
                                                                                 </div>
@@ -282,7 +285,7 @@
                                             <tr class="border-0">
                                                 <td class="border-0"></td>
                                                 <td class="border-0 w-100">
-                                                    <h6 class="text-center font-weight-light">Keranjang anda kosong, <a class="text-primary text-hover" href="<?= base_url('shop/produk'); ?>">Belanja sekarang!</a></h6>
+                                                    <h6 class="text-center font-weight-light">Keranjang anda kosong, <a class="text-primary text-hover" href="<?= base_url('hewanumuum'); ?>">Belanja sekarang!</a></h6>
                                                 </td>
                                                 <td class="border-0"></td>
                                             </tr>
@@ -343,7 +346,7 @@
                                         <?php if (!empty($barang) && !empty($jmlBarang)) : ?>
                                             <input type="hidden" value="0" name="ongkir" id="ongkir">
                                             <input type="hidden" value="" name="nama_kurir" id="nama_kurir">
-                                            <button type="submit" value="<?= $subjumlah; ?>" name="jumlah" id="jumlah" class="btn btn-primary rounded-pill ml-auto text-uppercase shadow d-inline-flex "><i class="fa fa-shopping-bag "></i> Bayar</button>
+                                            <button type="submit" value="<?= $subjumlah; ?>" name="jumlah" id="jumlah" class="btn btn-primary rounded-pill ml-auto text-uppercase shadow d-inline-flex "> Bayar</button>
                                         <?php else : ?>
                                             <button disabled title="Tidak ada barang yang dipilih" class="btn btn-primary rounded-pill ml-auto text-uppercase shadow d-inline-flex px-4 py-2"><i class="fa fa-shopping-bag mr-2 pt-1"></i> Bayar</button>
                                         <?php endif; ?>

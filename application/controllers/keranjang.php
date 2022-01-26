@@ -10,6 +10,7 @@ class keranjang extends CI_Controller
         $this->load->model('m_wilayah');
         $this->load->model('m_user');
         $this->load->model('m_customer');
+        $this->load->model('m_keranjang');
         $this->load->model('m_pembayaran');
         $this->load->library('form_validation');
         $this->load->database();
@@ -18,35 +19,9 @@ class keranjang extends CI_Controller
     public function index()
     {
 
-        // var_dump($data);
-        // die;
-        // $data['path'] = base_url('assets');
-        // $userID = $this->session->userdata('email');
-        // $id = $this->session->userdata('pengguna_id');
-
-        // $data['userr'] = $this->m_user->getDataByID($userID)->row_array();
-        // $data['provinsi'] = $this->m_wilayah->getProvinsi()->result_array();
-        // $data['kot'] = $this->m_wilayah->getkot()->result_array();
-        // $data['kec'] = $this->m_wilayah->getkec()->result_array();
 
 
-        // $row = $this->m_wilayah->getUserProvinsi($id)->row_array();
-        // $province_id = $this->input->post('prov', TRUE);
-        // $data['kota'] = $this->m_wilayah->getKota($province_id)->result();
-
-        // if (!empty($row['province_id'])) {
-
-        //     $data['kota'] = $this->m_wilayah->getKota($row['province_id'])->result();
-
-        //     $row2 = $this->m_user->getUserKota($userID)->row();
-
-        //     if (!empty($row->province_id)) {
-
-        //         $data['kecamatan'] = $this->m_user->getKecamatan($row2->city_id)->result();
-        //     }
-        // }
-
-        if (empty($this->session->userdata('email'))) {
+        if (empty($this->session->userdata('customer_id'))) {
 
             $this->session->set_flashdata('warning_flashData', 'Anda harus login terlebih dahulu!');
             redirect(base_url('authcustomer'));
@@ -59,17 +34,17 @@ class keranjang extends CI_Controller
 
             $data['pembayaran'] = $this->m_user->getDataMetodePembayaran()->result();
             $data['userr'] = $this->m_customer->getDataByID($userID)->row_array();
-            // var_dump($data);
-            // die;
-            // $id = $this->session->userdata('USER_ID');
+            $id = $this->session->userdata('customer_id');
             // $data['kab_id'] = $this->session->userdata('USER_KABUPATEN');
 
-            // $data['customer'] = $this->M_Keranjang->getDataCustomer($id)->row();
-            // $data['barang'] = $this->M_Keranjang->getDataKeranjang($id)->result();
-            // $data['metode'] = $this->M_Keranjang->getDataMetodePembayaran()->result();
+            // $data['customer'] = $this->m_keranjang->getDataCustomer($id)->row();
+            $data['barang'] = $this->m_keranjang->getDataKeranjang($id)->result();
+            // var_dump($data);
+            // die;
+            // $data['metode'] = $this->m_keranjang->getDataMetodePembayaran()->result();
 
             // //Berat Total Barang
-            // $data['berat'] = $this->M_Keranjang->getDataBerat($id)->row()->berat;
+            // $data['berat'] = $this->m_keranjang->getDataBerat($id)->row()->berat;
 
             $this->load->view('layout/header',  $data);
             $this->load->view('konten/keranjang', $data);
@@ -81,66 +56,14 @@ class keranjang extends CI_Controller
     // {
     //     $row = array(1, 2);
     //     $id = $this->session->userdata('USER_ID');
-    //     $berat = $this->M_Keranjang->getDataBerat($id)->row()->berat;
+    //     $berat = $this->m_keranjang->getDataBerat($id)->row()->berat;
     //     $kab_id = $this->session->userdata('USER_KABUPATEN');
     //     foreach ($row as $row) {
     //         echo "<option value='" . $kab_id . "'>" . $berat . "</option>";
     //     }
     // }
 
-    // public function kurir()
-    // {
-    //     $id = $this->session->userdata('USER_ID');
-    //     $berat = $this->M_Keranjang->getDataBerat($id)->row()->berat;
-    //     $kab_id = $this->session->userdata('USER_KABUPATEN');
-    //     $barang = $this->M_Keranjang->getDataKeranjang($id)->result();
-    //     $stat = false;
 
-    //     if (!empty($kab_id) && !empty($barang)) {
-    //         //kurir JNE
-    //         if (!empty($this->M_Keranjang->getDataKurir('jne', $kab_id, $berat))) {
-    //             $data_kurir = $status = $this->M_Keranjang->getDataKurir('jne', $kab_id, $berat);
-    //             if ($status["rajaongkir"]["status"]["description"] !== "OK") {
-    //                 echo "error";
-    //             } else {
-    //                 $stat = true;
-    //                 echo '<option class="text-secondary" selected disabled hidden value="">Pilih Kurir</option>';
-    //                 echo '<option class="text-dark" value="0.Ambil Di Toko Kapron Petshop">Ambil Di Toko Kapron Petshop (Gratis)</option>';
-    //                 for ($k = 0; $k < count($data_kurir['rajaongkir']['results']); $k++) {
-    //                     for ($l = 0; $l < count($data_kurir['rajaongkir']['results'][$k]['costs']); $l++) {
-    //                         $value1 = $data_kurir['rajaongkir']['results'][$k]['costs'][$l]['cost'][0]['value'];
-    //                         $service1 = $data_kurir['rajaongkir']['results'][$k]['costs'][$l]['service'];
-    //                         $harga1 = number_format($data_kurir['rajaongkir']['results'][$k]['costs'][$l]['cost'][0]['value'], 0, ",", ".");
-    //                         echo "<option class='text-dark' value='$value1.JNE ($service1)'>JNE $service1 (Rp $harga1)</option>";
-    //                     }
-    //                 }
-    //             }
-    //         } else {
-    //             echo "error";
-    //         }
-
-    //         //Kurir POS
-    //         if (!empty($this->M_Keranjang->getDataKurir('pos', $kab_id, $berat))) {
-    //             $data_kurir2 = $this->M_Keranjang->getDataKurir('pos', $kab_id, $berat);
-    //             if (!$stat) {
-    //                 echo '<option class="text-secondary" selected disabled hidden value="">Pilih Kurir</option>';
-    //                 echo '<option class="text-dark" value="0.Ambil Di Toko Kapron Petshop">Ambil Di Toko Kapron Petshop (Gratis)</option>';
-    //             }
-    //             for ($k = 0; $k < count($data_kurir2['rajaongkir']['results']); $k++) {
-    //                 for ($l = 0; $l < count($data_kurir2['rajaongkir']['results'][$k]['costs']); $l++) {
-    //                     $value2 = $data_kurir2['rajaongkir']['results'][$k]['costs'][$l]['cost'][0]['value'];
-    //                     $service2 = $data_kurir2['rajaongkir']['results'][$k]['costs'][$l]['service'];
-    //                     $harga2 = number_format($data_kurir2['rajaongkir']['results'][$k]['costs'][$l]['cost'][0]['value'], 0, ",", ".");
-    //                     echo "<option class='text-dark' value='$value2.POS ($service2)'>POS $service2 (Rp $harga2)</option>";
-    //                 }
-    //             }
-    //         } else {
-    //             echo "error";
-    //         }
-    //     } else {
-    //         echo "empty";
-    //     }
-    // }
 
     // public function checkout()
     // {
@@ -166,7 +89,7 @@ class keranjang extends CI_Controller
     //         );
 
     //         // Create Order
-    //         $result = $this->M_Keranjang->addOrder($data);
+    //         $result = $this->m_keranjang->addOrder($data);
 
     //         if ($result == TRUE) {
 
@@ -174,7 +97,7 @@ class keranjang extends CI_Controller
     //             $last_id = $this->db->insert_id();
 
     //             // Get Data from tb_keranjang
-    //             $keranjang = $this->M_Keranjang->getDataKeranjangCheckout($customer_id)->result();
+    //             $keranjang = $this->m_keranjang->getDataKeranjangCheckout($customer_id)->result();
 
     //             foreach ($keranjang as $row) {
     //                 // Check Stock 
@@ -196,7 +119,7 @@ class keranjang extends CI_Controller
     //                     'order_item_subtotal' => $subtotal
     //                 );
 
-    //                 $result2 = $this->M_Keranjang->addOrderItem($data2);
+    //                 $result2 = $this->m_keranjang->addOrderItem($data2);
 
     //                 if ($result2 == TRUE) {
 
@@ -209,14 +132,14 @@ class keranjang extends CI_Controller
     //                         'product_stock' => $stokBaru
     //                     );
 
-    //                     $this->M_Keranjang->updateStock($row->product_id, $data3);
+    //                     $this->m_keranjang->updateStock($row->product_id, $data3);
 
     //                     // Remove Item From tb_kasir
-    //                     $result3 = $this->M_Keranjang->deleteData($customer_id, $row->product_id);
+    //                     $result3 = $this->m_keranjang->deleteData($customer_id, $row->product_id);
     //                 } else {
 
     //                     $this->session->set_flashdata('error_flashData', 'Gagal membuat order detail.');
-    //                     redirect(base_url('shop/keranjang'));
+    //                     redirect(base_url('keranjang'));
     //                     exit;
     //                 }
     //             }
@@ -230,7 +153,7 @@ class keranjang extends CI_Controller
     //                     'payment_amount' => $payment_amount
     //                 );
 
-    //                 $this->M_Keranjang->addPayment($dataOrder);
+    //                 $this->m_keranjang->addPayment($dataOrder);
 
     //                 // Insert Kurir
     //                 $dataKurir = array(
@@ -239,127 +162,135 @@ class keranjang extends CI_Controller
     //                     'kurir_harga' => $ongkir
     //                 );
 
-    //                 $this->M_Keranjang->addKurir($dataKurir);
+    //                 $this->m_keranjang->addKurir($dataKurir);
 
     //                 $this->session->set_flashdata('success_flashData', "Berhasil Melakukan Checkout Transaksi!");
     //                 redirect(base_url("shop/detail-transaksi/$last_id"));
     //             } else {
 
     //                 $this->session->set_flashdata('error_flashData', 'Gagal Menghapus Item Kasir!');
-    //                 redirect(base_url('shop/keranjang'));
+    //                 redirect(base_url('keranjang'));
     //             }
     //         } else {
 
     //             $this->session->set_flashdata('error_flashData', 'Gagal membuat order.');
-    //             redirect(base_url('shop/keranjang'));
+    //             redirect(base_url('keranjang'));
     //         }
     //     }
     // }
 
-    // public function delete()
-    // {
-    //     if (empty($this->session->userdata('USER_ID'))) {
+    public function hapus()
+    {
+        if (empty($this->session->userdata('customer_id'))) {
 
-    //         $this->session->set_flashdata('warning_flashData', 'Anda harus login terlebih dahulu!');
-    //         redirect(base_url('login'));
-    //         exit;
-    //     } else {
-    //         $customer_id = $this->session->userdata('USER_ID');
-    //         $product_id = $this->input->post('product_id', TRUE);
+            $this->session->set_flashdata('warning_flashData', 'Anda harus login terlebih dahulu!');
+            redirect(base_url('login'));
+            exit;
+        } else {
+            $customer_id = $this->session->userdata('customer_id');
+            $product_id = $this->input->post('product_id', TRUE);
 
-    //         $result = $this->M_Keranjang->deleteData($customer_id, $product_id);
+            $result = $this->m_keranjang->deleteData($customer_id, $product_id);
 
-    //         if ($result == TRUE) {
+            if ($result == TRUE) {
 
-    //             $this->session->set_flashdata('success_flashData', 'Barang berhasil dihapus dari keranjang belanja.');
-    //             redirect(base_url('shop/keranjang'));
-    //         } else {
+                $this->session->set_flashdata('success_flashData', '<div class="alert alert-success" role="alert">
+                Berhasil menghapus barang di keranjang belanja.!
+              </div> ');
+                redirect(base_url('keranjang'));
+            } else {
 
-    //             $this->session->set_flashdata('error_flashData', 'Gagal menghapus barang dari keranjang belanja.');
-    //             redirect(base_url('shop/keranjang'));
-    //         }
-    //     }
-    // }
+                $this->session->set_flashdata('error_flashData', '<div class="alert alert-danger" role="alert">
+                Gagal menghapus barang di keranjang belanja.!
+              </div> ');
+                redirect(base_url('keranjang'));
+            }
+        }
+    }
 
-    // public function add()
-    // {
-    //     if (empty($this->session->userdata('USER_ID'))) {
+    public function tambah()
+    {
+        if (empty($this->session->userdata('customer_id'))) {
 
-    //         $this->session->set_flashdata('warning_flashData', 'Anda harus login terlebih dahulu!');
-    //         redirect(base_url('login'));
-    //         exit;
-    //     } else {
-    //         // menyimpan nilai dari form post yang dikirimkan
-    //         $customer_id = $this->session->userdata('USER_ID');
-    //         $product_id = $this->input->post('product_id', TRUE);
-    //         $cart_amount_item = $this->input->post('cart_amount_item', TRUE);
+            $this->session->set_flashdata('warning_flashData', 'Anda harus login terlebih dahulu!');
+            redirect(base_url('login'));
+            exit;
+        } else {
+            // menyimpan nilai dari form post yang dikirimkan
+            $customer_id = $this->session->userdata('customer_id');
+            $product_id = $this->input->post('product_id', TRUE);
+            $cart_amount_item = $this->input->post('cart_amount_item', TRUE);
 
-    //         $data = array(
-    //             'product_id' => $product_id,
-    //             'customer_id' => $customer_id,
-    //             'cart_amount_item' => $cart_amount_item
-    //         );
+            $data = array(
+                'pengguna_id' => $customer_id,
+                'hewan_id' => $product_id,
+                'jumlah_keranjang' => $cart_amount_item,
+            );
 
-    //         $cekKeranjang = $this->M_Keranjang->cekKeranjang($customer_id, $product_id);
+            $cekKeranjang = $this->m_keranjang->cekKeranjang($customer_id, $product_id);
 
-    //         if (!empty($cekKeranjang) || $cekKeranjang == 1) {
+            if (!empty($cekKeranjang) || $cekKeranjang == 1) {
 
-    //             $hasil = $this->M_Keranjang->getItemStock($product_id)->result();
-    //             $stock = $hasil[0]->product_stock;
+                $hasil = $this->m_keranjang->getItemStock($product_id)->result();
+                $stock = $hasil[0]->jumlah;
 
-    //             $QtyBaru = $cart_amount_item;
+                $QtyBaru = $cart_amount_item;
 
-    //             if ($QtyBaru > $stock) {
-    //                 $data2 = array(
-    //                     'product_id' => $product_id,
-    //                     'customer_id' => $customer_id,
-    //                     'cart_amount_item' => $stock
-    //                 );
+                if ($QtyBaru > $stock) {
+                    $data2 = array(
+                        'hewan_id' => $product_id,
+                        'pengguna_id' => $customer_id,
+                        'jumlah_keranjang' => $stock,
+                    );
 
-    //                 $result2 = $this->M_Keranjang->editKeranjang($customer_id, $product_id, $data2);
+                    $result2 = $this->m_keranjang->editKeranjang($customer_id, $product_id, $data2);
 
-    //                 if ($result2 == TRUE) {
+                    if ($result2 == TRUE) {
 
-    //                     $this->session->set_flashdata('warning_flashData', "Jumlah melebihi stok ($stock), Berhasil menambahkan max barang.");
-    //                     redirect(base_url("shop/keranjang"));
-    //                 } else {
+                        $this->session->set_flashdata('warning_flashData', "Jumlah melebihi stok ($stock), Berhasil menambahkan max barang.");
+                        redirect(base_url("keranjang"));
+                    } else {
 
-    //                     $this->session->set_flashdata('error_flashData', 'Gagal menambahkan jumlah barang.');
-    //                     redirect(base_url("shop/keranjang"));
-    //                 }
-    //             } else {
-    //                 $data2 = array(
-    //                     'product_id' => $product_id,
-    //                     'customer_id' => $customer_id,
-    //                     'cart_amount_item' => $QtyBaru
-    //                 );
+                        $this->session->set_flashdata('error_flashData', 'Gagal menambahkan jumlah barang.');
+                        redirect(base_url("keranjang"));
+                    }
+                } else {
+                    $data2 = array(
+                        'hewan_id' => $product_id,
+                        'pengguna_id' => $customer_id,
+                        'jumlah_keranjang' => $QtyBaru,
+                    );
 
-    //                 $result2 = $this->M_Keranjang->editKeranjang($customer_id, $product_id, $data2);
+                    $result2 = $this->m_keranjang->editKeranjang($customer_id, $product_id, $data2);
 
-    //                 if ($result2 == TRUE) {
+                    if ($result2 == TRUE) {
 
-    //                     $this->session->set_flashdata('success_flashData', 'Berhasil menambahkan jumlah barang.');
-    //                     redirect(base_url("shop/keranjang"));
-    //                 } else {
+                        $this->session->set_flashdata('success_flashData', '<div class="alert alert-success" role="alert">
+                        Berhasil menambahkan atau mengurangi barang ke keranjang belanja.!
+                      </div> ');
+                        redirect(base_url("keranjang"));
+                    } else {
 
-    //                     $this->session->set_flashdata('error_flashData', 'Gagal menambahkan jumlah barang.');
-    //                     redirect(base_url("shop/keranjang"));
-    //                 }
-    //             }
-    //         } else {
+                        $this->session->set_flashdata('error_flashData', '<div class="alert alert-danger" role="alert">
+                        Gagal menambahkan barang ke keranjang belanja.!
+                      </div> ');
+                        redirect(base_url("keranjang"));
+                    }
+                }
+            } else {
 
-    //             $result = $this->M_Keranjang->addKeranjang($data);
+                $result = $this->m_keranjang->addKeranjang($data);
 
-    //             if ($result == TRUE) {
+                if ($result == TRUE) {
 
-    //                 $this->session->set_flashdata('success_flashData', 'Berhasil menambahkan jumlah barang.');
-    //                 redirect(base_url("shop/keranjang"));
-    //             } else {
+                    $this->session->set_flashdata('success_flashData', 'Berhasil menambahkan jumlah barang.');
+                    redirect(base_url("keranjang"));
+                } else {
 
-    //                 $this->session->set_flashdata('error_flashData', 'Gagal menambahkan jumlah barang.');
-    //                 redirect(base_url("shop/keranjang"));
-    //             }
-    //         }
-    //     }
-    // }
+                    $this->session->set_flashdata('error_flashData', 'Gagal menambahkan jumlah barang.');
+                    redirect(base_url("keranjang"));
+                }
+            }
+        }
+    }
 }
